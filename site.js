@@ -63,6 +63,23 @@
       return tb - ta;
     })[0] || null;
   }
+  function attachReleaseNotes(release, channel) {
+    var node = document.getElementById(channel + '-version');
+    var tag = String(release.tag_name || '');
+    if (!node || !/^v?\\d+\\.\\d+\\.\\d+(?:-rc\\.\\d+)?$/.test(tag)) return;
+    var href = 'https://github.com/magaskye/discordia/releases/tag/' + encodeURIComponent(tag);
+    var existing = document.getElementById(channel + '-notes');
+    if (existing) existing.remove();
+    var link = document.createElement('a');
+    link.id = channel + '-notes';
+    link.href = href;
+    link.textContent = 'Ver novidades e problemas conhecidos ↗';
+    link.rel = 'noopener noreferrer';
+    link.target = '_blank';
+    link.style.display = 'block';
+    link.style.marginTop = '0.5rem';
+    node.insertAdjacentElement('afterend', link);
+  }
   function display(release, channel) {
     if (!release) return false;
     var ver = String(release.tag_name || '').replace(/^v/i, '').slice(0, 40);
@@ -72,6 +89,7 @@
     var yesPortable = enable(channel + '-portable', portable, 'Baixar versão portátil ↗');
     if (yesInstaller || yesPortable) {
       setText(channel + '-version', 'Versão oficial publicada: ' + ver);
+      attachReleaseNotes(release, channel);
       return true;
     }
     setText(channel + '-version', 'Release ' + ver + ' sem executável validado');
