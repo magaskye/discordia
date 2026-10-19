@@ -1,0 +1,28 @@
+name: "💡 Sugerir melhoria"
+description: "Envie uma ideia para o site ou para o aplicativo."
+title: "[Sugestão] "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Este formulário é PÚBLICO. Não inclua dados pessoais, tokens ou informações privadas.
+  - type: dropdown
+    id: area
+    attributes:
+      label: Área
+      options:
+        - Site oficial
+        - Interface e personalização
+        - Voz e transmissões
+        - Servidores e mensagens
+        - Instalação e atualizações
+        - Outro
+    validations:
+      required: true
+  - type: textarea
+    id: ideia
+    attributes:
+      label: Sua sugestão
+      placeholder: "O que gostaria de melhorar e por quê?"
+    validations:
+      required: true

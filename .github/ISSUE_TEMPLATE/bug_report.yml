@@ -1,0 +1,44 @@
+name: "🐞 Relatar problema"
+description: "Conte um erro do site ou do Discórdia em testes."
+title: "[Bug] "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Este formulário é PÚBLICO. Não envie senhas, tokens, e-mails de terceiros ou capturas com dados pessoais.
+  - type: dropdown
+    id: area
+    attributes:
+      label: Área do problema
+      options:
+        - Site e downloads
+        - Instalação e atualizações
+        - Voz e chamada
+        - Compartilhamento de tela
+        - Mensagens e servidores
+        - Outro
+    validations:
+      required: true
+  - type: input
+    id: versao
+    attributes:
+      label: Versão utilizada
+      placeholder: "Site, RC5 ou outra"
+  - type: textarea
+    id: ocorrido
+    attributes:
+      label: O que aconteceu?
+      placeholder: "Descreva o resultado observado..."
+    validations:
+      required: true
+  - type: textarea
+    id: reproduzir
+    attributes:
+      label: Passos para reproduzir
+      placeholder: "1. Abri...
+2. Cliquei..."
+  - type: textarea
+    id: esperado
+    attributes:
+      label: Resultado esperado
+      placeholder: "O que deveria ter ocorrido?"
