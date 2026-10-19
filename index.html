@@ -1,308 +1,113 @@
-<!DOCTYPE html>
-<html lang="pt-BR" class="dark">
+<!doctype html>
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Discordia - Download & Changelog</title>
-    <!-- Tailwind CSS CDN -->
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <!-- FontAwesome para ícones -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800;900&display=swap" rel="stylesheet">
-    <style>
-        body {
-            font-family: 'Outfit', sans-serif;
-            background-color: #0b0f19;
-            color: #f3f4f6;
-            overflow-x: hidden;
-        }
-
-        .text-glow-cyan {
-            text-shadow: 0 0 15px rgba(6, 182, 212, 0.8);
-        }
-
-        @keyframes floatLogo {
-            0%, 100% { transform: translateY(0px) rotate(0deg); }
-            50% { transform: translateY(-10px) rotate(1deg); }
-        }
-        .animate-float {
-            animation: floatLogo 4s ease-in-out infinite;
-        }
-
-        @keyframes pulseGlow {
-            0%, 100% { filter: drop-shadow(0 0 15px rgba(236, 72, 153, 0.6)); }
-            50% { filter: drop-shadow(0 0 30px rgba(6, 182, 212, 0.9)); }
-        }
-        .animate-pulse-glow {
-            animation: pulseGlow 3s ease-in-out infinite;
-        }
-
-        @keyframes introLogo {
-            0% { transform: scale(0.5) rotate(-15deg); opacity: 0; }
-            60% { transform: scale(1.1) rotate(5deg); opacity: 1; }
-            100% { transform: scale(1) rotate(0deg); opacity: 1; }
-        }
-        .animate-intro {
-            animation: introLogo 1.2s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
-        }
-
-        #splash-screen {
-            transition: opacity 0.6s ease, visibility 0.6s ease;
-        }
-    </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#0b0d1a">
+<meta name="description" content="Discórdia Desktop — voz, comunidades, mensagens e transmissões para Windows. Acompanhe o desenvolvimento e os lançamentos oficiais.">
+<meta property="og:title" content="Discórdia Desktop — Seu grupo, seu universo">
+<meta property="og:description" content="Seu espaço para conversar, jogar e compartilhar momentos. Acompanhe o pré-lançamento do Discórdia para Windows.">
+<meta property="og:type" content="website">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src https://api.github.com; form-action 'none'; object-src 'none'; base-uri 'self'; upgrade-insecure-requests">
+<link rel="icon" href="./logo.png" type="image/png">
+<link rel="stylesheet" href="./site.css">
+<script src="./site.js" defer></script>
+<title>Discórdia Desktop — Seu grupo, seu universo</title>
 </head>
-<body class="selection:bg-pink-500 selection:text-white">
-
-    <!-- SPLASH SCREEN DE BOAS-VINDAS ANIMADA -->
-    <div id="splash-screen" class="fixed inset-0 z-50 flex flex-col items-center justify-center bg-[#070913] px-4">
-        <div class="relative flex flex-col items-center">
-            <div class="absolute w-48 h-48 rounded-full bg-gradient-to-r from-cyan-500/20 to-pink-500/20 blur-3xl animate-pulse"></div>
-            
-            <img src="logo.png" alt="Discordia Logo" class="w-32 h-32 md:w-40 md:h-40 object-contain animate-intro animate-pulse-glow relative z-10 mb-6">
-            
-            <h1 class="text-3xl md:text-5xl font-black tracking-wider text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-300 to-pink-500 text-glow-cyan mb-2">
-                DISCORDIA
-            </h1>
-            <p class="text-gray-400 text-sm md:text-base tracking-widest uppercase mb-8 font-medium">Carregando Experiência Estelar...</p>
-            
-            <div class="w-52 h-1.5 bg-gray-800 rounded-full overflow-hidden mb-6">
-                <div id="progress-bar" class="h-full bg-gradient-to-r from-cyan-400 to-pink-500 w-0 transition-all duration-1000"></div>
-            </div>
-
-            <button onclick="entrarSite()" class="text-xs tracking-widest text-gray-400 hover:text-cyan-400 border border-gray-800 hover:border-cyan-500/50 px-4 py-2 rounded-xl transition">
-                PULAR ANIMAÇÃO <i class="fas fa-arrow-right ml-1"></i>
-            </button>
-        </div>
+<body>
+<a class="skip-link" href="#principal">Pular para o conteúdo</a>
+<header class="header">
+ <div class="container nav-shell">
+  <a href="#inicio" class="brand" aria-label="Discórdia Desktop — início"><img src="./logo.png" alt="" width="44" height="44"><span>Disc<span class="accent">ó</span>rdia<span class="pink">.</span></span></a>
+  <button id="nav-toggle" class="nav-toggle" type="button" aria-controls="nav-main" aria-expanded="false" aria-label="Abrir menu"><span></span><span></span><span></span></button>
+  <nav id="nav-main" class="navigation" aria-label="Navegação principal"><a href="#recursos">Recursos</a><a href="#conexao">Conexão</a><a href="#progresso">Desenvolvimento</a><a href="#downloads">Downloads</a><a href="#perguntas">Dúvidas</a></nav>
+  <a href="#downloads" class="nav-button">Acompanhar lançamento <span aria-hidden="true">↗</span></a>
+ </div>
+</header>
+<main id="principal">
+ <section class="hero" id="inicio" aria-labelledby="hero-title">
+  <div class="ambient ambient-1" aria-hidden="true"></div><div class="ambient ambient-2" aria-hidden="true"></div>
+  <div class="container hero-grid">
+   <div class="hero-copy">
+    <div class="overline pill"><span class="pulse"></span> EM DESENVOLVIMENTO <span class="divider-dot">/</span> WINDOWS</div>
+    <h1 id="hero-title">Seu grupo.<br><span class="gradient">Seu universo.</span></h1>
+    <p>Uma nova maneira de reunir seus amigos. Converse, entre em chamadas, compartilhe momentos e deixe cada comunidade com a sua identidade.</p>
+    <div class="hero-buttons"><a class="btn primary" href="#downloads">Ver disponibilidade <span aria-hidden="true">↗</span></a><a class="btn outline" href="#recursos">Explorar recursos <span aria-hidden="true">↓</span></a></div>
+    <div class="hero-note"><span><b>✓</b> Feito para Windows</span><span><b>✓</b> Construído com a comunidade</span></div>
+   </div>
+   <div class="hero-illustration">
+    <div class="app-window">
+     <div class="app-top"><span class="dots"><i></i><i></i><i></i></span><span>discórdia <small>/ comunidade</small></span><span class="online-caption"><i></i> conceito</span></div>
+     <div class="app-view">
+      <div class="app-rail"><img src="./logo.png" alt=""><span>G</span><span>+</span></div>
+      <div class="app-channels"><strong class="server-name">✦ Nosso universo</strong><small class="channel-header">CANAIS DE TEXTO</small><span># &nbsp; geral</span><span># &nbsp; novidades</span><small class="channel-header">CANAIS DE VOZ</small><span class="chosen">◉ &nbsp; Palco principal</span><div class="self"><b>V</b><span>Você<small>Na chamada</small></span><i>▂▄▆</i></div></div>
+      <div class="app-stage"><div class="stage-top"><strong>◉ &nbsp; Palco principal</strong><span>AO VIVO</span></div><div class="stage-area"><div class="shared-screen"><div class="planet"></div><span>✧</span><small>Compartilhando momentos</small></div><div class="faces"><div><b>M</b><small>Amigo 01</small></div><div><b>J</b><small>Amigo 02</small></div><div><b>L</b><small>Amigo 03</small></div></div></div><div class="stage-controls"><span>♫</span><span>◉</span><span>▣</span><span>⌕</span></div></div>
+     </div>
     </div>
-
-    <!-- CONTEÚDO PRINCIPAL DO SITE -->
-    <div id="main-content">
-        
-        <!-- HEADER / NAVBAR -->
-        <header class="fixed top-0 left-0 right-0 z-40 bg-[#0b0f19]/80 backdrop-blur-md border-b border-gray-800/60">
-            <div class="max-w-6xl mx-auto px-6 h-20 flex items-center justify-between">
-                <div class="flex items-center space-x-3">
-                    <img src="logo.png" alt="Logo" class="w-10 h-10 object-contain animate-float">
-                    <span class="text-xl font-extrabold tracking-wide text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-pink-500">
-                        DISCORDIA
-                    </span>
-                </div>
-                <nav class="hidden md:flex items-center space-x-8 text-sm font-medium text-gray-300">
-                    <a href="#features" class="hover:text-cyan-400 transition">Recursos</a>
-                    <a href="#download" class="hover:text-pink-400 transition">Download</a>
-                    <a href="#changelog" class="hover:text-cyan-400 transition">Changelog</a>
-                </nav>
-                <a href="#download" class="px-5 py-2.5 rounded-xl font-semibold text-sm bg-gradient-to-r from-cyan-500 to-pink-500 text-white shadow-lg shadow-cyan-500/20 hover:scale-105 transition transform">
-                    Baixar App
-                </a>
-            </div>
-        </header>
-
-        <!-- HERO SECTION -->
-        <section class="relative pt-36 pb-20 md:pt-48 md:pb-28 px-6 flex items-center justify-center overflow-hidden">
-            <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-cyan-500/10 rounded-full blur-[120px] pointer-events-none"></div>
-            <div class="absolute top-1/3 left-1/3 w-[400px] h-[400px] bg-pink-500/10 rounded-full blur-[120px] pointer-events-none"></div>
-
-            <div class="max-w-4xl mx-auto text-center relative z-10">
-                <div class="inline-block p-4 rounded-3xl bg-gradient-to-b from-gray-800/40 to-gray-900/60 border border-gray-700/50 backdrop-blur-xl shadow-2xl mb-8 animate-float">
-                    <img src="logo.png" alt="Discordia Emblema" class="w-28 h-28 md:w-36 md:h-36 object-contain animate-pulse-glow">
-                </div>
-
-                <h1 class="text-4xl md:text-7xl font-black tracking-tight mb-6">
-                    O Aplicativo Definitivo para <br>
-                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-500 text-glow-cyan">
-                        Windows & Amigos
-                    </span>
-                </h1>
-                
-                <p class="text-lg md:text-xl text-gray-300 max-w-2xl mx-auto mb-10 font-light leading-relaxed">
-                    Desfrute de customizações exclusivas, performance otimizada para jogos e uma experiência visual futurista incomparável.
-                </p>
-
-                <div id="download" class="flex flex-col sm:flex-row items-center justify-center gap-4">
-                    <a href="#" class="w-full sm:w-auto px-8 py-4 rounded-2xl font-bold text-base bg-gradient-to-r from-cyan-500 to-blue-600 text-white shadow-xl shadow-cyan-500/30 hover:shadow-cyan-500/50 hover:scale-105 transition transform flex items-center justify-center space-x-3">
-                        <i class="fas fa-download text-lg"></i>
-                        <span>Baixar para Windows (.exe)</span>
-                    </a>
-                    <a href="#" class="w-full sm:w-auto px-8 py-4 rounded-2xl font-bold text-base bg-gray-800/80 hover:bg-gray-800 text-gray-200 border border-gray-700 backdrop-blur-md hover:scale-105 transition transform flex items-center justify-center space-x-3">
-                        <i class="fas fa-box-archive text-lg text-pink-400"></i>
-                        <span>Versão Portable (.zip)</span>
-                    </a>
-                </div>
-            </div>
-        </section>
-
-        <!-- SEÇÃO DE DESTAQUES / PRINCIPAIS PONTOS DO APP -->
-        <section id="features" class="py-20 px-6 max-w-6xl mx-auto relative z-10">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl md:text-5xl font-extrabold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-pink-500">
-                    Principais Pontos do Aplicativo
-                </h2>
-                <p class="text-gray-400">Tudo o que o Discordia Desktop oferece para a sua experiência.</p>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <!-- Card 1 -->
-                <div class="p-8 rounded-3xl bg-gray-900/60 border border-gray-800 hover:border-cyan-500/40 transition group backdrop-blur-xl">
-                    <div class="w-14 h-14 rounded-2xl bg-cyan-500/10 border border-cyan-500/30 flex items-center justify-center text-cyan-400 text-2xl mb-6 group-hover:scale-110 transition">
-                        <i class="fas fa-desktop"></i>
-                    </div>
-                    <h3 class="text-xl font-bold text-white mb-3">Feito para Windows</h3>
-                    <p class="text-gray-400 text-sm leading-relaxed">
-                        Executável otimizado com suporte a tray (minimizar ao fechar), inicialização junto ao sistema e detecção opcional de jogos.
-                    </p>
-                </div>
-
-                <!-- Card 2 -->
-                <div class="p-8 rounded-3xl bg-gray-900/60 border border-gray-800 hover:border-pink-500/40 transition group backdrop-blur-xl">
-                    <div class="w-14 h-14 rounded-2xl bg-pink-500/10 border border-pink-500/30 flex items-center justify-center text-pink-400 text-2xl mb-6 group-hover:scale-110 transition">
-                        <i class="fas fa-palette"></i>
-                    </div>
-                    <h3 class="text-xl font-bold text-white mb-3">Temas e Cores Customizáveis</h3>
-                    <p class="text-gray-400 text-sm leading-relaxed">
-                        Gradientes incríveis, paletas de cores personalizáveis e opção para randomizar cores direto na interface.
-                    </p>
-                </div>
-
-                <!-- Card 3 -->
-                <div class="p-8 rounded-3xl bg-gray-900/60 border border-gray-800 hover:border-purple-500/40 transition group backdrop-blur-xl">
-                    <div class="w-14 h-14 rounded-2xl bg-purple-500/10 border border-purple-500/30 flex items-center justify-center text-purple-400 text-2xl mb-6 group-hover:scale-110 transition">
-                        <i class="fas fa-video"></i>
-                    </div>
-                    <h3 class="text-xl font-bold text-white mb-3">Transmissão & PiP Avançado</h3>
-                    <p class="text-gray-400 text-sm leading-relaxed">
-                        Compartilhamento de tela em 720p/1080p (30/60 FPS), galeria com foco individual, tela cheia e Picture-in-Picture[cite: 5].
-                    </p>
-                </div>
-            </div>
-        </section>
-
-        <!-- SEÇÃO DE CHANGELOG (ATUALIZADA) -->
-        <section id="changelog" class="py-20 px-6 max-w-4xl mx-auto relative z-10">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl md:text-5xl font-extrabold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-pink-500">
-                    Changelog & Histórico de Versões
-                </h2>
-                <p class="text-gray-400">Acompanhe todas as atualizações e correções do Discordia Desktop.</p>
-            </div>
-
-            <div class="space-y-6">
-                <!-- Beta 0.9.7 -->
-                <div class="p-6 md:p-8 rounded-3xl bg-gray-900/60 border border-cyan-500/30 backdrop-blur-xl relative overflow-hidden group hover:border-cyan-400 transition">
-                    <div class="absolute top-0 right-0 w-32 h-32 bg-cyan-500/10 rounded-full blur-2xl group-hover:bg-cyan-500/20 transition"></div>
-                    <div class="flex flex-col md:flex-row md:items-center justify-between mb-6 gap-2">
-                        <div class="flex items-center space-x-3">
-                            <span class="px-3.5 py-1 rounded-full text-xs font-bold bg-cyan-500/20 text-cyan-300 border border-cyan-500/30">Beta 0.9.7</span>
-                            <h3 class="text-xl font-bold text-white">Correção da Tela Preta & Hotfix Portable</h3>
-                        </div>
-                        <span class="text-sm text-gray-400 font-medium">Outubro, 2026</span>
-                    </div>
-                    <ul class="space-y-3 text-gray-300 text-sm md:text-base">
-                        <li class="flex items-center space-x-3">
-                            <i class="fas fa-check text-cyan-400 text-xs"></i>
-                            <span>Substituição do protocolo interno de assets por `BrowserWindow.loadFile()` no executável portátil[cite: 5].</span>
-                        </li>
-                        <li class="flex items-center space-x-3">
-                            <i class="fas fa-check text-cyan-400 text-xs"></i>
-                            <span>Validação automática dos arquivos JS e CSS da build Vite antes do empacotamento[cite: 5].</span>
-                        </li>
-                        <li class="flex items-center space-x-3">
-                            <i class="fas fa-check text-cyan-400 text-xs"></i>
-                            <span>Resposta dos arquivos locais por `fs.readFile` com MIME correto e proteção de caminhos[cite: 5].</span>
-                        </li>
-                    </ul>
-                </div>
-
-                <!-- v0.9.6 -->
-                <div class="p-6 md:p-8 rounded-3xl bg-gray-900/60 border border-gray-800 backdrop-blur-xl">
-                    <div class="flex flex-col md:flex-row md:items-center justify-between mb-6 gap-2">
-                        <div class="flex items-center space-x-3">
-                            <span class="px-3.5 py-1 rounded-full text-xs font-bold bg-pink-500/20 text-pink-300 border border-pink-500/30">v0.9.6</span>
-                            <h3 class="text-xl font-bold text-white">Correção do Google OAuth no Windows</h3>
-                        </div>
-                        <span class="text-sm text-gray-400 font-medium">Outubro, 2026</span>
-                    </div>
-                    <ul class="space-y-3 text-gray-300 text-sm md:text-base">
-                        <li class="flex items-center space-x-3">
-                            <i class="fas fa-check text-pink-400 text-xs"></i>
-                            <span>Credenciais criptografadas pelo `safeStorage` do Electron no perfil do Windows[cite: 5].</span>
-                        </li>
-                        <li class="flex items-center space-x-3">
-                            <i class="fas fa-check text-pink-400 text-xs"></i>
-                            <span>Correção da troca do código OAuth após erro `client_secret is missing`[cite: 5].</span>
-                        </li>
-                    </ul>
-                </div>
-
-                <!-- v0.9.4 -->
-                <div class="p-6 md:p-8 rounded-3xl bg-gray-900/60 border border-gray-800 backdrop-blur-xl">
-                    <div class="flex flex-col md:flex-row md:items-center justify-between mb-6 gap-2">
-                        <div class="flex items-center space-x-3">
-                            <span class="px-3.5 py-1 rounded-full text-xs font-bold bg-purple-500/20 text-purple-300 border border-purple-500/30">v0.9.4</span>
-                            <h3 class="text-xl font-bold text-white">Integração Social Firestore</h3>
-                        </div>
-                        <span class="text-sm text-gray-400 font-medium">Outubro, 2026</span>
-                    </div>
-                    <ul class="space-y-3 text-gray-300 text-sm md:text-base">
-                        <li class="flex items-center space-x-3">
-                            <i class="fas fa-check text-purple-400 text-xs"></i>
-                            <span>Identidade pública por UID Firebase e histórico de mensagens sincronizadas[cite: 5].</span>
-                        </li>
-                    </ul>
-                </div>
-
-                <!-- v0.9.0 -->
-                <div class="p-6 md:p-8 rounded-3xl bg-gray-900/40 border border-gray-800/60 backdrop-blur-xl">
-                    <div class="flex flex-col md:flex-row md:items-center justify-between mb-6 gap-2">
-                        <div class="flex items-center space-x-3">
-                            <span class="px-3.5 py-1 rounded-full text-xs font-bold bg-gray-800 text-gray-300 border border-gray-700">v0.9.0</span>
-                            <h3 class="text-xl font-bold text-white">Voz de Abertura & PiP Individual</h3>
-                        </div>
-                        <span class="text-sm text-gray-400 font-medium">Pré-final[cite: 5]</span>
-                    </div>
-                    <ul class="space-y-3 text-gray-400 text-sm md:text-base">
-                        <li class="flex items-center space-x-3">
-                            <i class="fas fa-rocket text-gray-500 text-xs"></i>
-                            <span>Áudio original pronunciando “Discórdia” na abertura animada e ao clicar 5 vezes no símbolo[cite: 5].</span>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-
-        <!-- FOOTER -->
-        <footer class="border-t border-gray-800/80 py-10 text-center text-gray-500 text-sm">
-            <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-4">
-                <div class="flex items-center space-x-2">
-                    <img src="logo.png" alt="Logo" class="w-6 h-6 object-contain">
-                    <span class="font-bold text-gray-300">Discordia</span>
-                </div>
-                <p>&copy; 2026 Discordia. Desenvolvido para amigos com muito estilo.</p>
-            </div>
-        </footer>
-
-    </div>
-
-    <!-- SCRIPT DE TRANSIÇÃO -->
-    <script>
-        function entrarSite() {
-            const splashScreen = document.getElementById('splash-screen');
-            splashScreen.style.opacity = '0';
-            splashScreen.style.visibility = 'hidden';
-        }
-
-        document.addEventListener("DOMContentLoaded", () => {
-            const progressBar = document.getElementById('progress-bar');
-            
-            setTimeout(() => {
-                progressBar.style.width = '100%';
-            }, 100);
-
-            setTimeout(() => {
-                entrarSite();
-            }, 1600);
-        });
-    </script>
-</body>
-</html>
+    <div class="floating-label label-left">✧ &nbsp; Seu estilo</div><div class="floating-label label-right">◉ &nbsp; Sua comunidade</div>
+    <p class="illustration-disclaimer">Ilustração conceitual — não é uma captura real do aplicativo.</p>
+   </div>
+  </div>
+ </section>
+ <section class="section" id="recursos" aria-labelledby="features-heading">
+  <div class="container">
+   <span class="section-tag">O QUE ESTAMOS CONSTRUINDO</span>
+   <div class="section-heading"><h2 id="features-heading">Tudo começa com uma <span class="gradient">boa conexão.</span></h2><p>Os recursos do Desktop estão em desenvolvimento e validação. A experiência pode mudar durante os testes.</p></div>
+   <div class="features">
+    <article class="feature"><span class="feature-icon">◉</span><h3>Voz para ficar junto</h3><p>Entre em canais de voz, encontre seus amigos e mantenha a conversa enquanto usa o aplicativo.</p><small>CANAIS DE VOZ</small></article>
+    <article class="feature"><span class="feature-icon violet">▣</span><h3>Compartilhe sua tela</h3><p>Mostre jogos e janelas, acompanhe transmissões e use o mini-player.</p><small>TRANSMISSÃO EM TESTES</small></article>
+    <article class="feature"><span class="feature-icon pink-icon">⌗</span><h3>Seu espaço, suas regras</h3><p>Servidores, canais de texto, mensagens diretas e organização da comunidade.</p><small>COMUNIDADES</small></article>
+    <article class="feature"><span class="feature-icon violet">✧</span><h3>Personalize tudo</h3><p>Perfis, banners, cores e estilos para deixar seu universo com a sua personalidade.</p><small>IDENTIDADE VISUAL</small></article>
+    <article class="feature"><span class="feature-icon">♫</span><h3>Feito para o Desktop</h3><p>Notificações organizadas, controles de áudio e atividade opcional de jogos.</p><small>WINDOWS</small></article>
+    <article class="feature"><span class="feature-icon pink-icon">↗</span><h3>Melhorias a cada RC</h3><p>Versões de teste ajudam a identificar falhas antes de liberar uma edição estável.</p><small>EVOLUÇÃO CONTÍNUA</small></article>
+   </div>
+  </div>
+ </section>
+ <section class="section technology" id="conexao" aria-labelledby="technology-heading">
+  <div class="container technology-grid">
+   <div><span class="section-tag">POR TRÁS DA CONEXÃO</span><h2 id="technology-heading">Conectar pessoas. <span class="gradient">Evoluir com segurança.</span></h2><p>O Discórdia combina tecnologias de comunicação. Separamos o que já foi configurado daquilo que ainda precisa de testes reais com vídeo e vários participantes.</p></div>
+   <div class="tech-list">
+    <article><strong>01</strong><div><h3>P2P / WebRTC</h3><p>Conexões diretas avaliadas nas chamadas e transmissões.</p></div><span class="tech-state">EM USO</span></article>
+    <article><strong>02</strong><div><h3>TURN de reserva</h3><p>Rota alternativa para ajudar quando a ligação direta encontra dificuldades.</p></div><span class="tech-state">CONFIGURADO</span></article>
+    <article><strong>03</strong><div><h3>SFU de mídia</h3><p>A autorização da sala foi testada; o transporte real de vídeo ainda não foi homologado.</p></div><span class="tech-state test-state">EXPERIMENTAL</span></article>
+   </div>
+  </div>
+ </section>
+ <section class="section progress" id="progresso" aria-labelledby="progress-heading">
+  <div class="container">
+   <span class="section-tag">DESENVOLVIMENTO TRANSPARENTE</span>
+   <div class="section-heading"><h2 id="progress-heading">Cada versão, <span class="gradient">um passo.</span></h2><p>Compilar uma versão privada não significa que ela foi lançada publicamente.</p></div>
+   <div class="timeline">
+    <article><span class="index">01</span><div><small class="completed">CONCLUÍDO INTERNAMENTE</small><h3>Compilação automática para Windows</h3><p>Instalador e portátil gerados pelo GitHub Actions em repositório privado.</p></div></article>
+    <article><span class="index">02</span><div><small class="completed">TESTES PRIVADOS</small><h3>Discórdia 1.0.0-rc.5</h3><p>Notificações empilhadas, avisos de atualização e segurança do piloto SFU.</p></div></article>
+    <article><span class="index">03</span><div><small class="developing">EM DESENVOLVIMENTO</small><h3>SFU e recuperação de transmissões</h3><p>Controle de sessões, mídia real e testes entre computadores, preservando a voz.</p></div></article>
+    <article><span class="index">04</span><div><small>PRÓXIMO MARCO</small><h3>Discórdia 1.0 Estável</h3><p>Depende da homologação, revisão de segurança e distribuição aprovada.</p></div></article>
+   </div>
+  </div>
+ </section>
+ <section class="section downloads" id="downloads" aria-labelledby="downloads-heading">
+  <div class="container">
+   <span class="section-tag">DISTRIBUIÇÃO OFICIAL</span>
+   <div class="download-heading"><div><h2 id="downloads-heading">Seu lugar no <span class="gradient">Discórdia.</span></h2><p>Os botões só serão liberados quando existirem executáveis publicados oficialmente no GitHub Releases deste projeto.</p></div><div class="status-box"><i></i><span id="release-status" role="status" aria-live="polite">Consultando versões públicas…</span></div></div>
+   <div class="download-grid">
+    <article class="download-card"><div class="download-top"><span class="download-icon">◇</span><small>CANAL ESTÁVEL</small></div><h3>Discórdia Estável</h3><p>Para quem prefere versões aprovadas. Não recebe candidatos RC automaticamente.</p><strong class="download-version" id="stable-version">Sem lançamento público</strong><div class="download-actions"><a id="stable-installer" class="btn primary is-disabled" aria-disabled="true" tabindex="-1">Instalador indisponível</a><a id="stable-portable" class="secondary-link is-disabled" aria-disabled="true" tabindex="-1">Portátil indisponível</a></div><span class="download-caption">Windows x64 • Instalador NSIS e portátil quando disponíveis</span></article>
+    <article class="download-card testers"><div class="download-top"><span class="download-icon">✧</span><small>PROGRAMA DE TESTERS</small></div><h3>Discórdia RC</h3><p>Versões experimentais para quem aceita testar novidades e relatar problemas. Podem conter bugs.</p><strong class="download-version" id="rc-version">RC5 em validação privada</strong><div class="download-actions"><a id="rc-installer" class="btn outline is-disabled" aria-disabled="true" tabindex="-1">RC indisponível publicamente</a><a id="rc-portable" class="secondary-link is-disabled" aria-disabled="true" tabindex="-1">Portátil RC indisponível</a></div><span class="download-caption">O canal RC é opcional nas configurações do aplicativo.</span></article>
+   </div>
+   <div class="download-footer"><span id="release-hint">Nenhuma Release pública disponível para download.</span><a href="https://github.com/magaskye/discordia/releases" target="_blank" rel="noopener noreferrer">Ver Releases no GitHub ↗</a></div>
+  </div>
+ </section>
+ <section class="section faq" id="perguntas" aria-labelledby="faq-heading">
+  <div class="container faq-grid"><div><span class="section-tag">PERGUNTAS FREQUENTES</span><h2 id="faq-heading">Antes de entrar <span class="gradient">no universo.</span></h2><p>Tire suas dúvidas sobre versões, atualizações e desenvolvimento.</p></div>
+   <div class="questions">
+    <details><summary>Já posso baixar o Discórdia?</summary><p>A RC5 está em testes privados. Quando existir uma Release pública aprovada, os links de download aparecerão automaticamente nesta página.</p></details>
+    <details><summary>Qual é a diferença entre Estável e RC?</summary><p>Estável é para versões aprovadas. RC (Release Candidate) é um programa opcional para testers, com possíveis bugs e recursos experimentais.</p></details>
+    <details><summary>O Discórdia terá atualização automática?</summary><p>O instalador Windows tem um atualizador em validação. Ele deverá consultar Releases oficiais, mostrar as novidades e permitir adiar, sem encerrar chamadas sem confirmação. O portátil oferece link para download, não troca silenciosa do EXE.</p></details>
+    <details><summary>O SFU já transmite vídeo?</summary><p>A autorização de sala já foi testada. O envio e recebimento de vídeo pelo SFU ainda estão sendo desenvolvidos e não podem ser considerados homologados.</p></details>
+    <details><summary>Como relatar bugs e sugestões?</summary><p>Use a área de Issues do GitHub por enquanto. Ela é pública: não envie senhas, tokens, dados pessoais ou imagens sensíveis. O formulário privado com antispam ainda está no planejamento.</p></details>
+   </div>
+  </div>
+ </section>
+ <section class="contact-section" id="comunidade"><div class="container contact-card"><div><span class="section-tag">CONSTRUINDO JUNTOS</span><h2>Tem uma ideia para o <span class="gradient">Discórdia?</span></h2><p>Erros e sugestões ajudam o projeto a crescer. Os relatos publicados no GitHub são visíveis a outras pessoas; não inclua dados sensíveis.</p></div><div class="contact-actions"><a class="btn primary" href="https://github.com/magaskye/discordia/issues/new/choose" target="_blank" rel="noopener noreferrer">Enviar bug ou sugestão ↗</a><a class="btn outline" href="https://github.com/magaskye/discordia" target="_blank" rel="noopener noreferrer">Visitar GitHub ↗</a></div></div></section>
+</main>
+<footer class="footer"><div class="container footer-main"><div class="footer-brand"><a href="#inicio" class="brand"><img src="./logo.png" alt="" width="37" height="37"><span>Disc<span class="accent">ó</span>rdia<span class="pink">.</span></span></a><p>Um universo para os seus amigos, em evolução constante.</p></div><nav aria-label="Links do rodapé" class="footer-links"><a href="#recursos">Recursos</a><a href="#downloads">Lançamentos</a><a href="./privacidade.html">Privacidade</a><a href="https://github.com/magaskye/discordia/issues" target="_blank" rel="noopener noreferrer">Feedback ↗</a></nav></div><div class="container footer-end"><span>© 2026 Discórdia Desktop — projeto independente em desenvolvimento.</span><span>Versão estável ainda não lançada.</span></div></footer>
+</body></html>
