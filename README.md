@@ -10,6 +10,14 @@ Este repositório é **público** e hospeda somente o site estático do Discórd
 - `privacidade.html` — informações preliminares, a serem revisadas antes do lançamento estável.
 - `.github/ISSUE_TEMPLATE` — modelos públicos de bugs e sugestões, sem formulário privado ainda.
 
+## Hotfix RC6.3 — SFU em sala de teste com duas pessoas — 20/10/2026
+
+- **Última Release RC/Testers:** [v1.0.0-rc.6.3](https://github.com/magaskye/discordia/releases/tag/v1.0.0-rc.6.3), com instalador, portátil, `rc.yml` e somas SHA256. Validação automatizada e build Windows aprovados pelo [GitHub Actions privado](https://github.com/magaskye/discordia-build/actions/runs/39461774698). **Não significa homologação SFU em computadores reais.**
+- Corrigido o `connect-src` do Electron para permitir **somente** o hostname SFU staging oficial; é uma causa provável do `Failed_to_fetch`, mas o resultado final exige teste Windows.
+- A sala **Teste SFU RC6** prefere vídeo SFU a partir de duas pessoas, com validação de `framesEncoded/framesDecoded` e fallback de vídeo P2P/TURN, mantendo voz independente.
+- Preserva Palco V2, SmartStream V2, presença e economia TURN opcional da RC6.2. Não altera Cloudflare TURN nem a edição Estável.
+- O canal RC/Testers com atualizador ativo pode detectar o pré-lançamento. A edição portátil exige download; não há garantia de notificação push em todos os computadores.
+
 ## Hotfix RC6.2 de economia TURN — 20/10/2026
 
 - **Última Release pública RC/Testers:** [v1.0.0-rc.6.2](https://github.com/magaskye/discordia/releases/tag/v1.0.0-rc.6.2), validada e compilada pelo GitHub Actions privado (workflow 39381979631), com instalador, portátil, `rc.yml` e hash SHA256.
@@ -21,7 +29,7 @@ Este repositório é **público** e hospeda somente o site estático do Discórd
 
 ## Situação do projeto — 20/10/2026
 
-- **Discórdia Desktop 1.0.0-rc.6.1:** hotfix **publicado como pré-lançamento RC/Testers** em https://github.com/magaskye/discordia/releases/tag/v1.0.0-rc.6.1, contendo instalador e versão portátil Windows. O workflow privado de validação/empacotamento concluiu com sucesso. **Ainda falta homologação com usuários reais no Windows**.
+- **Discórdia Desktop 1.0.0-rc.6.3:** hotfix **publicado como pré-lançamento RC/Testers** em https://github.com/magaskye/discordia/releases/tag/v1.0.0-rc.6.3, contendo instalador e versão portátil Windows. O workflow privado de validação/empacotamento concluiu com sucesso. **Ainda falta homologação com usuários reais no Windows**.
 - **P2P e TURN:** fluxos de áudio/vídeo e relay testados; o TURN permanece homologado para seu escopo.
 - **SFU:** staging/autorizações implementadas e verificadas; recepção real de quadros por múltiplos computadores ainda **não homologada**.
 - **Palco V2, SmartStream V2 e presença:** compilados no hotfix RC6.1; precisam de testes de fluidez/FPS, tela preta, reconexão e remoção de participantes fantasma em vários computadores.
