@@ -10,6 +10,15 @@ Este repositório é **público** e hospeda somente o site estático do Discórd
 - `privacidade.html` — informações preliminares, a serem revisadas antes do lançamento estável.
 - `.github/ISSUE_TEMPLATE` — modelos públicos de bugs e sugestões, sem formulário privado ainda.
 
+## Hotfix RC6.2 de economia TURN — 20/10/2026
+
+- **Última Release pública RC/Testers:** [v1.0.0-rc.6.2](https://github.com/magaskye/discordia/releases/tag/v1.0.0-rc.6.2), validada e compilada pelo GitHub Actions privado (workflow 39381979631), com instalador, portátil, `rc.yml` e hash SHA256.
+- Economia de dados opcional **somente quando o vídeo WebRTC está comprovadamente usando TURN**: jogo até 1,8 Mbps/45 FPS/900p, janela/tela até 1,25 Mbps/30 FPS/720p. Há uma opção para desativar, priorizando a qualidade máxima.
+- **Não modifica o TURN hospedado na Cloudflare**, nem ICE/P2P direto ou áudio de chamadas. A economia real exige testes com a mesma audiência e tempo, observando `egressBytes` no analytics TURN.
+- **SFU ainda não homologado** em quadros de vídeo entre vários clientes Windows; estágio experimental continua com fallback P2P/TURN.
+- Release RC6.1 segue no histórico; a 1.0 estável não foi lançada.
+- Atualização automática apenas para clientes com feed configurado e opção RC/Testers ativa. Portátil informa download manual.
+
 ## Situação do projeto — 20/10/2026
 
 - **Discórdia Desktop 1.0.0-rc.6.1:** hotfix **publicado como pré-lançamento RC/Testers** em https://github.com/magaskye/discordia/releases/tag/v1.0.0-rc.6.1, contendo instalador e versão portátil Windows. O workflow privado de validação/empacotamento concluiu com sucesso. **Ainda falta homologação com usuários reais no Windows**.
