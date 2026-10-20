@@ -10,6 +10,17 @@ Este repositório é **público** e hospeda somente o site estático do Discórd
 - `privacidade.html` — informações preliminares, a serem revisadas antes do lançamento estável.
 - `.github/ISSUE_TEMPLATE` — modelos públicos de bugs e sugestões, sem formulário privado ainda.
 
+## Situação do projeto — 20/10/2026
+
+- **Discórdia Desktop RC6 (1.0.0-rc.6):** compilação Windows privada de instalador e portátil concluída, mas sem homologação final em máquinas dos testers ou Release pública.
+- **P2P e TURN:** fluxos de áudio/vídeo com relay e reinício ICE verificados em testes de conectividade. O TURN permanece homologado para esse escopo.
+- **SFU:** ambiente experimental isolado e autorização de sala validados; publicação, assinatura e decodificação de quadros de vídeo entre usuários reais ainda aguardam comprovação.
+- **Palco V2 e SmartStream V2:** alterações preparadas em branch experimental, com testes automatizados aprovados. Layout compacto, vídeo principal em destaque e adaptação de qualidade de aproximadamente 1,6 segundo; solicitação de até 60 FPS conforme capacidade de captura. **Não compilados nem homologados no Windows na versão V2.**
+- **Próxima etapa:** integrar e validar as melhorias, observar falhas de 0 FPS/tela preta, qualidade e recuperação das transmissões, testar com vários espectadores e preparar a próxima distribuição de testes.
+- **Estável 1.0:** ainda não lançada. O site somente oferece botões ativos quando a Release pública possui executáveis oficiais verificados.
+
+O aplicativo Windows e o piloto Cloudflare permanecem separados deste repositório público. Não publicar detalhes de contas de teste, credenciais, configuração privada de CI ou materiais internos.
+
 ## Regras de lançamento
 1. Os botões nunca apontam para artefatos do repositório privado ou para endereços fictícios.
 2. Releases **estáveis** e **RC/Testers** são separadas pela informação oficial de `prerelease`.
