@@ -66,7 +66,7 @@
   function attachReleaseNotes(release, channel) {
     var node = document.getElementById(channel + '-version');
     var tag = String(release.tag_name || '');
-    if (!node || !/^v?\\d+\\.\\d+\\.\\d+(?:-rc\\.\\d+)?$/.test(tag)) return;
+    if (!node || !/^v?\d+\.\d+\.\d+(?:-rc\.\d+)?$/.test(tag)) return;
     var href = 'https://github.com/magaskye/discordia/releases/tag/' + encodeURIComponent(tag);
     var existing = document.getElementById(channel + '-notes');
     if (existing) existing.remove();
