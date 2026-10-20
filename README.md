@@ -12,12 +12,13 @@ Este repositório é **público** e hospeda somente o site estático do Discórd
 
 ## Situação do projeto — 20/10/2026
 
-- **Discórdia Desktop RC6 (1.0.0-rc.6):** compilação Windows privada de instalador e portátil concluída, mas sem homologação final em máquinas dos testers ou Release pública.
-- **P2P e TURN:** fluxos de áudio/vídeo com relay e reinício ICE verificados em testes de conectividade. O TURN permanece homologado para esse escopo.
-- **SFU:** ambiente experimental isolado e autorização de sala validados; publicação, assinatura e decodificação de quadros de vídeo entre usuários reais ainda aguardam comprovação.
-- **Palco V2 e SmartStream V2:** alterações preparadas em branch experimental, com testes automatizados aprovados. Layout compacto, vídeo principal em destaque e adaptação de qualidade de aproximadamente 1,6 segundo; solicitação de até 60 FPS conforme capacidade de captura. **Não compilados nem homologados no Windows na versão V2.**
-- **Próxima etapa:** integrar e validar as melhorias, observar falhas de 0 FPS/tela preta, qualidade e recuperação das transmissões, testar com vários espectadores e preparar a próxima distribuição de testes.
-- **Estável 1.0:** ainda não lançada. O site somente oferece botões ativos quando a Release pública possui executáveis oficiais verificados.
+- **Discórdia Desktop 1.0.0-rc.6.1:** hotfix **publicado como pré-lançamento RC/Testers** em https://github.com/magaskye/discordia/releases/tag/v1.0.0-rc.6.1, contendo instalador e versão portátil Windows. O workflow privado de validação/empacotamento concluiu com sucesso. **Ainda falta homologação com usuários reais no Windows**.
+- **P2P e TURN:** fluxos de áudio/vídeo e relay testados; o TURN permanece homologado para seu escopo.
+- **SFU:** staging/autorizações implementadas e verificadas; recepção real de quadros por múltiplos computadores ainda **não homologada**.
+- **Palco V2, SmartStream V2 e presença:** compilados no hotfix RC6.1; precisam de testes de fluidez/FPS, tela preta, reconexão e remoção de participantes fantasma em vários computadores.
+- **Aviso de atualização:** RC6 com feed GitHub ativo e participação no canal RC/Testers pode detectar o hotfix ao iniciar e nas verificações periódicas/manuais. Canal Estável não recebe RC automaticamente; portátil apenas aponta o download. **Publicar uma Release não envia um push universal**.
+- **Hotfix privado futuro:** cliente com receptor de avisos autenticados preparado, porém o backend privado ainda não está implantado/homologado e o recurso está desativado.
+- **Estável 1.0:** ainda não lançada. Versões RC públicas são experimentais.
 
 O aplicativo Windows e o piloto Cloudflare permanecem separados deste repositório público. Não publicar detalhes de contas de teste, credenciais, configuração privada de CI ou materiais internos.
 
