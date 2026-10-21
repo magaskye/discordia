@@ -111,6 +111,12 @@
     });
     var stableAvailable = display(stable, 'stable');
     var rcAvailable = display(rc, 'rc');
+    // Never announce the RC7 as published until the official binary assets exist.
+    if (rcAvailable && String(rc.tag_name || '') === 'v1.0.0-rc.7') {
+      setText('rc7-hero-badge', 'RC7 PUBLICADA · ÚLTIMA PRÉVIA ANTES DA 1.0');
+      setText('rc7-hero-description', 'A RC7 já está disponível para Windows no canal RC/Testers: nova interface V3, temas Fuyuki, Requiem e CTR Turbo Rush e perfis SmartStream V3. P2P, TURN e SFU continuam preservados. Esta é uma versão de testes, não a 1.0 Stable.');
+      setText('rc7-timeline-status', 'RC7 PUBLICADA · TESTES WINDOWS EM ANDAMENTO');
+    }
     if (stableAvailable || rcAvailable) {
       status.textContent = 'Releases oficiais disponíveis';
       setText('release-hint', 'Arquivos publicados pelo projeto. Confira as notas de cada versão antes de instalar.');
