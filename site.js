@@ -94,7 +94,12 @@
       if(rcAvailable){
         const match=String(rc?.tag_name||'').match(/^v?\d+\.\d+\.\d+-rc\.(\d+)(?:\.(\d+))?$/);
         const rcLevel=Number(match?.[1]||0),rcPatch=Number(match?.[2]||0);
-        if(rcLevel>7||(rcLevel===7&&rcPatch>=5)){
+        if(rcLevel>7||(rcLevel===7&&rcPatch>=6)){
+          const latest=document.getElementById('rc-7-6-news');
+          if(latest)latest.hidden=false;
+          const former=document.getElementById('rc-sfu-news');
+          if(former)former.hidden=true;
+        }else if(rcLevel===7&&rcPatch>=5){
           const feature=document.getElementById('rc-sfu-news');
           if(feature)feature.hidden=false;
         }
