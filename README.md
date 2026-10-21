@@ -12,14 +12,15 @@ Este repositório é **público** e hospeda somente o site estático do Discórd
 
 ## RC7 — última prévia pública planejada antes da 1.0 (21/10/2026)
 
-- **Status da publicação:** testes e build Windows em validação no repositório privado. A RC7 só será anunciada quando a [Release](https://github.com/magaskye/discordia/releases/tag/v1.0.0-rc.7) incluir instalador, portátil e arquivo do atualizador.
+- **Status da publicação: PUBLICADA.** [RC7 v1.0.0-rc.7](https://github.com/magaskye/discordia/releases/tag/v1.0.0-rc.7) disponível como pré-lançamento público para Windows x64: instalador, portátil, `rc.yml`, blockmap e SHA-256. Testes e compilação Windows verificados no [GitHub Actions privado](https://github.com/magaskye/discordia-build/actions/runs/39554133211). A RC7 continua sujeita à homologação visual e funcional pelos testers.
 - **Interface V3:** nova composição responsiva, reorganização do Palco e amigos, controles compactos e cenários que não cobrem mensagens e vídeo.
 - **Temas V3:** Fuyuki, Requiem e CTR Turbo Rush com identidade visual independente e pacotes .disca V2 validados.
 - **SmartStream V3:** perfis Automático, Jogos, Vídeo e Texto, preservando P2P, TURN e SFU homologados pelos testers.
 - **Servidores:** permissões por canal ainda dependem de autorização no backend; não são anunciadas como prontas.
 - **Canal RC:** o site consulta o GitHub Releases e só libera links com executáveis confirmados. A 1.0 Stable permanece indisponível.
 
-### Última RC pública confirmada antes da RC7
+### Histórico de RCs
+RC7: https://github.com/magaskye/discordia/releases/tag/v1.0.0-rc.7
 RC6.5: https://github.com/magaskye/discordia/releases/tag/v1.0.0-rc.6.5
 ## Hotfix RC6.4 — vídeo, presença e economia adaptativa — 20/10/2026
 
