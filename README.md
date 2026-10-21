@@ -46,6 +46,21 @@ Este repositório público mantém exclusivamente os arquivos do site, informaç
 
 O site é estático e usa o GitHub Pages. Não requer credenciais de acesso, segredos de servidor ou coleta de senhas para disponibilizar os downloads.
 
+## Demonstração visual
+
+O site apresenta um **carrossel com capturas reais** da interface Desktop, compartilhadas durante testes anteriores: Amigos, Palco e Compartilhamento. As imagens foram reduzidas para preservar dados pessoais; os textos e controles podem variar entre versões RC. As capturas não devem ser confundidas com promessa de funcionalidades ainda não implantadas.
+
+O carrossel é manual, acessível por botões, sem reprodução automática. Para vê-lo, acesse [o início do site](https://magaskye.github.io/discordia/#inicio).
+
+## Firebase e presença
+
+- O Discórdia utiliza **Realtime Database** para presença online/voz por sessão, com `onDisconnect` e heartbeat; **Firestore** mantém informações sociais, servidores, permissões e mensagens.
+- As regras e orientações de configuração ficam no repositório privado do aplicativo. Nenhuma Release Desktop publica regras Firebase automaticamente.
+- A estabilidade de presença depende de relógio do servidor, regras autenticadas e da configuração `VITE_FIREBASE_DATABASE_URL` no build.
+- No plano Spark, mantenha os serviços dentro das cotas disponíveis e não ative Cloud Functions pagas ou novos serviços sem aprovação.
+
+A eventual **1.0 Estável** exige homologação com usuários reais, verificação das regras Firebase e confirmação das integrações de produção. O programa RC permanece separado até essa aprovação.
+
 ## Lançamentos
 
 A distribuição é organizada em dois canais:
