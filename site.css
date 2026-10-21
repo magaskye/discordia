@@ -79,3 +79,23 @@ h1{font-size:clamp(49px,5.7vw,79px);font-weight:950;letter-spacing:-.08em;line-h
 .ui2-site-points p{font-size:13px;line-height:1.7;color:#abb0c8}
 @media(max-width:1050px){.ui2-site-points{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:630px){.ui2-site-points{grid-template-columns:1fr}.ui2-site-points article{padding:18px}}
+
+/* Discórdia 2026 — official site product presentation */
+.ui2-site-story{background:linear-gradient(165deg,#10172a,#111a2f 70%,#0d1323)}
+.ui2-site-story-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:17px}
+.ui2-site-story-card{min-width:0;padding:28px;background:linear-gradient(145deg,#1b2741,#151d31);
+ border:1px solid #7085b045;border-radius:17px}
+.ui2-site-story-card h3{font-size:20px;margin-bottom:13px;color:#f3f4ff}
+.ui2-site-story-card p{font-size:13px;line-height:1.75;margin:0;color:#b8c4df}
+.ui2-site-tech{display:grid;gap:12px}
+.ui2-site-tech article{display:grid;grid-template-columns:80px 1fr;align-items:center;gap:14px;
+ background:#19243b;border:1px solid #7895b04a;border-radius:13px;padding:20px}
+.ui2-site-tech article strong{font-size:22px;color:#95dfff;letter-spacing:.015em}
+.ui2-site-tech article span{font-size:13px;line-height:1.6;color:#b5c4dc}
+.ui2-release-notes{display:inline-block;font-size:12px;color:#a7e4f6;text-decoration:underline;
+ text-underline-offset:4px;margin-top:-8px;margin-bottom:15px;font-weight:700}
+.download-card .is-disabled{opacity:.52;pointer-events:none}
+.download-card.testers{border-color:#9f75d080}
+.hero .ui2-site-preview{border-radius:15px}
+@media(max-width:900px){.ui2-site-story-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:630px){.ui2-site-story-grid{grid-template-columns:1fr}.ui2-site-tech article{grid-template-columns:64px 1fr;padding:15px}}
