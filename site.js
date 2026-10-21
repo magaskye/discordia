@@ -1,146 +1,78 @@
-/* Discórdia: botões são liberados APENAS com arquivos de Releases públicos. */
-(function () {
+/* Discórdia Desktop — exibir downloads somente após verificar os arquivos da Release oficial. */
+(function(){
   'use strict';
-  var button = document.getElementById('nav-toggle');
-  var nav = document.getElementById('nav-main');
-  if (button && nav) {
-    button.addEventListener('click', function () {
-      var isOpen = button.getAttribute('aria-expanded') === 'true';
-      button.setAttribute('aria-expanded', String(!isOpen));
-      button.setAttribute('aria-label', isOpen ? 'Abrir menu' : 'Fechar menu');
-      nav.classList.toggle('open', !isOpen);
+  const navButton=document.getElementById('nav-toggle'),nav=document.getElementById('nav-main');
+  if(navButton&&nav){
+    const close=()=>{navButton.setAttribute('aria-expanded','false');navButton.setAttribute('aria-label','Abrir menu');nav.classList.remove('open')};
+    navButton.addEventListener('click',()=>{
+      const open=navButton.getAttribute('aria-expanded')!=='true';
+      navButton.setAttribute('aria-expanded',String(open));
+      navButton.setAttribute('aria-label',open?'Fechar menu':'Abrir menu');
+      nav.classList.toggle('open',open);
     });
-    nav.querySelectorAll('a').forEach(function (link) {
-      link.addEventListener('click', function () {
-        button.setAttribute('aria-expanded', 'false');
-        button.setAttribute('aria-label', 'Abrir menu');
-        nav.classList.remove('open');
-      });
-    });
+    nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',close));
   }
-  var status = document.getElementById('release-status');
-  if (!status) return;
-
-  function setText(id, value) {
-    var element = document.getElementById(id);
-    if (element) element.textContent = value;
-  }
-  function officialUrl(value) {
-    try {
-      var url = new URL(value);
-      if (url.protocol !== 'https:' || url.hostname !== 'github.com') return null;
-      if (!url.pathname.startsWith('/magaskye/discordia/releases/download/')) return null;
-      return url.href;
-    } catch (_) { return null; }
-  }
-  function findAsset(release, kind) {
-    return (release.assets || []).find(function (file) {
-      return file && typeof file.name === 'string' &&
-        /^Discordia-.*-x64\.exe$/i.test(file.name) &&
-        file.name.toLowerCase().includes(kind) &&
-        officialUrl(file.browser_download_url);
-    });
-  }
-  function enable(id, file, label) {
-    if (!file) return false;
-    var link = document.getElementById(id);
-    var url = officialUrl(file.browser_download_url);
-    if (!link || !url) return false;
-    link.href = url;
-    link.classList.remove('is-disabled');
-    link.removeAttribute('aria-disabled');
-    link.removeAttribute('tabindex');
-    link.textContent = label;
-    link.rel = 'noopener noreferrer';
-    return true;
-  }
-  function chooseLatest(items, condition) {
-    return items.filter(function (release) {
-      return !release.draft && condition(release);
-    }).sort(function (a, b) {
-      var ta = Date.parse(a.published_at || a.created_at || '') || 0;
-      var tb = Date.parse(b.published_at || b.created_at || '') || 0;
-      return tb - ta;
-    })[0] || null;
-  }
-  function attachReleaseNotes(release, channel) {
-    var node = document.getElementById(channel + '-version');
-    var tag = String(release.tag_name || '');
-    if (!node || !/^v?\d+\.\d+\.\d+(?:-rc\.\d+(?:\.\d+)?)?$/.test(tag)) return;
-    var href = 'https://github.com/magaskye/discordia/releases/tag/' + encodeURIComponent(tag);
-    var existing = document.getElementById(channel + '-notes');
-    if (existing) existing.remove();
-    var link = document.createElement('a');
-    link.id = channel + '-notes';
-    link.href = href;
-    link.textContent = 'Ver novidades e problemas conhecidos ↗';
-    link.rel = 'noopener noreferrer';
-    link.target = '_blank';
-    link.style.display = 'block';
-    link.style.marginTop = '0.5rem';
-    node.insertAdjacentElement('afterend', link);
-  }
-  function display(release, channel) {
-    if (!release) return false;
-    var ver = String(release.tag_name || '').replace(/^v/i, '').slice(0, 40);
-    var installer = findAsset(release, 'instalador');
-    var portable = findAsset(release, 'portatil');
-    var yesInstaller = enable(channel + '-installer', installer, 'Baixar instalador (.exe) ↗');
-    var yesPortable = enable(channel + '-portable', portable, 'Baixar versão portátil ↗');
-    if (yesInstaller || yesPortable) {
-      setText(channel + '-version', 'Versão oficial publicada: ' + ver);
-      attachReleaseNotes(release, channel);
-      return true;
-    }
-    setText(channel + '-version', 'Release ' + ver + ' sem executável validado');
-    return false;
-  }
-  fetch('https://api.github.com/repos/magaskye/discordia/releases?per_page=40', {
-    headers: { Accept: 'application/vnd.github+json' },
-    cache: 'no-store'
-  }).then(function (response) {
-    if (!response.ok) throw new Error('github_unavailable_' + response.status);
-    return response.json();
-  }).then(function (releases) {
-    if (!Array.isArray(releases)) throw new Error('invalid_release_response');
-    var stable = chooseLatest(releases, function (r) {
-      return !r.prerelease && /^v?\d+\.\d+\.\d+$/.test(r.tag_name || '');
-    });
-    var rc = chooseLatest(releases, function (r) {
-      return r.prerelease && /^v?\d+\.\d+\.\d+-rc\.\d+(?:\.\d+)?$/.test(r.tag_name || '');
-    });
-    var stableAvailable = display(stable, 'stable');
-    var rcAvailable = display(rc, 'rc');
-    // Only announce UIDiscordiaV2 after the official RC7.2 Windows files pass display().
-    if (rcAvailable && String(rc.tag_name || '') === 'v1.0.0-rc.7.2') {
-      setText('rc7-hero-badge', 'RC7.2 PUBLICADA · UIDiscordiaV2');
-      setText('rc7-hero-description', 'A RC7.2 já está disponível para Windows: UIDiscordiaV2 é a nova interface padrão, com amigos em cartões ilustrados, Palco com chat próprio, transmissão simplificada e notificações renovadas. Temas Fuyuki, Requiem e CTR se adaptam ao novo design. P2P/TURN/SFU preservados.');
-      setText('rc7-timeline-status', 'RC7.1 · VERSÃO ANTERIOR');
-      setText('ui2-release-status', 'RC7.2 PUBLICADA · UIDiscordiaV2');
-    } else if (rcAvailable && String(rc.tag_name || '') === 'v1.0.0-rc.7.1') {
-      setText('rc7-hero-badge', 'UIDiscordiaV2 EM TESTES · RC7.1 DISPONÍVEL');
-      setText('rc7-hero-description', 'A UIDiscordiaV2 substituirá o layout antigo como interface padrão na RC7.2. O novo Palco, amigos, transmissão e notificações seguem em testes; enquanto isso o download confirmado continua sendo a RC7.1.');
-      setText('ui2-release-status', 'RC7.2 EM TESTES · AINDA NÃO PUBLICADA');
-      setText('rc7-hero-badge', 'RC7.1 PUBLICADA · INTERFACE V3 RENOVADA');
-      setText('rc7-hero-description', 'A RC7.1 foi publicada para Windows no canal RC/Testers: nova Central Social, Palco que prioriza vídeo, compartilhamento independente e temas Fuyuki, Requiem e CTR com layout protegido. P2P, TURN e SFU continuam preservados. Ainda é versão de testes, não Stable.');
-      setText('rc7-timeline-status', 'RC7.1 PUBLICADA · HOMOLOGAÇÃO VISUAL EM ANDAMENTO');
-    } else if (rcAvailable && String(rc.tag_name || '') === 'v1.0.0-rc.7') {
-      setText('rc7-hero-badge', 'RC7.1 EM TESTES · RC7 DISPONÍVEL');
-      setText('rc7-hero-description', 'Corrigindo a RC7 com a nova interface V3 estrutural: cards de amigos, Palco e temas sem sobreposição. A RC7.1 só será liberada após compilação e verificação dos arquivos oficiais; por enquanto a RC7 permanece disponível.');
-      setText('rc7-timeline-status', 'RC7.1 EM TESTES · RC7 CONTINUA DISPONÍVEL');
-    }
-    if (stableAvailable || rcAvailable) {
-      status.textContent = 'Releases oficiais disponíveis';
-      setText('release-hint', 'Arquivos publicados pelo projeto. Confira as notas de cada versão antes de instalar.');
-    } else if (stable || rc) {
-      status.textContent = 'Releases sem instalador confirmado';
-      setText('release-hint', 'Há registros de lançamento, mas nenhum executável corresponde ao padrão oficial.');
-    } else {
-      status.textContent = 'Pré-lançamento • sem download público';
-      setText('release-hint', 'Ainda não existe nenhuma Release pública disponível para download.');
-    }
-  }).catch(function () {
-    status.textContent = 'Verificação do GitHub indisponível';
-    setText('release-hint', 'Não foi possível verificar as versões. Consulte a página oficial de Releases no GitHub.');
+  const text=(id,value)=>{const el=document.getElementById(id);if(el)el.textContent=value};
+  const official=url=>{
+    try{
+      const u=new URL(url);
+      return u.protocol==='https:'&&u.hostname==='github.com'&&
+        u.pathname.startsWith('/magaskye/discordia/releases/download/')?u.href:null;
+    }catch{return null}
+  };
+  const kind=(release,label)=>(release.assets||[]).find(asset=>{
+    const name=String(asset.name||'').toLowerCase();
+    return /^discordia-.*-x64\.exe$/.test(name)&&name.includes(label)&&
+      Number(asset.size)>5000000&&official(asset.browser_download_url);
   });
+  const activate=(id,asset,label)=>{
+    if(!asset)return false;
+    const el=document.getElementById(id),url=official(asset.browser_download_url);
+    if(!el||!url)return false;
+    el.href=url;el.textContent=label;el.rel='noopener noreferrer';
+    el.classList.remove('is-disabled');el.removeAttribute('tabindex');el.removeAttribute('aria-disabled');
+    return true;
+  };
+  const latest=(items,filter)=>items.filter(v=>!v.draft&&filter(v)).sort((a,b)=>
+    (Date.parse(b.published_at||'')||0)-(Date.parse(a.published_at||'')||0))[0];
+  const confirm=(release,channel)=>{
+    if(!release)return false;
+    const installer=kind(release,'instalador'),portable=kind(release,'portatil');
+    if(!installer||!portable)return false;
+    const manifest=(release.assets||[]).some(a=>a.name===(channel==='rc'?'rc.yml':'latest.yml'));
+    const hash=(release.assets||[]).some(a=>a.name==='SHA256SUMS.txt');
+    if(!manifest||!hash)return false;
+    const okA=activate(channel+'-installer',installer,'Baixar instalador (.exe) ↗');
+    const okB=activate(channel+'-portable',portable,'Baixar versão portátil ↗');
+    if(!(okA&&okB))return false;
+    const tag=String(release.tag_name||'');
+    text(channel+'-version','Versão '+tag.replace(/^v/,'')+' · Windows x64');
+    const node=document.getElementById(channel+'-version');
+    if(node&&/^v?\d+\.\d+\.\d+(?:-rc\.\d+(?:\.\d+)?)?$/.test(tag)){
+      const link=document.createElement('a');
+      link.href='https://github.com/magaskye/discordia/releases/tag/'+encodeURIComponent(tag);
+      link.textContent='Consultar notas da versão ↗';link.target='_blank';link.rel='noopener noreferrer';
+      link.className='ui2-release-notes';
+      node.insertAdjacentElement('afterend',link);
+    }
+    return true;
+  };
+  fetch('https://api.github.com/repos/magaskye/discordia/releases?per_page=30',{headers:{Accept:'application/vnd.github+json'},cache:'no-store'})
+    .then(res=>{if(!res.ok)throw new Error('source_unavailable');return res.json()})
+    .then(items=>{
+      if(!Array.isArray(items))throw new Error('source_invalid');
+      const rc=latest(items,r=>r.prerelease&&/^v?\d+\.\d+\.\d+-rc\.\d+(?:\.\d+)?$/.test(r.tag_name||''));
+      const stable=latest(items,r=>!r.prerelease&&/^v?\d+\.\d+\.\d+$/.test(r.tag_name||''));
+      const rcAvailable=confirm(rc,'rc'),stableAvailable=confirm(stable,'stable');
+      if(rcAvailable){
+        text('release-hero-badge','DISCÓRDIA RC DISPONÍVEL');
+        text('release-hint','Downloads oficiais verificados. Consulte as notas e a integridade SHA-256.');
+      }
+      if(stableAvailable)text('release-hero-badge','DISCÓRDIA PARA WINDOWS');
+      text('release-status',rcAvailable||stableAvailable?'Downloads disponíveis':'Acompanhe os lançamentos');
+    })
+    .catch(()=>{
+      text('release-status','Consulte as versões no GitHub');
+      text('release-hint','A página oficial de Releases está disponível pelo link ao lado.');
+    });
 })();
