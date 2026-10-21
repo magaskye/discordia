@@ -57,6 +57,27 @@
     }
     return true;
   };
+  // Carrossel manual: navegação por controles, sem interromper leitor de tela.
+  const slides=[...document.querySelectorAll('.ui2-real-slide')];
+  const dots=[...document.querySelectorAll('.ui2-real-slide-dots button')];
+  let slideIndex=0;
+  const setSlide=index=>{
+    if(slides.length!==3)return;
+    slideIndex=(index+slides.length)%slides.length;
+    slides.forEach((slide,i)=>{
+      slide.hidden=i!==slideIndex;
+      slide.classList.toggle('is-current',i===slideIndex);
+    });
+    dots.forEach((dot,i)=>{
+      dot.classList.toggle('is-current',i===slideIndex);
+      if(i===slideIndex)dot.setAttribute('aria-current','true');
+      else dot.removeAttribute('aria-current');
+    });
+  };
+  document.getElementById('ui2-slide-prev')?.addEventListener('click',()=>setSlide(slideIndex-1));
+  document.getElementById('ui2-slide-next')?.addEventListener('click',()=>setSlide(slideIndex+1));
+  dots.forEach((dot,i)=>dot.addEventListener('click',()=>setSlide(i)));
+
   fetch('https://api.github.com/repos/magaskye/discordia/releases?per_page=30',{headers:{Accept:'application/vnd.github+json'},cache:'no-store'})
     .then(res=>{if(!res.ok)throw new Error('source_unavailable');return res.json()})
     .then(items=>{
