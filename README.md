@@ -10,6 +10,16 @@ Este repositório é **público** e hospeda somente o site estático do Discórd
 - `privacidade.html` — informações preliminares, a serem revisadas antes do lançamento estável.
 - `.github/ISSUE_TEMPLATE` — modelos públicos de bugs e sugestões, sem formulário privado ainda.
 
+## UIDiscordiaV2 · RC7.2 (21/10/2026)
+
+**Estado atual: em testes e compilação privada.** A RC7.1 permanece como download oficial até que a [Release v1.0.0-rc.7.2](https://github.com/magaskye/discordia/releases/tag/v1.0.0-rc.7.2) tenha instalador, portátil, `rc.yml` e SHA-256 verificados.
+
+A **UIDiscordiaV2 não é um tema**: é a única nova interface padrão do aplicativo. A antiga interface visual será substituída, enquanto dados, conexões, contas e ações existentes continuam preservados.
+
+Mudanças: amigos em cartões com capas e modos grade/lista; navegação; chat próprio do Palco; vídeos em mosaico; transmissão por miniaturas com presets; notificações com busca, filtros e histórico separado por conta. Os temas Fuyuki, Requiem, CTR e pacotes `.disca` passam a apenas personalizar a UIDiscordiaV2, sem alterar o layout.
+
+O site inclui uma **prévia vetorial conceitual, não uma captura do app em execução**. A homologação visual em computadores reais continuará necessária após a publicação. A Stable 1.0 não foi liberada.
+
 ## RC7.1 — correções de interface V3 (21/10/2026)
 
 **RC7.1 PUBLICADA:** [Release oficial v1.0.0-rc.7.1](https://github.com/magaskye/discordia/releases/tag/v1.0.0-rc.7.1) confirmada com instalador Windows x64, portátil, `rc.yml`, blockmap e `SHA256SUMS.txt`. Pipeline [GitHub Actions 39557953272](https://github.com/magaskye/discordia-build/actions/runs/39557953272). É pré-lançamento, não Stable.
