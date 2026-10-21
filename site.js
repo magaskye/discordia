@@ -111,8 +111,16 @@
     });
     var stableAvailable = display(stable, 'stable');
     var rcAvailable = display(rc, 'rc');
-    // RC7.1 is announced only after its installer, portable and release assets pass display().
-    if (rcAvailable && String(rc.tag_name || '') === 'v1.0.0-rc.7.1') {
+    // Only announce UIDiscordiaV2 after the official RC7.2 Windows files pass display().
+    if (rcAvailable && String(rc.tag_name || '') === 'v1.0.0-rc.7.2') {
+      setText('rc7-hero-badge', 'RC7.2 PUBLICADA · UIDiscordiaV2');
+      setText('rc7-hero-description', 'A RC7.2 já está disponível para Windows: UIDiscordiaV2 é a nova interface padrão, com amigos em cartões ilustrados, Palco com chat próprio, transmissão simplificada e notificações renovadas. Temas Fuyuki, Requiem e CTR se adaptam ao novo design. P2P/TURN/SFU preservados.');
+      setText('rc7-timeline-status', 'RC7.1 · VERSÃO ANTERIOR');
+      setText('ui2-release-status', 'RC7.2 PUBLICADA · UIDiscordiaV2');
+    } else if (rcAvailable && String(rc.tag_name || '') === 'v1.0.0-rc.7.1') {
+      setText('rc7-hero-badge', 'UIDiscordiaV2 EM TESTES · RC7.1 DISPONÍVEL');
+      setText('rc7-hero-description', 'A UIDiscordiaV2 substituirá o layout antigo como interface padrão na RC7.2. O novo Palco, amigos, transmissão e notificações seguem em testes; enquanto isso o download confirmado continua sendo a RC7.1.');
+      setText('ui2-release-status', 'RC7.2 EM TESTES · AINDA NÃO PUBLICADA');
       setText('rc7-hero-badge', 'RC7.1 PUBLICADA · INTERFACE V3 RENOVADA');
       setText('rc7-hero-description', 'A RC7.1 foi publicada para Windows no canal RC/Testers: nova Central Social, Palco que prioriza vídeo, compartilhamento independente e temas Fuyuki, Requiem e CTR com layout protegido. P2P, TURN e SFU continuam preservados. Ainda é versão de testes, não Stable.');
       setText('rc7-timeline-status', 'RC7.1 PUBLICADA · HOMOLOGAÇÃO VISUAL EM ANDAMENTO');
