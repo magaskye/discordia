@@ -12,11 +12,11 @@ Este repositório é **público** e hospeda somente o site estático do Discórd
 
 ## RC7.1 — correções de interface V3 (21/10/2026)
 
-**Em homologação até confirmação da [Release RC7.1](https://github.com/magaskye/discordia/releases/tag/v1.0.0-rc.7.1).** A RC7 permanece disponível até que instalador, portátil, manifesto e SHA-256 da nova prévia estejam oficialmente publicados.
+**RC7.1 PUBLICADA:** [Release oficial v1.0.0-rc.7.1](https://github.com/magaskye/discordia/releases/tag/v1.0.0-rc.7.1) confirmada com instalador Windows x64, portátil, `rc.yml`, blockmap e `SHA256SUMS.txt`. Pipeline [GitHub Actions 39557953272](https://github.com/magaskye/discordia-build/actions/runs/39557953272). É pré-lançamento, não Stable.
 
 A RC7.1 reestrutura o workspace em três regiões, cria uma Central Social de verdade com cartões legíveis, prioriza a área de vídeo do Palco, posiciona a janela de transmissão fora dos painéis e impede que temas Fuyuki/Requiem/CTR cubram conteúdo ou alterem posições. P2P/TURN/SFU e SmartStream são preservados.
 
-A compilação está sob controle de testes privados. O fato de compilar não substitui homologação visual no Windows.
+Os testes automatizados passaram; a homologação visual em Windows e as capturas com os temas ainda são necessárias antes da 1.0 Stable.
 
 ## RC7 — última prévia pública planejada antes da 1.0 (21/10/2026)
 
