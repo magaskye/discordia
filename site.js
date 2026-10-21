@@ -89,6 +89,16 @@
         text('release-hero-badge','DISCÓRDIA RC DISPONÍVEL');
         text('release-hint','Downloads oficiais verificados. Consulte as notas e a integridade SHA-256.');
       }
+      // The SFU RC7.5 showcase appears only once official release assets
+      // are verified; an unfinished Windows build never becomes an announcement.
+      if(rcAvailable){
+        const match=String(rc?.tag_name||'').match(/^v?\\d+\\.\\d+\\.\\d+-rc\\.(\\d+)(?:\\.(\\d+))?$/);
+        const rcLevel=Number(match?.[1]||0),rcPatch=Number(match?.[2]||0);
+        if(rcLevel>7||(rcLevel===7&&rcPatch>=5)){
+          const feature=document.getElementById('rc-sfu-news');
+          if(feature)feature.hidden=false;
+        }
+      }
       if(stableAvailable)text('release-hero-badge','DISCÓRDIA PARA WINDOWS');
       text('release-status',rcAvailable||stableAvailable?'Downloads disponíveis':'Acompanhe os lançamentos');
     })
