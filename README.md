@@ -10,6 +10,14 @@ Este repositório é **público** e hospeda somente o site estático do Discórd
 - `privacidade.html` — informações preliminares, a serem revisadas antes do lançamento estável.
 - `.github/ISSUE_TEMPLATE` — modelos públicos de bugs e sugestões, sem formulário privado ainda.
 
+## RC7.1 — correções de interface V3 (21/10/2026)
+
+**Em homologação até confirmação da [Release RC7.1](https://github.com/magaskye/discordia/releases/tag/v1.0.0-rc.7.1).** A RC7 permanece disponível até que instalador, portátil, manifesto e SHA-256 da nova prévia estejam oficialmente publicados.
+
+A RC7.1 reestrutura o workspace em três regiões, cria uma Central Social de verdade com cartões legíveis, prioriza a área de vídeo do Palco, posiciona a janela de transmissão fora dos painéis e impede que temas Fuyuki/Requiem/CTR cubram conteúdo ou alterem posições. P2P/TURN/SFU e SmartStream são preservados.
+
+A compilação está sob controle de testes privados. O fato de compilar não substitui homologação visual no Windows.
+
 ## RC7 — última prévia pública planejada antes da 1.0 (21/10/2026)
 
 - **Status da publicação: PUBLICADA.** [RC7 v1.0.0-rc.7](https://github.com/magaskye/discordia/releases/tag/v1.0.0-rc.7) disponível como pré-lançamento público para Windows x64: instalador, portátil, `rc.yml`, blockmap e SHA-256. Testes e compilação Windows verificados no [GitHub Actions privado](https://github.com/magaskye/discordia-build/actions/runs/39554133211). A RC7 continua sujeita à homologação visual e funcional pelos testers.
