@@ -12,9 +12,9 @@ Este repositório é **público** e hospeda somente o site estático do Discórd
 
 ## UIDiscordiaV2 · RC7.2 (21/10/2026)
 
-**Estado atual: em testes e compilação privada.** A RC7.1 permanece como download oficial até que a [Release v1.0.0-rc.7.2](https://github.com/magaskye/discordia/releases/tag/v1.0.0-rc.7.2) tenha instalador, portátil, `rc.yml` e SHA-256 verificados.
+**RC7.2 PUBLICADA:** [Release oficial v1.0.0-rc.7.2](https://github.com/magaskye/discordia/releases/tag/v1.0.0-rc.7.2) confirmada como pré-lançamento Windows x64, com instalador, portátil, `rc.yml`, blockmap e `SHA256SUMS.txt`. Build privado [GitHub Actions 39564289079](https://github.com/magaskye/discordia-build/actions/runs/39564289079). A homologação visual no Windows pelos testers ainda está pendente.
 
-A **UIDiscordiaV2 não é um tema**: é a única nova interface padrão do aplicativo. A antiga interface visual será substituída, enquanto dados, conexões, contas e ações existentes continuam preservados.
+A **UIDiscordiaV2 não é um tema**: é a única nova interface padrão do aplicativo na RC7.2. A opção de usar a interface anterior não é oferecida; dados, conexões e recursos existentes continuam integrados.
 
 Mudanças: amigos em cartões com capas e modos grade/lista; navegação; chat próprio do Palco; vídeos em mosaico; transmissão por miniaturas com presets; notificações com busca, filtros e histórico separado por conta. Os temas Fuyuki, Requiem, CTR e pacotes `.disca` passam a apenas personalizar a UIDiscordiaV2, sem alterar o layout.
 
