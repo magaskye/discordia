@@ -36,8 +36,30 @@
         <div class="hero-note"><span><b>✓</b> Windows x64</span><span><b>✓</b> Instalador e portátil</span><span><b>✓</b> Download oficial</span></div>
       </div>
       <div class="hero-illustration ui2-site-hero">
-        <img class="ui2-site-preview" src="./ui-discordia-v2-preview.svg" alt="Ilustração da interface do Discórdia, incluindo amigos em cartões e Palco de chamadas" width="1200" height="690">
-        <p class="illustration-disclaimer">Representação ilustrativa da experiência. A aparência pode variar conforme o tema e a versão.</p>
+        <section class="ui2-real-slides" aria-roledescription="carrossel" aria-label="Capturas reais do Discórdia">
+          <div class="ui2-real-slide is-current" id="real-slide-1" role="group" aria-roledescription="slide" aria-label="1 de 3: amigos">
+            <img src="./screenshot-real-amigos.svg" alt="Captura real da tela de amigos em cartões no Discórdia" width="400" height="206" fetchpriority="high">
+            <div><strong>Amigos ao seu alcance</strong><p>Lista ou cartões, presença e conversas a poucos cliques.</p></div>
+          </div>
+          <div class="ui2-real-slide" id="real-slide-2" role="group" aria-roledescription="slide" aria-label="2 de 3: palco" hidden>
+            <img src="./screenshot-real-palco.svg" alt="Captura real de uma tela de Palco do Discórdia" width="400" height="209" loading="lazy">
+            <div><strong>Palco para reunir sua comunidade</strong><p>Chamadas e atividades com painéis organizados.</p></div>
+          </div>
+          <div class="ui2-real-slide" id="real-slide-3" role="group" aria-roledescription="slide" aria-label="3 de 3: transmissão" hidden>
+            <img src="./screenshot-real-transmissao.svg" alt="Captura real do seletor de compartilhamento de tela" width="400" height="207" loading="lazy">
+            <div><strong>Compartilhe jogos e telas</strong><p>Escolha a fonte e personalize áudio e qualidade.</p></div>
+          </div>
+          <div class="ui2-real-slide-controls">
+            <button id="ui2-slide-prev" type="button" aria-label="Captura anterior">‹</button>
+            <div class="ui2-real-slide-dots" role="group" aria-label="Escolher captura">
+              <button class="is-current" type="button" aria-label="Mostrar amigos" aria-current="true" data-slide="0"></button>
+              <button type="button" aria-label="Mostrar Palco" data-slide="1"></button>
+              <button type="button" aria-label="Mostrar transmissão" data-slide="2"></button>
+            </div>
+            <button id="ui2-slide-next" type="button" aria-label="Próxima captura">›</button>
+          </div>
+        </section>
+        <p class="illustration-disclaimer">Capturas reais de versões de teste anteriores; detalhes e aparência podem variar conforme a versão. Imagens reduzidas para preservar a privacidade.</p>
       </div>
     </div>
   </section>
