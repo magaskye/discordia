@@ -1,96 +1,68 @@
-# Site oficial — Discórdia Desktop
+# Discórdia Desktop — site oficial
 
-Este repositório é **público** e hospeda somente o site estático do Discórdia Desktop pelo GitHub Pages. O código-fonte do aplicativo Windows e a configuração privada de CI permanecem em outro repositório, sem arquivos secretos aqui.
+O **Discórdia Desktop** é um aplicativo de comunicação para Windows que reúne amigos, mensagens, chamadas por voz e vídeo, salas de comunidade e compartilhamento de tela. O projeto oferece personalização visual e experiências voltadas à convivência e aos jogos.
 
-## Estrutura
-- `index.html` — apresentação e canais de download, com situação de desenvolvimento clara.
-- `site.css` — estilos responsivos.
-- `site.js` — consulta pública de GitHub Releases com validação dos links oficiais.
-- `logo.png` — logo original do Discórdia, preservado.
-- `privacidade.html` — informações preliminares, a serem revisadas antes do lançamento estável.
-- `.github/ISSUE_TEMPLATE` — modelos públicos de bugs e sugestões, sem formulário privado ainda.
+**Site:** https://magaskye.github.io/discordia/  
+**Downloads oficiais:** https://github.com/magaskye/discordia/releases  
+**Plataforma:** Windows x64  
+**Canal de distribuição atual:** Release Candidate (RC/Testers). A edição estável 1.0 será anunciada separadamente.
 
-## UIDiscordiaV2 · RC7.2 (21/10/2026)
+## Recursos
 
-**RC7.2 PUBLICADA:** [Release oficial v1.0.0-rc.7.2](https://github.com/magaskye/discordia/releases/tag/v1.0.0-rc.7.2) confirmada como pré-lançamento Windows x64, com instalador, portátil, `rc.yml`, blockmap e `SHA256SUMS.txt`. Build privado [GitHub Actions 39564289079](https://github.com/magaskye/discordia-build/actions/runs/39564289079). A homologação visual no Windows pelos testers ainda está pendente.
+| Área | Recursos |
+| --- | --- |
+| Social | Lista de amigos, cartões de perfil, mensagens diretas, presença e convites |
+| Comunidades | Servidores, canais de texto, salas de voz e Palco |
+| Comunicação | Voz, câmera, vídeo e compartilhamento de janelas, jogos e monitores |
+| SmartStream | Perfis de qualidade de imagem e opções de áudio, conforme dispositivo e contexto |
+| Conexão | Caminhos P2P, retransmissão TURN e distribuição de vídeo SFU quando aplicável |
+| Personalização | Interface organizada, painéis ajustáveis e Estúdio de Temas independente |
 
-A **UIDiscordiaV2 não é um tema**: é a única nova interface padrão do aplicativo na RC7.2. A opção de usar a interface anterior não é oferecida; dados, conexões e recursos existentes continuam integrados.
+O desempenho e a qualidade podem variar conforme o hardware, a conexão e o conteúdo da transmissão.
 
-Mudanças: amigos em cartões com capas e modos grade/lista; navegação; chat próprio do Palco; vídeos em mosaico; transmissão por miniaturas com presets; notificações com busca, filtros e histórico separado por conta. Os temas Fuyuki, Requiem, CTR e pacotes `.disca` passam a apenas personalizar a UIDiscordiaV2, sem alterar o layout.
+## Download e instalação
 
-O site inclui uma **prévia vetorial conceitual, não uma captura do app em execução**. A homologação visual em computadores reais continuará necessária após a publicação. A Stable 1.0 não foi liberada.
+O site identifica a versão mais recente por meio da **API oficial do GitHub Releases** e só habilita os botões após identificar instalador, portátil, manifesto e arquivo SHA-256. Nenhum instalador é armazenado diretamente no site.
 
-## RC7.1 — correções de interface V3 (21/10/2026)
+1. Acesse [Downloads](https://magaskye.github.io/discordia/#downloads).
+2. Escolha o **instalador** ou a **versão portátil** para Windows x64.
+3. Consulte as notas da Release e o arquivo `SHA256SUMS.txt`.
+4. Caso o Windows apresente aviso de editor não verificado em uma versão não assinada, confirme a origem do arquivo. Não desative proteções de segurança.
 
-**RC7.1 PUBLICADA:** [Release oficial v1.0.0-rc.7.1](https://github.com/magaskye/discordia/releases/tag/v1.0.0-rc.7.1) confirmada com instalador Windows x64, portátil, `rc.yml`, blockmap e `SHA256SUMS.txt`. Pipeline [GitHub Actions 39557953272](https://github.com/magaskye/discordia-build/actions/runs/39557953272). É pré-lançamento, não Stable.
+**Atualizações:** usuários inscritos no canal RC/Testers podem receber notificações quando a configuração do atualizador permitir. A versão portátil pode exigir download manual.
 
-A RC7.1 reestrutura o workspace em três regiões, cria uma Central Social de verdade com cartões legíveis, prioriza a área de vídeo do Palco, posiciona a janela de transmissão fora dos painéis e impede que temas Fuyuki/Requiem/CTR cubram conteúdo ou alterem posições. P2P/TURN/SFU e SmartStream são preservados.
+## Sobre este repositório
 
-Os testes automatizados passaram; a homologação visual em Windows e as capturas com os temas ainda são necessárias antes da 1.0 Stable.
+Este repositório público mantém exclusivamente os arquivos do site, informações institucionais e releases executáveis. O código-fonte do aplicativo, credenciais e configuração de serviços permanecem fora deste repositório.
 
-## RC7 — última prévia pública planejada antes da 1.0 (21/10/2026)
+| Arquivo | Finalidade |
+| --- | --- |
+| `index.html` | Conteúdo da página oficial |
+| `site.css` | Identidade visual e responsividade |
+| `site.js` | Consulta às Releases oficiais e habilitação segura de downloads |
+| `ui-discordia-v2-preview.svg` | Ilustração da experiência do aplicativo |
+| `logo.png` | Marca do projeto |
+| `privacidade.html` | Informações sobre privacidade |
 
-- **Status da publicação: PUBLICADA.** [RC7 v1.0.0-rc.7](https://github.com/magaskye/discordia/releases/tag/v1.0.0-rc.7) disponível como pré-lançamento público para Windows x64: instalador, portátil, `rc.yml`, blockmap e SHA-256. Testes e compilação Windows verificados no [GitHub Actions privado](https://github.com/magaskye/discordia-build/actions/runs/39554133211). A RC7 continua sujeita à homologação visual e funcional pelos testers.
-- **Interface V3:** nova composição responsiva, reorganização do Palco e amigos, controles compactos e cenários que não cobrem mensagens e vídeo.
-- **Temas V3:** Fuyuki, Requiem e CTR Turbo Rush com identidade visual independente e pacotes .disca V2 validados.
-- **SmartStream V3:** perfis Automático, Jogos, Vídeo e Texto, preservando P2P, TURN e SFU homologados pelos testers.
-- **Servidores:** permissões por canal ainda dependem de autorização no backend; não são anunciadas como prontas.
-- **Canal RC:** o site consulta o GitHub Releases e só libera links com executáveis confirmados. A 1.0 Stable permanece indisponível.
+O site é estático e usa o GitHub Pages. Não requer credenciais de acesso, segredos de servidor ou coleta de senhas para disponibilizar os downloads.
 
-### Histórico de RCs
-RC7: https://github.com/magaskye/discordia/releases/tag/v1.0.0-rc.7
-RC6.5: https://github.com/magaskye/discordia/releases/tag/v1.0.0-rc.6.5
-## Hotfix RC6.4 — vídeo, presença e economia adaptativa — 20/10/2026
+## Lançamentos
 
-- **Última Release RC/Testers:** [v1.0.0-rc.6.4](https://github.com/magaskye/discordia/releases/tag/v1.0.0-rc.6.4). Instalador Windows, portátil, `rc.yml`, blockmap e `SHA256SUMS.txt` publicados como pré-lançamento. Pipeline privado [39470673817](https://github.com/magaskye/discordia-build/actions/runs/39470673817): testes, build Windows, hashes e publicação **SUCCESS**.
-- **Presença:** snapshot RTDB não alterna para Firestore por queda momentânea do estado local; tolerância visual de 7 segundos quando usuário online desaparece brevemente, mas Invisível/Offline explícitos continuam imediatos.
-- **Tela e recuperação:** intenção de assistir é preservada por até 18 segundos em interrupções curtas; emissor/receptor verificam quadros reais, com tentativas limitadas de recuperação de **somente SCREEN** e pedido de relay TURN quando aplicável; PeerJS/ICE restart requer teste em dois Windows.
-- **SFU:** após quadros decodificados confirmados no receptor, evita duplicar a tela P2P/TURN para aquele espectador; ao detectar perda do SFU, tenta reabrir a tela fallback. SFU ainda **não homologado em PCs reais** e pode haver falhas de renegociação.
-- **Economia adaptativa:** TURN jogo até 3,4 Mbps / 60 FPS / 1080p se houver capacidade; tela até 2,1 Mbps / 30 FPS / 1080p. SFU limite próprio de vídeo. É um equilíbrio entre nitidez e tráfego, não garantia de menor cobrança. Um jogo recebendo 13 FPS com RTT baixo também pode estar limitado na captura, não na rota.
-- **Segurança:** TURN Cloudflare homologado não foi reconfigurado, voz independente e canal Estável continuam separados. Nenhum código-fonte privado nem segredo deve ser anexado às Releases públicas.
-- **Avisos de atualização:** clientes com feed ativo no canal RC/Testers podem detectar a nova Release; edições portáteis precisam baixar manualmente. Atualizar fora de uma chamada.
+A distribuição é organizada em dois canais:
 
-## Hotfix RC6.3 — SFU em sala de teste com duas pessoas — 20/10/2026
+- **RC/Testers:** versões de pré-lançamento, destinadas à avaliação e ao aperfeiçoamento da experiência. Apenas a RC pública mais recente é mantida na lista de downloads.
+- **Estável:** canal separado, reservado para a versão final quando estiver disponível.
 
-- **Release RC/Testers anterior:** [v1.0.0-rc.6.3](https://github.com/magaskye/discordia/releases/tag/v1.0.0-rc.6.3), com instalador, portátil, `rc.yml` e somas SHA256. Validação automatizada e build Windows aprovados pelo [GitHub Actions privado](https://github.com/magaskye/discordia-build/actions/runs/39461774698). **Não significa homologação SFU em computadores reais.**
-- Corrigido o `connect-src` do Electron para permitir **somente** o hostname SFU staging oficial; é uma causa provável do `Failed_to_fetch`, mas o resultado final exige teste Windows.
-- A sala **Teste SFU RC6** prefere vídeo SFU a partir de duas pessoas, com validação de `framesEncoded/framesDecoded` e fallback de vídeo P2P/TURN, mantendo voz independente.
-- Preserva Palco V2, SmartStream V2, presença e economia TURN opcional da RC6.2. Não altera Cloudflare TURN nem a edição Estável.
-- O canal RC/Testers com atualizador ativo pode detectar o pré-lançamento. A edição portátil exige download; não há garantia de notificação push em todos os computadores.
+Consulte sempre [GitHub Releases](https://github.com/magaskye/discordia/releases) para obter a versão vigente e as notas oficiais. Não utilize links desatualizados enviados por terceiros.
 
-## Hotfix RC6.2 de economia TURN — 20/10/2026
+## Comunicação e contribuições
 
-- **Release pública RC/Testers anterior:** [v1.0.0-rc.6.2](https://github.com/magaskye/discordia/releases/tag/v1.0.0-rc.6.2), validada e compilada pelo GitHub Actions privado (workflow 39381979631), com instalador, portátil, `rc.yml` e hash SHA256.
-- Economia de dados opcional **somente quando o vídeo WebRTC está comprovadamente usando TURN**: jogo até 1,8 Mbps/45 FPS/900p, janela/tela até 1,25 Mbps/30 FPS/720p. Há uma opção para desativar, priorizando a qualidade máxima.
-- **Não modifica o TURN hospedado na Cloudflare**, nem ICE/P2P direto ou áudio de chamadas. A economia real exige testes com a mesma audiência e tempo, observando `egressBytes` no analytics TURN.
-- **SFU ainda não homologado** em quadros de vídeo entre vários clientes Windows; estágio experimental continua com fallback P2P/TURN.
-- Release RC6.1 segue no histórico; a 1.0 estável não foi lançada.
-- Atualização automática apenas para clientes com feed configurado e opção RC/Testers ativa. Portátil informa download manual.
+Contribuições, sugestões e relatos podem ser encaminhados por meio dos recursos públicos do projeto. Evite incluir informações pessoais, senhas, tokens ou outros dados confidenciais em mensagens públicas.
 
-## Situação do projeto — 20/10/2026
+## Privacidade e segurança
 
-- **Discórdia Desktop 1.0.0-rc.6.4:** hotfix **publicado como pré-lançamento RC/Testers** em https://github.com/magaskye/discordia/releases/tag/v1.0.0-rc.6.4, contendo instalador e versão portátil Windows. O workflow privado de validação/empacotamento concluiu com sucesso. **Ainda falta homologação com usuários reais no Windows**.
-- **P2P e TURN:** fluxos de áudio/vídeo e relay testados; o TURN permanece homologado para seu escopo.
-- **SFU:** staging/autorizações implementadas e verificadas; recepção real de quadros por múltiplos computadores ainda **não homologada**.
-- **Palco V2, SmartStream V2 e presença:** compilados no hotfix RC6.1; precisam de testes de fluidez/FPS, tela preta, reconexão e remoção de participantes fantasma em vários computadores.
-- **Aviso de atualização:** RC6 com feed GitHub ativo e participação no canal RC/Testers pode detectar o hotfix ao iniciar e nas verificações periódicas/manuais. Canal Estável não recebe RC automaticamente; portátil apenas aponta o download. **Publicar uma Release não envia um push universal**.
-- **Hotfix privado futuro:** cliente com receptor de avisos autenticados preparado, porém o backend privado ainda não está implantado/homologado e o recurso está desativado.
-- **Estável 1.0:** ainda não lançada. Versões RC públicas são experimentais.
+Consulte a [página de privacidade](https://magaskye.github.io/discordia/privacidade.html). O site não substitui o sistema de autenticação do aplicativo. O transporte de dados, recursos de mídia e eventuais serviços externos são descritos nas informações do produto.
 
-O aplicativo Windows e o piloto Cloudflare permanecem separados deste repositório público. Não publicar detalhes de contas de teste, credenciais, configuração privada de CI ou materiais internos.
+---
 
-## Regras de lançamento
-1. Os botões nunca apontam para artefatos do repositório privado ou para endereços fictícios.
-2. Releases **estáveis** e **RC/Testers** são separadas pela informação oficial de `prerelease`.
-3. Somente arquivos publicados em `magaskye/discordia/releases/download/` e com nome oficial de instalador ou portátil habilitam o download.
-4. Não divulgar SFU como transmissão homologada antes dos testes de vídeo.
-5. Nunca publicar `.env`, credenciais Firebase, App Secret SFU, Cloudflare TURN/SFU, certificados privados ou o repositório de código do Desktop.
-
-## Próximos passos do site
-- Substituir a arte conceitual por capturas reais **aprovadas**, sem nomes/identificadores de usuários.
-- Preparar formulário privado de bugs/sugestões para e-mail do responsável, usando backend com antispam e política de privacidade. **Nunca** colocar credenciais de e-mail no JavaScript.
-- Concluir política de privacidade do aplicativo e páginas de suporte antes da 1.0 estável.
-- Atualizar o progresso sempre que um marco for validado.
-
-## Deploy
-A branch `main` publica o site conforme a configuração existente do GitHub Pages; o site não dispara builds do Discórdia Windows nem cria Releases do aplicativo.
+© 2026 Discórdia Desktop. Todos os direitos reservados.
