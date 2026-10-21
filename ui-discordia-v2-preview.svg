@@ -1,0 +1,136 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 690" role="img" aria-labelledby="title desc">
+<title id="title">UIDiscordiaV2, nova interface padrão do Discórdia</title><desc id="desc">Prévia ilustrativa com amigos em cartões, mosaico do Palco, controles e chat lateral.</desc>
+<defs>
+<linearGradient id="frame" x2="1" y2="1"><stop stop-color="#141d36"/><stop offset="1" stop-color="#080f20"/></linearGradient>
+<linearGradient id="brand" x2="1" y2=".7"><stop stop-color="#642ce2"/><stop offset=".48" stop-color="#ba3dd6"/><stop offset="1" stop-color="#178dcc"/></linearGradient>
+<linearGradient id="stage" x2="1" y2="1"><stop stop-color="#462077"/><stop offset=".55" stop-color="#101d56"/><stop offset="1" stop-color="#1481aa"/></linearGradient>
+<linearGradient id="card" x2="1" y2="1"><stop stop-color="#38286b"/><stop offset=".65" stop-color="#182957"/><stop offset="1" stop-color="#0686a0"/></linearGradient>
+<filter id="shadow"><feDropShadow dx="0" dy="12" stdDeviation="16" flood-color="#000" flood-opacity=".45"/></filter>
+</defs><rect width="1200" height="690" rx="22" fill="#090f1c"/>
+<g font-family="Segoe UI,Arial,sans-serif" fill="#f2f4ff">
+<rect x="5" y="5" width="1190" height="327" rx="17" fill="url(#frame)" stroke="#6356a1" stroke-opacity=".5"/>
+<rect x="5" y="5" width="54" height="327" rx="14" fill="#0c1322"/><text x="18" y="36" font-size="24">✦</text>
+<g fill="#1d2840"><rect x="14" y="53" width="35" height="35" rx="11"/><rect x="14" y="99" width="35" height="35" rx="11"/><rect x="14" y="145" width="35" height="35" rx="11"/><rect x="14" y="191" width="35" height="35" rx="11"/></g>
+<text x="24" y="77" font-size="16">⌂</text><text x="24" y="123" font-size="16">♧</text><text x="24" y="169" font-size="16">✧</text><text x="24" y="216" font-size="16">⚙</text>
+<rect x="60" y="5" width="172" height="327" fill="#111b2c"/><text x="76" y="32" font-size="17" font-weight="bold">Discórdia</text>
+<rect x="73" y="46" width="146" height="30" rx="8" fill="#081121" stroke="#2b3e5c"/><text x="83" y="65" font-size="10" fill="#93a4c3">⌕  Buscar conversa...</text>
+<rect x="72" y="88" width="148" height="28" rx="8" fill="#40387a"/><text x="84" y="106" font-size="12" font-weight="bold">♧  Amigos</text>
+<text x="81" y="144" font-size="9" fill="#8199bd">MENSAGENS DIRETAS</text>
+<g font-size="11"><circle cx="88" cy="168" r="12" fill="#954fbf"/><text x="109" y="172">Equipe</text>
+<circle cx="88" cy="207" r="12" fill="#278ccc"/><text x="109" y="211">Amigo A</text>
+<circle cx="88" cy="246" r="12" fill="#27a99d"/><text x="109" y="250">Amigo B</text></g>
+<rect x="232" y="5" width="963" height="51" rx="12" fill="#0c1524"/><text x="258" y="37" font-size="22" font-weight="bold">Amigos</text>
+<g font-size="11" fill="#abb7db"><text x="393" y="35">Todos</text><text x="450" y="35">Online</text><text x="512" y="35">Offline</text></g>
+<rect x="1020" y="17" width="148" height="27" rx="8" fill="url(#brand)"/><text x="1043" y="35" font-size="11" font-weight="bold">+ Adicionar amigo</text>
+<rect x="252" y="69" width="910" height="29" rx="9" fill="#0d192b" stroke="#344566"/><text x="266" y="88" font-size="11" fill="#91a6c6">⌕   Buscar amigos…</text>
+<rect x="251" y="113" width="168" height="96" rx="12" fill="#172237" stroke="#3e4a68"/>
+<rect x="254" y="116" width="162" height="34" rx="9" fill="url(#card)"/>
+<path d="M254 141l25 -16 33 18 33 -21 29 21 44 -15" fill="none" stroke="#673cca" stroke-width="2" opacity=".75"/>
+<circle cx="274" cy="155" r="15" fill="#673cca" stroke="#dcbaff" stroke-width="2"/>
+<text x="298" y="168" font-size="12" font-weight="bold">Amigo A</text>
+<circle cx="299" cy="179" r="3.5" fill="#818eab"/>
+<text x="308" y="182" font-size="9" fill="#94a9cc">Offline</text>
+<rect x="258" y="187" width="82" height="16" rx="5" fill="#2a3b61"/><text x="270" y="198" font-size="9">✉ Mensagem</text>
+<rect x="352" y="187" width="25" height="16" rx="5" fill="#213650"/><text x="358" y="199" font-size="11">☎</text>
+<rect x="384" y="187" width="26" height="16" rx="5" fill="#213650"/><text x="390" y="199" font-size="11">▣</text><rect x="433" y="113" width="168" height="96" rx="12" fill="#172237" stroke="#3e4a68"/>
+<rect x="436" y="116" width="162" height="34" rx="9" fill="url(#card)"/>
+<path d="M436 141l25 -16 33 18 33 -21 29 21 44 -15" fill="none" stroke="#1379c4" stroke-width="2" opacity=".75"/>
+<circle cx="456" cy="155" r="15" fill="#1379c4" stroke="#dcbaff" stroke-width="2"/>
+<text x="480" y="168" font-size="12" font-weight="bold">Amigo B</text>
+<circle cx="481" cy="179" r="3.5" fill="#31dfa6"/>
+<text x="490" y="182" font-size="9" fill="#94a9cc">Online</text>
+<rect x="440" y="187" width="82" height="16" rx="5" fill="#2a3b61"/><text x="452" y="198" font-size="9">✉ Mensagem</text>
+<rect x="534" y="187" width="25" height="16" rx="5" fill="#213650"/><text x="540" y="199" font-size="11">☎</text>
+<rect x="566" y="187" width="26" height="16" rx="5" fill="#213650"/><text x="572" y="199" font-size="11">▣</text><rect x="615" y="113" width="168" height="96" rx="12" fill="#172237" stroke="#3e4a68"/>
+<rect x="618" y="116" width="162" height="34" rx="9" fill="url(#card)"/>
+<path d="M618 141l25 -16 33 18 33 -21 29 21 44 -15" fill="none" stroke="#a847a9" stroke-width="2" opacity=".75"/>
+<circle cx="638" cy="155" r="15" fill="#a847a9" stroke="#dcbaff" stroke-width="2"/>
+<text x="662" y="168" font-size="12" font-weight="bold">Amigo C</text>
+<circle cx="663" cy="179" r="3.5" fill="#31dfa6"/>
+<text x="672" y="182" font-size="9" fill="#94a9cc">Online</text>
+<rect x="622" y="187" width="82" height="16" rx="5" fill="#2a3b61"/><text x="634" y="198" font-size="9">✉ Mensagem</text>
+<rect x="716" y="187" width="25" height="16" rx="5" fill="#213650"/><text x="722" y="199" font-size="11">☎</text>
+<rect x="748" y="187" width="26" height="16" rx="5" fill="#213650"/><text x="754" y="199" font-size="11">▣</text><rect x="797" y="113" width="168" height="96" rx="12" fill="#172237" stroke="#3e4a68"/>
+<rect x="800" y="116" width="162" height="34" rx="9" fill="url(#card)"/>
+<path d="M800 141l25 -16 33 18 33 -21 29 21 44 -15" fill="none" stroke="#158b91" stroke-width="2" opacity=".75"/>
+<circle cx="820" cy="155" r="15" fill="#158b91" stroke="#dcbaff" stroke-width="2"/>
+<text x="844" y="168" font-size="12" font-weight="bold">Amigo D</text>
+<circle cx="845" cy="179" r="3.5" fill="#818eab"/>
+<text x="854" y="182" font-size="9" fill="#94a9cc">Offline</text>
+<rect x="804" y="187" width="82" height="16" rx="5" fill="#2a3b61"/><text x="816" y="198" font-size="9">✉ Mensagem</text>
+<rect x="898" y="187" width="25" height="16" rx="5" fill="#213650"/><text x="904" y="199" font-size="11">☎</text>
+<rect x="930" y="187" width="26" height="16" rx="5" fill="#213650"/><text x="936" y="199" font-size="11">▣</text><rect x="979" y="113" width="168" height="96" rx="12" fill="#172237" stroke="#3e4a68"/>
+<rect x="982" y="116" width="162" height="34" rx="9" fill="url(#card)"/>
+<path d="M982 141l25 -16 33 18 33 -21 29 21 44 -15" fill="none" stroke="#994aae" stroke-width="2" opacity=".75"/>
+<circle cx="1002" cy="155" r="15" fill="#994aae" stroke="#dcbaff" stroke-width="2"/>
+<text x="1026" y="168" font-size="12" font-weight="bold">Amigo E</text>
+<circle cx="1027" cy="179" r="3.5" fill="#31dfa6"/>
+<text x="1036" y="182" font-size="9" fill="#94a9cc">Online</text>
+<rect x="986" y="187" width="82" height="16" rx="5" fill="#2a3b61"/><text x="998" y="198" font-size="9">✉ Mensagem</text>
+<rect x="1080" y="187" width="25" height="16" rx="5" fill="#213650"/><text x="1086" y="199" font-size="11">☎</text>
+<rect x="1112" y="187" width="26" height="16" rx="5" fill="#213650"/><text x="1118" y="199" font-size="11">▣</text><rect x="251" y="217" width="168" height="96" rx="12" fill="#172237" stroke="#3e4a68"/>
+<rect x="254" y="220" width="162" height="34" rx="9" fill="url(#card)"/>
+<path d="M254 245l25 -16 33 18 33 -21 29 21 44 -15" fill="none" stroke="#673cca" stroke-width="2" opacity=".75"/>
+<circle cx="274" cy="259" r="15" fill="#673cca" stroke="#dcbaff" stroke-width="2"/>
+<text x="298" y="272" font-size="12" font-weight="bold">Amigo F</text>
+<circle cx="299" cy="283" r="3.5" fill="#31dfa6"/>
+<text x="308" y="286" font-size="9" fill="#94a9cc">Online</text>
+<rect x="258" y="291" width="82" height="16" rx="5" fill="#2a3b61"/><text x="270" y="302" font-size="9">✉ Mensagem</text>
+<rect x="352" y="291" width="25" height="16" rx="5" fill="#213650"/><text x="358" y="303" font-size="11">☎</text>
+<rect x="384" y="291" width="26" height="16" rx="5" fill="#213650"/><text x="390" y="303" font-size="11">▣</text><rect x="433" y="217" width="168" height="96" rx="12" fill="#172237" stroke="#3e4a68"/>
+<rect x="436" y="220" width="162" height="34" rx="9" fill="url(#card)"/>
+<path d="M436 245l25 -16 33 18 33 -21 29 21 44 -15" fill="none" stroke="#1379c4" stroke-width="2" opacity=".75"/>
+<circle cx="456" cy="259" r="15" fill="#1379c4" stroke="#dcbaff" stroke-width="2"/>
+<text x="480" y="272" font-size="12" font-weight="bold">Amigo G</text>
+<circle cx="481" cy="283" r="3.5" fill="#818eab"/>
+<text x="490" y="286" font-size="9" fill="#94a9cc">Offline</text>
+<rect x="440" y="291" width="82" height="16" rx="5" fill="#2a3b61"/><text x="452" y="302" font-size="9">✉ Mensagem</text>
+<rect x="534" y="291" width="25" height="16" rx="5" fill="#213650"/><text x="540" y="303" font-size="11">☎</text>
+<rect x="566" y="291" width="26" height="16" rx="5" fill="#213650"/><text x="572" y="303" font-size="11">▣</text><rect x="615" y="217" width="168" height="96" rx="12" fill="#172237" stroke="#3e4a68"/>
+<rect x="618" y="220" width="162" height="34" rx="9" fill="url(#card)"/>
+<path d="M618 245l25 -16 33 18 33 -21 29 21 44 -15" fill="none" stroke="#a847a9" stroke-width="2" opacity=".75"/>
+<circle cx="638" cy="259" r="15" fill="#a847a9" stroke="#dcbaff" stroke-width="2"/>
+<text x="662" y="272" font-size="12" font-weight="bold">Amigo H</text>
+<circle cx="663" cy="283" r="3.5" fill="#31dfa6"/>
+<text x="672" y="286" font-size="9" fill="#94a9cc">Online</text>
+<rect x="622" y="291" width="82" height="16" rx="5" fill="#2a3b61"/><text x="634" y="302" font-size="9">✉ Mensagem</text>
+<rect x="716" y="291" width="25" height="16" rx="5" fill="#213650"/><text x="722" y="303" font-size="11">☎</text>
+<rect x="748" y="291" width="26" height="16" rx="5" fill="#213650"/><text x="754" y="303" font-size="11">▣</text><rect x="797" y="217" width="168" height="96" rx="12" fill="#172237" stroke="#3e4a68"/>
+<rect x="800" y="220" width="162" height="34" rx="9" fill="url(#card)"/>
+<path d="M800 245l25 -16 33 18 33 -21 29 21 44 -15" fill="none" stroke="#158b91" stroke-width="2" opacity=".75"/>
+<circle cx="820" cy="259" r="15" fill="#158b91" stroke="#dcbaff" stroke-width="2"/>
+<text x="844" y="272" font-size="12" font-weight="bold">Amigo I</text>
+<circle cx="845" cy="283" r="3.5" fill="#31dfa6"/>
+<text x="854" y="286" font-size="9" fill="#94a9cc">Online</text>
+<rect x="804" y="291" width="82" height="16" rx="5" fill="#2a3b61"/><text x="816" y="302" font-size="9">✉ Mensagem</text>
+<rect x="898" y="291" width="25" height="16" rx="5" fill="#213650"/><text x="904" y="303" font-size="11">☎</text>
+<rect x="930" y="291" width="26" height="16" rx="5" fill="#213650"/><text x="936" y="303" font-size="11">▣</text><rect x="979" y="217" width="168" height="96" rx="12" fill="#172237" stroke="#3e4a68"/>
+<rect x="982" y="220" width="162" height="34" rx="9" fill="url(#card)"/>
+<path d="M982 245l25 -16 33 18 33 -21 29 21 44 -15" fill="none" stroke="#994aae" stroke-width="2" opacity=".75"/>
+<circle cx="1002" cy="259" r="15" fill="#994aae" stroke="#dcbaff" stroke-width="2"/>
+<text x="1026" y="272" font-size="12" font-weight="bold">Amigo J</text>
+<circle cx="1027" cy="283" r="3.5" fill="#818eab"/>
+<text x="1036" y="286" font-size="9" fill="#94a9cc">Offline</text>
+<rect x="986" y="291" width="82" height="16" rx="5" fill="#2a3b61"/><text x="998" y="302" font-size="9">✉ Mensagem</text>
+<rect x="1080" y="291" width="25" height="16" rx="5" fill="#213650"/><text x="1086" y="303" font-size="11">☎</text>
+<rect x="1112" y="291" width="26" height="16" rx="5" fill="#213650"/><text x="1118" y="303" font-size="11">▣</text><rect x="5" y="347" width="1190" height="338" rx="16" fill="#0d1627" stroke="#7060aa" stroke-opacity=".6"/>
+<rect x="5" y="347" width="56" height="338" rx="15" fill="#090f20"/><text x="19" y="375" font-size="23">✦</text>
+<g fill="#242e4e"><rect x="15" y="395" width="35" height="37" rx="10"/><rect x="15" y="441" width="35" height="37" rx="10"/></g>
+<text x="24" y="418" font-size="15">⌂</text><text x="24" y="464" font-size="15">♫</text>
+<rect x="62" y="347" width="168" height="338" fill="#131e2f"/><text x="80" y="374" font-size="13" font-weight="bold">Comunidade</text><text x="81" y="408" font-size="9" fill="#7e93b7">CANAIS DE TEXTO</text>
+<text x="83" y="434" font-size="11" fill="#cdd7f1"># principal</text><text x="83" y="457" font-size="11" fill="#cdd7f1"># avisos</text><text x="81" y="490" font-size="9" fill="#7e93b7">CANAIS DE VOZ</text>
+<rect x="75" y="502" width="142" height="30" rx="8" fill="#1c4f50"/><text x="84" y="521" font-size="11">♫ Sala de voz</text>
+<text x="84" y="552" font-size="10">● Em chamada</text><text x="84" y="572" font-size="10" fill="#a6b5d0">5 participantes</text>
+<rect x="231" y="347" width="956" height="44" fill="#101b2d"/><text x="251" y="375" font-size="15" font-weight="bold">Sala de voz</text><text x="360" y="374" font-size="10" fill="#75ddbf">P2P / TURN / SFU</text>
+<rect x="251" y="408" width="258" height="194" rx="12" fill="url(#stage)" stroke="#9b54e5" stroke-width="2"/>
+<circle cx="381" cy="482" r="53" fill="#a26be0" opacity=".14"/><text x="334" y="499" font-size="38" fill="#e3ccff">▷</text>
+<rect x="523" y="408" width="240" height="88" rx="12" fill="#21395e" stroke="#5668cc"/><text x="557" y="454" font-size="15">Câmera • Amigo A</text>
+<rect x="523" y="506" width="240" height="96" rx="12" fill="#153a59" stroke="#35a5d3"/><text x="557" y="552" font-size="15">Câmera • Amigo B</text>
+<rect x="775" y="395" width="396" height="270" rx="11" fill="#101c2e" stroke="#344460"/>
+<rect x="781" y="401" width="382" height="35" rx="7" fill="#282154"/><text x="793" y="424" font-size="12" font-weight="bold">Chat</text><text x="875" y="424" font-size="11" fill="#a3add5">Participantes</text>
+<g font-size="11"><circle cx="801" cy="467" r="13" fill="#6439cb"/><text x="823" y="461" font-weight="bold">Amigo A</text><text x="823" y="477" fill="#a9b9db">Vamos jogar depois?</text>
+<circle cx="801" cy="511" r="13" fill="#25a4aa"/><text x="823" y="505" font-weight="bold">Amigo B</text><text x="823" y="522" fill="#a9b9db">Que transmissão bonita!</text></g>
+<rect x="795" y="617" width="350" height="33" rx="9" fill="#202c47"/><text x="811" y="637" font-size="11" fill="#aebcd5">Digite uma mensagem…</text>
+<g><rect x="260" y="622" width="52" height="36" rx="11" fill="#222d48"/><rect x="322" y="622" width="52" height="36" rx="11" fill="#222d48"/><rect x="384" y="622" width="52" height="36" rx="11" fill="#222d48"/><rect x="446" y="622" width="52" height="36" rx="11" fill="#5735a0"/>
+<text x="276" y="646" font-size="18">◉</text><text x="338" y="646" font-size="18">♫</text><text x="399" y="646" font-size="18">▣</text><text x="461" y="645" font-size="18">◈</text></g>
+</g></svg>
