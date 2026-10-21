@@ -111,11 +111,15 @@
     });
     var stableAvailable = display(stable, 'stable');
     var rcAvailable = display(rc, 'rc');
-    // Never announce the RC7 as published until the official binary assets exist.
-    if (rcAvailable && String(rc.tag_name || '') === 'v1.0.0-rc.7') {
-      setText('rc7-hero-badge', 'RC7 PUBLICADA · ÚLTIMA PRÉVIA ANTES DA 1.0');
-      setText('rc7-hero-description', 'A RC7 já está disponível para Windows no canal RC/Testers: nova interface V3, temas Fuyuki, Requiem e CTR Turbo Rush e perfis SmartStream V3. P2P, TURN e SFU continuam preservados. Esta é uma versão de testes, não a 1.0 Stable.');
-      setText('rc7-timeline-status', 'RC7 PUBLICADA · TESTES WINDOWS EM ANDAMENTO');
+    // RC7.1 is announced only after its installer, portable and release assets pass display().
+    if (rcAvailable && String(rc.tag_name || '') === 'v1.0.0-rc.7.1') {
+      setText('rc7-hero-badge', 'RC7.1 PUBLICADA · INTERFACE V3 RENOVADA');
+      setText('rc7-hero-description', 'A RC7.1 foi publicada para Windows no canal RC/Testers: nova Central Social, Palco que prioriza vídeo, compartilhamento independente e temas Fuyuki, Requiem e CTR com layout protegido. P2P, TURN e SFU continuam preservados. Ainda é versão de testes, não Stable.');
+      setText('rc7-timeline-status', 'RC7.1 PUBLICADA · HOMOLOGAÇÃO VISUAL EM ANDAMENTO');
+    } else if (rcAvailable && String(rc.tag_name || '') === 'v1.0.0-rc.7') {
+      setText('rc7-hero-badge', 'RC7.1 EM TESTES · RC7 DISPONÍVEL');
+      setText('rc7-hero-description', 'Corrigindo a RC7 com a nova interface V3 estrutural: cards de amigos, Palco e temas sem sobreposição. A RC7.1 só será liberada após compilação e verificação dos arquivos oficiais; por enquanto a RC7 permanece disponível.');
+      setText('rc7-timeline-status', 'RC7.1 EM TESTES · RC7 CONTINUA DISPONÍVEL');
     }
     if (stableAvailable || rcAvailable) {
       status.textContent = 'Releases oficiais disponíveis';
