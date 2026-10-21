@@ -99,3 +99,20 @@ h1{font-size:clamp(49px,5.7vw,79px);font-weight:950;letter-spacing:-.08em;line-h
 .hero .ui2-site-preview{border-radius:15px}
 @media(max-width:900px){.ui2-site-story-grid{grid-template-columns:1fr 1fr}}
 @media(max-width:630px){.ui2-site-story-grid{grid-template-columns:1fr}.ui2-site-tech article{grid-template-columns:64px 1fr;padding:15px}}
+
+/* Capturas reais de testes: galeria acessível, sem auto-play e sem fotos de marketing. */
+.ui2-real-slides{position:relative;display:flex;flex-direction:column;min-width:0;width:100%;padding:9px;border-radius:18px;border:1px solid #766ca782;background:#10182d;box-shadow:0 24px 55px #030819ad}
+.ui2-real-slide{position:relative;width:100%;min-width:0}
+.ui2-real-slide[hidden]{display:none!important}
+.ui2-real-slide>img{display:block;width:100%;height:auto;min-height:205px;max-height:440px;object-fit:contain;aspect-ratio:400/209;border-radius:12px;background:#080d18;image-rendering:auto}
+.ui2-real-slide>div{display:grid;gap:5px;min-width:0;padding:12px 9px 5px}
+.ui2-real-slide strong{font-size:15px;color:#f7f6ff}
+.ui2-real-slide p{font-size:12px;line-height:1.5;color:#b5c3e1;margin:0}
+.ui2-real-slide-controls{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:2px 5px 5px}
+.ui2-real-slide-controls>button{width:33px;height:33px;display:grid;place-items:center;border-radius:9px;border:1px solid #667cb260;background:#233357;color:#f5f7ff;font-size:23px;cursor:pointer}
+.ui2-real-slide-controls>button:hover{background:#50409d}
+.ui2-real-slide-dots{display:flex;gap:8px;align-items:center;justify-content:center}
+.ui2-real-slide-dots>button{width:9px;height:9px;border:0;border-radius:50%;background:#8393b56e;padding:0;cursor:pointer}
+.ui2-real-slide-dots>button.is-current{background:#bd86ff;box-shadow:0 0 0 3px #8b65d536}
+.ui2-real-slides :is(button):focus-visible{outline:2px solid #81d5fa;outline-offset:3px}
+@media(max-width:700px){.ui2-real-slide>img{min-height:0}.ui2-real-slide>div{padding:10px 6px 3px}}
