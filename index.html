@@ -11,7 +11,7 @@
 <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src https://api.github.com; form-action 'none'; object-src 'none'; base-uri 'self'; upgrade-insecure-requests">
 <link rel="icon" href="./logo.png" type="image/png">
 <link rel="stylesheet" href="./site.css">
-<script src="./site.js?v=rc18" defer></script>
+<script src="./site.js?v=stable-ready-20261022" defer></script>
 <title>Discórdia Desktop — Conecte sua comunidade</title>
 </head>
 <body>
@@ -20,7 +20,7 @@
   <a href="#inicio" class="brand" aria-label="Discórdia — início"><img src="./logo.png" alt="" width="44" height="44"><span>Disc<span class="accent">ó</span>rdia<span class="pink">.</span></span></a>
   <button id="nav-toggle" class="nav-toggle" type="button" aria-controls="nav-main" aria-expanded="false" aria-label="Abrir menu"><span></span><span></span><span></span></button>
   <nav id="nav-main" class="navigation" aria-label="Navegação principal">
-    <a href="#recursos">Recursos</a><a href="#experiencia">Experiência</a><a href="#tecnologia">Tecnologia</a><a href="#downloads">Download</a><a href="#perguntas">Dúvidas</a>
+    <a href="#recursos">Recursos</a><a href="#experiencia">Experiência</a><a href="#tecnologia">Tecnologia</a><a href="#historico">Histórico</a><a href="#downloads">Download</a><a href="#perguntas">Dúvidas</a>
   </nav>
   <a class="nav-button" href="#downloads">Baixar Discórdia <span aria-hidden="true">↗</span></a>
 </div></header>
@@ -80,14 +80,42 @@
       <div class="ui2-site-tech"><article><strong>P2P</strong><span>Comunicação direta entre participantes, quando disponível.</span></article><article><strong>TURN</strong><span>Retransmissão de mídia quando a rede não permite o caminho direto.</span></article><article><strong>SFU</strong><span>Distribuição de vídeo em chamadas compatíveis com múltiplos participantes.</span></article></div>
     </div>
   </section>
+  <section class="section release-history" id="historico" aria-labelledby="history-title">
+    <div class="container">
+      <span class="section-tag">NOSSA JORNADA ATÉ A 1.0</span>
+      <div class="section-heading"><h2 id="history-title">Cada RC trouxe algo.<br><span class="gradient">A evolução fica registrada.</span></h2><p>O desenvolvimento do Discórdia reuniu melhorias em chamadas, captura, desempenho, segurança e personalização. O histórico permanece aqui mesmo após a retirada das versões de teste.</p></div>
+      <div class="release-history-highlights">
+        <article><strong>Conexões</strong><p>P2P, TURN e SFU, com voz independente do vídeo e diagnósticos de rota.</p></article>
+        <article><strong>Transmissões</strong><p>Captura de jogos e janelas, SmartStream, áudio seletivo e recuperação do player.</p></article>
+        <article><strong>Experiência</strong><p>Palco redesenhado, presença refinada, atualizador e Estúdio de Temas.</p></article>
+      </div>
+      <details class="release-history-expand">
+        <summary>Ver o destaque de cada versão RC publicada</summary>
+        <ol class="release-history-list">
+          <li><strong>RC7.4 — Presença e atualizações</strong><p>Sessões por dispositivo, controles compactos, melhorias do Palco e atualizações de instaladores.</p></li>
+          <li><strong>RC7.5 — SFU nos servidores</strong><p>Descoberta de transmissões pelo Firebase RTDB e renovação periódica das publicações.</p></li>
+          <li><strong>RC7.6 — Recuperação e tela cheia</strong><p>Alternância segura de vídeo quando SFU falha, player em tela cheia e seleção de captura de jogos.</p></li>
+          <li><strong>RC7.7 — Palco e Windows 10</strong><p>Menus que cabem em janelas pequenas, botão Minha prévia e melhorias de seleção e reprodução.</p></li>
+          <li><strong>RC7.8 — SFU exclusivo</strong><p>Separação estrita da rota de vídeo SFU, recuperação seletiva e voz P2P/TURN independente.</p></li>
+          <li><strong>RC7.9 — Inicialização corrigida</strong><p>Hotfix de abertura que corrigiu a ordem de inicialização do modo SFU exclusivo.</p></li>
+          <li><strong>RC7.10 — Captura nativa</strong><p>Melhorias na captura de janelas no Windows, adaptação à CPU e memória das escolhas de microfone.</p></li>
+          <li><strong>RC7.11 — Recepção SFU</strong><p>Descoberta mais rápida de publicações, tentativas controladas e estatísticas de envio e recepção.</p></li>
+          <li><strong>RC7.12 — Transmissão visível</strong><p>Correção dos anúncios SFU no RTDB, indicação de conexão e recuperação do vídeo sem cair da chamada.</p></li>
+          <li><strong>RC7.13 — Som e fluidez</strong><p>AudioWorklet para som de jogos, SmartStream V3 e ajustes de nitidez em Windows 10/11.</p></li>
+          <li><strong>RC18 — Temas e identidade</strong><p>Lukelucca, Fuyuki e CTR como temas de fábrica, integração .disca e créditos aos testers.</p></li>
+        </ol>
+      </details>
+      <p class="release-history-footnote">Resumo histórico baseado nas notas oficiais. A presença no histórico não indica que uma versão RC ainda esteja disponível para download.</p>
+    </div>
+  </section>
   <section class="section concept-rc" id="rc-18-news" aria-labelledby="rc-18-news-title" hidden><div class="container"><span class="section-tag">IDENTIDADE VISUAL · RC18</span><div class="section-heading"><h2 id="rc-18-news-title">Seu tema. Seu mundo.<br><span class="gradient">Sem sair da conversa.</span></h2><p>Fundos imersivos, ícones temáticos e uma atmosfera própria para cada comunidade. Arte e interface conceituais; os recursos disponíveis dependem da versão instalada.</p></div><div class="concept-theme-row"><article class="concept-theme concept-theme-fuyuki"><span>◈</span><h3>Sobrevivência Noir</h3><p>Atmosfera tática e verde militar.</p></article><article class="concept-theme concept-theme-ctr"><span>✦</span><h3>Turbo Rush</h3><p>Energia arcade e cores vibrantes.</p></article><article class="concept-theme concept-theme-night"><span>✦</span><h3>Noite mágica</h3><p>Luz estelar, violeta e dourado.</p></article></div></div></section>
   <section class="section downloads" id="downloads" aria-labelledby="downloads-heading">
     <div class="container">
       <span class="section-tag">DISTRIBUIÇÃO OFICIAL</span>
-      <div class="download-heading"><div><h2 id="downloads-heading">Pronto para<br><span class="gradient">entrar no Discórdia?</span></h2><p>Baixe diretamente do repositório oficial. A versão Release Candidate está disponível para quem deseja experimentar os recursos antes do lançamento estável.</p></div><span class="status-box" id="release-status">Verificando versões oficiais…</span></div>
+      <div class="download-heading"><div><h2 id="downloads-heading">Pronto para<br><span class="gradient">entrar no Discórdia?</span></h2><p>Baixe diretamente do repositório oficial. Os downloads são liberados somente quando a Release oficial publica instalador, portátil, manifesto de atualização e somas SHA-256.</p></div><span class="status-box" id="release-status">Verificando versões oficiais…</span></div>
       <div class="download-grid">
-        <article class="download-card testers"><div class="download-top"><span class="download-icon">✧</span><small>RELEASE CANDIDATE</small></div><h3>Discórdia RC</h3><p>Pré-lançamento para Windows x64, destinado à avaliação dos novos recursos e refinamentos da experiência.</p><strong class="download-version" id="rc-version">Consultando versão oficial…</strong><div class="download-actions"><a id="rc-installer" class="btn primary is-disabled" href="#downloads" aria-disabled="true" tabindex="-1">Instalador em verificação</a><a id="rc-portable" class="secondary-link is-disabled" href="#downloads" aria-disabled="true" tabindex="-1">Versão portátil</a></div><small class="download-caption">Arquivos da Release oficial; verifique as notas de versão e as somas SHA-256.</small></article>
-        <article class="download-card"><div class="download-top"><span class="download-icon">◇</span><small>LANÇAMENTO FUTURO</small></div><h3>Discórdia 1.0 Estável</h3><p>Canal planejado para a versão final, após a conclusão das verificações necessárias.</p><strong class="download-version" id="stable-version">Ainda não disponível</strong><div class="download-actions"><a id="stable-installer" class="btn primary is-disabled" href="#downloads" aria-disabled="true" tabindex="-1">Instalador estável</a><a id="stable-portable" class="secondary-link is-disabled" href="#downloads" aria-disabled="true" tabindex="-1">Portátil estável</a></div><small class="download-caption">As versões estáveis serão identificadas separadamente das RCs.</small></article>
+        <article class="download-card testers" id="rc-download-card"><div class="download-top"><span class="download-icon">✧</span><small>RELEASE CANDIDATE</small></div><h3>Discórdia RC</h3><p>Pré-lançamento para Windows x64, destinado à avaliação dos novos recursos e refinamentos da experiência.</p><strong class="download-version" id="rc-version">Consultando versão oficial…</strong><div class="download-actions"><a id="rc-installer" class="btn primary is-disabled" href="#downloads" aria-disabled="true" tabindex="-1">Instalador em verificação</a><a id="rc-portable" class="secondary-link is-disabled" href="#downloads" aria-disabled="true" tabindex="-1">Versão portátil</a></div><small class="download-caption">Arquivos da Release oficial; verifique as notas de versão e as somas SHA-256.</small></article>
+        <article class="download-card" id="stable-download-card"><div class="download-top"><span class="download-icon">◇</span><small id="stable-card-label">LANÇAMENTO FUTURO</small></div><h3>Discórdia 1.0 Estável</h3><p id="stable-card-description">A edição estável será liberada aqui após a publicação oficial e a verificação dos seus arquivos.</p><strong class="download-version" id="stable-version">Ainda não disponível</strong><div class="download-actions"><a id="stable-installer" class="btn primary is-disabled" href="#downloads" aria-disabled="true" tabindex="-1">Instalador estável</a><a id="stable-portable" class="secondary-link is-disabled" href="#downloads" aria-disabled="true" tabindex="-1">Portátil estável</a></div><small class="download-caption">As versões estáveis serão identificadas separadamente das RCs.</small></article>
       </div>
       <div class="download-footer"><span id="release-hint">Downloads fornecidos pelo GitHub Releases.</span><a href="https://github.com/magaskye/discordia/releases" target="_blank" rel="noopener noreferrer">Ver página oficial de versões ↗</a></div>
     </div>
@@ -97,7 +125,7 @@
     <div class="questions">
       <details><summary>Qual versão do Windows é compatível?</summary><p>O Discórdia Desktop é distribuído para Windows x64. Os requisitos podem variar conforme a captura de tela, a câmera e os recursos em uso.</p></details>
       <details><summary>Qual a diferença entre instalador e portátil?</summary><p>O instalador adiciona o aplicativo ao computador; a edição portátil pode ser executada sem instalação tradicional. Confira as instruções da Release antes de utilizar.</p></details>
-      <details><summary>O que significa Release Candidate?</summary><p>É uma prévia próxima da versão final, ainda sujeita a alterações. A edição estável 1.0 será anunciada separadamente.</p></details>
+      <details><summary>O que significa Release Candidate?</summary><p>É uma prévia próxima da versão final, ainda sujeita a alterações. Quando a edição estável estiver disponível, ela terá prioridade nos downloads, e os destaques das RCs permanecerão na seção Histórico.</p></details>
       <details><summary>Como confirmar que o arquivo é oficial?</summary><p>Baixe pelos links deste site ou pelo GitHub Releases do projeto e compare o hash SHA-256 publicado. O Windows pode exibir aviso de editor não verificado em versões sem assinatura digital.</p></details>
       <details><summary>Onde encontro informações de privacidade?</summary><p>Consulte a <a href="./privacidade.html">página de privacidade</a> antes de usar o serviço.</p></details>
     </div></div>
