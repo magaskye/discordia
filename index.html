@@ -11,7 +11,7 @@
 <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src https://api.github.com; form-action 'none'; object-src 'none'; base-uri 'self'; upgrade-insecure-requests">
 <link rel="icon" href="./logo.png" type="image/png">
 <link rel="stylesheet" href="./site.css">
-<script src="./site.js?v=rc7.13" defer></script>
+<script src="./site.js?v=rc18" defer></script>
 <title>Discórdia Desktop — Conecte sua comunidade</title>
 </head>
 <body>
@@ -35,31 +35,19 @@
         <div class="hero-buttons"><a class="btn primary" href="#downloads">Baixar para Windows <span aria-hidden="true">↗</span></a><a class="btn outline" href="#recursos">Conhecer recursos <span aria-hidden="true">↓</span></a></div>
         <div class="hero-note"><span><b>✓</b> Windows x64</span><span><b>✓</b> Instalador e portátil</span><span><b>✓</b> Download oficial</span></div>
       </div>
-      <div class="hero-illustration ui2-site-hero">
-        <section class="ui2-real-slides" aria-roledescription="carrossel" aria-label="Capturas reais do Discórdia">
-          <div class="ui2-real-slide is-current" id="real-slide-1" role="group" aria-roledescription="slide" aria-label="1 de 3: amigos">
-            <img src="./screenshot-real-amigos.svg" alt="Captura real da tela de amigos em cartões no Discórdia" width="400" height="206" fetchpriority="high">
-            <div><strong>Amigos ao seu alcance</strong><p>Lista ou cartões, presença e conversas a poucos cliques.</p></div>
+      <div class="hero-illustration concept-hero" aria-label="Representação artística da interface do Discórdia; não é uma captura do aplicativo">
+        <div class="concept-glow" aria-hidden="true"></div>
+        <div class="concept-window">
+          <div class="concept-titlebar"><span class="concept-brandmark">D<span>✦</span></span><strong>DISCÓRDIA</strong><span class="concept-title-sub">/ sua comunidade</span><span class="concept-window-dots" aria-hidden="true">● ● ●</span></div>
+          <div class="concept-layout">
+            <div class="concept-rail" aria-hidden="true"><span class="concept-rail-active">◈</span><span>◎</span><span>✣</span><span>＋</span></div>
+            <aside class="concept-channels"><div class="concept-community"><span class="concept-community-art">◈</span><div><strong>Seu universo</strong><small>Comunidade online</small></div></div><div class="concept-channel-heading">VOZ</div><div class="concept-channel active">◉ &nbsp; Lounge</div><div class="concept-channel">◈ &nbsp; Equipe</div><div class="concept-channel-heading">CANAIS</div><div class="concept-channel"># &nbsp; geral</div><div class="concept-channel"># &nbsp; clipes</div></aside>
+            <div class="concept-stage"><div class="concept-stage-top"><div><small>CONVERSA ATIVA</small><strong>Seu palco, suas regras.</strong></div><div class="concept-live"><span></span> AO VIVO</div></div><div class="concept-visual"><div class="concept-visual-orbit" aria-hidden="true"></div><div class="concept-visual-core"><span class="concept-play">▶</span><strong>A experiência acontece aqui</strong><small>Converse. Compartilhe. Personalize.</small></div></div><div class="concept-stage-bottom"><div class="concept-face face-a">F</div><div class="concept-face face-b">E</div><div class="concept-face face-c">M</div><span>Seus amigos estão por perto.</span><div class="concept-meter" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div></div></div>
           </div>
-          <div class="ui2-real-slide" id="real-slide-2" role="group" aria-roledescription="slide" aria-label="2 de 3: palco" hidden>
-            <img src="./screenshot-real-palco.svg" alt="Captura real de uma tela de Palco do Discórdia" width="400" height="209" loading="lazy">
-            <div><strong>Palco para reunir sua comunidade</strong><p>Chamadas e atividades com painéis organizados.</p></div>
-          </div>
-          <div class="ui2-real-slide" id="real-slide-3" role="group" aria-roledescription="slide" aria-label="3 de 3: transmissão" hidden>
-            <img src="./screenshot-real-transmissao.svg" alt="Captura real do seletor de compartilhamento de tela" width="400" height="207" loading="lazy">
-            <div><strong>Compartilhe jogos e telas</strong><p>Escolha a fonte e personalize áudio e qualidade.</p></div>
-          </div>
-          <div class="ui2-real-slide-controls">
-            <button id="ui2-slide-prev" type="button" aria-label="Captura anterior">‹</button>
-            <div class="ui2-real-slide-dots" role="group" aria-label="Escolher captura">
-              <button class="is-current" type="button" aria-label="Mostrar amigos" aria-current="true" data-slide="0"></button>
-              <button type="button" aria-label="Mostrar Palco" data-slide="1"></button>
-              <button type="button" aria-label="Mostrar transmissão" data-slide="2"></button>
-            </div>
-            <button id="ui2-slide-next" type="button" aria-label="Próxima captura">›</button>
-          </div>
-        </section>
-        <p class="illustration-disclaimer">Capturas reais de versões de teste anteriores; detalhes e aparência podem variar conforme a versão. Imagens reduzidas para preservar a privacidade.</p>
+        </div>
+        <div class="concept-bubble concept-bubble-theme">✧ Temas imersivos</div>
+        <div class="concept-bubble concept-bubble-stream">◉ Áudio e vídeo adaptativos</div>
+        <p class="concept-caption">Visualização conceitual da experiência Discórdia — não é uma captura do aplicativo em execução.</p>
       </div>
     </div>
   </section>
@@ -92,109 +80,7 @@
       <div class="ui2-site-tech"><article><strong>P2P</strong><span>Comunicação direta entre participantes, quando disponível.</span></article><article><strong>TURN</strong><span>Retransmissão de mídia quando a rede não permite o caminho direto.</span></article><article><strong>SFU</strong><span>Distribuição de vídeo em chamadas compatíveis com múltiplos participantes.</span></article></div>
     </div>
   </section>
-  <section class="section ui2-site-story" id="rc-sfu-news" aria-labelledby="rc-sfu-news-title" hidden>
-    <div class="container">
-      <span class="section-tag">NOVIDADE · RC 7.5 / TESTERS</span>
-      <div class="section-heading"><h2 id="rc-sfu-news-title">Mais gente na sala.<br><span class="gradient">Vídeo conectado.</span></h2><p>O SFU encontra transmissões em canais de voz autorizados dos servidores. A rota automática escolhe a distribuição de vídeo para grupos, e o fallback P2P/TURN mantém alternativas de conexão quando necessário.</p></div>
-      <div class="ui2-site-story-grid">
-        <div class="ui2-site-story-card"><h3>Salas de servidor</h3><p>Descoberta de vídeo pelo Firebase, sem depender de uma sala com nome especial.</p></div>
-        <div class="ui2-site-story-card"><h3>Rota de vídeo clara</h3><p>Indicadores distinguem publicar, receber e recuperar transmissão — separados da rota de voz.</p></div>
-        <div class="ui2-site-story-card"><h3>Experimente com amigos</h3><p>Recurso SFU ainda experimental nesta RC. Chamadas privadas continuam em P2P/TURN até a autorização específica de DM.</p></div>
-      </div>
-    </div>
-  </section>
-  <section class="section ui2-site-story" id="rc-7-6-news" aria-labelledby="rc-7-6-news-title" hidden>
-    <div class="container">
-      <span class="section-tag">NOVIDADE · RC 7.6 / TESTERS</span>
-      <div class="section-heading"><h2 id="rc-7-6-news-title">Sua transmissão.<br><span class="gradient">Sem perder a chamada.</span></h2><p>Mais clareza para escolher a rota de vídeo, recuperação quando o SFU não autoriza a mídia, tela cheia redesenhada e lista de espectadores pelo nome.</p></div>
-      <div class="ui2-site-story-grid">
-        <div class="ui2-site-story-card"><h3>Vídeo resiliente</h3><p>Se a conexão SFU for negada, o Discórdia mantém P2P/TURN como alternativa, sem interromper a voz.</p></div>
-        <div class="ui2-site-story-card"><h3>Jogos e tela cheia</h3><p>Jogos reconhecidos e opção de compartilhar o monitor quando o Windows não expõe uma janela de jogo em tela cheia.</p></div>
-        <div class="ui2-site-story-card"><h3>Quem assiste?</h3><p>Passe o mouse no olho para ver os nomes de espectadores conectados, com layout mais limpo para o Palco.</p></div>
-      </div>
-      <p class="site-rc-note">SFU permanece experimental e depende da autorização do Worker Cloudflare. Jogos protegidos e algumas configurações do Windows podem limitar a captura.</p>
-    </div>
-  </section>
-  <section class="section ui2-site-story" id="rc-7-7-news" aria-labelledby="rc-7-7-news-title" hidden>
-    <div class="container">
-      <span class="section-tag">NOVIDADE · RC 7.7 / TESTERS</span>
-      <div class="section-heading"><h2 id="rc-7-7-news-title">Uma transmissão.<br><span class="gradient">Tudo no lugar.</span></h2><p>Menu de opções mais organizado, prévia pessoal acessível mesmo assistindo aos amigos e captura mais amigável para computadores com Windows 10.</p></div>
-      <div class="ui2-site-story-grid">
-        <div class="ui2-site-story-card"><h3>Minha prévia</h3><p>Um botão dedicado no Palco permite abrir ou ocultar sua própria transmissão enquanto assiste a outras pessoas.</p></div>
-        <div class="ui2-site-story-card"><h3>Controles completos</h3><p>Menu sem cortes, com rolagem, ajuste de volume, recuperação de vídeo, tela cheia e opções de modo cinema.</p></div>
-        <div class="ui2-site-story-card"><h3>Melhor no Windows 10</h3><p>Fontes de jogos priorizadas e recuperação de reprodução após a faixa ficar pronta no decodificador.</p></div>
-      </div>
-      <p class="site-rc-note">SFU continua experimental e depende de autorização do Worker Cloudflare. O vídeo mantém P2P/TURN como alternativa quando o SFU for recusado.</p>
-    </div>
-  </section>
-  <section class="section ui2-site-story" id="rc-7-8-news" aria-labelledby="rc-7-8-news-title" hidden>
-    <div class="container">
-      <span class="section-tag">NOVIDADE · RC 7.8 / TESTERS</span>
-      <div class="section-heading"><h2 id="rc-7-8-news-title">Vídeo estável.<br><span class="gradient">Você escolhe a rota.</span></h2><p>SFU de vídeo exclusivo, recuperação individual sem derrubar a voz e melhorias de captura para quem joga no Windows 10.</p></div>
-      <div class="ui2-site-story-grid">
-        <div class="ui2-site-story-card"><h3>SFU exclusivo</h3><p>Ao selecionar SFU, o vídeo é transmitido e recebido pelo Worker. Se estiver indisponível, o aplicativo avisa sem trocar automaticamente para P2P/TURN.</p></div>
-        <div class="ui2-site-story-card"><h3>Recuperação individual</h3><p>Novas conexões de vídeo não herdam sessões antigas; o Palco monitora quadros exibidos sem reiniciar sua chamada de voz.</p></div>
-        <div class="ui2-site-story-card"><h3>Jogos no Windows 10</h3><p>Preferência de captura mais eficiente quando compatível, mantendo SmartStream, FPS adaptável e seleção manual de janela ou monitor.</p></div>
-      </div>
-      <p class="site-rc-note">O SFU exclusivo atualmente transporta vídeo, não áudio da tela. A voz continua independente via P2P/TURN. Qualidade e fluidez em PCs reais precisam de homologação antes da versão estável.</p>
-    </div>
-  </section>
-  <section class="section ui2-site-story" id="rc-7-9-news" aria-labelledby="rc-7-9-news-title" hidden>
-    <div class="container">
-      <span class="section-tag">HOTFIX · RC 7.9 / TESTERS</span>
-      <div class="section-heading"><h2 id="rc-7-9-news-title">Discórdia de volta.<br><span class="gradient">Agora abre normalmente.</span></h2><p>Correção urgente de inicialização: o novo controle de vídeo SFU foi reorganizado para não causar falha visual ao abrir o aplicativo.</p></div>
-      <div class="ui2-site-story-grid">
-        <div class="ui2-site-story-card"><h3>Falha de abertura corrigida</h3><p>Reordenação da inicialização do SFU exclusivo, evitando o erro de JavaScript da RC 7.8.</p></div>
-        <div class="ui2-site-story-card"><h3>SFU e voz preservados</h3><p>As melhorias de vídeo exclusivo continuam presentes. A chamada de voz permanece independente por P2P/TURN.</p></div>
-        <div class="ui2-site-story-card"><h3>Windows 10 e reconexão</h3><p>Correções de recepção, captura e conexões repetidas introduzidas na RC 7.8 foram mantidas para testes.</p></div>
-      </div>
-      <p class="site-rc-note">A RC 7.9 é um hotfix de inicialização. A fluidez real das transmissões no Windows 10 ainda precisa de homologação antes da versão estável.</p>
-    </div>
-  </section>
-  <section class="section ui2-site-story" id="rc-7-13-news" aria-labelledby="rc-7-13-news-title" hidden>
-    <div class="container">
-      <span class="section-tag">NOVIDADE · RC 7.13 / TESTERS</span>
-      <div class="section-heading"><h2 id="rc-7-13-news-title">Jogue e transmita.<br><span class="gradient">Áudio mais estável, imagem mais nítida.</span></h2><p>Melhorias na captura seletiva de áudio, recuperação de qualidade em jogos no Windows 10/11 e conexão visual sem alertas falsos. O Discórdia adapta o vídeo ao desempenho real do computador e da rede.</p></div>
-      <div class="site-stream-connect-demo" role="img" aria-label="Prévia do estado de conexão da transmissão no Discórdia">
-        <span class="site-stream-connect-dots" aria-hidden="true"><i></i><i></i><i></i></span>
-        <div><strong>Conectando à transmissão…</strong><p>Aguardando quadros de vídeo. A voz da chamada continua independente.</p></div>
-      </div>
-      <div class="ui2-site-story-grid">
-        <div class="ui2-site-story-card"><h3>Áudio de jogos mais estável</h3><p>Processamento por AudioWorklet com buffer curto e caminho compatível para Windows, reduzindo interrupções durante cenas pesadas.</p></div>
-        <div class="ui2-site-story-card"><h3>Qualidade que se recupera</h3><p>Bitrate de vídeo sobe gradualmente quando a conexão do transmissor está estável. Sem forçar resolução acima da capacidade da rede.</p></div>
-        <div class="ui2-site-story-card"><h3>Vídeo sem cobertura indevida</h3><p>A interface reconhece melhor os quadros apresentados e exibe avisos compactos durante congelamentos.</p></div>
-      </div>
-      <p class="site-rc-note">RC de homologação para Windows x64. TURN e voz mantidos; vídeo SFU exclusivo sem fallback escondido. Desempenho e recepção SFU ainda exigem testes reais com vários computadores.</p>
-    </div>
-  </section>
-  <section class="section ui2-site-story" id="rc-7-12-news" aria-labelledby="rc-7-12-news-title" hidden>
-    <div class="container">
-      <span class="section-tag">NOVIDADE · RC 7.12 / TESTERS</span>
-      <div class="section-heading"><h2 id="rc-7-12-news-title">Acompanhe a conexão.<br><span class="gradient">Sem tela vazia.</span></h2><p>Ao escolher uma transmissão, o Discórdia mostra que está conectando, avisa sobre reconexão e informa o erro se não receber imagem. O vídeo só aparece como conectado depois dos primeiros quadros.</p></div>
-      <div class="site-stream-connect-demo" aria-label="Exemplo visual do estado Conectando à transmissão">
-        <span class="site-stream-connect-dots" aria-hidden="true"><i></i><i></i><i></i></span>
-        <div><strong>Conectando à transmissão…</strong><p>Aguardando os primeiros quadros de vídeo.</p></div>
-      </div>
-      <div class="ui2-site-story-grid">
-        <div class="ui2-site-story-card"><h3>Conectando e reconectando</h3><p>A animação acompanha o início do vídeo e não fica girando para sempre: após o limite de espera, é possível tentar novamente.</p></div>
-        <div class="ui2-site-story-card"><h3>SFU exclusivo de verdade</h3><p>Quando selecionado manualmente, o vídeo só usa SFU. Falhas são explicadas na própria chamada, sem substituir a imagem por P2P/TURN escondido.</p></div>
-        <div class="ui2-site-story-card"><h3>Descoberta de transmissão</h3><p>Corrigido o anúncio de publicações SFU no Firebase. A recepção em computadores reais continua em homologação.</p></div>
-      </div>
-      <p class="site-rc-note">Release Candidate para Windows x64; teste com amigos antes da versão estável. Voz independente do SFU de vídeo. Consulte notas oficiais e SHA-256.</p>
-    </div>
-  </section>
-  <section class="section ui2-site-story" id="rc-7-10-news" aria-labelledby="rc-7-10-news-title" hidden>
-    <div class="container">
-      <span class="section-tag">NOVIDADES · RC 7.10 / TESTERS</span>
-      <div class="section-heading"><h2 id="rc-7-10-news-title">Compartilhe seus jogos.<br><span class="gradient">Retome do seu jeito.</span></h2><p>Captura nativa no Windows 10, recuperação da mesma janela após interrupções e preferências de áudio lembradas na próxima abertura.</p></div>
-      <div class="ui2-site-story-grid">
-        <div class="ui2-site-story-card"><h3>Menos cópias de imagem</h3><p>A redução de resolução usa a captura nativa. O envio adapta resolução e FPS quando o encoder indica pressão de CPU.</p></div>
-        <div class="ui2-site-story-card"><h3>Recuperação de janela</h3><p>Se a captura terminar numa transição de tela cheia, o aplicativo tenta reabrir a mesma janela. Se o Windows recriá-la, selecione-a novamente.</p></div>
-        <div class="ui2-site-story-card"><h3>Áudio como você deixou</h3><p>Microfone silenciado ou aberto e áudio da chamada ativado ou desativado são lembrados por conta neste computador.</p></div>
-      </div>
-      <p class="site-rc-note">Release Candidate para Windows x64. A fluidez varia conforme hardware, driver e conexão; não há garantia de FPS fixo. Consulte as notas e os hashes SHA-256 da versão oficial.</p>
-    </div>
-  </section>
+  <section class="section concept-rc" id="rc-18-news" aria-labelledby="rc-18-news-title" hidden><div class="container"><span class="section-tag">IDENTIDADE VISUAL · RC18</span><div class="section-heading"><h2 id="rc-18-news-title">Seu tema. Seu mundo.<br><span class="gradient">Sem sair da conversa.</span></h2><p>Fundos imersivos, ícones temáticos e uma atmosfera própria para cada comunidade. Arte e interface conceituais; os recursos disponíveis dependem da versão instalada.</p></div><div class="concept-theme-row"><article class="concept-theme concept-theme-ds"><span>⚔</span><h3>Cinzas & aço</h3><p>Fantasia sombria, azul glacial.</p></article><article class="concept-theme concept-theme-sekiro"><span>⛩</span><h3>Folhas rubras</h3><p>Atmosfera japonesa, vermelho profundo.</p></article><article class="concept-theme concept-theme-night"><span>✦</span><h3>Noite mágica</h3><p>Luz estelar, violeta e dourado.</p></article></div></div></section>
   <section class="section downloads" id="downloads" aria-labelledby="downloads-heading">
     <div class="container">
       <span class="section-tag">DISTRIBUIÇÃO OFICIAL</span>
@@ -221,6 +107,6 @@
 <footer class="footer"><div class="container footer-main">
   <div class="footer-brand"><a href="#inicio" class="brand"><img src="./logo.png" alt="" width="37" height="37"><span>Disc<span class="accent">ó</span>rdia<span class="pink">.</span></span></a><p>Comunicação, comunidades e compartilhamento para Windows.</p></div>
   <nav class="footer-links" aria-label="Links do rodapé"><a href="#recursos">Recursos</a><a href="#downloads">Downloads</a><a href="./privacidade.html">Privacidade</a><a href="https://github.com/magaskye/discordia/releases" target="_blank" rel="noopener noreferrer">GitHub Releases ↗</a></nav>
-</div><div class="container footer-end"><span>© 2026 Discórdia Desktop. Todos os direitos reservados.</span><span>Site oficial do projeto · Windows</span></div><p class="footer-testers">Agradecimento aos testers: @Fuyuki · @Lukelucca · @Skallzin · @Galaxy · @Ezereal · <strong>@Merakh</strong></p></footer>
+</div><div class="container footer-end"><span>© 2026 Discórdia Desktop. Todos os direitos reservados.</span><span>Projeto criado por Carlos Eduardo Lopes, com apoio de ChatGPT e Gemini.</span></div><p class="footer-testers">Agradecimento aos testers: @Fuyuki · @Lukelucca · @Skallzin · @Galaxy · @Ezereal · <strong>@Merakh</strong></p></footer>
 </body>
 </html>
