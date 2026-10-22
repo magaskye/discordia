@@ -11,7 +11,7 @@
 <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src https://api.github.com; form-action 'none'; object-src 'none'; base-uri 'self'; upgrade-insecure-requests">
 <link rel="icon" href="./logo.png" type="image/png">
 <link rel="stylesheet" href="./site.css">
-<script src="./site.js?v=rc7.12" defer></script>
+<script src="./site.js?v=rc7.13" defer></script>
 <title>Discórdia Desktop — Conecte sua comunidade</title>
 </head>
 <body>
@@ -149,6 +149,22 @@
         <div class="ui2-site-story-card"><h3>Windows 10 e reconexão</h3><p>Correções de recepção, captura e conexões repetidas introduzidas na RC 7.8 foram mantidas para testes.</p></div>
       </div>
       <p class="site-rc-note">A RC 7.9 é um hotfix de inicialização. A fluidez real das transmissões no Windows 10 ainda precisa de homologação antes da versão estável.</p>
+    </div>
+  </section>
+  <section class="section ui2-site-story" id="rc-7-13-news" aria-labelledby="rc-7-13-news-title" hidden>
+    <div class="container">
+      <span class="section-tag">NOVIDADE · RC 7.13 / TESTERS</span>
+      <div class="section-heading"><h2 id="rc-7-13-news-title">Jogue e transmita.<br><span class="gradient">Áudio mais estável, imagem mais nítida.</span></h2><p>Melhorias na captura seletiva de áudio, recuperação de qualidade em jogos no Windows 10/11 e conexão visual sem alertas falsos. O Discórdia adapta o vídeo ao desempenho real do computador e da rede.</p></div>
+      <div class="site-stream-connect-demo" role="img" aria-label="Prévia do estado de conexão da transmissão no Discórdia">
+        <span class="site-stream-connect-dots" aria-hidden="true"><i></i><i></i><i></i></span>
+        <div><strong>Conectando à transmissão…</strong><p>Aguardando quadros de vídeo. A voz da chamada continua independente.</p></div>
+      </div>
+      <div class="ui2-site-story-grid">
+        <div class="ui2-site-story-card"><h3>Áudio de jogos mais estável</h3><p>Processamento por AudioWorklet com buffer curto e caminho compatível para Windows, reduzindo interrupções durante cenas pesadas.</p></div>
+        <div class="ui2-site-story-card"><h3>Qualidade que se recupera</h3><p>Bitrate de vídeo sobe gradualmente quando a conexão do transmissor está estável. Sem forçar resolução acima da capacidade da rede.</p></div>
+        <div class="ui2-site-story-card"><h3>Vídeo sem cobertura indevida</h3><p>A interface reconhece melhor os quadros apresentados e exibe avisos compactos durante congelamentos.</p></div>
+      </div>
+      <p class="site-rc-note">RC de homologação para Windows x64. TURN e voz mantidos; vídeo SFU exclusivo sem fallback escondido. Desempenho e recepção SFU ainda exigem testes reais com vários computadores.</p>
     </div>
   </section>
   <section class="section ui2-site-story" id="rc-7-12-news" aria-labelledby="rc-7-12-news-title" hidden>
