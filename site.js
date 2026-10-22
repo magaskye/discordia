@@ -57,27 +57,6 @@
     }
     return true;
   };
-  // Carrossel manual: navegação por controles, sem interromper leitor de tela.
-  const slides=[...document.querySelectorAll('.ui2-real-slide')];
-  const dots=[...document.querySelectorAll('.ui2-real-slide-dots button')];
-  let slideIndex=0;
-  const setSlide=index=>{
-    if(slides.length!==3)return;
-    slideIndex=(index+slides.length)%slides.length;
-    slides.forEach((slide,i)=>{
-      slide.hidden=i!==slideIndex;
-      slide.classList.toggle('is-current',i===slideIndex);
-    });
-    dots.forEach((dot,i)=>{
-      dot.classList.toggle('is-current',i===slideIndex);
-      if(i===slideIndex)dot.setAttribute('aria-current','true');
-      else dot.removeAttribute('aria-current');
-    });
-  };
-  document.getElementById('ui2-slide-prev')?.addEventListener('click',()=>setSlide(slideIndex-1));
-  document.getElementById('ui2-slide-next')?.addEventListener('click',()=>setSlide(slideIndex+1));
-  dots.forEach((dot,i)=>dot.addEventListener('click',()=>setSlide(i)));
-
   fetch('https://api.github.com/repos/magaskye/discordia/releases?per_page=30',{headers:{Accept:'application/vnd.github+json'},cache:'no-store'})
     .then(res=>{if(!res.ok)throw new Error('source_unavailable');return res.json()})
     .then(items=>{
@@ -89,57 +68,15 @@
         text('release-hero-badge','DISCÓRDIA RC DISPONÍVEL');
         text('release-hint','Downloads oficiais verificados. Consulte as notas e a integridade SHA-256.');
       }
-      // The SFU RC7.5 showcase appears only once official release assets
-      // are verified; an unfinished Windows build never becomes an announcement.
+      // RC18 concept is announced only after both official Windows binaries,
+      // the update manifest and SHA-256 file are validated on the release.
       if(rcAvailable){
         const match=String(rc?.tag_name||'').match(/^v?\d+\.\d+\.\d+-rc\.(\d+)(?:\.(\d+))?$/);
-        const rcLevel=Number(match?.[1]||0),rcPatch=Number(match?.[2]||0);
-        if(rcLevel>7||(rcLevel===7&&rcPatch>=13)){
-          const newest=document.getElementById('rc-7-13-news');
-          if(newest)newest.hidden=false;
-          for(const id of ['rc-7-12-news','rc-7-10-news','rc-7-9-news','rc-7-8-news','rc-7-7-news','rc-7-6-news','rc-sfu-news']){
-            const old=document.getElementById(id);if(old)old.hidden=true;
-          }
-        }else if(rcLevel===7&&rcPatch>=12){
-          const newest=document.getElementById('rc-7-12-news');
-          if(newest)newest.hidden=false;
-          for(const id of ['rc-7-10-news','rc-7-9-news','rc-7-8-news','rc-7-7-news','rc-7-6-news','rc-sfu-news']){
-            const old=document.getElementById(id);if(old)old.hidden=true;
-          }
-        }else if(rcLevel===7&&rcPatch>=10){
-          const newest=document.getElementById('rc-7-10-news');
-          if(newest)newest.hidden=false;
-          for(const id of ['rc-7-9-news','rc-7-8-news','rc-7-7-news','rc-7-6-news','rc-sfu-news']){
-            const old=document.getElementById(id);if(old)old.hidden=true;
-          }
-        }else if(rcLevel===7&&rcPatch>=9){
-          const newest=document.getElementById('rc-7-9-news');
-          if(newest)newest.hidden=false;
-          for(const id of ['rc-7-8-news','rc-7-7-news','rc-7-6-news','rc-sfu-news']){
-            const old=document.getElementById(id);if(old)old.hidden=true;
-          }
-        }else if(rcLevel===7&&rcPatch>=8){
-          const newest=document.getElementById('rc-7-8-news');
-          if(newest)newest.hidden=false;
-          for(const id of ['rc-7-7-news','rc-7-6-news','rc-sfu-news']){
-            const old=document.getElementById(id);if(old)old.hidden=true;
-          }
-        }else if(rcLevel===7&&rcPatch>=7){
-          const newest=document.getElementById('rc-7-7-news');
-          if(newest)newest.hidden=false;
-          const previous=document.getElementById('rc-7-6-news');
-          if(previous)previous.hidden=true;
-          const former=document.getElementById('rc-sfu-news');
-          if(former)former.hidden=true;
-        }else if(rcLevel===7&&rcPatch>=6){
-          const latest=document.getElementById('rc-7-6-news');
-          if(latest)latest.hidden=false;
-          const former=document.getElementById('rc-sfu-news');
-          if(former)former.hidden=true;
-        }else if(rcLevel===7&&rcPatch>=5){
-          const feature=document.getElementById('rc-sfu-news');
-          if(feature)feature.hidden=false;
-        }
+        const level=Number(match?.[1]||0);
+        const sub=Number(match?.[2]||0);
+        const rc18=level>=18;
+        const section=document.getElementById('rc-18-news');
+        if(section)section.hidden=!rc18;
       }
       if(stableAvailable)text('release-hero-badge','DISCÓRDIA PARA WINDOWS');
       text('release-status',rcAvailable||stableAvailable?'Downloads disponíveis':'Acompanhe os lançamentos');
