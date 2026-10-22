@@ -64,9 +64,21 @@
       const rc=latest(items,r=>r.prerelease&&/^v?\d+\.\d+\.\d+-rc\.\d+(?:\.\d+)?$/.test(r.tag_name||''));
       const stable=latest(items,r=>!r.prerelease&&/^v?\d+\.\d+\.\d+$/.test(r.tag_name||''));
       const rcAvailable=confirm(rc,'rc'),stableAvailable=confirm(stable,'stable');
-      if(rcAvailable){
+      if(rcAvailable && !stableAvailable){
         text('release-hero-badge','DISCÓRDIA RC DISPONÍVEL');
-        text('release-hint','Downloads oficiais verificados. Consulte as notas e a integridade SHA-256.');
+        text('release-hint','RC oficial disponível. Consulte as notas e as somas SHA-256 antes de instalar.');
+      }
+      // Só promover a estável quando a API oficial comprovar os dois EXEs,
+      // latest.yml e SHA256SUMS.txt. Até lá a RC permanece acessível.
+      if(stableAvailable){
+        const rcCard=document.getElementById('rc-download-card');
+        if(rcCard)rcCard.hidden=true;
+        text('stable-card-label','VERSÃO ESTÁVEL');
+        text('stable-card-description','Versão oficial para Windows x64. Instalador, edição portátil e hashes disponíveis na Release verificada.');
+        text('release-hero-badge','DISCÓRDIA ESTÁVEL DISPONÍVEL');
+        text('release-hint','Versão estável validada pela listagem de arquivos do GitHub Releases; confira as somas SHA-256.');
+        const oldRcNews=document.getElementById('rc-18-news');
+        if(oldRcNews)oldRcNews.hidden=true;
       }
       // RC18 concept is announced only after both official Windows binaries,
       // the update manifest and SHA-256 file are validated on the release.
@@ -78,8 +90,7 @@
         const section=document.getElementById('rc-18-news');
         if(section)section.hidden=!rc18;
       }
-      if(stableAvailable)text('release-hero-badge','DISCÓRDIA PARA WINDOWS');
-      text('release-status',rcAvailable||stableAvailable?'Downloads disponíveis':'Acompanhe os lançamentos');
+      text('release-status',stableAvailable?'Estável disponível':rcAvailable?'RC disponível':'Acompanhe os lançamentos');
     })
     .catch(()=>{
       text('release-status','Consulte as versões no GitHub');
