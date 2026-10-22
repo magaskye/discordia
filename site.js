@@ -82,7 +82,7 @@
       }
       // RC18 concept is announced only after both official Windows binaries,
       // the update manifest and SHA-256 file are validated on the release.
-      if(rcAvailable){
+      if(rcAvailable && !stableAvailable){
         const match=String(rc?.tag_name||'').match(/^v?\d+\.\d+\.\d+-rc\.(\d+)(?:\.(\d+))?$/);
         const level=Number(match?.[1]||0);
         const sub=Number(match?.[2]||0);
