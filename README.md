@@ -5,7 +5,7 @@ O **Discórdia Desktop** é um aplicativo de comunicação para Windows que reú
 **Site:** https://magaskye.github.io/discordia/  
 **Downloads oficiais:** https://github.com/magaskye/discordia/releases  
 **Plataforma:** Windows x64  
-**Canal de distribuição atual:** Release Candidate (RC/Testers). A edição estável 1.0 será anunciada separadamente.
+**Canal público confirmado em 22/10/2026:** Release Candidate RC18. O site está preparado para priorizar automaticamente uma edição estável somente quando a Release oficial publicar os arquivos completos e verificáveis.
 
 ## Recursos
 
@@ -22,7 +22,7 @@ O desempenho e a qualidade podem variar conforme o hardware, a conexão e o cont
 
 ## Download e instalação
 
-O site identifica a versão mais recente por meio da **API oficial do GitHub Releases** e só habilita os botões após identificar instalador, portátil, manifesto e arquivo SHA-256. Nenhum instalador é armazenado diretamente no site.
+O site identifica as versões por meio da **API oficial do GitHub Releases** e só habilita os botões após encontrar instalador, portátil, manifesto de atualização e arquivo de somas SHA-256. Quando existe uma edição estável verificável, ela substitui a RC no painel de downloads, sem apagar o histórico das melhorias. Nenhum instalador é armazenado diretamente no site.
 
 1. Acesse [Downloads](https://magaskye.github.io/discordia/#downloads).
 2. Escolha o **instalador** ou a **versão portátil** para Windows x64.
@@ -43,14 +43,13 @@ Este repositório público mantém exclusivamente os arquivos do site, informaç
 | `ui-discordia-v2-preview.svg` | Ilustração da experiência do aplicativo |
 | `logo.png` | Marca do projeto |
 | `privacidade.html` | Informações sobre privacidade |
+| `HISTORICO_RCS.md` | O destaque de cada RC pública preservado mesmo após a retirada dos executáveis antigos |
 
 O site é estático e usa o GitHub Pages. Não requer credenciais de acesso, segredos de servidor ou coleta de senhas para disponibilizar os downloads.
 
 ## Demonstração visual
 
-O site apresenta um **carrossel com capturas reais** da interface Desktop, compartilhadas durante testes anteriores: Amigos, Palco e Compartilhamento. As imagens foram reduzidas para preservar dados pessoais; os textos e controles podem variar entre versões RC. As capturas não devem ser confundidas com promessa de funcionalidades ainda não implantadas.
-
-O carrossel é manual, acessível por botões, sem reprodução automática. Para vê-lo, acesse [o início do site](https://magaskye.github.io/discordia/#inicio).
+O topo do site apresenta uma **ilustração conceitual identificada como tal** da experiência Discórdia, não uma captura real do executável. A seção **Histórico** preserva as melhorias de cada RC pública.
 
 ## Firebase e presença
 
@@ -61,14 +60,14 @@ O carrossel é manual, acessível por botões, sem reprodução automática. Par
 
 A eventual **1.0 Estável** exige homologação com usuários reais, verificação das regras Firebase e confirmação das integrações de produção. O programa RC permanece separado até essa aprovação.
 
-## Lançamentos
+## Lançamentos e continuidade
 
-A distribuição é organizada em dois canais:
+- **RC/Testers:** enquanto não existir uma versão estável verificável, o site oferece a RC pública mais recente por meio da API do GitHub. Os arquivos de instalação antigos não são removidos antes da substituição estável, para preservar a continuidade de atualização.
+- **Estável:** quando a `v1.0.0` estiver disponível na página oficial com instalador, portátil, `latest.yml` e `SHA256SUMS.txt`, o site dará prioridade à estável e ocultará os links de RC da página inicial.
+- **Histórico:** os principais marcos das RCs públicas, da 7.4 até a 18, estão registrados em [HISTORICO_RCS.md](./HISTORICO_RCS.md), independentemente da disponibilidade futura de seus binários.
+- **Segurança:** o lançamento da versão estável exige confirmação das regras e serviços efetivamente implantados e dos hashes individuais dos executáveis finais; ensaios privados e testes em emulador não substituem essa verificação.
 
-- **RC/Testers:** versões de pré-lançamento, destinadas à avaliação e ao aperfeiçoamento da experiência. Apenas a RC pública mais recente é mantida na lista de downloads.
-- **Estável:** canal separado, reservado para a versão final quando estiver disponível.
-
-Consulte sempre [GitHub Releases](https://github.com/magaskye/discordia/releases) para obter a versão vigente e as notas oficiais. Não utilize links desatualizados enviados por terceiros.
+Consulte [GitHub Releases](https://github.com/magaskye/discordia/releases) para saber qual versão foi efetivamente publicada. Não confunda um instalador privado `1.0.0` com a Release pública `v1.0.0`.
 
 ## Comunicação e contribuições
 
