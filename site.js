@@ -94,7 +94,13 @@
       if(rcAvailable){
         const match=String(rc?.tag_name||'').match(/^v?\d+\.\d+\.\d+-rc\.(\d+)(?:\.(\d+))?$/);
         const rcLevel=Number(match?.[1]||0),rcPatch=Number(match?.[2]||0);
-        if(rcLevel>7||(rcLevel===7&&rcPatch>=10)){
+        if(rcLevel>7||(rcLevel===7&&rcPatch>=12)){
+          const newest=document.getElementById('rc-7-12-news');
+          if(newest)newest.hidden=false;
+          for(const id of ['rc-7-10-news','rc-7-9-news','rc-7-8-news','rc-7-7-news','rc-7-6-news','rc-sfu-news']){
+            const old=document.getElementById(id);if(old)old.hidden=true;
+          }
+        }else if(rcLevel===7&&rcPatch>=10){
           const newest=document.getElementById('rc-7-10-news');
           if(newest)newest.hidden=false;
           for(const id of ['rc-7-9-news','rc-7-8-news','rc-7-7-news','rc-7-6-news','rc-sfu-news']){
