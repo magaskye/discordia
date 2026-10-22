@@ -116,3 +116,15 @@ h1{font-size:clamp(49px,5.7vw,79px);font-weight:950;letter-spacing:-.08em;line-h
 .ui2-real-slide-dots>button.is-current{background:#bd86ff;box-shadow:0 0 0 3px #8b65d536}
 .ui2-real-slides :is(button):focus-visible{outline:2px solid #81d5fa;outline-offset:3px}
 @media(max-width:700px){.ui2-real-slide>img{min-height:0}.ui2-real-slide>div{padding:10px 6px 3px}}
+
+/* RC7.12: small illustrative status preview, hidden until official assets verify. */
+.site-stream-connect-demo{display:flex;align-items:center;justify-content:center;gap:23px;margin:6px 0 25px;padding:24px 28px;border-radius:18px;background:radial-gradient(ellipse at 36% 25%,#263b59,#0c152a 82%);border:1px solid #87d7ff3f;color:#f4f8ff;min-height:116px}
+.site-stream-connect-demo strong{font-weight:800;font-size:16px}
+.site-stream-connect-demo p{margin:6px 0 0;color:#aabbdd;font-size:12px}
+.site-stream-connect-dots{display:flex;gap:6px;align-items:center;min-height:36px}
+.site-stream-connect-dots i{display:block;width:9px;height:9px;background:#80ddff;border-radius:100%;animation:site-stream-dot 1.1s ease-in-out infinite;box-shadow:0 0 16px #50c3f55f}
+.site-stream-connect-dots i:nth-child(2){animation-delay:.17s}
+.site-stream-connect-dots i:nth-child(3){animation-delay:.34s}
+@keyframes site-stream-dot{0%,65%,100%{opacity:.4;transform:translateY(0)}33%{opacity:1;transform:translateY(-8px)}}
+@media(max-width:600px){.site-stream-connect-demo{flex-direction:column;gap:12px;text-align:center}}
+@media(prefers-reduced-motion:reduce){.site-stream-connect-dots i{animation:none;opacity:.95}}
