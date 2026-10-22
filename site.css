@@ -128,3 +128,7 @@ h1{font-size:clamp(49px,5.7vw,79px);font-weight:950;letter-spacing:-.08em;line-h
 @keyframes site-stream-dot{0%,65%,100%{opacity:.4;transform:translateY(0)}33%{opacity:1;transform:translateY(-8px)}}
 @media(max-width:600px){.site-stream-connect-demo{flex-direction:column;gap:12px;text-align:center}}
 @media(prefers-reduced-motion:reduce){.site-stream-connect-dots i{animation:none;opacity:.95}}
+
+/* Crédito permanente à comunidade de testers, inclusive @Merakh. */
+.footer-testers{margin:0 auto;padding:0 24px 20px;max-width:1180px;text-align:center;color:#aeb6c8;font-size:12px;line-height:1.7}
+.footer-testers strong{font-weight:750;color:#cee6f5}
