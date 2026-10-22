@@ -164,3 +164,22 @@ h1{font-size:clamp(49px,5.7vw,79px);font-weight:950;letter-spacing:-.08em;line-h
 @media(max-width:760px){.concept-hero{min-height:0;padding-top:20px}.concept-window{max-width:560px}.concept-theme-row{grid-template-columns:1fr}.concept-theme{min-height:160px}.concept-theme>span{font-size:32px}}
 @media(max-width:510px){.concept-channels{display:none}.concept-layout{min-height:285px}.concept-rail{width:40px}.concept-stage{padding:9px}.concept-visual{min-height:175px}.concept-bubble{position:relative;display:inline-flex;top:auto;bottom:auto;left:auto;right:auto;margin:8px 7px 0 0;padding:7px 9px;font-size:10px}.concept-caption{margin-top:14px}.concept-title-sub{display:none}}
 @media(prefers-reduced-motion:reduce){.concept-visual::before,.concept-visual::after,.concept-meter i{animation:none}.concept-theme{transition:none}}
+
+
+/* Histórico público das RCs — mantido após a transição para Stable. */
+[hidden]{display:none!important}
+.release-history{background:linear-gradient(150deg,#101a2b,#111324);border-block:1px solid #ffffff17}
+.release-history-highlights{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin:0 0 24px}
+.release-history-highlights article{padding:22px;border:1px solid #ffffff20;border-radius:15px;background:#ffffff08;min-width:0}
+.release-history-highlights strong{font-size:16px;color:#a1e5ec}
+.release-history-highlights p{font-size:12px;line-height:1.75;margin:9px 0 0}
+.release-history-expand{border:1px solid #7086a45c;border-radius:14px;background:#141d2c;overflow:hidden}
+.release-history-expand summary{cursor:pointer;padding:18px 23px;color:#e5edf8;font-size:14px;font-weight:800}
+.release-history-expand[open] summary{border-bottom:1px solid #ffffff1f}
+.release-history-list{list-style:none;counter-reset:milestones;padding:12px 22px 18px;margin:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));column-gap:26px;row-gap:0}
+.release-history-list li{min-width:0;border-bottom:1px solid #ffffff12;padding:16px 0}
+.release-history-list strong{font-size:13px;color:#a3e2ed}
+.release-history-list p{margin:7px 0 0;font-size:12px;line-height:1.7}
+.release-history-footnote{font-size:11px;margin:16px 0 0}
+.download-grid:has(#rc-download-card[hidden]){grid-template-columns:minmax(0,700px);justify-content:center}
+@media(max-width:800px){.release-history-highlights{grid-template-columns:1fr}.release-history-list{grid-template-columns:1fr}}
