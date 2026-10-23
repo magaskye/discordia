@@ -5,7 +5,7 @@ O **Discórdia Desktop** é um aplicativo de comunicação para Windows que reú
 **Site:** https://magaskye.github.io/discordia/  
 **Downloads oficiais:** https://github.com/magaskye/discordia/releases  
 **Plataforma:** Windows x64  
-**Estado em 23/10/2026:** Discórdia 1.0.0 compilado com êxito no GitLab privado (job `17429566006`), com 88/88 testes Windows aprovados, instalador e portátil x64 e hashes. A publicação pública está condicionada ao envio autenticado dos arquivos para a Release oficial `v1.0.0`. A última versão pública anteriormente confirmada é a RC18. O site identifica automaticamente a versão estável quando os artefatos necessários aparecem no GitHub Releases.
+**Versão oficial em 23/10/2026: Discórdia 1.0.0 estável publicada.** Release [v1.0.0](https://github.com/magaskye/discordia/releases/tag/v1.0.0) disponível no GitHub, com instalador, versão portátil, `latest.yml` e SHA-256. Compilação no GitLab privado (job `17429566006`), com **88/88 testes Windows aprovados**. O site identifica automaticamente a versão estável com base nos quatro arquivos oficiais.
 
 ## Recursos
 
@@ -26,7 +26,7 @@ O desempenho e a qualidade podem variar conforme o hardware, a conexão e o cont
 - A versão 1.0.0 consolidada foi compilada no GitLab (commit `33d71ce65280aa70a5430ec4d857b3d32c18b816`), **sem publicar código-fonte privado**.
 - A exclusão definitiva de servidores está desativada até a verificação da integração Google–Cloudflare/Firebase; o cliente não deve oferecer exclusão sem backend autorizado.
 - O build disponibiliza login por e-mail; OAuth Google nativo ainda não foi provisionado.
-- O download público precisa acompanhar `latest.yml` e `SHA256SUMS.txt` gerados a partir **dos executáveis reais**, e não dos assets antigos da Release em rascunho.
+- Os downloads públicos foram publicados com `latest.yml` e `SHA256SUMS.txt`, gerados a partir **dos executáveis reais**, em substituição aos arquivos antigos do rascunho.
 
 ## Download e instalação
 
@@ -66,16 +66,16 @@ O topo do site apresenta uma **ilustração conceitual identificada como tal** d
 - A estabilidade de presença depende de relógio do servidor, regras autenticadas e da configuração `VITE_FIREBASE_DATABASE_URL` no build.
 - No plano Spark, mantenha os serviços dentro das cotas disponíveis e não ative Cloud Functions pagas ou novos serviços sem aprovação.
 
-A eventual **1.0 Estável** exige homologação com usuários reais, verificação das regras Firebase e confirmação das integrações de produção. O programa RC permanece separado até essa aprovação.
+A **1.0.0 Estável** foi publicada após compilação e testes automatizados, com a RC22 como referência homologada. A exclusão definitiva de servidores permanece bloqueada até a verificação real do backend e das regras Firebase em produção.
 
 ## Lançamentos e continuidade
 
-- **RC/Testers:** enquanto não existir uma versão estável verificável, o site oferece a RC pública mais recente por meio da API do GitHub. Os arquivos de instalação antigos não são removidos antes da substituição estável, para preservar a continuidade de atualização.
-- **Estável:** quando a `v1.0.0` estiver disponível na página oficial com instalador, portátil, `latest.yml` e `SHA256SUMS.txt`, o site dará prioridade à estável e ocultará os links de RC da página inicial.
+- **RC/Testers:** o histórico dos testes continua disponível na página de versões, mas a edição estável é a escolha principal do site.
+- **Estável:** a [`v1.0.0`](https://github.com/magaskye/discordia/releases/tag/v1.0.0) foi publicada com instalador, portátil, `latest.yml` e `SHA256SUMS.txt`; o site agora lhe dá prioridade.
 - **Histórico:** os principais marcos das RCs públicas, da 7.4 até a 18, estão registrados em [HISTORICO_RCS.md](./HISTORICO_RCS.md), independentemente da disponibilidade futura de seus binários.
-- **Segurança:** o lançamento da versão estável exige confirmação das regras e serviços efetivamente implantados e dos hashes individuais dos executáveis finais; ensaios privados e testes em emulador não substituem essa verificação.
+- **Segurança:** hashes dos dois binários conferidos com a compilação de origem. Testes em emulador não substituem revisão dos serviços efetivamente implantados; por isso, a exclusão definitiva permanece desativada.
 
-Consulte [GitHub Releases](https://github.com/magaskye/discordia/releases) para saber qual versão foi efetivamente publicada. Não confunda um instalador privado `1.0.0` com a Release pública `v1.0.0`.
+Consulte a [Release pública oficial v1.0.0](https://github.com/magaskye/discordia/releases/tag/v1.0.0) para instalar ou verificar as somas SHA-256.
 
 ## Comunicação e contribuições
 
