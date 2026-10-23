@@ -5,7 +5,7 @@ O **Discórdia Desktop** é um aplicativo de comunicação para Windows que reú
 **Site:** https://magaskye.github.io/discordia/  
 **Downloads oficiais:** https://github.com/magaskye/discordia/releases  
 **Plataforma:** Windows x64  
-**Canal público confirmado em 22/10/2026:** Release Candidate RC18. O site está preparado para priorizar automaticamente uma edição estável somente quando a Release oficial publicar os arquivos completos e verificáveis.
+**Estado em 23/10/2026:** Discórdia 1.0.0 compilado com êxito no GitLab privado (job `17429566006`), com 88/88 testes Windows aprovados, instalador e portátil x64 e hashes. A publicação pública está condicionada ao envio autenticado dos arquivos para a Release oficial `v1.0.0`. A última versão pública anteriormente confirmada é a RC18. O site identifica automaticamente a versão estável quando os artefatos necessários aparecem no GitHub Releases.
 
 ## Recursos
 
@@ -19,6 +19,14 @@ O **Discórdia Desktop** é um aplicativo de comunicação para Windows que reú
 | Personalização | Interface organizada, painéis ajustáveis e Estúdio de Temas independente |
 
 O desempenho e a qualidade podem variar conforme o hardware, a conexão e o conteúdo da transmissão.
+
+## 1.0.0 — transparência sobre a primeira versão estável
+
+- A RC22 foi homologada como referência de funcionalidades e qualidade.
+- A versão 1.0.0 consolidada foi compilada no GitLab (commit `33d71ce65280aa70a5430ec4d857b3d32c18b816`), **sem publicar código-fonte privado**.
+- A exclusão definitiva de servidores está desativada até a verificação da integração Google–Cloudflare/Firebase; o cliente não deve oferecer exclusão sem backend autorizado.
+- O build disponibiliza login por e-mail; OAuth Google nativo ainda não foi provisionado.
+- O download público precisa acompanhar `latest.yml` e `SHA256SUMS.txt` gerados a partir **dos executáveis reais**, e não dos assets antigos da Release em rascunho.
 
 ## Download e instalação
 
