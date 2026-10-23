@@ -74,7 +74,7 @@
         const rcCard=document.getElementById('rc-download-card');
         if(rcCard)rcCard.hidden=true;
         text('stable-card-label','VERSÃO ESTÁVEL');
-        text('stable-card-description','Versão oficial para Windows x64. Instalador, edição portátil e hashes disponíveis na Release verificada.');
+        text('stable-card-description','Versão oficial Windows x64, com instalador, portátil e hashes SHA-256. Exclusão definitiva de servidores ainda está desativada; login por e-mail disponível.');
         text('release-hero-badge','DISCÓRDIA ESTÁVEL DISPONÍVEL');
         text('release-hint','Versão estável validada pela listagem de arquivos do GitHub Releases; confira as somas SHA-256.');
         const oldRcNews=document.getElementById('rc-18-news');
