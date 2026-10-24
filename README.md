@@ -46,7 +46,9 @@ Este repositório público mantém exclusivamente os arquivos do site, informaç
 | Arquivo | Finalidade |
 | --- | --- |
 | `index.html` | Conteúdo da página oficial |
-| `site.css` | Identidade visual e responsividade |
+| `site.css` | Layout geral e responsividade |
+| `identity-2026.css` | Tipografia futurista e novo acabamento de marca |
+| `discordia-identity-2026.webp` | Arte de identidade visual oficial otimizada do Google Flow |
 | `site.js` | Consulta às Releases oficiais e habilitação segura de downloads |
 | `ui-discordia-v2-preview.svg` | Ilustração da experiência do aplicativo |
 | `logo.png` | Marca do projeto |
@@ -68,7 +70,7 @@ A página inicial contém uma **apresentação interativa de 36 segundos**, sem 
 
 ## Demonstração visual
 
-O topo do site apresenta uma **ilustração conceitual identificada como tal** da experiência Discórdia, não uma captura real do executável. A seção **Histórico** preserva as melhorias de cada RC pública.
+O topo do site agora apresenta a **arte oficial de identidade visual aprovada pelo criador**, produzida no Google Flow, com a marca do Discórdia em ciano, violeta e magenta e o nome em estilo metálico futurista. A arte é uma peça visual de marca, **não** uma captura do aplicativo em execução. A apresentação é veiculada no arquivo `discordia-identity-2026.webp`, otimizado para o GitHub Pages; a fonte e o acabamento visual são definidos em `identity-2026.css`, com alternativas tipográficas locais, sem dependência de serviços de fontes externas. A seção **Histórico** preserva as melhorias de cada RC pública.
 
 ## Firebase e presença
 
