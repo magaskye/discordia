@@ -48,6 +48,8 @@ Este repositório público mantém exclusivamente os arquivos do site, informaç
 | `index.html` | Conteúdo da página oficial |
 | `site.css` | Layout geral e responsividade |
 | `identity-2026.css` | Tipografia futurista e novo acabamento de marca |
+| `velosinc-preview.css` | Estilos da apresentação técnica futura VeloSinc |
+| `velosinc-preview.js` | Navegação local, sem backend, pela explicação das etapas |
 | `discordia-identity-2026.webp` | Arte de identidade visual oficial otimizada do Google Flow |
 | `site.js` | Consulta às Releases oficiais e habilitação segura de downloads |
 | `ui-discordia-v2-preview.svg` | Ilustração da experiência do aplicativo |
@@ -56,6 +58,22 @@ Este repositório público mantém exclusivamente os arquivos do site, informaç
 | `HISTORICO_RCS.md` | O destaque de cada RC pública preservado mesmo após a retirada dos executáveis antigos |
 
 O site é estático e usa o GitHub Pages. Não requer credenciais de acesso, segredos de servidor ou coleta de senhas para disponibilizar os downloads.
+
+## Próxima arquitetura VeloSinc (em desenvolvimento; não publicada)
+
+A página oficial inclui a seção **VeloSinc — em desenvolvimento**, baseada na especificação privada
+`docs/DISCORDIA_VELOSINC_MEDIA_1_0_3_PRIVATE_2026-10-24.md`
+na branch `feature/1.0.3-smart-route-fps-recovery-20261024` do projeto de aplicativo.
+
+A nova demonstração ilustrativa permite comparar três etapas:
+
+- **Envio:** frames capturados versus frames realmente codificados/enviados;
+- **Recepção:** frames recebidos, decodificados e efetivamente exibidos; problemas de rede são distintos de problemas locais de GPU/decodificação;
+- **Recuperação (proposta):** avaliar P2P → TURN → SFU apenas para um espectador afetado, confirmando quadros exibidos antes de trocar de rota e preservando os demais.
+
+O SFU de áudio para voz/som do compartilhamento está apenas previsto na especificação, **não foi implementado nem homologado**. A rota efetiva não pode ser deduzida de um seletor; requer ICE/quadros confirmados.
+
+Esta seção é **preview técnico**, não anúncio de uma versão publicada. Arquivos: `velosinc-preview.css` e `velosinc-preview.js`. A ilustração não coleta métricas nem conecta a serviços. Os downloads oficiais continuam condicionados à checagem do GitHub, e o atualizador permanece no hold de emergência vigente.
 
 ## Apresentação animada de P2P, TURN e SFU
 
