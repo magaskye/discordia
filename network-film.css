@@ -61,3 +61,20 @@
 @media(max-width:850px){.tech-heading{display:block}.tech-heading p{margin-top:20px;max-width:630px}.net-tech-cards{gap:11px}.net-tech-card{padding:19px}.net-film-label{letter-spacing:0}}
 @media(max-width:640px){.tech-cinema .container{width:min(calc(100% - 26px),1160px)}.net-film{border-radius:17px}.net-film-head{padding:13px 15px}.net-film-label{font-size:9px}.net-film-stage{min-height:220px;aspect-ratio:16/11}.net-film-stage .net-corner{top:13px;left:14px;font-size:8px}.net-film-stage .net-corner-right{right:14px;left:auto}.net-map .node-name{font-size:22px}.net-map .node-desc{font-size:14px}.net-map .node-icon{font-size:32px}.net-map .route-label{font-size:18px}.net-map .route-note{font-size:15px}.net-film-subtitles{padding:19px 17px;min-height:151px}.net-film-subtitles h3{padding-right:0;font-size:22px}.net-caption-chip{position:static;display:inline-flex;margin-bottom:10px}.net-film-controls{flex-wrap:wrap;padding:13px 15px}.net-film-progress{flex:1}.net-film-scene-buttons{width:100%;justify-content:space-between}.net-film-scene-buttons button{flex:1}.net-tech-cards{grid-template-columns:1fr}.net-tech-card{padding:21px}.net-tech-card h3{font-size:20px}}
 @media(prefers-reduced-motion:reduce){.net-film *{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+
+/* Pacotes de mídia percorrendo cada rota: movimento inteiramente decorativo. */
+.net-map .net-data-dot{filter:url(#net-glow);opacity:0}
+.net-film:not(.is-paused) .net-data-direct{animation:net-data-direct 2.4s ease-in-out infinite}
+.net-film:not(.is-paused) .net-data-reverse{animation:net-data-reverse 2.4s ease-in-out 1.2s infinite}
+.net-film:not(.is-paused) .net-data-turn{animation:net-data-turn 3.1s ease-in-out infinite}
+.net-film:not(.is-paused) .net-data-src{animation:net-data-src 2.8s ease-in-out infinite}
+.net-film:not(.is-paused) .net-data-top{animation:net-data-top 2.8s ease-in-out .4s infinite}
+.net-film:not(.is-paused) .net-data-middle{animation:net-data-middle 2.8s ease-in-out .7s infinite}
+.net-film:not(.is-paused) .net-data-bottom{animation:net-data-bottom 2.8s ease-in-out 1s infinite}
+@keyframes net-data-direct{0%{transform:translateX(0);opacity:0}12%,84%{opacity:1}100%{transform:translateX(365px);opacity:0}}
+@keyframes net-data-reverse{0%{transform:translateX(0);opacity:0}12%,84%{opacity:1}100%{transform:translateX(-365px);opacity:0}}
+@keyframes net-data-turn{0%{transform:translate(0,0);opacity:0}11%{opacity:1}50%{transform:translate(240px,-191px);opacity:1}90%{opacity:1}100%{transform:translate(480px,0);opacity:0}}
+@keyframes net-data-src{0%{transform:translateX(0);opacity:0}20%,80%{opacity:1}100%{transform:translateX(190px);opacity:0}}
+@keyframes net-data-top{0%{transform:translate(0,0);opacity:0}20%,82%{opacity:1}100%{transform:translate(223px,-140px);opacity:0}}
+@keyframes net-data-middle{0%{transform:translateX(0);opacity:0}20%,82%{opacity:1}100%{transform:translateX(223px);opacity:0}}
+@keyframes net-data-bottom{0%{transform:translate(0,0);opacity:0}20%,82%{opacity:1}100%{transform:translate(223px,145px);opacity:0}}
