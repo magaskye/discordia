@@ -73,8 +73,8 @@
       // Só promover a estável quando a API oficial comprovar os dois EXEs,
       // latest.yml e o manifesto SHA256SUMS da versão. Até lá a RC permanece acessível.
       if(stableAvailable){
-        const rcCard=document.getElementById('rc-download-card');
-        if(rcCard)rcCard.hidden=true;
+        // Do NOT hide a verified newer RC just because the historical stable
+        // release remains available. Friends need both channels side by side.
         text('stable-card-label','VERSÃO ESTÁVEL');
         text('stable-card-description','Versão pública anterior disponível, com instalador e portátil verificados. A atualização 1.0.2 está temporariamente suspensa enquanto corrigimos e homologamos o atualizador automático.');
         text('release-hero-badge','DISCÓRDIA ESTÁVEL DISPONÍVEL');
@@ -92,7 +92,11 @@
         const section=document.getElementById('rc-18-news');
         if(section)section.hidden=!rc18;
       }
-      text('release-status',stableAvailable?'Estável disponível':rcAvailable?'RC disponível':'Acompanhe os lançamentos');
+      if(rcAvailable){
+        text('release-hero-badge','DISCÓRDIA 1.0.3 RC DISPONÍVEL');
+        text('release-hint','RC de testes disponível para amigos. A versão estável anterior permanece separada.');
+      }
+      text('release-status',rcAvailable?'RC 1.0.3 disponível para testers':stableAvailable?'Estável anterior disponível':'Acompanhe os lançamentos');
     })
     .catch(()=>{
       text('release-status','Consulte as versões no GitHub');
