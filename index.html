@@ -84,7 +84,7 @@
         <p>O Discórdia combina diferentes rotas para conversar e compartilhar. Descubra visualmente como P2P, TURN e SFU trabalham em situações distintas.</p>
       </div>
       <div class="net-film is-paused" id="network-film" data-mode="p2p" role="group" aria-label="Apresentação animada sobre os modos de conexão">
-        <div class="net-film-head"><div class="net-film-brand"><span class="net-film-mark" aria-hidden="true">D</span> DISCÓRDIA <span class="divider-dot">/</span> NETWORK</div><span class="net-film-label"><i aria-hidden="true"></i> ANIMAÇÃO EXPLICATIVA · 36 SEGUNDOS</span></div>
+        <div class="net-film-head"><div class="net-film-brand"><img class="net-film-logo" src="./logo.png" alt="" width="34" height="34"> DISCÓRDIA <span class="divider-dot">/</span> NETWORK</div><span class="net-film-label"><i aria-hidden="true"></i> SIMULAÇÃO DE TRANSMISSÃO · 36 SEGUNDOS</span></div>
         <div class="net-film-stage">
           <span class="net-corner" aria-hidden="true">CONNECTION VISUALIZER / 01</span><span class="net-corner net-corner-right" aria-hidden="true">SIMULAÇÃO ILUSTRATIVA</span>
           <svg class="net-map" viewBox="0 0 900 500" role="img" aria-labelledby="net-map-title net-map-description" preserveAspectRatio="xMidYMid meet">
@@ -99,8 +99,8 @@
 <circle class="net-data-dot net-data-direct" cx="270" cy="255" r="9" fill="#64eade"/><circle class="net-data-dot net-data-reverse" cx="635" cy="255" r="7" fill="#a3caff"/>
 <text class="route-label" x="450" y="221">CAMINHO DIRETO</text>
 <text class="route-note" x="450" y="299">Sem retransmissor de mídia</text>
-<g class="movie-node" transform="translate(190 255)"><circle class="node-halo" r="69"/><circle class="node-shell" r="55"/><circle class="node-core" r="39" opacity=".42"/><text class="node-icon" y="9">A</text><text class="node-name" y="82">Amigo A</text><text class="node-desc" y="103">Origem</text></g>
-<g class="movie-node" transform="translate(710 255)"><circle class="node-halo" r="69"/><circle class="node-shell" r="55"/><circle class="node-core" r="39" opacity=".42"/><text class="node-icon" y="9">B</text><text class="node-name" y="82">Amigo B</text><text class="node-desc" y="103">Destino</text></g>
+<g class="movie-node" transform="translate(190 255)"><circle class="node-halo" r="69"/><circle class="node-shell" r="55"/><circle class="node-core" r="39" opacity=".42"/><text class="node-icon" y="9">A</text><text class="node-name" y="82">Transmissor</text><text class="node-desc" y="103">Captura e envia</text></g>
+<g class="movie-node" transform="translate(710 255)"><circle class="node-halo" r="69"/><circle class="node-shell" r="55"/><circle class="node-core" r="39" opacity=".42"/><text class="node-icon" y="9">B</text><text class="node-name" y="82">Receptor</text><text class="node-desc" y="103">Recebe e exibe</text></g>
 <text class="route-note" x="450" y="426">Primeira opção quando a rede permite</text>
 </g>
 <g class="movie-scenario" data-scene="turn">
@@ -108,9 +108,9 @@
 <path class="net-route turn-route" d="M210 328 L450 137 L690 328"/><circle class="net-data-dot net-data-turn" cx="210" cy="328" r="9" fill="#fabd85"/>
 <text class="route-label" x="452" y="361">RETRANSMISSÃO</text>
 <text class="route-note" x="452" y="387">A rota passa por um servidor TURN</text>
-<g class="movie-node" transform="translate(156 343)"><circle class="node-halo" r="69"/><circle class="node-shell" r="55"/><circle class="node-core" r="39" opacity=".42"/><text class="node-icon" y="9">A</text><text class="node-name" y="82">Amigo A</text><text class="node-desc" y="103">Rede restrita</text></g>
+<g class="movie-node" transform="translate(156 343)"><circle class="node-halo" r="69"/><circle class="node-shell" r="55"/><circle class="node-core" r="39" opacity=".42"/><text class="node-icon" y="9">A</text><text class="node-name" y="82">Transmissor</text><text class="node-desc" y="103">Rede restrita</text></g>
 <g class="movie-node" transform="translate(450 133)"><circle class="node-halo" r="69"/><circle class="node-shell" r="55"/><circle class="node-core" r="39" opacity=".42"/><text class="node-icon" y="9">↗</text><text class="node-name" y="82">TURN</text><text class="node-desc" y="103">Servidor relay</text></g>
-<g class="movie-node" transform="translate(745 343)"><circle class="node-halo" r="69"/><circle class="node-shell" r="55"/><circle class="node-core" r="39" opacity=".42"/><text class="node-icon" y="9">B</text><text class="node-name" y="82">Amigo B</text><text class="node-desc" y="103">Recebe a mídia</text></g>
+<g class="movie-node" transform="translate(745 343)"><circle class="node-halo" r="69"/><circle class="node-shell" r="55"/><circle class="node-core" r="39" opacity=".42"/><text class="node-icon" y="9">B</text><text class="node-name" y="82">Receptor</text><text class="node-desc" y="103">Recebe e exibe</text></g>
 </g>
 <g class="movie-scenario" data-scene="sfu">
 <path class="route-dim" d="M222 255 H412 M502 240 L725 100 M502 255 H725 M502 270 L725 415"/>
@@ -122,17 +122,17 @@
 <circle class="net-data-dot net-data-bottom" cx="502" cy="270" r="7" fill="#c5a3ff"/>
 <text class="route-label" x="320" y="224">ENVIA 1 VEZ</text>
 <text class="route-label" x="626" y="220">DISTRIBUI VÍDEO</text>
-<g class="movie-node" transform="translate(155 255)"><circle class="node-halo" r="69"/><circle class="node-shell" r="55"/><circle class="node-core" r="39" opacity=".42"/><text class="node-icon" y="9">▶</text><text class="node-name" y="82">Transmissor</text><text class="node-desc" y="103">Envia vídeo</text></g>
+<g class="movie-node" transform="translate(155 255)"><circle class="node-halo" r="69"/><circle class="node-shell" r="55"/><circle class="node-core" r="39" opacity=".42"/><text class="node-icon" y="9">▶</text><text class="node-name" y="82">Transmissor</text><text class="node-desc" y="103">Envia uma vez</text></g>
 <g class="movie-node" transform="translate(455 255)"><circle class="node-halo" r="69"/><circle class="node-shell" r="55"/><circle class="node-core" r="39" opacity=".42"/><text class="node-icon" y="9">✦</text><text class="node-name" y="82">SFU</text><text class="node-desc" y="103">Distribui fluxos</text></g>
-<g class="movie-node" transform="translate(779 91)"><circle class="node-halo" r="69"/><circle class="node-shell" r="55"/><circle class="node-core" r="39" opacity=".42"/><text class="node-icon" y="9">1</text><text class="node-name" y="82">Amigo A</text><text class="node-desc" y="103">Assiste</text></g>
-<g class="movie-node" transform="translate(779 255)"><circle class="node-halo" r="69"/><circle class="node-shell" r="55"/><circle class="node-core" r="39" opacity=".42"/><text class="node-icon" y="9">2</text><text class="node-name" y="82">Amigo B</text><text class="node-desc" y="103">Assiste</text></g>
-<g class="movie-node" transform="translate(779 417)"><circle class="node-halo" r="69"/><circle class="node-shell" r="55"/><circle class="node-core" r="39" opacity=".42"/><text class="node-icon" y="9">3</text><text class="node-name" y="82">Amigo C</text><text class="node-desc" y="103">Assiste</text></g>
+<g class="movie-node" transform="translate(779 91)"><circle class="node-halo" r="69"/><circle class="node-shell" r="55"/><circle class="node-core" r="39" opacity=".42"/><text class="node-icon" y="9">1</text><text class="node-name" y="82">Receptor A</text><text class="node-desc" y="103">Decodifica vídeo</text></g>
+<g class="movie-node" transform="translate(779 255)"><circle class="node-halo" r="69"/><circle class="node-shell" r="55"/><circle class="node-core" r="39" opacity=".42"/><text class="node-icon" y="9">2</text><text class="node-name" y="82">Receptor B</text><text class="node-desc" y="103">Decodifica vídeo</text></g>
+<g class="movie-node" transform="translate(779 417)"><circle class="node-halo" r="69"/><circle class="node-shell" r="55"/><circle class="node-core" r="39" opacity=".42"/><text class="node-icon" y="9">3</text><text class="node-name" y="82">Receptor C</text><text class="node-desc" y="103">Decodifica vídeo</text></g>
 </g>
 </svg>
         </div>
-        <div class="net-film-subtitles" aria-live="off"><span class="net-caption-chip" id="net-film-chip">P2P · DIRETO</span><h3 id="net-film-title">01. O caminho mais direto</h3><p id="net-film-description">Quando a rede permite, duas pessoas trocam voz ou vídeo diretamente pela conexão P2P, sem um servidor retransmitindo a mídia.</p></div>
+        <div class="net-film-subtitles" aria-live="off"><span class="net-caption-chip" id="net-film-chip">P2P · DIRETO</span><h3 id="net-film-title">01. O caminho mais direto</h3><p id="net-film-description">Se a rede permite, o seu Discórdia envia a mídia diretamente para o aplicativo do amigo, que recebe e reproduz.</p></div>
         <div class="net-film-controls"><button id="net-film-toggle" class="net-film-toggle" type="button" aria-label="Reproduzir a apresentação" title="Reproduzir">▶</button>
-          <div class="net-film-progress"><div class="net-track" role="progressbar" id="net-film-progress" aria-label="Progresso da apresentação" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><div class="net-fill" id="net-film-fill"></div></div><div class="net-stamps"><span>EXPLICAÇÃO ANIMADA · SEM ÁUDIO</span><output id="net-film-clock" aria-label="Duração">0:00 / 0:36</output></div></div>
+          <div class="net-film-progress"><div class="net-track" role="progressbar" id="net-film-progress" aria-label="Progresso da apresentação" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><div class="net-fill" id="net-film-fill"></div></div><div class="net-stamps"><span>EXPLICAÇÃO VISUAL · SEM LOCUÇÃO ARTIFICIAL</span><output id="net-film-clock" aria-label="Duração">0:00 / 0:36</output></div></div>
           <div class="net-film-scene-buttons" aria-label="Capítulos"><button type="button" data-net-chapter="p2p" aria-pressed="true">01 P2P</button><button type="button" data-net-chapter="turn" aria-pressed="false">02 TURN</button><button type="button" data-net-chapter="sfu" aria-pressed="false">03 SFU</button></div>
         </div>
       </div>
