@@ -40,7 +40,9 @@
     const installer=kind(release,'instalador'),portable=kind(release,'portatil');
     if(!installer||!portable)return false;
     const manifest=(release.assets||[]).some(a=>a.name===(channel==='rc'?'rc.yml':'latest.yml'));
-    const hash=(release.assets||[]).some(a=>a.name==='SHA256SUMS.txt');
+    const version=String(release.tag_name||'').replace(/^v/,'');
+    const hash=(release.assets||[]).some(a=>
+      a.name==='SHA256SUMS.txt'||a.name==='SHA256SUMS-'+version+'.txt');
     if(!manifest||!hash)return false;
     const okA=activate(channel+'-installer',installer,'Baixar instalador (.exe) ↗');
     const okB=activate(channel+'-portable',portable,'Baixar versão portátil ↗');
@@ -69,12 +71,12 @@
         text('release-hint','RC oficial disponível. Consulte as notas e as somas SHA-256 antes de instalar.');
       }
       // Só promover a estável quando a API oficial comprovar os dois EXEs,
-      // latest.yml e SHA256SUMS.txt. Até lá a RC permanece acessível.
+      // latest.yml e o manifesto SHA256SUMS da versão. Até lá a RC permanece acessível.
       if(stableAvailable){
         const rcCard=document.getElementById('rc-download-card');
         if(rcCard)rcCard.hidden=true;
         text('stable-card-label','VERSÃO ESTÁVEL');
-        text('stable-card-description','Versão oficial Windows x64, com instalador, portátil e hashes SHA-256. Exclusão definitiva de servidores ainda está desativada; login por e-mail disponível.');
+        text('stable-card-description','Versão 1.0.2 estável para Windows x64, com instalador, portátil e hashes SHA-256. Melhorias de KLIPY/GIFs, login Google Desktop e atualizador. Exclusão definitiva de servidores aguarda ativação do backend.');
         text('release-hero-badge','DISCÓRDIA ESTÁVEL DISPONÍVEL');
         text('release-hint','Versão estável validada pela listagem de arquivos do GitHub Releases; confira as somas SHA-256.');
         const oldRcNews=document.getElementById('rc-18-news');
