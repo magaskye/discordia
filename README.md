@@ -57,7 +57,7 @@ O site é estático e usa o GitHub Pages. Não requer credenciais de acesso, seg
 
 ## Apresentação animada de P2P, TURN e SFU
 
-A página inicial contém uma **apresentação interativa de 36 segundos**, sem áudio e sem dependências externas, no bloco **P2P / TURN / SFU**. O visitante pode reproduzir, pausar e escolher diretamente um capítulo. Os fluxos são simulações gráficas, **não** medições em tempo real nem gravações de chamadas reais.
+A página inicial contém uma **apresentação interativa de 36 segundos**, sem áudio e sem dependências externas, no bloco **P2P / TURN / SFU**. O quadro utiliza o logo oficial `logo.png`, diferencia o aplicativo transmissor dos aplicativos receptores e esclarece a recepção, decodificação e exibição do vídeo. O visitante pode reproduzir, pausar e escolher diretamente um capítulo. Os fluxos são simulações gráficas, **não** medições em tempo real nem gravações de chamadas reais.
 
 - **P2P:** conexão direta quando possível.
 - **TURN:** relay alternativo quando o caminho direto falha por restrições de rede.
