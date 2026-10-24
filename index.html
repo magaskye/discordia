@@ -96,7 +96,7 @@
 </defs>
 <g class="movie-scenario" data-scene="p2p">
 <path class="route-dim" d="M270 255 H635"/><path class="net-route direct-route" d="M270 255 H635"/>
-<circle class="packet" cx="450" cy="255" r="10" fill="#64eade"/>
+<circle class="net-data-dot net-data-direct" cx="270" cy="255" r="9" fill="#64eade"/><circle class="net-data-dot net-data-reverse" cx="635" cy="255" r="7" fill="#a3caff"/>
 <text class="route-label" x="450" y="221">CAMINHO DIRETO</text>
 <text class="route-note" x="450" y="299">Sem retransmissor de mídia</text>
 <g class="movie-node" transform="translate(190 255)"><circle class="node-halo" r="69"/><circle class="node-shell" r="55"/><circle class="node-core" r="39" opacity=".42"/><text class="node-icon" y="9">A</text><text class="node-name" y="82">Amigo A</text><text class="node-desc" y="103">Origem</text></g>
@@ -105,7 +105,7 @@
 </g>
 <g class="movie-scenario" data-scene="turn">
 <path class="route-dim" d="M210 328 L450 137 L690 328"/>
-<path class="net-route turn-route" d="M210 328 L450 137 L690 328"/>
+<path class="net-route turn-route" d="M210 328 L450 137 L690 328"/><circle class="net-data-dot net-data-turn" cx="210" cy="328" r="9" fill="#fabd85"/>
 <text class="route-label" x="452" y="361">RETRANSMISSÃO</text>
 <text class="route-note" x="452" y="387">A rota passa por um servidor TURN</text>
 <g class="movie-node" transform="translate(156 343)"><circle class="node-halo" r="69"/><circle class="node-shell" r="55"/><circle class="node-core" r="39" opacity=".42"/><text class="node-icon" y="9">A</text><text class="node-name" y="82">Amigo A</text><text class="node-desc" y="103">Rede restrita</text></g>
@@ -116,6 +116,10 @@
 <path class="route-dim" d="M222 255 H412 M502 240 L725 100 M502 255 H725 M502 270 L725 415"/>
 <path class="net-route sfu-source" d="M222 255 H412"/>
 <path class="net-route sfu-multi" d="M502 240 L725 100 M502 255 H725 M502 270 L725 415"/>
+<circle class="net-data-dot net-data-src" cx="222" cy="255" r="9" fill="#5bf3de"/>
+<circle class="net-data-dot net-data-top" cx="502" cy="240" r="7" fill="#c5a3ff"/>
+<circle class="net-data-dot net-data-middle" cx="502" cy="255" r="7" fill="#c5a3ff"/>
+<circle class="net-data-dot net-data-bottom" cx="502" cy="270" r="7" fill="#c5a3ff"/>
 <text class="route-label" x="320" y="224">ENVIA 1 VEZ</text>
 <text class="route-label" x="626" y="220">DISTRIBUI VÍDEO</text>
 <g class="movie-node" transform="translate(155 255)"><circle class="node-halo" r="69"/><circle class="node-shell" r="55"/><circle class="node-core" r="39" opacity=".42"/><text class="node-icon" y="9">▶</text><text class="node-name" y="82">Transmissor</text><text class="node-desc" y="103">Envia vídeo</text></g>
