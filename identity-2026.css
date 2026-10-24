@@ -1,0 +1,48 @@
+/* Discórdia Desktop — Identidade visual oficial 2026
+   Inspiração: arte original aprovada pelo criador, gerada no Google Flow.
+   Sem fontes externas, scripts, terceiros ou alteração nos downloads. */
+:root{--bg:#080c18;--card:#121b30;--cyan:#66e3f7;--purple:#aa80f9;--pink:#fb85e0}
+body{background:#080c18}
+.header{background:#080f20ec;border-bottom:1px solid #9ed5f01c;box-shadow:0 14px 55px #03071280}
+.brand{font-family:Bahnschrift,"Arial Narrow","Segoe UI",system-ui,sans-serif;font-size:24px;font-stretch:condensed;letter-spacing:.075em;text-transform:uppercase;font-weight:750;line-height:1}
+.brand img{filter:drop-shadow(0 0 7px #d368ff9d) drop-shadow(0 0 15px #48d4ff55)}
+.brand .accent{color:#8deafa}.brand .pink{color:#f5b2f1}
+.nav-button,.btn.primary{background:linear-gradient(108deg,#69dffa 0%,#b991ff 66%,#f1a4e2 100%);box-shadow:0 12px 37px #718cf333;color:#07111b}
+.navigation a:hover{color:#a0edfb}
+.hero{padding:86px 0 95px;min-height:620px;background:
+radial-gradient(ellipse at 75% 47%,#9b58eb1e 0%,transparent 52%),
+radial-gradient(ellipse at 40% 7%,#2b8da528 0%,transparent 42%),
+linear-gradient(145deg,#0b1325 0%,#070b15 68%,#0a101f 100%)}
+.hero-grid{grid-template-columns:.91fr 1.09fr;gap:34px;align-items:center}
+.hero-copy>p{color:#b6c8df;line-height:1.85;max-width:520px}
+.hero h1{font-family:Bahnschrift,"Arial Narrow","Segoe UI",system-ui,sans-serif;font-stretch:condensed;font-weight:800;font-size:clamp(53px,5.55vw,80px);letter-spacing:-.056em;line-height:1.04;text-shadow:0 7px 38px #040b1b}
+.hero h1 .gradient{background:linear-gradient(95deg,#93ebff,#a890f8 53%,#f4a8e5);color:transparent;background-clip:text;-webkit-background-clip:text}
+.hero .overline{color:#b5d9ee;letter-spacing:.15em;background:#1b28535c;border-color:#86afd253}
+.hero-note{color:#aac0d8}
+.hero-identity-visual{position:relative;min-width:0;margin:0;display:flex;align-items:center;justify-content:center;flex-direction:column;isolation:isolate}
+.hero-identity-aura{position:absolute;z-index:-1;top:8%;left:8%;right:4%;bottom:12%;background:radial-gradient(ellipse,#b253fa39,#227bac29 45%,transparent 70%);filter:blur(45px);pointer-events:none}
+.hero-identity-frame{position:relative;width:100%;aspect-ratio:800/447;overflow:hidden;border-radius:19px;border:1px solid #83c8e442;background:#070e1e;box-shadow:0 30px 100px #020611a8,0 0 38px #975fea25,inset 0 0 35px #c7dff906;transform:perspective(1500px) rotateY(-2deg)}
+.hero-identity-frame:after{position:absolute;inset:0;content:"";pointer-events:none;border-radius:inherit;box-shadow:inset 0 0 30px #01091777}
+.hero-identity-frame img{display:block;width:100%;height:100%;object-fit:cover;object-position:center;transform:scale(1.008);filter:saturate(1.065) contrast(1.01)}
+.identity-art-caption{align-self:flex-start;padding:16px 0 0 3px;display:flex;align-items:center;flex-wrap:wrap;gap:11px;font-size:10px;letter-spacing:.135em;color:#a0cbe1;font-weight:850}
+.identity-art-caption>span[aria-hidden="true"]:not(.identity-pulse){color:#7291ac}
+.identity-pulse{display:inline-block;width:7px;height:7px;background:#70e9d7;border-radius:100%;box-shadow:0 0 13px #64e7d7aa}
+.hero .btn.outline{border:1px solid #7a9dd66d;background:#26314e57}
+.hero .btn.outline:hover{border-color:#97e7ff;background:#293a5d6e}
+.section-heading h2,.tech-heading h2,.contact-card h2,.download-heading h2,.faq h2{
+font-family:Bahnschrift,"Arial Narrow","Segoe UI",system-ui,sans-serif;letter-spacing:-.048em}
+.ui2-site-points article,.ui2-site-story-card,.net-tech-card{border-color:#8b83e33b}
+.footer{background:#060914}
+@media(hover:hover) and (prefers-reduced-motion:no-preference){
+.hero-identity-frame{animation:identity-reveal .95s ease-out both}
+.hero-identity-frame img{transition:transform .7s cubic-bezier(.2,.7,.2,1),filter .7s}
+.hero-identity-frame:hover img{transform:scale(1.04);filter:saturate(1.09) contrast(1.04)}
+}
+@keyframes identity-reveal{from{opacity:.65;transform:translateY(16px) perspective(1500px) rotateY(-2deg)}to{opacity:1;transform:translateY(0) perspective(1500px) rotateY(-2deg)}}
+@media(max-width:980px){.hero-grid{grid-template-columns:1fr;gap:35px}.hero{padding:65px 0 75px}.hero-identity-visual{max-width:820px}.hero h1{font-size:clamp(49px,8.5vw,75px)}}
+@media(max-width:580px){.brand{font-size:20px;letter-spacing:.035em}.brand img{width:37px;height:37px}
+.hero{padding:52px 0 64px}.hero-grid{gap:28px}.hero-copy>p{font-size:15px}
+.hero h1{font-size:clamp(46px,12vw,63px)}.hero-identity-frame{transform:none;border-radius:13px}
+.hero-identity-frame img{transform:none}.identity-art-caption{font-size:9px;letter-spacing:.09em;line-height:1.55}
+}
+@media(prefers-reduced-motion:reduce){.hero-identity-frame,.hero-identity-frame img{transform:none!important;animation:none!important;transition:none!important}}
