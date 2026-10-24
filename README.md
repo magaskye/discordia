@@ -55,6 +55,17 @@ Este repositório público mantém exclusivamente os arquivos do site, informaç
 
 O site é estático e usa o GitHub Pages. Não requer credenciais de acesso, segredos de servidor ou coleta de senhas para disponibilizar os downloads.
 
+## Apresentação animada de P2P, TURN e SFU
+
+A página inicial contém uma **apresentação interativa de 36 segundos**, sem áudio e sem dependências externas, no bloco **P2P / TURN / SFU**. O visitante pode reproduzir, pausar e escolher diretamente um capítulo. Os fluxos são simulações gráficas, **não** medições em tempo real nem gravações de chamadas reais.
+
+- **P2P:** conexão direta quando possível.
+- **TURN:** relay alternativo quando o caminho direto falha por restrições de rede.
+- **SFU:** distribuição seletiva de vídeo em sessões compatíveis; a voz do Discórdia segue por P2P/TURN separadamente.
+- O roteiro **não** promete automaticamente desempenho, latência ou disponibilidade de um modo. A execução real depende do aplicativo, infraestrutura e rede.
+- Implementação: `network-film.css` e `network-film.js`. A animação respeita `prefers-reduced-motion`, só inicia quando visível e pode ser pausada.
+- A apresentação é realizada no navegador por HTML/SVG/CSS/JavaScript, não há arquivo MP4 neste repositório.
+
 ## Demonstração visual
 
 O topo do site apresenta uma **ilustração conceitual identificada como tal** da experiência Discórdia, não uma captura real do executável. A seção **Histórico** preserva as melhorias de cada RC pública.
