@@ -76,7 +76,7 @@
         const rcCard=document.getElementById('rc-download-card');
         if(rcCard)rcCard.hidden=true;
         text('stable-card-label','VERSÃO ESTÁVEL');
-        text('stable-card-description','Versão 1.0.2 estável para Windows x64, com instalador, portátil e hashes SHA-256. Melhorias de KLIPY/GIFs, login Google Desktop e atualizador. Exclusão definitiva de servidores aguarda ativação do backend.');
+        text('stable-card-description','Versão pública anterior disponível, com instalador e portátil verificados. A atualização 1.0.2 está temporariamente suspensa enquanto corrigimos e homologamos o atualizador automático.');
         text('release-hero-badge','DISCÓRDIA ESTÁVEL DISPONÍVEL');
         text('release-hint','Versão estável validada pela listagem de arquivos do GitHub Releases; confira as somas SHA-256.');
         const oldRcNews=document.getElementById('rc-18-news');
