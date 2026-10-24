@@ -78,3 +78,7 @@
 @keyframes net-data-top{0%{transform:translate(0,0);opacity:0}20%,82%{opacity:1}100%{transform:translate(223px,-140px);opacity:0}}
 @keyframes net-data-middle{0%{transform:translateX(0);opacity:0}20%,82%{opacity:1}100%{transform:translateX(223px);opacity:0}}
 @keyframes net-data-bottom{0%{transform:translate(0,0);opacity:0}20%,82%{opacity:1}100%{transform:translate(223px,145px);opacity:0}}
+
+/* Marca real do aplicativo, em lugar do monograma ilustrativo. */
+.net-film-logo{display:block;width:34px;height:34px;object-fit:contain;filter:drop-shadow(0 0 9px #9558e08c);flex:none}
+@media(max-width:640px){.net-film-logo{width:30px;height:30px}}
