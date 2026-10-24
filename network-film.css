@@ -1,0 +1,63 @@
+/* Discórdia — apresentação visual dos modos de rede */
+.tech-cinema{background:radial-gradient(ellipse at 16% 8%,#33488625,transparent 42%),radial-gradient(ellipse at 95% 75%,#67356e27,transparent 40%),#0b101d;border-block:1px solid #ffffff15;overflow:hidden}
+.tech-cinema .section-tag{color:#8ce7eb}.tech-heading{display:flex;align-items:end;justify-content:space-between;gap:36px;margin:22px 0 36px}
+.tech-heading h2{margin:0;font-size:clamp(35px,4.6vw,63px);max-width:730px;line-height:1.08;letter-spacing:-.067em}
+.tech-heading p{font-size:14px;line-height:1.85;max-width:350px;margin:0}
+.net-film{overflow:hidden;position:relative;border-radius:24px;background:radial-gradient(ellipse at 51% 50%,#162b4f,#090e1c 69%);border:1px solid #7093cf5c;box-shadow:0 36px 90px #03051080,0 0 100px #774cba0d;isolation:isolate}
+.net-film:before{content:"";position:absolute;inset:0;pointer-events:none;background:linear-gradient(transparent 50%,#a1b9e003 50%);background-size:100% 6px;opacity:.65;z-index:4}
+.net-film-head{display:flex;justify-content:space-between;gap:14px;align-items:center;padding:18px 24px;background:linear-gradient(180deg,#18243bde,#131b2ec9);border-bottom:1px solid #cde3ff15}
+.net-film-brand{display:flex;gap:11px;align-items:center;font-size:12px;font-weight:900;letter-spacing:.12em;color:#eaf7ff}.net-film-mark{display:grid;place-items:center;width:29px;height:29px;border-radius:9px;background:linear-gradient(135deg,#43d7e7,#9a7afa);color:#0d1321;font-size:19px;line-height:1}
+.net-film-label{display:inline-flex;gap:9px;align-items:center;font-size:10px;font-weight:800;color:#a6bfd6;letter-spacing:.09em}.net-film-label i{height:8px;width:8px;border-radius:50%;background:#6edcb5;box-shadow:0 0 16px #64e6b8}
+.net-film-stage{position:relative;aspect-ratio:16/8.15;min-height:285px;overflow:hidden}
+.net-film-stage:before{content:"";position:absolute;inset:0;background-image:linear-gradient(#afc6e709 1px,transparent 1px),linear-gradient(90deg,#afc6e709 1px,transparent 1px);background-size:42px 42px;mask-image:radial-gradient(ellipse at center,black,transparent 88%);pointer-events:none}
+.net-map{position:absolute;inset:0;width:100%;height:100%;overflow:visible}
+.net-map .movie-scenario{opacity:0;visibility:hidden;transform:translateY(12px);transition:opacity .55s,transform .55s,visibility .55s}
+.net-film[data-mode="p2p"] .movie-scenario[data-scene="p2p"],.net-film[data-mode="turn"] .movie-scenario[data-scene="turn"],.net-film[data-mode="sfu"] .movie-scenario[data-scene="sfu"]{opacity:1;visibility:visible;transform:translateY(0)}
+.net-map text{font-family:system-ui,-apple-system,"Segoe UI",sans-serif}
+.net-map .node-halo{fill:none;stroke:#7fdcec;stroke-opacity:.13;stroke-width:2;transform-box:fill-box;transform-origin:center}
+.net-film:not(.is-paused) .net-map .node-halo{animation:net-halo 3s ease-in-out infinite}
+.net-map .net-route{fill:none;stroke-width:3.5;stroke-linecap:round;stroke-dasharray:12 15;filter:url(#net-glow)}
+.net-film:not(.is-paused) .net-map .net-route{animation:net-dash 1.3s linear infinite}
+.net-map .route-dim{fill:none;stroke:#8db0e9;stroke-opacity:.11;stroke-width:15;stroke-linecap:round}
+.net-map .node-shell{fill:#101f38;stroke:#5671a3;stroke-width:2}
+.net-map .node-core{fill:url(#net-node)}
+.net-map .node-name{fill:#edf7ff;font-size:19px;font-weight:800;text-anchor:middle}
+.net-map .node-desc{fill:#96afcf;font-size:12px;font-weight:600;text-anchor:middle}
+.net-map .node-icon{fill:#eaf7ff;font-size:25px;font-weight:900;text-anchor:middle}
+.net-map .route-label{font-size:14px;fill:#b7e7f8;font-weight:850;text-anchor:middle}
+.net-map .route-note{font-size:12px;fill:#a7b7d8;text-anchor:middle}
+.net-map .packet{filter:url(#net-glow);transform-box:fill-box;transform-origin:center}
+.net-film:not(.is-paused) .net-map .packet{animation:net-pulse 1.3s ease-in-out infinite alternate}
+.net-map .sfu-source{stroke:#6be8dd}.net-map .sfu-multi{stroke:#b58aff}.net-map .turn-route{stroke:#fabd85}.net-map .direct-route{stroke:#5ce7d0}
+.net-film-stage .net-corner{position:absolute;top:26px;left:30px;z-index:2;font-size:10px;font-weight:850;letter-spacing:.19em;color:#8fa7c4}
+.net-film-stage .net-corner-right{left:auto;right:30px;color:#7fe4d3}
+.net-film-subtitles{min-height:128px;position:relative;background:linear-gradient(180deg,#101b30f4,#0e1728);border-top:1px solid #b6d8f417;padding:25px 32px}
+.net-film-subtitles h3{color:#fff;font-size:clamp(22px,3vw,31px);letter-spacing:-.045em;margin:0 0 9px}
+.net-film-subtitles p{color:#b9c8df;font-size:13px;max-width:740px;line-height:1.7;margin:0}
+.net-caption-chip{position:absolute;top:24px;right:30px;font-size:10px;font-weight:900;letter-spacing:.08em;border:1px solid #79d3e36b;border-radius:25px;padding:6px 10px;color:#9be7ef}
+.net-film-controls{display:flex;align-items:center;gap:12px;padding:14px 22px 18px;background:#0d1728}
+.net-film-toggle{border:1px solid #8bc3dd75;background:#283d59;color:#e8fbff;border-radius:50%;width:47px;height:47px;display:grid;place-items:center;flex:none;font-size:18px;transition:background .18s,transform .18s}
+.net-film-toggle:hover{background:#355479;transform:scale(1.04)}
+.net-film-progress{flex:1;display:flex;flex-direction:column;gap:7px;min-width:0}
+.net-track{height:8px;background:#2d3d57;border-radius:20px;overflow:hidden;position:relative}
+.net-fill{height:100%;width:0%;border-radius:20px;background:linear-gradient(90deg,#60e5dc,#8aabfb,#e0a1f9);transition:width .12s linear}
+.net-stamps{display:flex;justify-content:space-between;font-size:10px;color:#91a6c1;font-weight:850;letter-spacing:.05em}
+.net-stamps output{color:#c8deef;font-variant-numeric:tabular-nums}
+.net-film-scene-buttons{display:flex;gap:7px;flex:none}
+.net-film-scene-buttons button{padding:9px 13px;font-size:11px;font-weight:850;border-radius:9px;background:#ffffff0a;border:1px solid #ffffff22;color:#a9bbd5;transition:background .2s,color .2s}
+.net-film-scene-buttons button:hover{background:#334a69;color:#fff}
+.net-film-scene-buttons button[aria-pressed="true"]{background:#4f75903b;border-color:#6ee1e2;color:#c3f5ff}
+.net-tech-cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin-top:21px}
+.net-tech-card{padding:25px 25px 24px;border-radius:17px;background:linear-gradient(150deg,#192339c7,#101725c7);border:1px solid #8aa6ca2c;min-width:0}
+.net-tech-card span{font-size:10px;letter-spacing:.13em;font-weight:900;color:#7fcde4}
+.net-tech-card h3{font-size:22px;margin:9px 0 10px;letter-spacing:-.04em}
+.net-tech-card p{font-size:12px;line-height:1.85;margin:0}
+.net-tech-card:nth-child(2) span{color:#f6c48a}.net-tech-card:nth-child(3) span{color:#c3a6f9}
+.net-tech-foot{display:flex;gap:13px;align-items:start;margin:24px 0 0;color:#a5b7d1;font-size:12px;line-height:1.7;max-width:880px}
+.net-tech-foot:before{content:"i";display:grid;place-items:center;flex:none;border:1px solid #91bfe07a;color:#c3e9f7;border-radius:50%;width:22px;height:22px;font-weight:900}
+@keyframes net-dash{to{stroke-dashoffset:-54}}
+@keyframes net-halo{0%,100%{transform:scale(1);opacity:.7}50%{transform:scale(1.18);opacity:.25}}
+@keyframes net-pulse{from{opacity:.35}to{opacity:1}}
+@media(max-width:850px){.tech-heading{display:block}.tech-heading p{margin-top:20px;max-width:630px}.net-tech-cards{gap:11px}.net-tech-card{padding:19px}.net-film-label{letter-spacing:0}}
+@media(max-width:640px){.tech-cinema .container{width:min(calc(100% - 26px),1160px)}.net-film{border-radius:17px}.net-film-head{padding:13px 15px}.net-film-label{font-size:9px}.net-film-stage{min-height:220px;aspect-ratio:16/11}.net-film-stage .net-corner{top:13px;left:14px;font-size:8px}.net-film-stage .net-corner-right{right:14px;left:auto}.net-map .node-name{font-size:22px}.net-map .node-desc{font-size:14px}.net-map .node-icon{font-size:32px}.net-map .route-label{font-size:18px}.net-map .route-note{font-size:15px}.net-film-subtitles{padding:19px 17px;min-height:151px}.net-film-subtitles h3{padding-right:0;font-size:22px}.net-caption-chip{position:static;display:inline-flex;margin-bottom:10px}.net-film-controls{flex-wrap:wrap;padding:13px 15px}.net-film-progress{flex:1}.net-film-scene-buttons{width:100%;justify-content:space-between}.net-film-scene-buttons button{flex:1}.net-tech-cards{grid-template-columns:1fr}.net-tech-card{padding:21px}.net-tech-card h3{font-size:20px}}
+@media(prefers-reduced-motion:reduce){.net-film *{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
