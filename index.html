@@ -11,7 +11,9 @@
 <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src https://api.github.com; form-action 'none'; object-src 'none'; base-uri 'self'; upgrade-insecure-requests">
 <link rel="icon" href="./logo.png" type="image/png">
 <link rel="stylesheet" href="./site.css">
+<link rel="stylesheet" href="./network-film.css?v=20261024">
 <script src="./site.js?v=1-0-2-stable-public-20261024" defer></script>
+<script src="./network-film.js?v=20261024" defer></script>
 <title>Discórdia Desktop — Conecte sua comunidade</title>
 </head>
 <body>
@@ -20,7 +22,7 @@
   <a href="#inicio" class="brand" aria-label="Discórdia — início"><img src="./logo.png" alt="" width="44" height="44"><span>Disc<span class="accent">ó</span>rdia<span class="pink">.</span></span></a>
   <button id="nav-toggle" class="nav-toggle" type="button" aria-controls="nav-main" aria-expanded="false" aria-label="Abrir menu"><span></span><span></span><span></span></button>
   <nav id="nav-main" class="navigation" aria-label="Navegação principal">
-    <a href="#recursos">Recursos</a><a href="#experiencia">Experiência</a><a href="#tecnologia">Tecnologia</a><a href="#historico">Histórico</a><a href="#downloads">Download</a><a href="#perguntas">Dúvidas</a>
+    <a href="#recursos">Recursos</a><a href="#experiencia">Experiência</a><a href="#tecnologia">P2P / TURN / SFU</a><a href="#historico">Histórico</a><a href="#downloads">Download</a><a href="#perguntas">Dúvidas</a>
   </nav>
   <a class="nav-button" href="#downloads">Baixar Discórdia <span aria-hidden="true">↗</span></a>
 </div></header>
@@ -32,7 +34,7 @@
         <div class="overline pill"><span class="pulse"></span><span id="release-hero-badge">DISPONÍVEL PARA WINDOWS</span></div>
         <h1 id="hero-title">Seus amigos.<br><span class="gradient">Seu universo.</span></h1>
         <p id="release-hero-description">Voz, mensagens e transmissão em uma experiência feita para reunir sua comunidade. Personalize seu espaço, compartilhe momentos e mantenha suas conversas por perto.</p>
-        <div class="hero-buttons"><a class="btn primary" href="#downloads">Baixar para Windows <span aria-hidden="true">↗</span></a><a class="btn outline" href="#recursos">Conhecer recursos <span aria-hidden="true">↓</span></a></div>
+        <div class="hero-buttons"><a class="btn primary" href="#downloads">Baixar para Windows <span aria-hidden="true">↗</span></a><a class="btn outline" href="#tecnologia">Ver conexões em ação <span aria-hidden="true">▶</span></a></div>
         <div class="hero-note"><span><b>✓</b> Windows x64</span><span><b>✓</b> Instalador e portátil</span><span><b>✓</b> Download oficial</span></div>
       </div>
       <div class="hero-illustration concept-hero" aria-label="Representação artística da interface do Discórdia; não é uma captura do aplicativo">
@@ -74,10 +76,68 @@
       </div>
     </div>
   </section>
-  <section class="section technology" id="tecnologia" aria-labelledby="technology-heading">
-    <div class="container technology-grid">
-      <div><span class="section-tag">TECNOLOGIA DE CONEXÃO</span><h2 id="technology-heading">Conectados,<br><span class="gradient">onde estiverem.</span></h2><p>O Discórdia combina conexão direta e alternativas de rede para adaptar a comunicação ao contexto de cada chamada. A rota utilizada depende das condições de conexão e dos recursos disponíveis.</p></div>
-      <div class="ui2-site-tech"><article><strong>P2P</strong><span>Comunicação direta entre participantes, quando disponível.</span></article><article><strong>TURN</strong><span>Retransmissão de mídia quando a rede não permite o caminho direto.</span></article><article><strong>SFU</strong><span>Distribuição de vídeo em chamadas compatíveis com múltiplos participantes.</span></article></div>
+  <section class="section technology tech-cinema" id="tecnologia" aria-labelledby="technology-heading">
+    <div class="container">
+      <span class="section-tag">POR DENTRO DO DISCÓRDIA · CONEXÕES WEBRTC</span>
+      <div class="tech-heading">
+        <h2 id="technology-heading">Uma chamada.<br><span class="gradient">Três caminhos inteligentes.</span></h2>
+        <p>O Discórdia combina diferentes rotas para conversar e compartilhar. Descubra visualmente como P2P, TURN e SFU trabalham em situações distintas.</p>
+      </div>
+      <div class="net-film is-paused" id="network-film" data-mode="p2p" role="group" aria-label="Apresentação animada sobre os modos de conexão">
+        <div class="net-film-head"><div class="net-film-brand"><span class="net-film-mark" aria-hidden="true">D</span> DISCÓRDIA <span class="divider-dot">/</span> NETWORK</div><span class="net-film-label"><i aria-hidden="true"></i> ANIMAÇÃO EXPLICATIVA · 36 SEGUNDOS</span></div>
+        <div class="net-film-stage">
+          <span class="net-corner" aria-hidden="true">CONNECTION VISUALIZER / 01</span><span class="net-corner net-corner-right" aria-hidden="true">SIMULAÇÃO ILUSTRATIVA</span>
+          <svg class="net-map" viewBox="0 0 900 500" role="img" aria-labelledby="net-map-title net-map-description" preserveAspectRatio="xMidYMid meet">
+<title id="net-map-title">Simulação dos caminhos de conexão no Discórdia</title>
+<desc id="net-map-description">A animação alterna entre dois amigos conectados diretamente por P2P, retransmissão por TURN e distribuição de vídeo de um transmissor para três espectadores via SFU.</desc><defs>
+  <radialGradient id="net-node"><stop stop-color="#58cae3"/><stop offset="1" stop-color="#2b347c"/></radialGradient>
+  <filter id="net-glow" x="-40%" y="-40%" width="180%" height="180%"><feGaussianBlur stdDeviation="1.35" result="glow"/><feMerge><feMergeNode in="glow"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  <linearGradient id="net-cloud" x1="0" x2="1"><stop stop-color="#302958"/><stop offset="1" stop-color="#2d5270"/></linearGradient>
+</defs>
+<g class="movie-scenario" data-scene="p2p">
+<path class="route-dim" d="M270 255 H635"/><path class="net-route direct-route" d="M270 255 H635"/>
+<circle class="packet" cx="450" cy="255" r="10" fill="#64eade"/>
+<text class="route-label" x="450" y="221">CAMINHO DIRETO</text>
+<text class="route-note" x="450" y="299">Sem retransmissor de mídia</text>
+<g class="movie-node" transform="translate(190 255)"><circle class="node-halo" r="69"/><circle class="node-shell" r="55"/><circle class="node-core" r="39" opacity=".42"/><text class="node-icon" y="9">A</text><text class="node-name" y="82">Amigo A</text><text class="node-desc" y="103">Origem</text></g>
+<g class="movie-node" transform="translate(710 255)"><circle class="node-halo" r="69"/><circle class="node-shell" r="55"/><circle class="node-core" r="39" opacity=".42"/><text class="node-icon" y="9">B</text><text class="node-name" y="82">Amigo B</text><text class="node-desc" y="103">Destino</text></g>
+<text class="route-note" x="450" y="426">Primeira opção quando a rede permite</text>
+</g>
+<g class="movie-scenario" data-scene="turn">
+<path class="route-dim" d="M210 328 L450 137 L690 328"/>
+<path class="net-route turn-route" d="M210 328 L450 137 L690 328"/>
+<text class="route-label" x="452" y="361">RETRANSMISSÃO</text>
+<text class="route-note" x="452" y="387">A rota passa por um servidor TURN</text>
+<g class="movie-node" transform="translate(156 343)"><circle class="node-halo" r="69"/><circle class="node-shell" r="55"/><circle class="node-core" r="39" opacity=".42"/><text class="node-icon" y="9">A</text><text class="node-name" y="82">Amigo A</text><text class="node-desc" y="103">Rede restrita</text></g>
+<g class="movie-node" transform="translate(450 133)"><circle class="node-halo" r="69"/><circle class="node-shell" r="55"/><circle class="node-core" r="39" opacity=".42"/><text class="node-icon" y="9">↗</text><text class="node-name" y="82">TURN</text><text class="node-desc" y="103">Servidor relay</text></g>
+<g class="movie-node" transform="translate(745 343)"><circle class="node-halo" r="69"/><circle class="node-shell" r="55"/><circle class="node-core" r="39" opacity=".42"/><text class="node-icon" y="9">B</text><text class="node-name" y="82">Amigo B</text><text class="node-desc" y="103">Recebe a mídia</text></g>
+</g>
+<g class="movie-scenario" data-scene="sfu">
+<path class="route-dim" d="M222 255 H412 M502 240 L725 100 M502 255 H725 M502 270 L725 415"/>
+<path class="net-route sfu-source" d="M222 255 H412"/>
+<path class="net-route sfu-multi" d="M502 240 L725 100 M502 255 H725 M502 270 L725 415"/>
+<text class="route-label" x="320" y="224">ENVIA 1 VEZ</text>
+<text class="route-label" x="626" y="220">DISTRIBUI VÍDEO</text>
+<g class="movie-node" transform="translate(155 255)"><circle class="node-halo" r="69"/><circle class="node-shell" r="55"/><circle class="node-core" r="39" opacity=".42"/><text class="node-icon" y="9">▶</text><text class="node-name" y="82">Transmissor</text><text class="node-desc" y="103">Envia vídeo</text></g>
+<g class="movie-node" transform="translate(455 255)"><circle class="node-halo" r="69"/><circle class="node-shell" r="55"/><circle class="node-core" r="39" opacity=".42"/><text class="node-icon" y="9">✦</text><text class="node-name" y="82">SFU</text><text class="node-desc" y="103">Distribui fluxos</text></g>
+<g class="movie-node" transform="translate(779 91)"><circle class="node-halo" r="69"/><circle class="node-shell" r="55"/><circle class="node-core" r="39" opacity=".42"/><text class="node-icon" y="9">1</text><text class="node-name" y="82">Amigo A</text><text class="node-desc" y="103">Assiste</text></g>
+<g class="movie-node" transform="translate(779 255)"><circle class="node-halo" r="69"/><circle class="node-shell" r="55"/><circle class="node-core" r="39" opacity=".42"/><text class="node-icon" y="9">2</text><text class="node-name" y="82">Amigo B</text><text class="node-desc" y="103">Assiste</text></g>
+<g class="movie-node" transform="translate(779 417)"><circle class="node-halo" r="69"/><circle class="node-shell" r="55"/><circle class="node-core" r="39" opacity=".42"/><text class="node-icon" y="9">3</text><text class="node-name" y="82">Amigo C</text><text class="node-desc" y="103">Assiste</text></g>
+</g>
+</svg>
+        </div>
+        <div class="net-film-subtitles" aria-live="off"><span class="net-caption-chip" id="net-film-chip">P2P · DIRETO</span><h3 id="net-film-title">01. O caminho mais direto</h3><p id="net-film-description">Quando a rede permite, duas pessoas trocam voz ou vídeo diretamente pela conexão P2P, sem um servidor retransmitindo a mídia.</p></div>
+        <div class="net-film-controls"><button id="net-film-toggle" class="net-film-toggle" type="button" aria-label="Reproduzir a apresentação" title="Reproduzir">▶</button>
+          <div class="net-film-progress"><div class="net-track" role="progressbar" id="net-film-progress" aria-label="Progresso da apresentação" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><div class="net-fill" id="net-film-fill"></div></div><div class="net-stamps"><span>EXPLICAÇÃO ANIMADA · SEM ÁUDIO</span><output id="net-film-clock" aria-label="Duração">0:00 / 0:36</output></div></div>
+          <div class="net-film-scene-buttons" aria-label="Capítulos"><button type="button" data-net-chapter="p2p" aria-pressed="true">01 P2P</button><button type="button" data-net-chapter="turn" aria-pressed="false">02 TURN</button><button type="button" data-net-chapter="sfu" aria-pressed="false">03 SFU</button></div>
+        </div>
+      </div>
+      <div class="net-tech-cards">
+        <article class="net-tech-card"><span>01 / CONEXÃO DIRETA</span><h3>P2P — entre amigos</h3><p>O dispositivo tenta estabelecer uma conexão direta com o outro participante. Quando viável, os dados da chamada seguem diretamente entre eles.</p></article>
+        <article class="net-tech-card"><span>02 / PLANO DE CONTINGÊNCIA</span><h3>TURN — uma rota alternativa</h3><p>Quando restrições de NAT ou firewall impedem uma ligação direta, um relay TURN pode encaminhar o tráfego entre os participantes.</p></article>
+        <article class="net-tech-card"><span>03 / TRANSMISSÃO EM GRUPO</span><h3>SFU — um para vários</h3><p>Em transmissões de vídeo compatíveis, o SFU recebe um fluxo e o encaminha aos espectadores autorizados, sem exigir um envio separado para cada pessoa.</p></article>
+      </div>
+      <p class="net-tech-foot">Demonstração educativa, não um monitor de conexão em tempo real. No Discórdia, a voz da chamada utiliza sua própria rota P2P/TURN; o SFU se aplica ao vídeo nas situações habilitadas. A disponibilidade e a qualidade dependem da rede, permissões, versão instalada e infraestrutura ativa.</p>
     </div>
   </section>
   <section class="section release-history" id="historico" aria-labelledby="history-title">
@@ -129,6 +189,7 @@
       <details><summary>Qual a diferença entre instalador e portátil?</summary><p>O instalador adiciona o aplicativo ao computador; a edição portátil pode ser executada sem instalação tradicional. Confira as instruções da Release antes de utilizar.</p></details>
       <details><summary>O que significa Release Candidate?</summary><p>É uma prévia próxima da versão final, ainda sujeita a alterações. Quando a edição estável estiver disponível, ela terá prioridade nos downloads, e os destaques das RCs permanecerão na seção Histórico.</p></details>
       <details><summary>Como confirmar que o arquivo é oficial?</summary><p>Baixe pelos links deste site ou pelo GitHub Releases do projeto e compare o hash SHA-256 publicado. O Windows pode exibir aviso de editor não verificado em versões sem assinatura digital.</p></details>
+      <details><summary>Como funcionam P2P, TURN e SFU?</summary><p>O P2P tenta a conexão direta; o TURN pode retransmitir quando ela não é possível; o SFU distribui vídeo para múltiplos espectadores em sessões compatíveis. <a href="#tecnologia">Assista à explicação animada.</a></p></details>
       <details><summary>Onde encontro informações de privacidade?</summary><p>Consulte a <a href="./privacidade.html">página de privacidade</a> antes de usar o serviço.</p></details>
     </div></div>
   </section>
