@@ -14,8 +14,10 @@
 <link rel="stylesheet" href="./site.css">
 <link rel="stylesheet" href="./identity-2026.css?v=brand-official-20261024">
 <link rel="stylesheet" href="./network-film.css?v=20261024">
+<link rel="stylesheet" href="./velosinc-preview.css?v=20261024">
 <script src="./site.js?v=updater-emergency-hold-20261024" defer></script>
 <script src="./network-film.js?v=20261024" defer></script>
+<script src="./velosinc-preview.js?v=20261024" defer></script>
 <title>Discórdia Desktop — Conecte sua comunidade</title>
 </head>
 <body>
@@ -75,7 +77,7 @@
     <div class="container">
       <span class="section-tag">POR DENTRO DO DISCÓRDIA · CONEXÕES WEBRTC</span>
       <div class="tech-heading">
-        <h2 id="technology-heading">Uma chamada.<br><span class="gradient">Três caminhos inteligentes.</span></h2>
+        <h2 id="technology-heading">Três rotas de mídia.<br><span class="gradient">Cada conexão tem seu caminho.</span></h2>
         <p>O Discórdia combina diferentes rotas para conversar e compartilhar. Descubra visualmente como P2P, TURN e SFU trabalham em situações distintas.</p>
       </div>
       <div class="net-film is-paused" id="network-film" data-mode="p2p" role="group" aria-label="Apresentação animada sobre os modos de conexão">
@@ -136,7 +138,53 @@
         <article class="net-tech-card"><span>02 / PLANO DE CONTINGÊNCIA</span><h3>TURN — uma rota alternativa</h3><p>Quando restrições de NAT ou firewall impedem uma ligação direta, um relay TURN pode encaminhar o tráfego entre os participantes.</p></article>
         <article class="net-tech-card"><span>03 / TRANSMISSÃO EM GRUPO</span><h3>SFU — um para vários</h3><p>Em transmissões de vídeo compatíveis, o SFU recebe um fluxo e o encaminha aos espectadores autorizados, sem exigir um envio separado para cada pessoa.</p></article>
       </div>
-      <p class="net-tech-foot">Demonstração educativa, não um monitor de conexão em tempo real. No Discórdia, a voz da chamada utiliza sua própria rota P2P/TURN; o SFU se aplica ao vídeo nas situações habilitadas. A disponibilidade e a qualidade dependem da rede, permissões, versão instalada e infraestrutura ativa.</p>
+      <p class="net-tech-foot">Demonstração educativa da arquitetura já existente, não um monitor de conexão em tempo real. No Discórdia, a voz da chamada utiliza sua própria rota P2P/TURN; o SFU se aplica ao vídeo nas situações habilitadas. A disponibilidade e a qualidade dependem da rede, permissões, versão instalada e infraestrutura ativa.</p>
+    </div>
+  </section>
+  <section class="section vs-section" id="velosinc" aria-labelledby="vs-heading">
+    <div class="container">
+      <div class="vs-topline">
+        <span class="vs-kicker">PRÓXIMA EVOLUÇÃO · DISCÓRDIA DESKTOP</span>
+        <span class="vs-status">VELOSINC · EM DESENVOLVIMENTO</span>
+      </div>
+      <h2 class="vs-title" id="vs-heading">Não basta enviar.<br><span class="gradient">É preciso chegar e aparecer na tela.</span></h2>
+      <p class="vs-intro">O VeloSinc é uma arquitetura em desenvolvimento para aproximar a experiência de quem transmite e de quem assiste. A proposta acompanha não só os quadros enviados, mas também os recebidos, decodificados e efetivamente exibidos — antes de sugerir uma recuperação.</p>
+      <div class="vs-panel" data-vs-demo aria-label="Demonstração ilustrativa da arquitetura planejada VeloSinc">
+        <div class="vs-toolbar">
+          <span class="vs-toolbar-title"><span class="vs-toolbar-pulse" aria-hidden="true"></span> DISCÓRDIA / VELOSINC</span>
+          <span class="vs-toolbar-note">VISUALIZAÇÃO CONCEITUAL · NÃO É DIAGNÓSTICO AO VIVO</span>
+        </div>
+        <div class="vs-controls" aria-label="Etapas do processamento">
+          <button class="vs-tab" type="button" data-vs-tab="envio" aria-pressed="false">01 / Envio</button>
+          <button class="vs-tab" type="button" data-vs-tab="recepcao" aria-pressed="true">02 / Recepção</button>
+          <button class="vs-tab" type="button" data-vs-tab="recuperacao" aria-pressed="false">03 / Recuperação</button>
+        </div>
+        <div class="vs-stage">
+          <div class="vs-flow" data-vs-flow data-step="recepcao" aria-hidden="true">
+            <div class="vs-node" data-node="emissor"><span class="vs-node-icon">▣</span><strong>Transmissor</strong><small>Captura · Codifica · Envia</small></div>
+            <span class="vs-link"></span>
+            <div class="vs-node" data-node="caminho"><span class="vs-node-icon">⌁</span><strong>Rede</strong><small>P2P · TURN · SFU</small></div>
+            <span class="vs-link"></span>
+            <div class="vs-node" data-node="receptor"><span class="vs-node-icon">▷</span><strong>Receptor</strong><small>Recebe · Decodifica · Exibe</small></div>
+          </div>
+          <div class="vs-measurements" aria-label="Etapas de vídeo consideradas na proposta">
+            <div class="vs-metric"><b>Capturados</b><span>Fonte de imagem</span></div>
+            <div class="vs-metric"><b>Enviados</b><span>Codificador + rede</span></div>
+            <div class="vs-metric"><b>Decodificados</b><span>Processamento local</span></div>
+            <div class="vs-metric"><b>Exibidos</b><span>Resultado para quem assiste</span></div>
+          </div>
+          <div class="vs-stage-foot">
+            <p data-vs-description aria-live="polite">Quem assiste pode receber quadros e ainda assim não conseguir exibi-los. O VeloSinc foi planejado para distinguir perda de rede, lentidão na decodificação e lentidão de exibição no computador receptor.</p>
+            <span class="vs-stage-chip" data-vs-status>DESTINO · QUADROS EXIBIDOS</span>
+          </div>
+        </div>
+      </div>
+      <div class="vs-cards">
+        <article class="vs-card"><span>01 / POR ESPECTADOR</span><h3>Recuperação individual</h3><p>O mecanismo proposto avalia uma rota alternativa apenas para quem está com dificuldade, sem obrigar os demais espectadores a trocar de caminho.</p></article>
+        <article class="vs-card"><span>02 / COMPROVAÇÃO</span><h3>Rota realmente utilizada</h3><p>Escolher TURN ou SFU não significa que a conexão aconteceu. A rota precisa ser confirmada por ICE ou pelos quadros efetivamente apresentados.</p></article>
+        <article class="vs-card"><span>03 / ÁUDIO</span><h3>Voz e som do jogo</h3><p>A arquitetura prevê tratamento independente para voz e áudio da transmissão. Uso de SFU para áudio é uma possibilidade futura, ainda não implementada.</p></article>
+      </div>
+      <p class="vs-disclaimer"><strong>Transparência do projeto:</strong> a política VeloSinc e os testes de decisões estão preparados no repositório privado, mas o motor ainda não está conectado ao processamento real das transmissões. A implementação e a homologação em Windows 10/11 permanecem pendentes. As rotas P2P, TURN e SFU de vídeo já existentes continuam sendo explicadas na seção anterior.</p>
     </div>
   </section>
   <section class="section release-history" id="historico" aria-labelledby="history-title">
@@ -188,6 +236,7 @@
       <details><summary>Qual a diferença entre instalador e portátil?</summary><p>O instalador adiciona o aplicativo ao computador; a edição portátil pode ser executada sem instalação tradicional. Confira as instruções da Release antes de utilizar.</p></details>
       <details><summary>O que significa Release Candidate?</summary><p>É uma prévia próxima da versão final, ainda sujeita a alterações. Quando a edição estável estiver disponível, ela terá prioridade nos downloads, e os destaques das RCs permanecerão na seção Histórico.</p></details>
       <details><summary>Como confirmar que o arquivo é oficial?</summary><p>Baixe pelos links deste site ou pelo GitHub Releases do projeto e compare o hash SHA-256 publicado. O Windows pode exibir aviso de editor não verificado em versões sem assinatura digital.</p></details>
+      <details><summary>O VeloSinc já está disponível?</summary><p>Não. O VeloSinc é uma evolução em desenvolvimento para analisar o que o espectador realmente recebe e exibe, identificar gargalos e propor recuperação por espectador. A política e os testes existem em código, mas ainda não foram integrados ao aplicativo. <a href="#velosinc">Conheça o conceito.</a></p></details>
       <details><summary>Como funcionam P2P, TURN e SFU?</summary><p>O P2P tenta a conexão direta; o TURN pode retransmitir quando ela não é possível; o SFU distribui vídeo para múltiplos espectadores em sessões compatíveis. <a href="#tecnologia">Assista à explicação animada.</a></p></details>
       <details><summary>Onde encontro informações de privacidade?</summary><p>Consulte a <a href="./privacidade.html">página de privacidade</a> antes de usar o serviço.</p></details>
     </div></div>

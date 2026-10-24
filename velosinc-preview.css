@@ -1,0 +1,45 @@
+
+/* VeloSinc — preview fiel à especificação privada: NÃO é um recurso ativo no Desktop. */
+.vs-section{position:relative;isolation:isolate;overflow:hidden;padding:105px 0;background:radial-gradient(ellipse at 8% 18%,#5b3e9d29,transparent 40%),radial-gradient(ellipse at 85% 60%,#155e8034,transparent 50%),#080d19;border-block:1px solid #8d9bc827}
+.vs-section:before{content:"";position:absolute;inset:0;z-index:-1;opacity:.22;pointer-events:none;background-image:linear-gradient(#b8cfff0b 1px,transparent 1px),linear-gradient(90deg,#b8cfff0b 1px,transparent 1px);background-size:66px 66px;mask-image:linear-gradient(90deg,transparent 3%,black 40%,transparent 100%)}
+.vs-topline{display:flex;align-items:center;gap:20px;justify-content:space-between;flex-wrap:wrap}
+.vs-kicker{font-weight:850;font-size:11px;letter-spacing:.15em;color:#8fe3ef}
+.vs-status{font-size:10px;letter-spacing:.08em;color:#e2c5ff;border:1px solid #9d71d76a;background:#69499b28;border-radius:99px;padding:8px 13px;font-weight:800}
+.vs-title{font-family:Bahnschrift,"Arial Narrow","Segoe UI",system-ui,sans-serif;font-size:clamp(39px,4.6vw,65px);letter-spacing:-.056em;max-width:870px;line-height:1.11;margin:21px 0}
+.vs-intro{max-width:750px;font-size:15px;line-height:1.9;color:#b4c4d9}
+.vs-panel{margin-top:37px;background:linear-gradient(145deg,#111f36,#0c1325);border:1px solid #7e9ab74e;border-radius:22px;overflow:hidden;box-shadow:0 40px 85px #0208157a}
+.vs-toolbar{display:flex;justify-content:space-between;gap:15px;align-items:center;padding:18px 23px;border-bottom:1px solid #ffffff16}
+.vs-toolbar-title{display:flex;align-items:center;gap:9px;letter-spacing:.11em;font-size:11px;color:#dfecfb;font-weight:850}
+.vs-toolbar-pulse{width:9px;height:9px;border-radius:50%;background:#75ddea;box-shadow:0 0 13px #7ce2eeaa}
+.vs-toolbar-note{font-size:10px;color:#95a9c3;text-align:right}
+.vs-controls{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;padding:16px 23px 0}
+.vs-tab{font:800 12px/1.4 system-ui,"Segoe UI",sans-serif;text-align:left;padding:14px 17px;background:#ffffff09;color:#abbfdc;border:1px solid #7792b526;border-bottom:2px solid transparent;border-radius:11px 11px 0 0;cursor:pointer}
+.vs-tab:hover{color:#e3f5ff;background:#ffffff11}
+.vs-tab[aria-pressed="true"]{background:#264b6855;border-color:#6bd0e8a4;border-bottom-color:#86ebf0;color:#e8fdff}
+.vs-stage{padding:29px 29px 25px;min-height:320px}
+.vs-flow{display:grid;grid-template-columns:minmax(0,1fr) 110px minmax(0,1fr) 110px minmax(0,1fr);align-items:center;gap:8px}
+.vs-node{border-radius:15px;border:1px solid #ffffff24;background:linear-gradient(156deg,#24334e,#111e35);min-width:0;padding:22px 13px 19px;text-align:center;position:relative;transition:box-shadow .3s,border-color .3s,transform .3s}
+.vs-node-icon{width:52px;height:52px;border-radius:16px;display:grid;place-items:center;margin:0 auto 13px;background:#69d7ed1d;border:1px solid #5ec7db40;color:#9dedfa;font-size:24px}
+.vs-node strong{display:block;font-size:14px;color:#f5f8fe;letter-spacing:-.01em}
+.vs-node small{display:block;font-size:11px;color:#96abc6;margin-top:5px;line-height:1.6}
+.vs-link{position:relative;height:4px;background:#6a8bba35;border-radius:12px}
+.vs-link:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,transparent,#73e4ed,transparent);background-size:40% 100%;background-repeat:no-repeat;animation:vs-transfer 2.2s ease-in-out infinite}
+.vs-flow[data-step="envio"] [data-node="emissor"],.vs-flow[data-step="recepcao"] [data-node="receptor"],.vs-flow[data-step="recuperacao"] [data-node="caminho"]{border-color:#67def0;box-shadow:0 0 30px #6bd3eb22;transform:translateY(-3px)}
+.vs-flow[data-step="recuperacao"] .vs-link:after{background:linear-gradient(90deg,transparent,#cd9cf8,transparent)}
+.vs-measurements{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:9px;margin-top:28px}
+.vs-metric{padding:13px 12px;border-radius:11px;background:#0a1628;border:1px solid #ffffff17;min-width:0}
+.vs-metric b{display:block;color:#e3f8ff;font-size:12px}
+.vs-metric span{color:#88abc5;font-size:10px}
+.vs-stage-foot{display:flex;align-items:center;gap:15px;flex-wrap:wrap;justify-content:space-between;padding-top:19px}
+.vs-stage-foot p{max-width:780px;color:#d2e2f4;font-size:13px;line-height:1.85;margin:0}
+.vs-stage-chip{display:inline-flex;white-space:nowrap;font-size:10px;border:1px solid #75bac47a;border-radius:8px;padding:8px 11px;color:#9be8f1;font-weight:800}
+.vs-cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:15px;margin-top:20px}
+.vs-card{background:#131b2cf0;border:1px solid #93add333;border-radius:16px;padding:25px}
+.vs-card>span{font-size:10px;font-weight:850;letter-spacing:.13em;color:#94d9f3}
+.vs-card h3{font-size:19px;margin:10px 0 12px;letter-spacing:-.025em;color:#f3f7fe}
+.vs-card p{font-size:12px;line-height:1.85;margin:0;color:#abbad1}
+.vs-disclaimer{margin:20px 0 0;max-width:920px;font-size:12px;line-height:1.8;color:#aabbd2;border-left:3px solid #9775cb;padding:7px 0 7px 16px}
+@keyframes vs-transfer{from{background-position:-55% 0}to{background-position:160% 0}}
+@media(max-width:880px){.vs-flow{grid-template-columns:minmax(0,1fr) 42px minmax(0,1fr) 42px minmax(0,1fr)}.vs-node{padding:16px 8px}.vs-node small{font-size:10px}.vs-metric b{font-size:11px}}
+@media(max-width:670px){.vs-section{padding:72px 0}.vs-title{font-size:clamp(34px,9vw,48px)}.vs-toolbar{padding:15px}.vs-toolbar-note{max-width:140px}.vs-controls{padding:13px 13px 0;gap:5px}.vs-tab{padding:11px 9px;font-size:11px}.vs-stage{padding:21px 12px;min-height:initial}.vs-flow{grid-template-columns:minmax(0,1fr) 15px minmax(0,1fr) 15px minmax(0,1fr);gap:4px}.vs-node{padding:15px 3px 12px;border-radius:10px}.vs-node-icon{width:32px;height:32px;font-size:16px;border-radius:9px;margin-bottom:9px}.vs-node strong{font-size:11px;line-height:1.3}.vs-node small{font-size:9px;line-height:1.3}.vs-measurements{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}.vs-cards{grid-template-columns:1fr}.vs-toolbar-title{font-size:10px}.vs-stage-foot p{font-size:12px}.vs-status{font-size:9px}}
+@media(prefers-reduced-motion:reduce){.vs-link:after{animation:none;background:#77d9ec}.vs-node{transition:none}}
