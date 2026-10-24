@@ -14,19 +14,19 @@
     {
       mode: 'p2p',
       title: '01. O caminho mais direto',
-      text: 'Quando a rede permite, duas pessoas trocam voz ou vídeo diretamente pela conexão P2P, sem um servidor retransmitindo a mídia.',
+      text: 'Se a rede deixa, o Discórdia envia direto para o aplicativo do amigo. Ele recebe e reproduz o que você compartilhou, sem um servidor retransmitindo.',
       chip: 'P2P · DIRETO'
     },
     {
       mode: 'turn',
       title: '02. Quando a rede precisa de ajuda',
-      text: 'Se firewall ou roteador bloqueia a conexão direta, TURN pode atuar como retransmissor. A conversa continua por outro caminho, quando a rota está disponível.',
+      text: 'Às vezes a rede dificulta. Nessa hora, o TURN pode servir de ponte: recebe os dados do transmissor e repassa ao aplicativo receptor.',
       chip: 'TURN · RETRANSMISSÃO'
     },
     {
       mode: 'sfu',
       title: '03. Uma transmissão, vários amigos',
-      text: 'Para vídeo em sessões compatíveis, um participante envia ao SFU, que encaminha os fluxos aos espectadores autorizados. A voz segue em rota própria, P2P ou TURN.',
+      text: 'Quando mais gente quer assistir, o seu aplicativo envia o vídeo ao SFU. Ele distribui a cada receptor, que recebe, decodifica e exibe a imagem. A voz continua pela própria rota P2P ou TURN.',
       chip: 'SFU · DISTRIBUIÇÃO DE VÍDEO'
     }
   ];
