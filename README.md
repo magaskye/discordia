@@ -139,9 +139,9 @@ Consulte a [página de privacidade](https://magaskye.github.io/discordia/privaci
 © 2026 Discórdia Desktop. Todos os direitos reservados.
 
 
-## Redesign cinematográfico + Apoie o projeto (prévia não publicada — 25/10/2026)
+## Redesign cinematográfico + Apoie o projeto (publicação autorizada em 25/10/2026)
 
-**Branch:** `design/site-cinematic-apoia-preview-20261025`. Esta mudança é apenas uma proposta visual; não atualizar `main`/GitHub Pages sem revisão e autorização.
+**Origem:** `design/site-cinematic-apoia-preview-20261025`. O proprietário autorizou publicar o redesign no GitHub Pages mantendo o pagamento do APOIA.se desativado até regularizar o cadastro, confirmar a URL e dar autorização para ativar a campanha.
 
 - `next-chapter-2026.css`: identidade cinematográfica própria; cores ciano, violeta e magenta e uso dos ativos existentes. Inspirado em boas práticas de landing pages de comunicação, sem copiar identidade, personagens, marca, texto ou layouts específicos de terceiros.
 - `index.html`: novo título de capa, navegação e seção pública de apoio voluntário. O bloco de downloads e o `site.js` permanecem inalterados.
@@ -149,9 +149,9 @@ Consulte a [página de privacidade](https://magaskye.github.io/discordia/privaci
 - `site-support.js`: variável local `campaignUrl` em branco por padrão. Para ativar um CTA, após o proprietário finalizar a campanha oficial, preencher somente com URL HTTPS no domínio `apoia.se`, revisar o endereço e testar. Nenhum token, segredo, PIX pessoal, cartão ou API é armazenado.
 - A meta sugerida de **R$ 200 por mês é um valor de planejamento**, não uma despesa verificada, nem uma promessa de receita ou dados de arrecadação. Na campanha mensal contínua, a taxa informada pelo APOIA.se é de **13%**; arrecadar R$ 200 renderia cerca de R$ 174 após essa taxa, antes de impostos e outras despesas. Fonte: https://suporte.apoia.se/hc/pt-br/articles/219814327-Quanto-custa-usar-a-APOIA-se.
 - Não exibir barra de arrecadação, número de apoiadores ou progresso sem dados reais. A barra no cartão é puramente decorativa e identificada como tal.
-- Revisar despesas reais e eventuais implicações legais/fiscais antes de divulgar a campanha. O apoio deve permanecer voluntário, sem retirar recursos essenciais dos usuários gratuitos.
+- Revisar despesas reais e eventuais implicações legais/fiscais antes de ativar e divulgar a campanha. O apoio deve permanecer voluntário, sem retirar recursos essenciais dos usuários gratuitos.
 - Preservar os identificadores DOM usados na lógica dos downloads e as verificações do atualizador. O arquivo `site.js` **não foi editado** nesta proposta.
-- Verificar experiência mobile e acessibilidade antes de publicar. A identidade poderá ser atualizada quando o futuro nome for aprovado.
+- Após a publicação, verificar visualmente mobile e desktop e ajustar eventuais problemas. A identidade poderá ser atualizada quando o futuro nome for aprovado.
 
 Para checar a estrutura sem build ou deploy: `node tools/test-site-next-chapter.mjs`.
 
