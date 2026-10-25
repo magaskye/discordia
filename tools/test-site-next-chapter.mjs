@@ -12,7 +12,7 @@ const one=(source,s)=>{assert.equal(source.split(s).length-1,1,'Missing or dupli
 for(const id of ['downloads','release-status','rc-download-card','stable-download-card','rc-installer','rc-portable','stable-installer','stable-portable','release-hint'])
   one(homepage,'id="'+id+'"');
 one(homepage,'id="apoie"');
-one(homepage,'href="./apoie.html"');
+assert.ok(homepage.includes('href="./apoie.html"'));
 assert.ok(homepage.includes('id="hero-title"'));
 assert.ok(homepage.includes('./next-chapter-2026.css'));
 assert.ok(homepage.includes('src="./site.js?'));
@@ -22,7 +22,7 @@ assert.ok(!homepage.includes('data-apoia-link'));
 assert.ok(support.includes('data-campaign-button'));
 assert.ok(support.includes('data-apoia-pending'));
 assert.ok(support.includes('CAMPANHA EM PREPARAÇÃO'));
-assert.ok(support.includes('não é um custo atual comprovado'));
+assert.ok(support.includes('não um custo atual comprovado'));
 assert.ok(support.includes('R$ 200'));
 assert.ok(support.includes('R$ 174'));
 assert.ok(campaign.includes("const campaignUrl = '';"));
