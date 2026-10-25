@@ -168,3 +168,17 @@ A página foi novamente redesenhada após avaliação de que as primeiras mudan�
 - O controle do atualizador e a descoberta de Releases em `site.js` **não foram alterados**, assim como o DOM de downloads, os manifestos e somas SHA-256.
 - O APOIA.se ainda depende de validação do cadastro; a campanha e os botões de pagamento continuam desativados em `site-support.js`.
 - Teste de contrato: `node tools/test-site-immersive.mjs`. Para inspeção visual mobile e desktop, abrir a página publicada e verificar hero, cards, ilustrações, contraste e navegação.
+
+
+## Design V4 unificado — 25/10/2026 (estado vigente do site)
+
+Este registro **substitui as descrições anteriores da estrutura visual da página inicial**. Os arquivos antigos de estilos, animações e histórico continuam no repositório como legado técnico, mas a home **não os carrega**.
+
+- `index.html` mantém a grande capa ilustrada, a narrativa de voz, transmissão e personalização e o encerramento de grande escala, com novos painéis no mesmo design para conexões P2P/TURN/SFU, VeloSinc, evolução do projeto, apoio voluntário, downloads e FAQ.
+- `unified-site-2026.css` é o único novo estilo para os painéis que antes se pareciam com o site antigo. A home carrega apenas `site.css` (base de navegação/compatibilidade), `immersive-landing-2026.css` e `unified-site-2026.css`.
+- As animações históricas `network-film.js` / `velosinc-preview.js` e os CSS correspondentes não são mais referenciados na home. Os detalhes técnicos essenciais são apresentados de forma sucinta, com indicação de recursos em desenvolvimento.
+- `apoie.html` foi reconstruída para acompanhar a identidade V4. Campanha ainda em preparação: não há botão de pagamento habilitado, valores de arrecadação reais ou captura de dados de pagamento no site. A meta de R$ 200/mês é uma proposta, não a despesa comprovada.
+- `privacidade.html` recebeu apenas novo enquadramento visual, logotipo original e correção de um link de menu obsoleto. Conteúdo da política permanece inalterado e ainda demanda revisão jurídico-operacional específica.
+- Os mesmos IDs consumidos pelo `site.js` seguem presentes na seção renovada de downloads. A lógica oficial de busca de Releases, manifestos e SHA-256 não foi alterada.
+- Ferramenta de regressão estática: `node tools/test-site-v4.mjs` (sem compilação, rede ou deploy).
+- A publicação depende da integração da branch de design com `main`, seguida de checagem visual real no GitHub Pages. Não ativar o APOIA.se até aprovação da plataforma e recebimento do URL oficial.
