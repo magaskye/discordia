@@ -155,3 +155,16 @@ Consulte a [página de privacidade](https://magaskye.github.io/discordia/privaci
 
 Para checar a estrutura sem build ou deploy: `node tools/test-site-next-chapter.mjs`.
 
+
+
+## Landing page imersiva — 25/10/2026
+
+A página foi novamente redesenhada após avaliação de que as primeiras mudanças eram apenas ajustes de cores. Agora utiliza narrativa visual com cenas de grande escala e composições próprias, inspirada em princípios de apresentação de produtos da web, **sem copiar** marca, personagens, textos ou imagens do Discord.
+
+- `index.html`: nova hero com ilustração CSS/HTML de uma sala do app, três painéis de experiência (voz/presença, transmissão/Palco, personalização) e encerramento com logo original; segue com as seções já existentes de P2P/TURN/SFU, VeloSinc, histórico, FAQs, apoio e downloads.
+- `immersive-landing-2026.css`: design e animações CSS responsivas (grandes blocos, mobile e preferência de movimento reduzido), sem fontes externas.
+- A UI mostrada na capa é **uma ilustração conceitual** e não uma captura ou comprovação de funcionamento; a imagem de Palco existente também é rotulada como prévia ilustrativa.
+- O logo em `discordia-orbit-app.png` é o símbolo real do app, não um símbolo inventado.
+- O controle do atualizador e a descoberta de Releases em `site.js` **não foram alterados**, assim como o DOM de downloads, os manifestos e somas SHA-256.
+- O APOIA.se ainda depende de validação do cadastro; a campanha e os botões de pagamento continuam desativados em `site-support.js`.
+- Teste de contrato: `node tools/test-site-immersive.mjs`. Para inspeção visual mobile e desktop, abrir a página publicada e verificar hero, cards, ilustrações, contraste e navegação.
