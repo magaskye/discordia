@@ -76,7 +76,7 @@
         // Do NOT hide a verified newer RC just because the historical stable
         // release remains available. Friends need both channels side by side.
         text('stable-card-label','VERSÃO ESTÁVEL');
-        text('stable-card-description','Versão pública anterior disponível, com instalador e portátil verificados. A atualização 1.0.2 está temporariamente suspensa enquanto corrigimos e homologamos o atualizador automático.');
+        text('stable-card-description','Versão pública estável anterior disponível para Windows x64. Confira as notas e o SHA-256 antes da instalação; versões de teste ficam em canal separado.');
         text('release-hero-badge','DISCÓRDIA ESTÁVEL DISPONÍVEL');
         text('release-hint','Versão estável validada pela listagem de arquivos do GitHub Releases; confira as somas SHA-256.');
         const oldRcNews=document.getElementById('rc-18-news');
