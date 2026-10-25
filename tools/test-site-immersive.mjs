@@ -19,7 +19,7 @@ assert.equal((home.match(/<div\b/g)||[]).length,(home.match(/<\/div>/g)||[]).len
 for(const cls of ['n26-hero','n26-hero-scene','n26-scene-window','n26-panel-lilac','n26-panel-indigo','n26-panel-cream','n26-final','n26-ribbon']){
  assert.ok(home.includes(cls) && visual.includes('.'+cls),'Missing illustration '+cls);
 }
-assert.ok(home.includes('ILUSTRATIVA')&&home.includes('ILUSTRATIVO'),'Concept imagery must be labelled');
+assert.ok(home.includes('CENA ILUSTRATIVA')&&home.includes('PRÉVIA ILUSTRATIVA'),'Concept imagery must be labelled');
 assert.ok(home.includes('src="./ui-discordia-v2-preview.svg"')&&asset.includes('<svg'));
 assert.ok(home.includes('src="./discordia-orbit-app.png"'),'Real icon must be used');
 assert.ok(home.includes('immersive-landing-2026.css?v=full-redesign-20261025'),'Versioned stylesheet missing');
