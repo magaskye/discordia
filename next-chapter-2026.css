@@ -1,0 +1,85 @@
+/*
+ * Discórdia Desktop — cinematic landing experience (preview branch only)
+ * Original visual treatment. Keeps existing official artwork, download IDs and update scripts intact.
+ */
+:root{--next-night:#070919;--next-panel:#11152b;--next-fuchsia:#d58bff;--next-electric:#7ce9ff}
+body{background:var(--next-night)}
+.header{background:rgba(7,9,24,.82);border-bottom:1px solid rgba(185,164,255,.17);backdrop-filter:blur(22px)}
+.navigation{gap:clamp(10px,1.65vw,25px)}
+.navigation a{font-size:12px}
+.navigation a.nav-support{color:#f4dfff;border:1px solid #cf90ff66;padding:9px 14px;border-radius:100px;background:#8d4fff1a;white-space:nowrap}
+.navigation a.nav-support:hover{background:#a669ff30;border-color:#e4b4ff}
+.hero{min-height:clamp(680px,75vh,850px);padding-top:clamp(100px,9vw,150px);padding-bottom:50px;background:radial-gradient(circle at 83% 28%,#6843b857,transparent 41%),radial-gradient(circle at 7% 76%,#1284aa48,transparent 38%),linear-gradient(130deg,#11142c 0%,#090b1e 55%,#070917 100%);border-bottom:1px solid #a67fe126}
+.hero::before{content:"";position:absolute;inset:0;z-index:-1;opacity:.42;pointer-events:none;background-image:radial-gradient(#bcdcff 0.7px,transparent 1.2px);background-size:31px 31px;mask-image:linear-gradient(120deg,transparent 5%,#000 65%,transparent 100%)}
+.hero::after{content:"";position:absolute;inset:auto 0 0;height:160px;pointer-events:none;background:linear-gradient(0deg,#080b1b,transparent)}
+.hero-grid{min-height:510px;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:38px}
+.hero h1{font-size:clamp(59px,6.6vw,105px);line-height:.99;letter-spacing:-.068em;max-width:710px;margin:28px 0 31px}
+.hero .gradient{background-image:linear-gradient(95deg,#88edff 3%,#b5a0ff 43%,#f59bfb 90%);text-shadow:none}
+.hero-copy>p{font-size:clamp(16px,1.5vw,19px);max-width:565px;line-height:1.72;color:#c4d0e5}
+.hero .overline{letter-spacing:.17em;border-color:#b994fa7a;background:#291a4d80;color:#e7dfff}
+.hero-buttons{margin-bottom:15px;display:flex;flex-wrap:wrap}
+.hero-buttons .btn{border-radius:15px;min-height:58px;font-size:13px}
+.hero-support-chip{display:inline-flex;align-items:center;gap:10px;border-bottom:1px solid #e2b9ff81;color:#ecd7ff;font-size:13px;font-weight:750;padding:9px 0;margin-bottom:24px}
+.hero-support-chip::after{content:"↗";font-size:17px}
+.hero-support-chip:hover{color:white;border-color:white}
+.brand-showcase{transform:translateY(8px)}
+.brand-showcase-frame{position:relative;border:1px solid #ad7cf585;box-shadow:0 26px 90px #030411c9,0 0 90px #8c55e63b}
+.brand-showcase-frame::before{content:"";position:absolute;z-index:1;inset:-12px;border:1px solid #ccabff24;border-radius:25px;pointer-events:none}
+.brand-showcase-frame::after{content:"";position:absolute;z-index:2;inset:0;box-shadow:inset 0 0 90px #080d2170;pointer-events:none;border-radius:inherit}
+.brand-showcase-sticker{animation:site-next-float 7s ease-in-out infinite}
+.hero-bottomline{position:relative;z-index:2;flex-wrap:wrap;row-gap:14px}
+.premium-feature-card{transition:transform .25s ease,border-color .25s ease,box-shadow .25s ease}
+.premium-feature-card:hover{transform:translateY(-6px);border-color:#c4a4ff70;box-shadow:0 16px 45px #02040e5e}
+.premium-heading h2,.premium-experience h2,.section-heading h2,.download-heading h2{letter-spacing:-.065em}
+.support-section{position:relative;isolation:isolate;padding:112px 0 125px;overflow:hidden;background:radial-gradient(circle at 88% 16%,#a34def36,transparent 44%),radial-gradient(circle at 3% 95%,#209abd26,transparent 44%),#0b0c21;border-top:1px solid #aa89ef19;border-bottom:1px solid #bd9aff20}
+.support-section::before{content:"";position:absolute;inset:0;z-index:-1;opacity:.3;pointer-events:none;background:linear-gradient(120deg,transparent 35%,#b89bff0a),repeating-linear-gradient(90deg,transparent 0 79px,#ffffff07 80px)}
+.support-layout{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(300px,.9fr);gap:clamp(34px,6vw,100px);align-items:center}
+.support-section .support-tag{display:inline-flex;align-items:center;gap:8px;font-weight:850;letter-spacing:.16em;font-size:11px;text-transform:uppercase;color:#bdeeff}
+.support-heart{font-size:20px;color:#e6a7ff}
+.support-section h2{font-family:Bahnschrift,"Arial Narrow","Segoe UI",system-ui,sans-serif;font-size:clamp(46px,5.3vw,78px);letter-spacing:-.067em;line-height:1.04;font-weight:900;margin:23px 0 24px;color:#f6f2ff}
+.support-section h2 em{font-style:normal;background:linear-gradient(100deg,#88edff,#c99cfa 65%,#ffabdc);color:transparent;background-clip:text}
+.support-section .support-lead{font-size:17px;line-height:1.72;max-width:570px;color:#cad1e7}
+.support-checks{list-style:none;padding:0;margin:24px 0 30px;display:grid;gap:12px}
+.support-checks li{display:flex;gap:10px;color:#e2e6f6;font-weight:650;font-size:14px}
+.support-checks li::before{content:"✦";color:#a2eafa}
+.support-actions{display:flex;align-items:center;gap:20px;flex-wrap:wrap}
+.support-section .support-primary{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:16px 23px;background:#f4eaff;color:#271039;border-radius:15px;font-size:14px;font-weight:850;box-shadow:0 15px 40px #a477fa36;transition:transform .2s,background .2s}
+.support-section .support-primary:hover{transform:translateY(-3px);background:white}
+.support-section .support-secondary{font-size:13px;color:#b9cae9;text-decoration:underline;text-underline-offset:4px}
+.support-money{position:relative;border:1px solid #b8a3fc5c;border-radius:27px;background:linear-gradient(150deg,#222448f2,#13172fea);box-shadow:0 30px 85px #0406167d,0 0 90px #9964ef24;padding:clamp(25px,4vw,40px);overflow:hidden}
+.support-money::before{content:"";position:absolute;right:-75px;top:-100px;width:260px;height:260px;background:radial-gradient(circle,#b76cfd75,transparent 65%);pointer-events:none}
+.support-money>*{position:relative}
+.support-money .money-top{display:flex;align-items:center;justify-content:space-between;gap:10px;font-size:12px;letter-spacing:.09em;font-weight:900;text-transform:uppercase;color:#c7d4ee}
+.support-money .money-status{display:inline-flex;align-items:center;border:1px solid #caa5ff61;border-radius:100px;padding:5px 10px;color:#efd5ff;font-size:10px;white-space:nowrap}
+.support-money .money-amount{font-size:clamp(55px,6vw,84px);font-weight:950;line-height:1;letter-spacing:-.07em;margin:29px 0 12px;color:#fff}
+.support-money .money-amount small{font-size:17px;letter-spacing:0;font-weight:650;color:#cad6ef}
+.support-money .money-bar{height:10px;background:#ffffff16;border:1px solid #ffffff1a;border-radius:20px;margin:25px 0 13px}
+.support-money .money-bar span{display:block;width:100%;height:100%;border-radius:20px;background:repeating-linear-gradient(110deg,#b994ff48 0,#b994ff48 9px,#b994ff2a 9px,#b994ff2a 18px)}
+.support-money .money-desc{font-size:13px;line-height:1.6;color:#c9cfe7;margin-bottom:26px}
+.support-money .money-divider{height:1px;background:#ffffff25;margin:22px 0}
+.support-money .money-facts{display:flex;gap:20px;justify-content:space-between}
+.support-money .money-facts span{color:#aebddd;font-size:12px}
+.support-money .money-facts strong{display:block;color:#f6f3ff;font-size:20px;font-weight:850}
+.support-disclosure{margin-top:19px;color:#9daac9;font-size:11px;line-height:1.6}
+.support-page{min-height:100vh;background:radial-gradient(circle at 80% 12%,#6731aa43,transparent 44%),radial-gradient(circle at 4% 52%,#207a9b24,transparent 48%),#080a1c}
+.support-page .header{position:sticky}
+.support-page .support-page-main{padding:75px 0 105px}
+.support-page .support-page-hero{text-align:center;max-width:840px;margin:0 auto 65px}
+.support-page .support-page-hero h1{font-size:clamp(55px,7vw,94px);margin:22px 0;line-height:1.01;font-family:Bahnschrift,"Arial Narrow","Segoe UI",system-ui,sans-serif}
+.support-page .support-page-hero p{font-size:18px;line-height:1.7;color:#bac9e4}
+.support-page .support-page-hero .support-primary{margin:15px auto 0}
+.support-page .support-page-columns{display:grid;grid-template-columns:1fr 1fr;gap:23px}
+.support-page .support-information{background:#151931de;border:1px solid #b7a2fa42;border-radius:22px;padding:32px}
+.support-page .support-information h2{font-size:27px;letter-spacing:-.045em;color:#faf8ff}
+.support-page .support-information p,.support-page .support-information li{font-size:14px;color:#c6d2e8}
+.support-page .support-information ul{padding-left:19px;display:grid;gap:10px}
+.support-page .support-ribbon{display:flex;gap:10px;align-items:center;justify-content:center;flex-wrap:wrap;color:#d9dbf7;margin-top:38px;font-size:12px}
+.support-page .support-ribbon a{text-decoration:underline;text-underline-offset:4px}
+.support-page [data-apoia-pending]{display:block;color:#d8c9e9;font-size:13px;margin-top:22px}
+.support-page [data-campaign-button][hidden],.support-page [data-apoia-pending][hidden]{display:none!important}
+.support-page .support-cta-text{color:#d1d8ea;margin-top:25px}
+@keyframes site-next-float{0%,100%{transform:translateY(0) rotate(-4deg)}50%{transform:translateY(-10px) rotate(-1deg)}}
+@media(max-width:1100px){.navigation{gap:13px}.navigation a{font-size:11px}.hero h1{font-size:clamp(57px,6vw,80px)}}
+@media(max-width:800px){.hero{min-height:auto;padding-top:97px}.hero-grid,.support-layout,.support-page .support-page-columns{grid-template-columns:1fr}.hero-grid{gap:25px}.brand-showcase{max-width:670px;margin:0 auto}.support-section{padding:80px 0}.support-money{width:100%}.support-section h2{font-size:clamp(47px,9vw,67px)}.hero h1{font-size:clamp(54px,10vw,82px)}.navigation a.nav-support{border:0;background:none;padding:0}.support-page .support-page-main{padding-top:50px}}
+@media(max-width:480px){.hero-note{gap:9px}.hero-buttons{gap:11px}.hero-buttons .btn{width:100%;justify-content:center}.support-money .money-facts{gap:12px}.support-money .money-facts strong{font-size:17px}.support-section .support-primary{width:100%}.support-page .support-information{padding:22px}}
+@media(prefers-reduced-motion:reduce){.brand-showcase-sticker{animation:none}.premium-feature-card,.support-section .support-primary{transition:none}.premium-feature-card:hover,.support-section .support-primary:hover{transform:none}html{scroll-behavior:auto}}
