@@ -1,0 +1,177 @@
+/*
+ * DISCÓRDIA — Unified Dark Finish · 25/10/2026.
+ * One deliberate dark palette for home, supporters and privacy.
+ * Loaded LAST to supersede the earlier light sections without changing any
+ * logic, releases, donations, links, content, or real brand assets.
+ */
+:root{
+  --dd-bg:#090a1e;
+  --dd-surface:#151633;
+  --dd-panel:#1c1a43;
+  --dd-plum:#281958;
+  --dd-outline:rgba(172,155,255,.31);
+  --dd-white:#f9f8ff;
+  --dd-muted:#d2cdeb;
+  --dd-cyan:#98efff;
+  --dd-violet:#bda3ff;
+  --dd-pink:#ffaddf;
+  color-scheme:dark;
+}
+html,body{background:var(--dd-bg);color:var(--dd-white)}
+::selection{background:#8363dc;color:#fff}
+:focus-visible{outline:3px solid var(--dd-cyan);outline-offset:4px}
+.n26-panel-lilac{
+  background:radial-gradient(ellipse at 13% 22%,#6241ce40,transparent 47%),linear-gradient(140deg,#13102e,#191539 56%,#111029);
+  color:var(--dd-white);
+}
+.n26-panel-cream{
+  background:radial-gradient(ellipse at 75% 19%,#c65abe2c,transparent 45%),linear-gradient(130deg,#14102d,#1b153b 53%,#110f27);
+  color:var(--dd-white);
+}
+.n26-panel-lilac .n26-panel-copy h2,
+.n26-panel-cream .n26-panel-copy h2{color:var(--dd-white)}
+.n26-panel-lilac .n26-panel-copy h2 em{color:var(--dd-cyan)}
+.n26-panel-cream .n26-panel-copy h2 em{color:var(--dd-pink)}
+.n26-panel-lilac .n26-panel-copy p,
+.n26-panel-cream .n26-panel-copy p{color:var(--dd-muted)}
+.n26-panel-lilac .n26-overline,
+.n26-panel-cream .n26-overline{color:var(--dd-cyan)}
+.n26-panel-lilac .n26-panel-link,
+.n26-panel-cream .n26-panel-link{color:var(--dd-cyan)}
+.n26-panel-lilac .n26-panel-link:hover,
+.n26-panel-cream .n26-panel-link:hover{color:#fff}
+.n26-voice-art:before{background:linear-gradient(145deg,#5e39bd73,#3325789c);border:1px solid #b79df34d}
+.n26-art-label{background:#26204c;color:#f7ebff;border-color:#977bdf91;box-shadow:0 16px 35px #05051c99}
+.n26-theme-art:before{background:linear-gradient(130deg,#8a398879,#52309ba1)}
+.n26-theme-layer.layer-back{background:#125d8d;color:#e1faff}
+.n26-theme-layer.layer-mid{background:#6436be;color:#fff}
+.n26-theme-layer.layer-front{border-color:#a18ded}
+.n26-float-chip{background:linear-gradient(145deg,#24204c,#181637);border:1px solid #a993ea99;box-shadow:0 19px 44px #0706259c}
+.n26-float-chip strong{color:var(--dd-white)}
+.n26-float-chip small{color:var(--dd-muted)}
+.n26-float-chip>span{background:#4b347f;color:#e1d8ff}
+.n26-float-chip.chip-bottom>span{background:#6b3e7a;color:#ffe0f6}
+.n26-ribbon{background:linear-gradient(95deg,#34216f,#48318a,#281d68);color:#fff;border-block:1px solid #b6a2ff6e;box-shadow:0 9px 31px #07051ca6}
+.n27-network{
+  background:radial-gradient(ellipse at 85% 15%,#7445c84a,transparent 47%),linear-gradient(145deg,#10112b,#1c1742 52%,#0f1029);
+  color:var(--dd-white);
+}
+.n27-network:before{background:#6942b034;border:1px solid #ab8afb33}
+.n27-network h2{color:var(--dd-white)}
+.n27-network h2 em{color:var(--dd-cyan)}
+.n27-network .n27-eyebrow{color:var(--dd-violet)}
+.n27-network-head>p,
+.n27-tech-note{color:var(--dd-muted)}
+.n27-route-origin{border:1px solid #bca2ff88}
+.n27-route-lines span{background:repeating-linear-gradient(90deg,#b6a5ff 0 11px,transparent 12px 20px)}
+.n27-route-lines span:after{color:#a99cff}
+.n27-route-cards article{border:1px solid #ddd0ff36}
+.n27-journey{
+  background:radial-gradient(ellipse at 12% 18%,#1f9cb44a,transparent 43%),linear-gradient(130deg,#0d1a2f,#142641 52%,#12122f);
+  color:var(--dd-white);
+}
+.n27-journey:before{border-color:#5ab8e126}
+.n27-journey .n27-eyebrow{color:var(--dd-cyan)}
+.n27-journey h2{color:var(--dd-white)}
+.n27-journey h2 em{color:var(--dd-cyan)}
+.n27-journey p{color:var(--dd-muted)}
+.n27-journey-tags span{background:#242951;border:1px solid #95dbf66b;color:#f1faff;box-shadow:0 11px 24px #050b203d}
+.n27-journey .n27-link{color:var(--dd-cyan);border-color:var(--dd-cyan)}
+.n27-support{
+  background:radial-gradient(ellipse at 72% 21%,#a552cc43,transparent 43%),linear-gradient(145deg,#1d1138,#261440 53%,#130d2c);
+  color:var(--dd-white);
+}
+.n27-support .n27-eyebrow{color:var(--dd-pink)}
+.n27-support h2{color:var(--dd-white)}
+.n27-support h2 em{color:var(--dd-pink)}
+.n27-support-copy>p,
+.n27-support-copy>small{color:var(--dd-muted)}
+.n27-goal{background:linear-gradient(145deg,#2a204f,#20193e);border:1px solid #c59bf68c;box-shadow:0 15px 38px #08051c54}
+.n27-goal>span{color:#e2c2ff}
+.n27-goal>strong{color:var(--dd-white)}
+.n27-goal>strong small{color:#d2beef}
+.n27-goal>small{color:var(--dd-muted)}
+.n27-support-action{background:linear-gradient(105deg,#643cce,#8339bb);color:#fff;border:1px solid #c5a7ff99}
+.n27-support-action:hover{background:linear-gradient(105deg,#774cf3,#9d4fe1);color:white}
+.n27-downloads{background:radial-gradient(circle at 85% 10%,#8146c04e,transparent 39%),linear-gradient(140deg,#130f34,#241657 52%,#100e2c)}
+.n27-download-card,
+.n27-download-card.is-stable{
+  background:linear-gradient(155deg,#252148,#191a39 78%);
+  color:var(--dd-white);
+  border:1px solid #ab9aee67;
+  box-shadow:0 22px 50px #06041d9c;
+}
+.n27-download-card.is-stable{background:linear-gradient(150deg,#16344b,#19263f 76%);border-color:#72cbd968}
+.n27-download-card:before{background:#8164c529}
+.n27-download-card.is-stable:before{background:#49a5be21}
+.n27-download-card-top{color:#f0edff}
+.n27-download-card-top b{background:#59419b;color:#fff}
+.n27-download-card.is-stable .n27-download-card-top b{background:#226679;color:#d6fff8}
+.n27-download-card h3{color:var(--dd-white)}
+.n27-download-card p,
+.n27-download-card>small{color:var(--dd-muted)}
+.n27-download-card .download-version{color:var(--dd-violet)}
+.n27-download-card .secondary-link{color:var(--dd-cyan)}
+.n27-download-card .secondary-link:hover{color:#fff}
+.n27-download-card .btn.primary:not(.is-disabled){background:linear-gradient(110deg,#664de3,#884ddd)!important;color:#fff!important}
+.n27-download-card.is-stable .btn.primary:not(.is-disabled){background:linear-gradient(105deg,#137f8d,#345ab9)!important;color:#fff!important}
+.n27-download-art strong{color:#bc9fff;text-shadow:7px 9px 0 #563aa0}
+.n27-download-card.is-stable .n27-download-art strong{color:#7ee6e0;text-shadow:7px 9px 0 #295b80}
+.n27-download-art span,.n27-download-art i{color:#e2a8ff}
+.n27-download-card.is-stable .n27-download-art span{color:#a4f5ff}
+.n27-faq{
+  background:radial-gradient(ellipse at 17% 20%,#7041d249,transparent 45%),linear-gradient(145deg,#15102f,#1b153d 57%,#100e27);
+  color:var(--dd-white);
+}
+.n27-faq .n27-eyebrow{color:var(--dd-violet)}
+.n27-faq h2{color:var(--dd-white)}
+.n27-faq h2 em{color:var(--dd-cyan)}
+.n27-faq-intro p{color:var(--dd-muted)}
+.n27-faq-decoration{color:#6349b6;text-shadow:15px 18px 0 #382369}
+.n27-faq-items details{background:#242044;border:1px solid #ab91ea73;box-shadow:0 9px 24px #06041a66}
+.n27-faq-items details[open]{background:#29234e;box-shadow:0 17px 36px #06041a8a}
+.n27-faq-items summary{color:var(--dd-white)}
+.n27-faq-items summary:after{background:#493481;color:#e8dbff}
+.n27-faq-items details[open] summary:after{background:#7653c9;color:#fff}
+.n27-faq-items details p{color:var(--dd-muted)}
+.n27-faq-items details a{color:var(--dd-cyan)}
+.n27-policy{
+  background:radial-gradient(ellipse at 85% 10%,#6c47c53e,transparent 49%),linear-gradient(140deg,#14102d,#1b1638 55%,#0f0d26);
+  color:var(--dd-white);
+}
+.n27-policy .policy-wrap h1,
+.n27-policy .policy-wrap h2{color:var(--dd-white)}
+.n27-policy .policy-wrap h1 .gradient{background:linear-gradient(100deg,#99eeff,#dfb2ff);background-clip:text;-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.n27-policy .section-tag{color:var(--dd-violet)!important}
+.n27-policy .policy-wrap p{color:var(--dd-muted)}
+.n27-policy .policy-wrap .policy-note{background:#262047;border:1px solid #a48be66e;color:#eeeaff}
+.n27-policy .policy-wrap a{color:var(--dd-cyan)}
+.n27-support-detail{
+  background:radial-gradient(ellipse at 12% 18%,#8e52c23f,transparent 47%),linear-gradient(145deg,#151030,#1e1743 53%,#100e28);
+  color:var(--dd-white);
+}
+.n27-support-detail-card,
+.n27-support-detail-card.second{
+  background:linear-gradient(155deg,#28214e,#1a183b);
+  border:1px solid #ac96e576;
+  color:var(--dd-white);
+  box-shadow:0 20px 50px #06051b86;
+}
+.n27-support-detail-card.second{background:linear-gradient(150deg,#173747,#182643);border-color:#80d8e575}
+.n27-support-detail-card .n27-eyebrow{color:var(--dd-violet)}
+.n27-support-detail-card.second .n27-eyebrow{color:var(--dd-cyan)}
+.n27-support-detail-card h2{color:var(--dd-white)}
+.n27-support-detail-card p,
+.n27-support-detail-card li{color:var(--dd-muted)}
+.n27-goal-number{color:var(--dd-violet)}
+.n27-goal-number small{color:var(--dd-muted)}
+.n27-heart-large{color:#97f3d7;text-shadow:7px 8px 0 #2c746e}
+.n27-support-hero{background:radial-gradient(circle at 78% 26%,#804ce45e,transparent 43%),linear-gradient(120deg,#160d3b,#2d165c 57%,#110c32)}
+.n27-open-campaign{background:linear-gradient(110deg,#ae99ff,#93edff);color:#26134e}
+.n27-subheader{background:#170e38}
+.n27-footer{background:linear-gradient(140deg,#0f0b29,#160d37 65%,#0b0a21)}
+.n26-btn-white{background:linear-gradient(110deg,#ddd2ff,#b0f2ff);color:#281654}
+.n26-btn-white:hover{background:linear-gradient(110deg,#f2e7ff,#ddfaff)}
+/* Small decorative highlights remain luminous; large sections and functional
+   cards are dark. Media and logo assets are left untouched. */
+@media(prefers-reduced-motion:reduce){.n27-media-trail i,.n26-waves i{animation:none}}
