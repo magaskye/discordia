@@ -2,6 +2,22 @@
 
 O **Discórdia Desktop** é um aplicativo de comunicação para Windows que reúne amigos, mensagens, chamadas por voz e vídeo, salas de comunidade e compartilhamento de tela. O projeto oferece personalização visual e experiências voltadas à convivência e aos jogos.
 
+## Redesign oficial do site — 24/10/2026
+
+A página inicial foi reconstruída para apresentar o Discórdia a novos usuários, com hierarquia visual clara, design responsivo, componentes acessíveis e seis áreas em destaque: voz, compartilhamento, comunidades, temas, amizades e Snake global.
+
+**Identidade e ativos:**
+
+- `discordia-orbit-app.png` é uma cópia **do emblema realmente utilizado no aplicativo** (`src/assets/discordia-orbit.png`, obtido do repositório privado apenas como imagem de marca);
+- `discordia-identity-2026.webp` é a **arte cinematográfica** aprovada anteriormente para a capa, não uma captura real do executável;
+- `ui-discordia-v2-preview.svg` é uma **prévia ilustrativa identificada como tal**, e não uma captura de tela autenticada;
+- a palavra **VeloSinc** recebe tratamento tipográfico em CSS (`vs-wordmark`) inspirado na identidade visual aprovada. **Não foi encontrado um arquivo independente de logo VeloSinc** no conjunto de assets do aplicativo consultado. Não declarar a composição CSS como arquivo original da marca.
+
+**Infraestrutura preservada:** o script `site.js` mantém a verificação de Releases pela API GitHub, com instalador, portátil, manifesto e SHA-256. Apenas o texto informativo da versão estável foi atualizado, sem alterar lógica ou downloads. `network-film.js` e `velosinc-preview.js` continuam sendo demonstrações ilustrativas sem backend e não registram telemetria.
+
+**Publicação do vídeo:** o filme institucional VeloSinc permanece privado até a aprovação final do sistema. Nenhum vídeo foi adicionado ao site por esta mudança. Os recursos VeloSinc exibidos como próximos aprimoramentos não equivalem a funcionalidades já presentes na versão estável pública.
+
+
 **Site:** https://magaskye.github.io/discordia/  
 **Downloads oficiais:** https://github.com/magaskye/discordia/releases  
 **Plataforma:** Windows x64  
@@ -48,6 +64,8 @@ Este repositório público mantém exclusivamente os arquivos do site, informaç
 | `index.html` | Conteúdo da página oficial |
 | `site.css` | Layout geral e responsividade |
 | `identity-2026.css` | Tipografia futurista e novo acabamento de marca |
+| `showcase-2026.css` | Redesign premium da página, recursos e vitrine visual responsiva |
+| `discordia-orbit-app.png` | Emblema original extraído dos assets do aplicativo Desktop |
 | `velosinc-preview.css` | Estilos da apresentação técnica futura VeloSinc |
 | `velosinc-preview.js` | Navegação local, sem backend, pela explicação das etapas |
 | `discordia-identity-2026.webp` | Arte de identidade visual oficial otimizada do Google Flow |
@@ -71,9 +89,9 @@ A nova demonstração ilustrativa permite comparar três etapas:
 - **Recepção:** frames recebidos, decodificados e efetivamente exibidos; problemas de rede são distintos de problemas locais de GPU/decodificação;
 - **Recuperação (proposta):** avaliar P2P → TURN → SFU apenas para um espectador afetado, confirmando quadros exibidos antes de trocar de rota e preservando os demais.
 
-O SFU de áudio para voz/som do compartilhamento está apenas previsto na especificação, **não foi implementado nem homologado**. A rota efetiva não pode ser deduzida de um seletor; requer ICE/quadros confirmados.
+O SFU para voz/som do compartilhamento evolui em builds RC privados e requer homologação específica antes de ser tratado como disponível na edição estável. A rota efetiva não pode ser deduzida de um seletor; requer ICE/quadros confirmados.
 
-Esta seção é **preview técnico**, não anúncio de uma versão publicada. Arquivos: `velosinc-preview.css` e `velosinc-preview.js`. A ilustração não coleta métricas nem conecta a serviços. Os downloads oficiais continuam condicionados à checagem do GitHub, e o atualizador permanece no hold de emergência vigente.
+Esta seção é uma **apresentação técnica**, não comprovação de que todos os elementos planejados já tenham sido publicados. Arquivos: `velosinc-preview.css` e `velosinc-preview.js`. A ilustração não coleta métricas nem conecta a serviços. Os downloads oficiais continuam condicionados à checagem do GitHub, e o atualizador permanece no hold de emergência vigente.
 
 ## Apresentação animada de P2P, TURN e SFU
 
