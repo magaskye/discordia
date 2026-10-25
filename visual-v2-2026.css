@@ -1,0 +1,61 @@
+/* Discórdia — VISUAL V2. Distinct original gaming-community direction.
+   Public website only: no external assets, downloads or payment integrations. */
+:root{--v2-ultraviolet:#6f38ef;--v2-electric:#8eeaff;--v2-rose:#ffa7ed}
+body{background:#08071b;color:#fbf9ff}
+.site-launch-bar{position:relative;z-index:92;min-height:44px;display:flex;align-items:center;justify-content:center;gap:14px;flex-wrap:wrap;padding:10px 24px;text-align:center;color:#fff;background:linear-gradient(100deg,#4d24b5,#7841ee 47%,#ad55d7);box-shadow:0 2px 20px #170b4266;font-size:12px;font-weight:750;letter-spacing:.02em}
+.site-launch-bar a{color:#fff;border-bottom:1px solid #fff9;font-weight:900}
+.site-launch-bar a:hover{border-color:#fff}
+.header{background:#100b2df0;border-bottom:1px solid #ccb1ff31}
+.nav-button{border-radius:100px;background:#fff!important;color:#30205a!important;box-shadow:0 12px 35px #100b3b8c!important;font-weight:900}
+.nav-button:hover{background:#dafaff!important}
+.brand img{filter:drop-shadow(0 0 16px #bc89ffad)}
+.hero{position:relative;isolation:isolate;min-height:760px;overflow:hidden;padding:112px 0 46px;background:
+ radial-gradient(circle at 88% 14%,#ec65ec6e 0,transparent 40%),
+ radial-gradient(ellipse at 31% 120%,#14afcd50 0,transparent 47%),
+ radial-gradient(ellipse at 3% 20%,#733af577 0,transparent 51%),
+ linear-gradient(116deg,#32115d 0%,#371579 39%,#160e4f 71%,#15113b 100%)!important}
+.hero::before{content:"";position:absolute;z-index:-1;pointer-events:none;inset:0;opacity:.45;background-image:radial-gradient(#e5d3ff90 1px,transparent 1.5px);background-size:35px 35px;mask-image:linear-gradient(80deg,#0006,transparent 68%)}
+.hero::after{content:"";position:absolute;z-index:-1;inset:auto -10% -200px;height:400px;border-radius:50%;background:radial-gradient(ellipse,#49d3ff3e,transparent 66%);filter:blur(48px)}
+.ambient-1{background:#53c7ff55!important;filter:blur(95px)}
+.ambient-2{background:#ff62e55c!important;filter:blur(90px)}
+.hero-grid{grid-template-columns:minmax(0,1.08fr) minmax(0,.92fr);gap:45px;min-height:555px;align-items:center}
+.hero-copy{max-width:700px}
+.hero h1{max-width:730px;color:#fff;font-size:clamp(63px,6.5vw,103px)!important;line-height:.99!important;letter-spacing:-.074em!important;font-weight:950!important;text-shadow:0 12px 46px #130b4b6b}
+.hero .gradient{background:linear-gradient(90deg,#8ff0ff 0%,#bba9ff 45%,#ffa9ef 96%);background-clip:text;color:transparent;-webkit-background-clip:text;text-shadow:none}
+.hero-copy>p{font-size:clamp(16px,1.45vw,20px)!important;line-height:1.65!important;color:#e4ddfa!important;max-width:540px}
+.hero .overline{background:#ffffff20!important;color:#effbff!important;border:1px solid #ffffff68!important;font-size:11px}
+.hero-buttons .btn{border-radius:100px!important;font-size:13px;font-weight:900;min-height:60px}
+.hero-buttons .btn.primary{background:#fff!important;color:#281850!important;box-shadow:0 14px 40px #160b4c91}
+.hero-buttons .btn.primary:hover{background:#c7faff!important}
+.hero-buttons .btn.outline{border:2px solid #ffffffba!important;color:#fff!important;background:#ffffff10!important}
+.hero-note{color:#e8e1ff!important}
+.hero-note b{color:#a8ffe4!important}
+.hero-support-chip{border-bottom-color:#e3b8ffcf!important;color:#fff!important}
+.brand-showcase{max-width:720px;transform:perspective(1700px) rotate(-2deg);filter:drop-shadow(0 30px 30px #0b0a3780)}
+.brand-showcase-halo{background:radial-gradient(ellipse,#cf6dffb0,transparent 69%)!important;filter:blur(66px)!important}
+.brand-showcase-frame{border:2px solid #f1d3ff8c!important;border-radius:28px!important;transform:perspective(1600px) rotateY(-6deg) rotateZ(1deg)!important;box-shadow:0 32px 90px #0b064099,0 0 70px #fa86ee4b!important}
+.brand-showcase-caption{color:#f4eaff!important}
+.hero-bottomline{border-top:1px solid #ffffff58!important;color:#ded6fa!important}
+.hero-bottomline span:before{color:#b4f4ff!important}
+.premium-features{background:#f2f1ff!important;color:#1c1641!important}
+.premium-features .section-tag{color:#642ee0!important}
+.premium-features .premium-heading h2{color:#231448!important;font-size:clamp(42px,4.8vw,74px)!important}
+.premium-features .premium-heading>p{color:#50476f!important}
+.premium-features .gradient{background-image:linear-gradient(99deg,#6732df,#b02fc6)!important}
+.premium-feature-grid{gap:18px!important}
+.premium-feature-card{border:0!important;border-radius:27px!important;min-height:302px!important;color:#fff!important;background:linear-gradient(145deg,#4924a4,#3f1a87 60%,#24104d)!important;box-shadow:0 18px 45px #25105e2d!important}
+.premium-feature-card:nth-child(3n+2){background:linear-gradient(140deg,#125878,#124e8c 60%,#172d71)!important}
+.premium-feature-card:nth-child(4n+3){background:linear-gradient(135deg,#833e9c,#5a247b 60%,#3e175f)!important}
+.premium-feature-card h3,.premium-feature-card p{color:#fff!important}
+.premium-feature-card p{color:#eee7ff!important}
+.premium-feature-card:hover{transform:translateY(-7px) rotate(-.3deg)!important;box-shadow:0 26px 60px #21105854!important}
+.premium-feature-symbol{background:#ffffff24!important;border:1px solid #ffffff3a!important;color:#fff!important}
+.support-section{background:radial-gradient(ellipse at 90% 20%,#8c50e76b,transparent 50%),linear-gradient(135deg,#180c43,#261250 53%,#0c123c)!important}
+.support-money{background:linear-gradient(150deg,#402a87,#21154b)!important;border-color:#d4adff99!important}
+.support-money .money-amount{color:#fff!important}
+.premium-experience{background:linear-gradient(145deg,#100b32,#08152d)!important}
+@media(max-width:1100px){.hero-grid{grid-template-columns:1fr 1fr;gap:20px}.hero h1{font-size:clamp(58px,6.5vw,85px)!important}}
+@media(max-width:930px){.hero{min-height:0;padding-top:84px}.hero-grid{grid-template-columns:1fr}.hero h1{max-width:760px}.brand-showcase{transform:none;max-width:730px}.brand-showcase-frame{transform:none!important}}
+@media(max-width:760px){.site-launch-bar{font-size:11px;padding:10px 13px;gap:6px}.hero h1{font-size:clamp(57px,11.3vw,83px)!important}.hero{padding-top:72px}.premium-feature-card{min-height:240px!important}.premium-features .premium-heading h2{font-size:clamp(39px,7vw,58px)!important}}
+@media(max-width:480px){.hero h1{font-size:clamp(52px,12.4vw,70px)!important}.hero-buttons .btn{width:100%}.site-launch-bar a{white-space:nowrap}}
+@media(prefers-reduced-motion:reduce){.brand-showcase-sticker{animation:none}.premium-feature-card{transition:none!important}.premium-feature-card:hover{transform:none!important}}
