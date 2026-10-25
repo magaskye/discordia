@@ -191,3 +191,15 @@
 .n27-support-detail-card ul{padding-left:21px;display:grid;gap:9px}
 .n27-heart-large{display:block;font-size:110px;line-height:1;color:#31a48e;text-shadow:8px 9px 0 #9cf1dc;margin:26px 0}
 @media(max-width:720px){.n27-subheader-inner{min-height:65px}.n27-subbrand{font-size:20px}.n27-subbrand img{width:39px;height:39px}.n27-support-hero{padding:62px 0 72px}.n27-support-hero h1{font-size:clamp(43px,10vw,70px)}.n27-support-hero-inner>p{font-size:15px}.n27-support-detail{padding:65px 0}.n27-support-detail-grid{grid-template-columns:1fr}.n27-support-detail-card{padding:27px}.n27-backsite{font-size:10px;padding:9px 12px}}
+
+/* Privacy page visual consistency; factual legal prose retained untouched. */
+.n27-policy{background:linear-gradient(150deg,#ede5ff,#f7f1ff 50%,#e8fff5);color:#2c1859;min-height:70vh}
+.n27-policy .policy-wrap{max-width:910px;margin:0 auto;padding:75px 30px 110px}
+.n27-policy .section-tag{color:#6f3abb!important;font-weight:950;letter-spacing:.15em}
+.n27-policy .policy-wrap h1{font-family:Bahnschrift,"Arial Narrow",system-ui,sans-serif;font-size:clamp(49px,6vw,86px);font-weight:950;line-height:1.02;letter-spacing:-.07em;color:#2a145d}
+.n27-policy .policy-wrap h1 .gradient{color:#884bd9;background:linear-gradient(105deg,#7c3cd0,#b952b3);background-clip:text;-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.n27-policy .policy-wrap h2{font-size:26px;color:#391c74;margin:35px 0 14px}
+.n27-policy .policy-wrap p{font-size:15px;color:#615578;line-height:1.8}
+.n27-policy .policy-wrap .policy-note{border:1px solid #bea6ee;background:#fff9;border-radius:20px;padding:25px;color:#38205e}
+.n27-policy .policy-wrap a{color:#6534c1;text-decoration:underline;text-underline-offset:3px;font-weight:850}
+@media(max-width:650px){.n27-policy .policy-wrap{padding:58px 0 75px}.n27-policy .policy-wrap h1{font-size:clamp(45px,11vw,67px)}}
