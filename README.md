@@ -1,3 +1,8 @@
+> [!IMPORTANT]
+> **27/10/2026 — Distribuição temporariamente suspensa.** O Discórdia Desktop está em homologação do banco de dados após alterações no Firebase. **A versão estável e todas as RCs foram retiradas da página oficial**, e não há downloads recomendados neste momento. **Seus dados estão preservados.** Evite instalar executáveis antigos enquanto a compatibilidade é validada.
+>
+> As referências e links abaixo são **históricos**, não uma recomendação de instalação. Essa suspensão do site não elimina automaticamente arquivos já publicados em GitHub Releases nem desinstala versões existentes.
+
 # Discórdia Desktop — site oficial
 
 O **Discórdia Desktop** é um aplicativo de comunicação para Windows que reúne amigos, mensagens, chamadas por voz e vídeo, salas de comunidade e compartilhamento de tela. O projeto oferece personalização visual e experiências voltadas à convivência e aos jogos.
