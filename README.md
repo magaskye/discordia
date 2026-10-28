@@ -1,7 +1,7 @@
 > [!IMPORTANT]
-> **27/10/2026 — Distribuição temporariamente suspensa.** O Discórdia Desktop está em homologação do banco de dados após alterações no Firebase. **A versão estável e todas as RCs foram retiradas da página oficial**, e não há downloads recomendados neste momento. **Seus dados estão preservados.** Evite instalar executáveis antigos enquanto a compatibilidade é validada.
+> **28/10/2026 — Site com dois canais separados.** A última RC antiga publicada é a **1.0.3-rc.8** (testes, [Release oficial](https://github.com/magaskye/discordia/releases/tag/v1.0.3-rc.8)). A nova **Estável 1.0.2** já foi compilada em [job privado GitLab #17547225550](https://gitlab.com/discordia-group/discordia-build/-/jobs/17547225550), mas sua Release GitHub ainda é **rascunho e não está disponível para download público**. O site só habilita o download da 1.0.2 quando houver Release pública e arquivos oficiais completos.
 >
-> As referências e links abaixo são **históricos**, não uma recomendação de instalação. Essa suspensão do site não elimina automaticamente arquivos já publicados em GitHub Releases nem desinstala versões existentes.
+> **Compatibilidade Firebase:** a RC8 é uma edição antiga anterior às mudanças no banco e pode apresentar erros de permissões, login e voz. A 1.0.2 continua pendente de homologação real do banco e instalação; não há garantia de compatibilidade. Os dados não foram apagados durante a atualização do site. Não reinstale excluindo dados para tentar corrigir erros de Firebase.
 
 # Discórdia Desktop — site oficial
 
@@ -26,7 +26,7 @@ A página inicial foi reconstruída para apresentar o Discórdia a novos usuári
 **Site:** https://magaskye.github.io/discordia/  
 **Downloads oficiais:** https://github.com/magaskye/discordia/releases  
 **Plataforma:** Windows x64  
-**Versão oficial em 23/10/2026: Discórdia 1.0.0 estável publicada.** Release [v1.0.0](https://github.com/magaskye/discordia/releases/tag/v1.0.0) disponível no GitHub, com instalador, versão portátil, `latest.yml` e SHA-256. Compilação no GitLab privado (job `17429566006`), com **88/88 testes Windows aprovados**. O site identifica automaticamente a versão estável com base nos quatro arquivos oficiais.
+**Registro histórico em 23/10/2026: Discórdia 1.0.0 estável publicada.** Release [v1.0.0](https://github.com/magaskye/discordia/releases/tag/v1.0.0) disponível no GitHub, com instalador, versão portátil, `latest.yml` e SHA-256. Compilação no GitLab privado (job `17429566006`), com **88/88 testes Windows aprovados**. O site identifica automaticamente a versão estável com base nos quatro arquivos oficiais.
 
 ## Recursos
 
@@ -51,7 +51,7 @@ O desempenho e a qualidade podem variar conforme o hardware, a conexão e o cont
 
 ## Download e instalação
 
-O site identifica as versões por meio da **API oficial do GitHub Releases** e só habilita os botões após encontrar instalador, portátil, manifesto de atualização e arquivo de somas SHA-256. Quando existe uma edição estável verificável, ela substitui a RC no painel de downloads, sem apagar o histórico das melhorias. Nenhum instalador é armazenado diretamente no site.
+O site identifica as versões por meio da **API oficial do GitHub Releases** e só habilita os botões após encontrar instalador, portátil, manifesto de atualização e arquivo de somas SHA-256. O site apresenta **RC antiga e Estável 1.0.2 em cartões separados**; o botão da Estável 1.0.2 permanece desativado enquanto a Release pública e seus manifestos não estiverem disponíveis. Nenhum instalador é armazenado diretamente no site.
 
 1. Acesse [Downloads](https://magaskye.github.io/discordia/#downloads).
 2. Escolha o **instalador** ou a **versão portátil** para Windows x64.
