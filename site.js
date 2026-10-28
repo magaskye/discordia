@@ -1,9 +1,9 @@
-/* Discórdia Desktop — catálogo público controlado: RC8 legada e Estável 1.0.2. */
+/* Discórdia Desktop — catálogo público controlado: RC8 legada e Estável 1.0.3. */
 (function () {
   'use strict';
   const OWNER='magaskye', REPO='discordia';
   const RELEASES='https://api.github.com/repos/'+OWNER+'/'+REPO+'/releases?per_page=60';
-  const TAG_RC='v1.0.3-rc.8', TAG_STABLE='v1.0.2';
+  const TAG_RC='v1.0.3-rc.8', TAG_STABLE='v1.0.3';
   const navButton=document.getElementById('nav-toggle');
   const nav=document.getElementById('nav-main');
   if(navButton&&nav){
@@ -85,11 +85,11 @@
       if(rc)enable('rc',rc);
       if(stable){
         enable('stable',stable);
-        text('stable-card-description','Discórdia 1.0.2 Estável para Windows x64, com atualização automática e opção de sair dos Testers. Confira as notas e o SHA-256 no lançamento oficial.');
+        text('stable-card-description','Discórdia 1.0.3 Estável para Windows x64, com atualização automática e opção de sair dos Testers. Confira as notas e o SHA-256 no lançamento oficial.');
       }
-      text('release-hero-badge',stable?'DISCÓRDIA ESTÁVEL 1.0.2':rc?'DISCÓRDIA · RC8 ANTIGA':'DISCÓRDIA · DOWNLOADS EM VALIDAÇÃO');
-      text('release-status',stable&&rc?'Estável 1.0.2 e RC8 disponíveis':stable?'Estável 1.0.2 disponível':rc?'RC8 disponível · Estável 1.0.2 em validação':'Downloads aguardando publicação');
-      text('release-hint',stable?'Downloads da Estável 1.0.2 e RC8 conferidos no GitHub Releases.':'RC8 antiga confirmada. A Estável 1.0.2 aparecerá quando for publicada oficialmente.');
+      text('release-hero-badge',stable?'DISCÓRDIA ESTÁVEL 1.0.3':rc?'DISCÓRDIA · RC8 ANTIGA':'DISCÓRDIA · DOWNLOADS EM VALIDAÇÃO');
+      text('release-status',stable&&rc?'Estável 1.0.3 e RC8 disponíveis':stable?'Estável 1.0.3 disponível':rc?'RC8 disponível · Estável 1.0.3 em validação':'Downloads aguardando publicação');
+      text('release-hint',stable?'Downloads da Estável 1.0.3 e RC8 conferidos no GitHub Releases.':'RC8 antiga confirmada. A Estável 1.0.3 aparecerá quando for publicada oficialmente.');
       // A RC é uma edição legada e pode não funcionar com regras Firebase atuais.
     })
     .catch(()=>{
