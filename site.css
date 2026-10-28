@@ -183,3 +183,11 @@ h1{font-size:clamp(49px,5.7vw,79px);font-weight:950;letter-spacing:-.08em;line-h
 .release-history-footnote{font-size:11px;margin:16px 0 0}
 .download-grid:has(#rc-download-card[hidden]){grid-template-columns:minmax(0,700px);justify-content:center}
 @media(max-width:800px){.release-history-highlights{grid-template-columns:1fr}.release-history-list{grid-template-columns:1fr}}
+
+/* Aviso de compatibilidade dos canais legados com regras Firebase em evolução. */
+.n27-compatibility-alert{
+ margin-top:22px;padding:17px 20px;border:1px solid #debd734d;
+ border-radius:14px;background:#251d20;color:#ecd8b4;
+ font-size:13px;line-height:1.7
+}
+.n27-compatibility-alert strong{color:#ffe3b6}
