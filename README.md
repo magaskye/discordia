@@ -1,7 +1,7 @@
 > [!IMPORTANT]
-> **28/10/2026 — Site com dois canais separados.** A última RC antiga publicada é a **1.0.3-rc.8** (testes, [Release oficial](https://github.com/magaskye/discordia/releases/tag/v1.0.3-rc.8)). A nova **Estável 1.0.2** já foi compilada em [job privado GitLab #17547225550](https://gitlab.com/discordia-group/discordia-build/-/jobs/17547225550), mas sua Release GitHub ainda é **rascunho e não está disponível para download público**. O site só habilita o download da 1.0.2 quando houver Release pública e arquivos oficiais completos.
+> **28/10/2026 — Site com dois canais separados.** A última RC antiga publicada é a **1.0.3-rc.8** (testes, [Release oficial](https://github.com/magaskye/discordia/releases/tag/v1.0.3-rc.8)). A nova **Estável 1.0.2** foi recompilada (pipeline privada GitLab [#3000232348](https://gitlab.com/discordia-group/discordia-build/-/pipelines/3000232348)) e **publicada oficialmente** em [v1.0.2](https://github.com/magaskye/discordia/releases/tag/v1.0.2). O site habilita o instalador e o portátil após conferir os arquivos dessa Release.
 >
-> **Compatibilidade Firebase:** a RC8 é uma edição antiga anterior às mudanças no banco e pode apresentar erros de permissões, login e voz. A 1.0.2 continua pendente de homologação real do banco e instalação; não há garantia de compatibilidade. Os dados não foram apagados durante a atualização do site. Não reinstale excluindo dados para tentar corrigir erros de Firebase.
+> **Compatibilidade Firebase:** a RC8 é uma edição antiga anterior às mudanças no banco e pode apresentar erros de permissões, login e voz. A 1.0.2 passou em 36/36 testes automatizados de atualização, mas ainda não foi homologada em múltiplos PCs com as regras atuais do Firebase; não há garantia de compatibilidade. Os dados não foram apagados durante a atualização do site. Não reinstale excluindo dados para tentar corrigir erros de Firebase.
 
 # Discórdia Desktop — site oficial
 
@@ -18,7 +18,7 @@ A página inicial foi reconstruída para apresentar o Discórdia a novos usuári
 - `ui-discordia-v2-preview.svg` é uma **prévia ilustrativa identificada como tal**, e não uma captura de tela autenticada;
 - a palavra **VeloSinc** recebe tratamento tipográfico em CSS (`vs-wordmark`) inspirado na identidade visual aprovada. **Não foi encontrado um arquivo independente de logo VeloSinc** no conjunto de assets do aplicativo consultado. Não declarar a composição CSS como arquivo original da marca.
 
-**Infraestrutura preservada:** o script `site.js` mantém a verificação de Releases pela API GitHub, com instalador, portátil, manifesto e SHA-256. Apenas o texto informativo da versão estável foi atualizado, sem alterar lógica ou downloads. `network-film.js` e `velosinc-preview.js` continuam sendo demonstrações ilustrativas sem backend e não registram telemetria.
+**Infraestrutura preservada:** o script `site.js` mantém a verificação de Releases pela API GitHub, com instalador, portátil, manifesto e SHA-256. O site agora separa explicitamente a última RC antiga da Estável 1.0.2, e o script de downloads verifica ambas por tag e arquivos oficiais. `network-film.js` e `velosinc-preview.js` continuam sendo demonstrações ilustrativas sem backend e não registram telemetria.
 
 **Publicação do vídeo:** o filme institucional VeloSinc permanece privado até a aprovação final do sistema. Nenhum vídeo foi adicionado ao site por esta mudança. Os recursos VeloSinc exibidos como próximos aprimoramentos não equivalem a funcionalidades já presentes na versão estável pública.
 
@@ -51,7 +51,7 @@ O desempenho e a qualidade podem variar conforme o hardware, a conexão e o cont
 
 ## Download e instalação
 
-O site identifica as versões por meio da **API oficial do GitHub Releases** e só habilita os botões após encontrar instalador, portátil, manifesto de atualização e arquivo de somas SHA-256. O site apresenta **RC antiga e Estável 1.0.2 em cartões separados**; o botão da Estável 1.0.2 permanece desativado enquanto a Release pública e seus manifestos não estiverem disponíveis. Nenhum instalador é armazenado diretamente no site.
+O site identifica as versões por meio da **API oficial do GitHub Releases** e só habilita os botões após encontrar instalador, portátil, manifesto de atualização e arquivo de somas SHA-256. O site apresenta **RC antiga e Estável 1.0.2 em cartões separados**; a Estável 1.0.2 está pública com instalador, portátil, latest.yml, rc.yml, blockmap e SHA-256, e aparece separada da RC8. O carregamento dos botões é condicionado à checagem de arquivos pela API. Nenhum instalador é armazenado diretamente no site.
 
 1. Acesse [Downloads](https://magaskye.github.io/discordia/#downloads).
 2. Escolha o **instalador** ou a **versão portátil** para Windows x64.
