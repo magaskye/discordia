@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="theme-color" content="#0b0d19">
-<meta name="description" content="Discórdia Desktop: suas conversas, chamadas de voz, comunidades e transmissões em um lugar feito para jogar e estar com os amigos. Conheça e baixe para Windows.">
+<meta name="description" content="Discórdia Desktop para Windows. Downloads da Estável temporariamente suspensos por falhas; acompanhe o andamento da RC11.">
 <meta property="og:title" content="Discórdia Desktop — Seus amigos. Seu universo.">
 <meta property="og:description" content="Jogue, converse, compartilhe sua tela e personalize seu mundo. Conheça o Discórdia Desktop para Windows.">
 <meta property="og:type" content="website">
@@ -16,7 +16,8 @@
 <link rel="stylesheet" href="./unified-site-2026.css?v=20261025-v4">
 <link rel="stylesheet" href="./dark-finish-2026.css?v=dark-final-20261025">
 <link rel="stylesheet" href="./admin-entry.css?v=20261030">
-<script src="./site.js?v=stable103-legacyrc8-20261028" defer></script>
+<link rel="stylesheet" href="./stable-suspension-20261031.css">
+<script src="./site.js?v=hold-stable-20261031" defer></script>
 <title>Discórdia Desktop | Sua galera. Seu jogo. Seu lugar.</title>
 </head>
 <body>
@@ -27,9 +28,20 @@
   <nav id="nav-main" class="navigation" aria-label="Navegação principal">
     <a href="#recursos">Experiência</a><a href="#experiencia">Transmissões</a><a href="#tecnologia">Conexões</a><a href="#velosinc">VeloSinc</a><a class="nav-support" href="#apoie">Apoie o projeto ♥</a><a class="nav-admin-entry" href="https://discordia-admin.netlify.app/" target="_blank" rel="noopener noreferrer" aria-label="Área administrativa em preparação, abre em nova aba"><span aria-hidden="true">🔒</span> Área Admin <small>Em preparação</small></a>
   </nav>
-  <a class="nav-button" href="#downloads">Baixar para Windows <span aria-hidden="true">↗</span></a>
+  <a class="nav-button" href="#downloads">Situação dos downloads <span aria-hidden="true">↗</span></a>
 </div></header>
 <main id="principal">
+<section class="maintenance-notice" id="status-estavel" role="region" aria-labelledby="maintenance-title">
+  <div class="notice-inner">
+    <div>
+      <span class="notice-eyebrow">COMUNICADO OFICIAL · 31/10/2026</span>
+      <h2 id="maintenance-title">Downloads da Estável temporariamente suspensos</h2>
+      <p>A versão pública 1.0.3 apresentou falhas de funcionamento, incluindo relatos de problemas em atualizações e conexão de voz. Para evitar novas instalações de uma versão que não funciona corretamente, interrompemos a oferta da Estável no site até que uma versão corrigida seja testada e aprovada.</p>
+      <p><strong>A RC11 está em finalização e homologação; ainda não é uma nova versão estável.</strong> Quem já instalou deve evitar apagar dados locais ou fazer reinstalações repetidas. Divulgaremos aqui a retomada dos downloads quando houver uma edição confiável.</p>
+    </div>
+    <a class="notice-link" href="#downloads">Ver situação das versões ↓</a>
+  </div>
+</section>
   
 <section class="n26-hero" id="inicio" aria-labelledby="hero-title">
   <div class="n26-sky" aria-hidden="true"></div>
@@ -38,7 +50,7 @@
       <span class="n26-tag"><span class="n26-live-dot"></span><span id="release-hero-badge">DISCÓRDIA · PARA WINDOWS</span></span>
       <h1 id="hero-title">SUA GALERA.<br>SEU JOGO.<br><em>SEU LUGAR.</em></h1>
       <p id="release-hero-description">Junte os amigos, entre na conversa e compartilhe os melhores momentos da partida. Um espaço feito para estar junto — até quando ninguém está jogando.</p>
-      <div class="n26-hero-actions"><a class="n26-btn n26-btn-white" href="#downloads">↓ Baixar para Windows</a><a class="n26-btn n26-btn-outline" href="#experiencia">▶ Conheça o aplicativo</a></div>
+      <div class="n26-hero-actions"><a class="n26-btn n26-btn-white" href="#status-estavel">Consultar disponibilidade</a><a class="n26-btn n26-btn-outline" href="#experiencia">▶ Conheça o aplicativo</a></div>
       <small>Windows 10 e 11 · Instalador e portátil · Projeto independente</small>
     </div>
     <div class="n26-hero-scene" role="img" aria-label="Ilustração conceitual de uma chamada de voz e transmissão no Discórdia, com amigos em uma sala">
@@ -141,29 +153,29 @@
 <section class="n27-downloads" id="downloads" aria-labelledby="downloads-heading">
  <div class="container">
    <div class="n27-downloads-head">
-     <div><span class="n27-eyebrow">SUA PRÓXIMA PARTIDA COMEÇA AQUI</span><h2 id="downloads-heading">BORA ENTRAR<br><em>NO DISCÓRDIA?</em></h2><p>Confira as duas edições do Discórdia para Windows 10 e 11. A RC8 antiga está disponível para testes. A Estável 1.0.3 já está publicada oficialmente; a RC8 antiga permanece disponível separadamente para testers. As novas mudanças do Firebase ainda exigem acompanhamento de compatibilidade.</p></div>
-     <span class="n27-release-status" id="release-status" role="status" aria-live="polite">Conferindo downloads oficiais…</span>
+     <div><span class="n27-eyebrow">STATUS OFICIAL · 31/10/2026</span><h2 id="downloads-heading">SITUAÇÃO<br><em>DOS DOWNLOADS.</em></h2><p>O download recomendado para uso diário está suspenso devido a falhas na Estável 1.0.3. A RC11 segue em homologação e não foi liberada como Estável. A RC8 abaixo é histórica, destinada exclusivamente a testers, e pode ser incompatível com o Firebase atual.</p></div>
+     <span class="n27-release-status" id="release-status" role="status" aria-live="polite">Estável suspensa · RC11 em testes</span>
    </div>
    <div class="n27-download-grid">
      <article class="n27-download-card is-rc" id="rc-download-card">
        <div class="n27-download-card-top"><span>✦ PARA QUEM TESTA</span><b>RC / TESTERS</b></div>
        <div class="n27-download-art" aria-hidden="true"><span>↗</span><strong>RC</strong><i>✦</i></div>
-       <h3>Última RC antiga.</h3><p>Discórdia 1.0.3 RC8, publicada antes da RC10. É uma versão de testes legada, com possíveis incompatibilidades após mudanças no Firebase. Indicada somente para testers que conhecem essas limitações.</p>
+       <h3>RC8 legada — somente testers.</h3><p>Discórdia 1.0.3 RC8, publicada antes da RC10. É uma versão de testes legada, com possíveis incompatibilidades após mudanças no Firebase. Indicada somente para testers que conhecem essas limitações.</p>
        <strong class="download-version" id="rc-version">RC8 · verificando arquivos oficiais…</strong>
        <div class="download-actions"><a id="rc-installer" class="btn primary is-disabled" href="#downloads" aria-disabled="true" tabindex="-1">Instalador em verificação</a><a id="rc-portable" class="secondary-link is-disabled" href="#downloads" aria-disabled="true" tabindex="-1">Versão portátil</a></div>
        <small>Instalador e portátil somente após checagem da Release.</small>
      </article>
      <article class="n27-download-card is-stable" id="stable-download-card">
-       <div class="n27-download-card-top"><span>◈ PARA O DIA A DIA</span><b id="stable-card-label">ESTÁVEL</b></div>
+       <div class="n27-download-card-top"><span>◈ DOWNLOAD INTERROMPIDO</span><b id="stable-card-label">ESTÁVEL SUSPENSA</b></div>
        <div class="n27-download-art" aria-hidden="true"><span>✳</span><strong>1.0.3</strong><i>◈</i></div>
-       <h3>Discórdia Estável 1.0.3.</h3><p id="stable-card-description">Atualização de manutenção: corrige a descoberta da lista de Servir a dor após as mudanças de permissão no Firestore, preservando atualização automática e a opção de sair dos Testers. A versão foi compilada e publicada oficialmente com instalador e portátil. Foram aprovados 45 testes automatizados; usuários com servidores antigos sem índice podem precisar de recuperação. Login e voz ainda exigem confirmação em computadores reais.</p>
-       <strong class="download-version" id="stable-version">Versão 1.0.3 · Release oficial publicada</strong>
-       <div class="download-actions"><a id="stable-installer" class="btn primary is-disabled" href="#downloads" aria-disabled="true" tabindex="-1">Conferindo download oficial…</a><a id="stable-portable" class="secondary-link is-disabled" href="#downloads" aria-disabled="true" tabindex="-1">Versão portátil</a></div>
-       <small>Arquivos oficiais publicados no GitHub: instalador, portátil, manifests e SHA-256. Botões verificados automaticamente pela API.</small>
+       <h3>Estável 1.0.3 — indisponível.</h3><p id="stable-card-description">A distribuição recomendada da versão Estável está temporariamente suspensa por falhas relatadas em funcionamento, atualização e voz. A RC11 está em validação; somente após homologação será disponibilizada uma nova edição Estável.</p>
+       <strong class="download-version" id="stable-version">Distribuição suspensa · aguardando correção</strong>
+       <div class="download-actions"><span id="stable-installer" class="btn primary is-disabled" role="status">Download suspenso</span><span id="stable-portable" class="secondary-link is-disabled">Portátil suspenso</span></div>
+       <small>Os botões de instalação estão indisponíveis. Releases anteriores permanecem apenas como registro histórico, não como recomendação de uso.</small>
      </article>
    </div>
-   <div role="note" class="n27-compatibility-alert"><strong>Atenção à compatibilidade:</strong> a Estável 1.0.3 corrige a consulta geral negada pelo Firestore, mas servidores antigos sem índice, login ou voz ainda podem apresentar problemas. Não desinstale apagando dados para tentar corrigir esses erros. RC é para testes; a 1.0.3 é a edição estável publicada, sem garantia de eliminação de todos os erros de Firebase.</div>
-   <div class="n27-download-foot"><span id="release-hint">Downloads fornecidos pelo GitHub Releases, somente após validação dos arquivos da edição.</span><a href="https://github.com/magaskye/discordia/releases" target="_blank" rel="noopener noreferrer">Ver versões oficiais e SHA-256 ↗</a></div>
+   <div role="note" class="n27-compatibility-alert"><strong>Comunicado de manutenção:</strong> a Estável 1.0.3 não é recomendada para novas instalações. O aplicativo pode apresentar erros de atualização, login, listagem ou conexão de voz. Não apague seus dados locais. A RC11 ainda é uma candidata de testes, não um lançamento estável.</div>
+   <div class="n27-download-foot"><span id="release-hint">Distribuição da Estável suspensa; histórico de releases mantido para transparência.</span><a href="https://github.com/magaskye/discordia/releases" target="_blank" rel="noopener noreferrer">Consultar histórico de versões (não recomendado para instalação) ↗</a></div>
  </div>
 </section>
 <section class="n27-faq" id="perguntas" aria-labelledby="faq-heading">
@@ -187,7 +199,7 @@
   <span>AGORA É COM VOCÊ</span>
   <h2 id="n26-final-title">A PRÓXIMA<br>HISTÓRIA COMEÇA<br><em>NA SUA GALERA.</em></h2>
   <p>Uma conversa pode virar amizade. Uma partida pode render histórias. Bora fazer isso acontecer?</p>
-  <a class="n26-btn n26-btn-white" href="#downloads">↓ Baixar o Discórdia</a>
+  <a class="n26-btn n26-btn-white" href="#status-estavel">Consultar status da versão</a>
  </div>
  <strong class="n26-final-wordmark" aria-hidden="true">DISCÓRDIA.</strong>
 </section>
