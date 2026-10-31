@@ -1,0 +1,38 @@
+name: Emergency retire broken stable v1.0.3
+on:
+  push:
+    branches: [main]
+    paths:
+      - .github/workflows/retire-v1-0-3-emergency.yml
+permissions:
+  contents: write
+jobs:
+  retire-only-v1-0-3:
+    if: github.repository == 'magaskye/discordia'
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Confirm exact broken release then remove
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_REPO: magaskye/discordia
+        shell: bash
+        run: |
+          set -euo pipefail
+          release_id="426966985"
+          tag="v1.0.3"
+          found="$(gh api "repos/${GH_REPO}/releases/${release_id}" --jq '.tag_name' 2>/dev/null || true)"
+          if [[ "$found" == "" ]]; then
+            echo "RELEASE_V103_ALREADY_ABSENT"
+            exit 0
+          fi
+          if [[ "$found" != "$tag" ]]; then
+            echo "::error::Refusing to modify a different release."
+            exit 1
+          fi
+          gh api --method DELETE "repos/${GH_REPO}/releases/${release_id}"
+          if gh api "repos/${GH_REPO}/releases/${release_id}" >/dev/null 2>&1; then
+            echo "::error::Release still exists after deletion"
+            exit 1
+          fi
+          echo "BROKEN_STABLE_V103_RELEASE_REMOVED"
