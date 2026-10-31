@@ -1,0 +1,11 @@
+/* Comunicado oficial de suspensão temporária da Estável — 31/10/2026 */
+.maintenance-notice{position:relative;z-index:2;padding:28px 0 30px;background:linear-gradient(110deg,#2a1e31 0%,#181d34 65%,#131c2f 100%);border-block:1px solid #ecae7465}
+.maintenance-notice .notice-inner{max-width:1160px;margin-inline:auto;padding:0 24px;display:grid;grid-template-columns:minmax(0,1fr) auto;gap:22px;align-items:center}
+.maintenance-notice .notice-eyebrow{display:block;font-size:12px;font-weight:850;letter-spacing:.12em;color:#f7cb98;margin-bottom:7px}
+.maintenance-notice h2{font-size:clamp(21px,2.7vw,32px);font-weight:850;letter-spacing:-.035em;color:#fff;margin:0 0 10px}
+.maintenance-notice p{font-size:14px;line-height:1.7;color:#e7dfef;max-width:850px;margin:0 0 9px}
+.maintenance-notice p:last-child{margin-bottom:0}
+.maintenance-notice .notice-link{display:inline-flex;align-items:center;justify-content:center;min-height:45px;padding:12px 16px;border:1px solid #ecae749e;border-radius:11px;color:#ffe2bc;background:#503b4755;font-size:13px;font-weight:800;white-space:nowrap}
+.maintenance-notice .notice-link:hover{background:#69465270}
+#stable-download-card .download-actions .is-disabled{pointer-events:none;cursor:not-allowed;opacity:.68}
+@media(max-width:730px){.maintenance-notice .notice-inner{grid-template-columns:1fr;gap:9px}.maintenance-notice .notice-link{width:fit-content;white-space:normal}}
