@@ -1,13 +1,30 @@
-# Discórdia Desktop — comunicado oficial (31/10/2026)
+# Discórdia Desktop — RC11 publicada (31/10/2026)
 
-**RC11 em preparação. Nenhuma edição disponível para download no site neste momento.**
+**Versão disponível neste site: [Discórdia Desktop v1.0.3-rc.11 — Versão candidata](https://github.com/magaskye/discordia/releases/tag/v1.0.3-rc.11).** É uma pré-release para Testers no Windows 10/11 x64, não uma versão Estável.
 
-A versão Estável 1.0.3 não funciona de maneira confiável no cenário atual. Após a homologação do recurso de exclusão de Servir a dor e as revisões técnicas relacionadas, houve atualizações de regras de acesso e registros de proprietários no Firebase, inclusive em produção. A Estável anterior não foi integralmente validada com essa configuração e foram relatadas falhas na atualização, no acesso aos Servir a dor e na conexão de voz. A relação causal exata de cada erro ainda está em investigação; não afirmar que a exclusão, isoladamente, causou todas as falhas.
+## Downloads RC11
+- [Instalador x64](https://github.com/magaskye/discordia/releases/download/v1.0.3-rc.11/Discordia-1.0.3-rc.11-Instalador-x64.exe)
+- [Portátil x64](https://github.com/magaskye/discordia/releases/download/v1.0.3-rc.11/Discordia-1.0.3-rc.11-Portatil-x64.exe)
+- [Manifesto Testers rc.yml](https://github.com/magaskye/discordia/releases/download/v1.0.3-rc.11/rc.yml)
+- [Hashes SHA256](https://github.com/magaskye/discordia/releases/download/v1.0.3-rc.11/SHA256SUMS.txt)
 
-A RC11 (1.0.3-rc.11) está em finalização e homologação, com melhorias e correções de autenticação, presença, voz, compartilhamento, SFU com áudio da tela, VeloSinc, interface e atualizações. **Não foi publicada ao público.**
+## Correções e melhorias
+- Corrigida a falha `Headphones is not defined` que impedia a abertura da interface.
+- Corrigida a atualização indevida de `1.0.3-rc.11` para a Estável `1.0.3`; canais Testers e Estável não migram silenciosamente.
+- Barra superior com `v1.0.3-rc.11 · Versão candidata`, com a edição após o número.
+- Painel de voz e cronômetro reorganizados para não sobrepor controles.
+- Detecção ampliada de jogos de Steam, Epic, Riot, Xbox, outras lojas e jogos portáteis identificáveis; suporte a ícones de emuladores (PCSX2, Dolphin, DuckStation etc.) com nome do jogo no perfil.
+- Melhorias de login, presença, Palco, compartilhamento e interface.
+- Voz P2P/TURN, SFU com áudio da tela, VeloSinc, reconexão e exclusão de Servir a dor **ainda exigem homologação real** antes de serem considerados integralmente aprovados.
 
-O site apresenta apenas esse comunicado; nenhuma RC antiga nem versão Estável é oferecida por sua interface. **A release pública Estável v1.0.3 foi retirada do GitHub em 31/10/2026, incluindo seus instaladores e o manifesto de atualização.** A retirada impede que o atualizador volte a obter essa versão pelo feed público; as demais releases históricas não foram excluídas. A RC11 continua em homologação, sem publicação pública.
+## Próxima Estável 1.1
+A próxima **Discórdia 1.1 Estável** será disponibilizada após os testes e a homologação da RC11. Não há data confirmada.
 
-Nenhum aplicativo foi compilado ou publicado nesta alteração. A RC11 e as infraestruturas de voz, TURN, SFU, VeloSinc e Firebase permanecem fora do escopo da modificação do site.
+A Estável antiga `v1.0.3` foi retirada do GitHub por falhas de compatibilidade e atualização. As demais releases históricas podem permanecer no repositório para histórico, mas **não são oferecidas nos downloads do site**. Este site oferece apenas a RC11.
 
-Site: https://magaskye.github.io/discordia/
+**Importante:** quem instalou uma RC11 privada anterior com a mesma numeração precisa reinstalar manualmente a nova edição, pois o autoatualizador não troca binários entre versões de número idêntico.
+
+**Site:** https://magaskye.github.io/discordia/  
+**Release:** https://github.com/magaskye/discordia/releases/tag/v1.0.3-rc.11
+
+Desenvolvido por Carlos Eduardo Lopes, com o apoio da comunidade e dos testers.
