@@ -1,35 +1,64 @@
 <!doctype html>
 <html lang="pt-BR">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="theme-color" content="#0b0c16">
-  <meta name="description" content="Discórdia Desktop: RC11 em finalização e homologação. A versão Estável 1.0.3 está temporariamente indisponível por falhas de compatibilidade após mudanças de segurança do Firebase.">
-  <meta property="og:title" content="Discórdia Desktop — RC11 em preparação">
-  <meta property="og:description" content="Estamos finalizando a RC11. A Estável 1.0.3 e as RCs anteriores estão fora dos downloads recomendados. Entenda o motivo.">
-  <meta property="og:type" content="website">
-  <meta property="og:image" content="https://magaskye.github.io/discordia/discordia-identity-2026.webp">
-  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; img-src 'self'; style-src 'self'; base-uri 'none'; form-action 'none'; object-src 'none'; upgrade-insecure-requests">
-  <link rel="icon" href="./discordia-orbit-app.png" type="image/png">
-  <link rel="stylesheet" href="./stable-suspension-20261031.css?v=rc11-only-20261031">
-  <title>Discórdia Desktop — RC11 em preparação</title>
+ <meta charset="utf-8">
+ <meta name="viewport" content="width=device-width,initial-scale=1">
+ <meta name="theme-color" content="#090b17">
+ <meta name="description" content="Discórdia Desktop RC11: versão candidata 1.0.3-rc.11 para Windows. Baixe instalador ou portátil, conheça as correções e melhorias. Próxima versão estável 1.1 após a homologação.">
+ <meta property="og:type" content="website">
+ <meta property="og:title" content="Discórdia Desktop — RC11 Versão candidata">
+ <meta property="og:description" content="Discórdia RC11 disponível para Testers no Windows, com melhorias de jogos, login, voz, transmissão, Palco, VeloSinc e atualizações. A Estável 1.1 virá após os testes.">
+ <meta property="og:image" content="https://magaskye.github.io/discordia/discordia-identity-2026.webp">
+ <meta http-equiv="Content-Security-Policy" content="default-src 'none'; img-src 'self'; style-src 'self'; base-uri 'none'; form-action 'none'; object-src 'none'; upgrade-insecure-requests">
+ <link rel="icon" type="image/png" href="./discordia-orbit-app.png">
+ <link rel="stylesheet" href="./rc11-release-20261031.css?v=rc11-public-20261031">
+ <title>Discórdia Desktop — RC11 Versão candidata</title>
 </head>
 <body>
-  <main class="page" id="principal">
-    <article class="notice" aria-labelledby="notice-title">
-      <div class="brand"><img src="./discordia-orbit-app.png" alt="Símbolo do Discórdia" width="76" height="76"><span>DISCÓRDIA<span class="brand-dot">.</span></span></div>
-      <p class="eyebrow"><span class="status-dot" aria-hidden="true"></span> COMUNICADO OFICIAL · 31 DE OUTUBRO DE 2026</p>
-      <h1 id="notice-title">Estamos preparando a <span>RC11.</span></h1>
-      <p class="lead">O Discórdia Desktop está temporariamente sem downloads públicos enquanto concluímos os últimos ajustes e testes da nova versão candidata.</p>
-      <div class="separator" aria-hidden="true"></div>
-      <h2>Por que a versão Estável não funciona corretamente?</h2>
-      <p>Após a homologação do recurso de exclusão de <strong>Servir a dor</strong>, o projeto passou por revisões de permissões, registros de proprietários e regras de acesso do Firebase, inclusive em produção. A versão <strong>Estável 1.0.3</strong> não foi validada integralmente para essa configuração atual e vem apresentando falhas de funcionamento, incluindo problemas relatados na atualização, no acesso aos servidores e na conexão de voz.</p>
-      <p>Essas mudanças exigem ajustes de compatibilidade no aplicativo. <strong>Ainda estamos investigando a causa específica de cada erro:</strong> não há comprovação de que o mecanismo de exclusão, por si só, tenha provocado todas essas falhas. Por isso, a Estável foi retirada da distribuição recomendada, assim como as RCs anteriores.</p>
-      <h2>O que acontece agora?</h2>
-      <p>A <strong>RC11</strong> está na etapa de finalização, com correções de acesso, voz, presença, transmissão, áudio da tela via SFU, VeloSinc, interface e atualizações. Essas alterações ainda precisam passar pelos testes finais de homologação. <strong>A RC11 não foi lançada.</strong></p>
-      <div class="availability" role="status"><span class="availability-symbol" aria-hidden="true">◌</span><div><strong>Downloads temporariamente indisponíveis</strong><span>Nenhuma RC antiga ou versão Estável está sendo oferecida neste site. A próxima versão será anunciada após os testes e a autorização de publicação.</span></div></div>
-      <p class="footnote">Se você já instalou o Discórdia, evite apagar dados locais ou reinstalar versões antigas como tentativa de correção. Obrigado pela compreensão.</p>
-    </article>
-  </main>
+<header class="top"><div class="wrap">
+ <a class="identity" href="#inicio" aria-label="Discórdia — início"><img src="./discordia-orbit-app.png" alt="" width="45" height="45"> DISCÓRDIA<span style="color:#c29aff">.</span></a>
+ <nav aria-label="Navegação principal"><a href="#downloads">Downloads</a><a href="#melhorias">Melhorias</a><a href="#futuro">Estável 1.1</a></nav>
+</div></header>
+<main id="inicio">
+ <section class="hero wrap" id="downloads">
+  <div class="eyebrow"><span class="dot"></span> Disponível para Testers · Windows 10/11 x64</div>
+  <h1>Discórdia RC11.<br><span class="gradient">Versão candidata.</span></h1>
+  <p class="lead">A nova etapa do Discórdia Desktop chegou. Um aplicativo feito para jogar, conversar e compartilhar — com correções de estabilidade, interface mais clara, detecção ampliada de jogos e uma arquitetura de voz e transmissão em homologação.</p>
+  <div class="actions">
+   <a class="button primary" href="https://github.com/magaskye/discordia/releases/download/v1.0.3-rc.11/Discordia-1.0.3-rc.11-Instalador-x64.exe" download>↓ Baixar instalador RC11</a>
+   <a class="button secondary" href="https://github.com/magaskye/discordia/releases/download/v1.0.3-rc.11/Discordia-1.0.3-rc.11-Portatil-x64.exe" download>↓ Baixar versão portátil</a>
+  </div>
+  <p class="micro"><strong>v1.0.3-rc.11</strong> · Versão candidata · 31/10/2026 · <a href="https://github.com/magaskye/discordia/releases/tag/v1.0.3-rc.11">Notas e hashes oficiais no GitHub</a></p>
+  <p class="micro">Somente a RC11 é oferecida para download neste site. Quem instalou uma compilação privada anterior com o mesmo número deve instalar manualmente estes novos arquivos, pois o atualizador não substitui automaticamente uma versão de numeração igual.</p>
+ </section>
+ <section class="wrap bands" id="melhorias">
+  <h2 class="section-title">O que mudou nesta RC11</h2>
+  <p class="section-intro">Correções e melhorias reunidas a partir da homologação com a comunidade. Recursos de mídia e exclusão continuam sujeitos aos testes reais antes da próxima Estável.</p>
+  <div class="grid">
+   <article class="feature"><span class="icon" aria-hidden="true">🔐</span><h3>Login corrigido</h3><p>Correção da falha visual que impedia a abertura da tela inicial. Acesso por e-mail/senha e Google mantido.</p></article>
+   <article class="feature"><span class="icon" aria-hidden="true">🎮</span><h3>Jogos de várias lojas</h3><p>Detecção ampliada de Steam, Epic, Riot, Xbox, jogos portáteis identificáveis e outras instalações, com ícones reais quando disponíveis.</p></article>
+   <article class="feature"><span class="icon" aria-hidden="true">🕹️</span><h3>Emuladores no perfil</h3><p>Suporte a PCSX2, Dolphin, DuckStation e outros emuladores: ícone do emulador e nome do jogo em execução no próprio perfil.</p></article>
+   <article class="feature"><span class="icon" aria-hidden="true">🎙️</span><h3>Controles de voz</h3><p>Cronômetro da chamada em linha própria, sem sobrepor os botões de microfone, áudio, câmera, chat e transmissão.</p></article>
+   <article class="feature"><span class="icon" aria-hidden="true">↻</span><h3>Atualizações mais seguras</h3><p>Canal Testers separado da Estável: uma RC não deve instalar automaticamente uma Estável incompatível.</p></article>
+   <article class="feature"><span class="icon" aria-hidden="true">🖥️</span><h3>Palco e transmissão</h3><p>Layout para vários espectadores, prévia, controles de compartilhamento e tratamento mais claro das sessões.</p></article>
+   <article class="feature"><span class="icon" aria-hidden="true">🔊</span><h3>Voz, SFU e áudio da tela</h3><p>Rotas de mídia P2P/TURN/SFU preparadas para testes de áudio da transmissão e espectadores simultâneos. Homologação prática em andamento.</p></article>
+   <article class="feature"><span class="icon" aria-hidden="true">⚡</span><h3>VeloSinc</h3><p>Ajustes de qualidade e adaptação da transmissão conforme condições de rede, sujeitos aos testes entre computadores.</p></article>
+   <article class="feature"><span class="icon" aria-hidden="true">🛡️</span><h3>Servir a dor</h3><p>Revisões de permissões e continuidade do fluxo de exclusão. A limpeza definitiva e automatizada ainda requer homologação completa.</p></article>
+  </div>
+  <div class="release-info">
+   <h3>Por que a Estável anterior saiu dos downloads?</h3>
+   <p>A antiga Estável 1.0.3 apresentou problemas de atualização e compatibilidade com mudanças de segurança e infraestrutura. Ela foi retirada da distribuição pública recomendada; esta RC11 concentra as correções e os testes. A exclusão de Servir a dor, isoladamente, não foi comprovada como a causa de todos os erros.</p>
+   <p><strong>Atenção:</strong> esta é uma versão candidata. Antes da publicação Estável, ainda precisamos validar em uso real a voz entre amigos, transmissão SFU com áudio da tela, VeloSinc, atualização e exclusão de Servir a dor. Preserve seus dados locais ao trocar de instalação.</p>
+  </div>
+ </section>
+ <section class="wrap" id="futuro">
+  <div class="future">
+   <span class="future-tag">Próximo capítulo</span>
+   <h2>A próxima Estável será a <span class="gradient">1.1</span>.</h2>
+   <p>A versão <strong>Discórdia 1.1 Estável</strong> será disponibilizada depois que a RC11 completar os testes e a homologação com os amigos. Até lá, a única edição oferecida nesta página é a <strong>RC11 — Versão candidata</strong>.</p>
+  </div>
+ </section>
+</main>
+<footer><div class="wrap"><span>© 2026 Discórdia Desktop · Desenvolvido por Carlos Eduardo Lopes</span><span>Feito com o apoio da comunidade e dos testers.</span></div></footer>
 </body>
 </html>
