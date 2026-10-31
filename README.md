@@ -1,11 +1,14 @@
 > [!CAUTION]
-> **31/10/2026 — ESTÁVEL 1.0.3 TEMPORARIAMENTE FORA DO CATÁLOGO DE DOWNLOADS DO SITE.**
+> **31/10/2026 — Downloads do Discórdia temporariamente indisponíveis no site.**
 >
-> Após relatos de falhas na versão pública (atualização, login/compatibilidade e conexão por voz), a instalação da Estável 1.0.3 deixou de ser recomendada. Os botões de instalador e portátil no [site oficial](https://magaskye.github.io/discordia/#status-estavel) foram desabilitados. **A RC11 está em homologação: não é uma nova versão Estável.**
+> A Estável 1.0.3 foi suspensa após relatos de falhas de atualização e conexão por voz. **Todas as RCs antigas também foram retiradas do catálogo público do site**, inclusive a RC8 legada. Nenhum botão de instalador ou portátil está ativo.
 >
-> **Importante:** Releases anteriores e seus manifestos ainda podem ser acessados diretamente no histórico do GitHub; a mudança do site **não** desativa o atualizador dos aplicativos já instalados. Não apague dados locais como tentativa de correção. A volta da distribuição depende da aprovação de uma nova Estável. Nenhuma nova build foi compilada ou publicada por este comunicado.
+> **RC11 (1.0.3-rc.11): fase final de ajustes, testes e homologação.** O próximo pacote candidato está sendo preparado, mas não está disponível ao público. Destaques em desenvolvimento: novo login com animação, controles de voz, galeria multi-transmissões, edição/encerramento seguro de compartilhamento, integração SFU/TURN/VeloSinc e verificação de acesso Firebase/atualização.
 >
-> As seções abaixo preservam registros históricos de publicações anteriores, não uma indicação atual de disponibilidade.
+> Os releases e arquivos históricos do GitHub **não foram excluídos nem seus manifestos desativados**, pois isso é uma ação separada da remoção da vitrine. O atualizador dos aplicativos já instalados também não foi alterado. Não reinstale versões antigas nem apague dados locais como tentativa de reparo.
+>
+> A nova edição terá seus downloads liberados apenas após aprovação. Os registros técnicos abaixo são históricos e não representam links recomendados atualmente.
+
 
 # Discórdia Desktop — site oficial
 
@@ -22,7 +25,7 @@ A página inicial foi reconstruída para apresentar o Discórdia a novos usuári
 - `ui-discordia-v2-preview.svg` é uma **prévia ilustrativa identificada como tal**, e não uma captura de tela autenticada;
 - a palavra **VeloSinc** recebe tratamento tipográfico em CSS (`vs-wordmark`) inspirado na identidade visual aprovada. **Não foi encontrado um arquivo independente de logo VeloSinc** no conjunto de assets do aplicativo consultado. Não declarar a composição CSS como arquivo original da marca.
 
-**Distribuição em manutenção (31/10/2026):** o script `site.js` mantém a checagem de Releases pela API GitHub para o canal RC legado, mas não habilita instalador ou portátil da Estável enquanto a suspensão estiver ativa. Os arquivos, manifests e SHA-256 existentes no histórico de Releases não foram removidos.
+**Distribuição em manutenção (31/10/2026):** o `site.js` não acessa mais a API de Releases nem ativa downloads de qualquer RC ou Estável. O site exibe apenas o andamento da RC11. Os arquivos e manifestos do histórico não foram removidos.
 
 **Publicação do vídeo:** o filme institucional VeloSinc permanece privado até a aprovação final do sistema. Nenhum vídeo foi adicionado ao site por esta mudança. Os recursos VeloSinc exibidos como próximos aprimoramentos não equivalem a funcionalidades já presentes na versão estável pública.
 
@@ -55,7 +58,7 @@ O desempenho e a qualidade podem variar conforme o hardware, a conexão e o cont
 
 ## Download e instalação
 
-**Situação atual (31/10/2026):** os botões da Estável 1.0.3 estão desabilitados independentemente da API GitHub. A RC8 permanece como versão antiga somente para testers. O histórico pode conter instaladores, `latest.yml`, `rc.yml`, blockmap e SHA-256 da 1.0.3, mas esses arquivos não são recomendados para uso. Nenhum instalador é hospedado diretamente no site.
+**Situação atual (31/10/2026):** não há links ativos para download de RCs antigas nem da Estável. A seção de versões destaca a RC11 em ajustes finais, sem instalador publicado. Os arquivos históricos no GitHub não devem ser usados como substitutos desta liberação.
 
 1. Acesse [Downloads](https://magaskye.github.io/discordia/#downloads).
 2. Escolha o **instalador** ou a **versão portátil** para Windows x64.
