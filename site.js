@@ -1,9 +1,10 @@
-/* Discórdia Desktop — catálogo público controlado: RC8 legada e Estável 1.0.3. */
+/* Discórdia Desktop — Estável suspensa em 31/10/2026; RC8 legada preservada. */
 (function () {
   'use strict';
   const OWNER='magaskye', REPO='discordia';
   const RELEASES='https://api.github.com/repos/'+OWNER+'/'+REPO+'/releases?per_page=60';
   const TAG_RC='v1.0.3-rc.8', TAG_STABLE='v1.0.3';
+  const STABLE_DOWNLOADS_PAUSED=true; // Liberar apenas após homologação e autorização.
   const navButton=document.getElementById('nav-toggle');
   const nav=document.getElementById('nav-main');
   if(navButton&&nav){
@@ -81,8 +82,14 @@
       // Não oferecer automaticamente RC10 ou releases experimentais posteriores.
       const rc=verified(releases.find(x=>x.tag_name===TAG_RC),TAG_RC,'rc');
       // Releases em draft não aparecem na API pública e nunca habilitam download.
-      const stable=verified(releases.find(x=>x.tag_name===TAG_STABLE),TAG_STABLE,'stable');
+      const stable=STABLE_DOWNLOADS_PAUSED?null:verified(releases.find(x=>x.tag_name===TAG_STABLE),TAG_STABLE,'stable');
       if(rc)enable('rc',rc);
+      if(STABLE_DOWNLOADS_PAUSED){
+        text('release-hero-badge','DISCÓRDIA · ESTÁVEL SUSPENSA');
+        text('release-status',rc?'Estável suspensa · RC8 legada para testers':'Estável suspensa · sem download para uso diário');
+        text('release-hint','Downloads da Estável suspensos. O catálogo do GitHub é histórico; aguarde uma edição testada e aprovada.');
+        return;
+      }
       if(stable){
         enable('stable',stable);
         text('stable-card-description','Discórdia 1.0.3 Estável para Windows x64, com atualização automática e opção de sair dos Testers. Confira as notas e o SHA-256 no lançamento oficial.');
@@ -93,6 +100,11 @@
       // A RC é uma edição legada e pode não funcionar com regras Firebase atuais.
     })
     .catch(()=>{
+      if(STABLE_DOWNLOADS_PAUSED){
+        text('release-status','Estável suspensa · catálogo RC não verificado');
+        text('release-hint','A Estável está suspensa independentemente da disponibilidade da API GitHub.');
+        return;
+      }
       text('release-status','Não foi possível verificar as Releases');
       text('release-hint','Consulte o catálogo oficial no GitHub para verificar os arquivos. Nenhum instalador é ativado sem confirmação.');
     });
