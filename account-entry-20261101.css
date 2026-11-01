@@ -1,0 +1,52 @@
+/* Discórdia: entrada visível do portal Minha Conta sem substituir o layout oficial. */
+.header .nav-shell{width:min(1480px,calc(100% - 48px));gap:18px}
+.header .navigation{gap:clamp(9px,1vw,17px)}
+.header .navigation a{font-size:12px}
+.nav-actions{display:flex;align-items:center;justify-content:flex-end;gap:10px;flex-shrink:0}
+.header .nav-account-entry{
+  display:inline-flex;align-items:center;justify-content:center;gap:9px;
+  min-height:43px;padding:9px 15px;border-radius:12px;
+  border:1px solid rgba(161,208,255,.48);
+  background:linear-gradient(120deg,rgba(104,74,195,.5),rgba(37,107,145,.45));
+  box-shadow:inset 0 1px 0 #ffffff1a;
+  color:#fff;font-size:13px;font-weight:800;white-space:nowrap;
+  text-decoration:none;transition:transform .22s,box-shadow .22s,border-color .22s,background .22s
+}
+.header .nav-account-entry svg{flex-shrink:0}
+.header .nav-account-entry:hover,.header .nav-account-entry:focus-visible{
+  color:#fff;transform:translateY(-2px);border-color:#97eeff;
+  box-shadow:0 8px 22px rgba(10,7,34,.35),0 0 18px rgba(102,213,254,.16)
+}
+@media(max-width:1240px){
+  .header .nav-toggle{
+    margin-left:auto;display:flex;flex-direction:column;justify-content:center;gap:5px;
+    width:42px;height:42px;padding:10px;border:1px solid #ffffff48;
+    background:transparent;border-radius:10px;flex-shrink:0
+  }
+  .header .nav-toggle span{width:100%;height:2px;background:#ecf0fa}
+  .header .navigation{
+    display:none;position:absolute;top:calc(100% - 1px);left:0;right:0;
+    padding:18px max(24px,calc((100vw - 1160px)/2));margin:0;
+    background:rgba(18,20,43,.98);border-bottom:1px solid #9c8de044;
+    box-shadow:0 18px 30px #06051f88;
+    flex-direction:column;align-items:stretch;gap:9px
+  }
+  .header .navigation.open{display:flex}
+  .header .navigation a{font-size:14px;padding:10px 12px;border-radius:9px}
+  .header .navigation a:hover,.header .navigation a:focus-visible{background:#ffffff12}
+}
+@media(max-width:850px){
+  .header .nav-shell{gap:13px}
+  .header .nav-account-entry{min-height:42px;padding:9px 13px}
+}
+@media(max-width:570px){
+  .header .nav-shell{width:calc(100% - 26px);gap:10px}
+  .header .nav-account-entry{font-size:12px;padding:9px 11px}
+  .header .brand{font-size:20px}
+}
+@media(max-width:385px){
+  .header .nav-account-entry{width:42px;height:42px;padding:0}
+  .header .nav-account-label{display:none}
+  .header .brand{font-size:18px}
+}
+@media(prefers-reduced-motion:reduce){.header .nav-account-entry{transition:none}}
