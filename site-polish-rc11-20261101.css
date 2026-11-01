@@ -1,0 +1,127 @@
+/* Discórdia: acabamento e navegação RC11.
+   Camada isolada: preserva os estilos e as seções originais do site. */
+html{scroll-padding-top:96px}
+.header{
+  position:sticky!important;top:0;z-index:200!important;
+  box-shadow:0 8px 28px #08051d24!important;
+  transition:box-shadow .25s ease,background-color .25s ease,backdrop-filter .25s ease;
+}
+.header.is-scrolled{
+  background:rgba(30,15,75,.94)!important;
+  box-shadow:0 12px 34px #08051c85,0 1px 0 #d6c1ff24!important;
+  -webkit-backdrop-filter:blur(20px) saturate(145%);
+  backdrop-filter:blur(20px) saturate(145%);
+}
+.header .navigation a.is-active:not(.nav-admin-entry){
+  color:#9df0ff!important;
+}
+.header .navigation a.is-active:not(.nav-admin-entry):not(.nav-support){
+  text-decoration:underline;text-decoration-color:#9df0ff;
+  text-decoration-thickness:2px;text-underline-offset:8px;
+}
+.header .brand img{transition:transform .4s cubic-bezier(.2,.85,.25,1),filter .4s}
+.header .brand:hover img{transform:rotate(-12deg) scale(1.06);filter:drop-shadow(0 0 16px #95e8ffad)}
+.header .nav-button,.n26-btn,.n27-download-card .btn,.n27-download-card .secondary-link{
+  transition:transform .24s ease,box-shadow .24s ease,background-color .24s ease,filter .24s ease;
+}
+.header .nav-button:hover,.n26-btn:hover,.n27-download-card a.btn:hover:not(.is-disabled),.n27-download-card a.secondary-link:hover:not(.is-disabled){
+  transform:translateY(-2px);filter:brightness(1.045);
+}
+.n27-download-card{transition:transform .3s ease,box-shadow .3s ease,border-color .3s ease}
+.n27-download-card:hover{transform:translateY(-4px);box-shadow:0 24px 48px #07021f60}
+.n27-faq{
+  overflow:visible;
+}
+.n27-faq-grid{
+  grid-template-columns:minmax(0,.92fr) minmax(0,1.08fr);
+  gap:clamp(24px,5vw,90px);
+  align-items:start;
+}
+.n27-faq-intro{
+  position:relative;
+  min-height:0!important;
+  min-width:0;
+  isolation:isolate;
+}
+.n27-faq h2{
+  font-size:clamp(38px,5vw,69px)!important;
+  line-height:1.07!important;
+  letter-spacing:-.055em!important;
+  margin:18px 0 20px!important;
+  overflow-wrap:normal;
+  word-break:normal;
+  max-width:100%;
+}
+.n27-faq-intro p{
+  position:relative;
+  z-index:1;
+  margin-top:0;
+  max-width:470px;
+  font-size:clamp(15px,1.4vw,17px);
+  line-height:1.65;
+}
+.n27-faq-decoration{display:none!important}
+.n27-faq-items{min-width:0;position:relative;z-index:1}
+.n27-faq-items details{
+  transition:box-shadow .22s ease,transform .22s ease,border-color .22s ease;
+}
+.n27-faq-items details:hover{transform:translateY(-2px);border-color:#bda5ed}
+.n27-faq-items details[open]{border-color:#a491eb}
+.n27-faq-items details[open] p{animation:disc-faq-answer .22s ease both}
+@keyframes disc-faq-answer{from{opacity:.4;transform:translateY(-4px)}to{opacity:1;transform:translateY(0)}}
+.site-scroll-progress{
+  position:fixed;inset:0 0 auto;z-index:501;height:3px;
+  pointer-events:none;overflow:hidden;background:transparent;
+}
+.site-scroll-progress span{
+  display:block;width:100%;height:100%;
+  background:linear-gradient(90deg,#8ceeff 0%,#c3a8ff 55%,#f6b8ef 100%);
+  transform:scaleX(0);transform-origin:left center;
+  box-shadow:0 0 12px #9ceaff;will-change:transform;
+}
+.site-back-top{
+  position:fixed;right:max(22px,env(safe-area-inset-right));bottom:max(23px,env(safe-area-inset-bottom));
+  z-index:210;display:inline-flex;align-items:center;justify-content:center;gap:8px;
+  min-width:50px;height:50px;padding:0 16px;
+  border:1px solid #bcacfa86;border-radius:999px;
+  background:linear-gradient(125deg,#321f77f2,#55419dec);
+  color:#fff;font-size:13px;font-weight:850;box-shadow:0 10px 32px #07041aaa;
+  -webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);
+  text-decoration:none;
+  transition:transform .22s ease,background-color .22s ease,box-shadow .22s ease;
+}
+.site-back-top[hidden]{display:none!important}
+.site-back-top:hover{transform:translateY(-4px);background:#684cb0;box-shadow:0 14px 35px #06041baa}
+.site-back-top .site-back-top-arrow{font-size:22px;line-height:1}
+.site-motion-ready .site-reveal{
+  opacity:0;transform:translate3d(0,28px,0);
+  transition:opacity .65s cubic-bezier(.2,.75,.3,1),transform .7s cubic-bezier(.2,.75,.3,1);
+}
+.site-motion-ready .site-reveal.is-visible{opacity:1;transform:none}
+.site-motion-ready .site-reveal:nth-child(2){transition-delay:.065s}
+.site-motion-ready .site-reveal:nth-child(3){transition-delay:.11s}
+@media(max-width:1000px){
+  .n27-faq-grid{grid-template-columns:1fr;gap:26px}
+  .n27-faq-intro{min-height:0!important}
+  .n27-faq h2{max-width:850px}
+  .n27-faq-items{margin-top:0}
+}
+@media(max-width:600px){
+  html{scroll-padding-top:86px}
+  .n27-faq{padding:65px 0 75px}
+  .n27-faq h2{font-size:clamp(34px,9vw,51px)!important;line-height:1.1!important}
+  .site-back-top{right:16px;bottom:18px;min-width:48px;height:48px;padding:0 13px}
+  .site-back-top .site-back-top-label{display:none}
+  .n27-download-card:hover{transform:none}
+}
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .site-motion-ready .site-reveal,.site-motion-ready .site-reveal.is-visible{
+    opacity:1!important;transform:none!important;transition:none!important;
+  }
+  .header,.header .brand img,.header .nav-button,.n26-btn,.n27-download-card,
+  .n27-download-card .btn,.n27-download-card .secondary-link,.n27-faq-items details,.site-back-top{
+    transition:none!important;animation:none!important;
+  }
+  .n27-faq-items details[open] p{animation:none}
+}
