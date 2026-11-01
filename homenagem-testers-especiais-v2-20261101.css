@@ -1,0 +1,148 @@
+/* Discórdia — homenagem: a contribuição especial precisa ser o foco principal.
+   Arquivo independente com nome versionado, para impedir reaproveitamento do CSS antigo. */
+.n27-footer .n27-footer-testers{
+  max-width:1100px;
+  margin:42px auto 0;
+  padding:38px 22px 18px;
+  text-align:center;
+  border-top:1px solid rgba(207,180,255,.25);
+}
+.n27-footer .n27-testers-eyebrow{
+  display:block;
+  color:#9de9fa;
+  letter-spacing:.16em;
+  font-size:11px;
+  font-weight:850;
+}
+.n27-footer .n27-footer-testers-title{
+  display:block;
+  margin:12px 0 8px;
+  color:#f8f4ff;
+  font-size:clamp(23px,3vw,34px);
+  font-weight:950;
+  letter-spacing:-.045em;
+  line-height:1.18;
+}
+.n27-footer .n27-footer-testers .n27-testers-intro{
+  max-width:670px;
+  margin:0 auto 25px;
+  color:#c6bede;
+  font-size:13px;
+  line-height:1.75;
+}
+.n27-footer .n27-testers-special{
+  position:relative;
+  display:block;
+  width:min(100%,790px);
+  box-sizing:border-box;
+  margin:0 auto;
+  padding:29px 30px 24px;
+  overflow:hidden;
+  isolation:isolate;
+  border:2px solid #c5adff;
+  border-radius:22px;
+  background:radial-gradient(ellipse at 50% 0%,rgba(170,126,255,.35),transparent 68%),linear-gradient(125deg,#372460,#20244b);
+  box-shadow:0 0 0 4px rgba(168,116,255,.08),0 18px 48px rgba(8,4,28,.62),inset 0 1px 0 rgba(255,255,255,.18);
+}
+.n27-footer .n27-testers-special:before,
+.n27-footer .n27-testers-special:after{
+  content:"✦";
+  position:absolute;
+  top:24px;
+  font-size:27px;
+  color:#f7de9e;
+  opacity:.87;
+  pointer-events:none;
+}
+.n27-footer .n27-testers-special:before{left:24px}
+.n27-footer .n27-testers-special:after{right:24px}
+.n27-footer .n27-testers-special .n27-testers-special-label{
+  display:block;
+  color:#ffe7ad;
+  font-size:clamp(15px,1.8vw,19px);
+  font-weight:950;
+  letter-spacing:.085em;
+  text-shadow:0 2px 18px rgba(242,192,108,.25);
+}
+.n27-footer .n27-testers-special .n27-testers-special-names{
+  display:flex;
+  flex-wrap:wrap;
+  align-items:stretch;
+  justify-content:center;
+  gap:12px;
+  margin:22px auto 15px;
+}
+.n27-footer .n27-testers-special .n27-testers-special-names span{
+  display:inline-flex;
+  flex:1 1 150px;
+  align-items:center;
+  justify-content:center;
+  max-width:205px;
+  min-height:59px;
+  box-sizing:border-box;
+  border:1px solid rgba(234,218,255,.84);
+  border-radius:13px;
+  padding:12px 19px;
+  background:linear-gradient(135deg,#7654c2,#4b4d9f);
+  color:#fff;
+  font-size:clamp(20px,2.6vw,26px);
+  line-height:1.2;
+  font-weight:950;
+  letter-spacing:-.035em;
+  box-shadow:0 8px 24px rgba(10,6,36,.45),inset 0 1px 0 rgba(255,255,255,.16);
+}
+.n27-footer .n27-testers-special p{
+  margin:0;
+  color:#e3d9f3;
+  font-size:13px;
+  line-height:1.6;
+}
+.n27-footer .n27-testers-community{
+  margin:31px auto 0;
+  padding:0 8px;
+}
+.n27-footer .n27-testers-community-label{
+  display:block;
+  color:#afa4c9;
+  font-size:11px;
+  letter-spacing:.01em;
+  font-weight:650;
+  margin-bottom:11px;
+}
+.n27-footer .n27-testers-community .n27-testers-names{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  align-items:center;
+  gap:9px;
+}
+.n27-footer .n27-testers-community .n27-testers-names span{
+  display:inline-flex;
+  padding:6px 12px;
+  border:1px solid rgba(176,147,216,.30);
+  border-radius:999px;
+  background:rgba(142,105,201,.09);
+  color:#bfb3d7;
+  font-size:11px;
+  font-weight:650;
+  box-shadow:none;
+}
+@media(max-width:650px){
+  .n27-footer .n27-footer-testers{padding:27px 12px 12px;margin-top:25px}
+  .n27-footer .n27-testers-special{padding:24px 14px 22px;border-radius:16px}
+  .n27-footer .n27-testers-special:before,.n27-footer .n27-testers-special:after{display:none}
+  .n27-footer .n27-testers-special .n27-testers-special-label{font-size:14px;letter-spacing:.045em}
+  .n27-footer .n27-testers-special .n27-testers-special-names{gap:8px;margin:19px auto 13px}
+  .n27-footer .n27-testers-special .n27-testers-special-names span{
+    flex:1 1 100%;
+    width:100%;
+    max-width:360px;
+    min-height:50px;
+    padding:10px 13px;
+    font-size:21px;
+  }
+}
+@media(prefers-reduced-motion:reduce){
+  .n27-footer .n27-testers-special,
+  .n27-footer .n27-testers-special .n27-testers-special-names span{animation:none;transition:none}
+}
