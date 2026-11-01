@@ -4,7 +4,13 @@ Atualizado em **1º de novembro de 2026**. Consulte também a [linha do tempo vi
 
 ## As cinco versões públicas mais recentes — detalhes
 
-Ordem de publicação no GitHub. RC15.1 é apenas uma atualização corretiva, sem novos recursos.
+Ordem de publicação no GitHub. RC15.2 é um hotfix, sem novas funcionalidades.
+
+### v1.0.3-rc.15.2 — hotfix
+
+Corrige o botão de pulso duplicado que aparecia ao reproduzir vídeo e impede o modo Ocultar barras de esconder a transmissão. As Estatísticas do Palco continuam disponíveis e o sistema de mídia permanece inalterado.
+
+[Release oficial](https://github.com/magaskye/discordia/releases/tag/v1.0.3-rc.15.2)
 
 ### v1.0.3-rc.15.1 — hotfix
 
@@ -30,16 +36,11 @@ Interface unificada, controles do Palco, mini-player, seleção de transmissão 
 
 [Release oficial](https://github.com/magaskye/discordia/releases/tag/v1.0.3-rc.13)
 
-### v1.0.3-rc.11
-
-Correção de login e atualizador entre canais, detecção de jogos e emuladores, além de melhorias de presença e chamadas.
-
-[Release oficial](https://github.com/magaskye/discordia/releases/tag/v1.0.3-rc.11)
-
 ## Versões anteriores — destaques
 
 | Versão | Data (Brasil) | Principal mudança |
 | --- | --- | --- |
+| [v1.0.3-rc.11](https://github.com/magaskye/discordia/releases/tag/v1.0.3-rc.11) | 31/10/2026 | Correções no atualizador, login, jogos e emuladores. |
 | [v1.0.2](https://github.com/magaskye/discordia/releases/tag/v1.0.2) | 28/10/2026 | Estável histórica retirada dos downloads recomendados. |
 | [v1.0.3-rc.8](https://github.com/magaskye/discordia/releases/tag/v1.0.3-rc.8) | 25/10/2026 | Atualização e instalação silenciosa, retomada de sessão. |
 | [v1.0.3-rc.7](https://github.com/magaskye/discordia/releases/tag/v1.0.3-rc.7) | 25/10/2026 | VeloSinc adaptativo e detecção de jogos. |
