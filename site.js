@@ -1,13 +1,23 @@
-/* Discórdia Desktop — mesmo site e navegação originais; somente RC11 nos downloads.
- * A release foi conferida em GitHub antes da publicação desta página. A conferência
- * adicional pela API serve para indicar o estado, não depende de scripts externos.
- */
+/* Discórdia Desktop RC11 — navegação e animação progressiva no layout original.
+   Sem bibliotecas externas. Downloads limitados à RC11, respeita movimento reduzido. */
 (function () {
   'use strict';
   const navButton=document.getElementById('nav-toggle');
   const nav=document.getElementById('nav-main');
+  const header=document.querySelector('.header');
+  const toTop=document.getElementById('site-back-top');
+  const progressBar=document.getElementById('site-scroll-progress-bar');
+  const reduceMotion=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const navLinks=nav?Array.from(nav.querySelectorAll('a[href^="#"]')).filter(link=>{
+    const id=link.getAttribute('href')?.slice(1);
+    return !!id&&!!document.getElementById(id);
+  }):[];
   if(navButton&&nav){
-    const close=()=>{navButton.setAttribute('aria-expanded','false');navButton.setAttribute('aria-label','Abrir menu');nav.classList.remove('open');};
+    const close=()=>{
+      navButton.setAttribute('aria-expanded','false');
+      navButton.setAttribute('aria-label','Abrir menu');
+      nav.classList.remove('open');
+    };
     navButton.addEventListener('click',()=>{
       const open=navButton.getAttribute('aria-expanded')!=='true';
       navButton.setAttribute('aria-expanded',String(open));
@@ -15,7 +25,76 @@
       nav.classList.toggle('open',open);
     });
     nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',close));
+    document.addEventListener('keydown',e=>{if(e.key==='Escape')close();});
+    document.addEventListener('click',e=>{
+      if(nav.classList.contains('open')&&!nav.contains(e.target)&&!navButton.contains(e.target))close();
+    });
   }
+
+  // Scroll work is scheduled once per frame and the scroll listener is passive.
+  let pendingFrame=false;
+  function updateScrollUI(){
+    pendingFrame=false;
+    const scrollMax=Math.max(0,document.documentElement.scrollHeight-window.innerHeight);
+    const current=Math.max(0,window.scrollY||window.pageYOffset||0);
+    const fraction=scrollMax>0?Math.min(1,current/scrollMax):0;
+    if(progressBar)progressBar.style.transform='scaleX('+fraction.toFixed(4)+')';
+    if(header)header.classList.toggle('is-scrolled',current>22);
+    if(toTop)toTop.hidden=current<440;
+    let active=null;
+    for(const link of navLinks){
+      const target=document.getElementById(link.getAttribute('href').slice(1));
+      if(target&&target.getBoundingClientRect().top<=Math.max(112,header?.offsetHeight||82)+48){
+        active=link;
+      }
+    }
+    for(const link of navLinks){
+      const selected=link===active;
+      link.classList.toggle('is-active',selected);
+      if(selected)link.setAttribute('aria-current','location');
+      else link.removeAttribute('aria-current');
+    }
+  }
+  function scheduleScrollUI(){
+    if(!pendingFrame){
+      pendingFrame=true;
+      window.requestAnimationFrame(updateScrollUI);
+    }
+  }
+  window.addEventListener('scroll',scheduleScrollUI,{passive:true});
+  window.addEventListener('resize',scheduleScrollUI,{passive:true});
+  updateScrollUI();
+
+  // Visible content stays visible if JS or IntersectionObserver is unavailable.
+  if(!reduceMotion&&'IntersectionObserver' in window){
+    const selectors=[
+      '.n26-hero-copy','.n26-hero-scene',
+      '.n26-panel-copy','.n26-panel-art',
+      '.n27-network .container','.n27-velosinc .container',
+      '.n27-journey-inner','.n27-support-copy','.n27-support-art',
+      '.n27-downloads-head','.n27-download-card',
+      '.n27-faq-intro','.n27-faq-items','.n26-final-content'
+    ];
+    const targets=Array.from(new Set(selectors.flatMap(selector=>Array.from(document.querySelectorAll(selector)))));
+    const io=new IntersectionObserver(entries=>{
+      for(const entry of entries){
+        if(!entry.isIntersecting)continue;
+        entry.target.classList.add('is-visible');
+        io.unobserve(entry.target);
+      }
+    },{threshold:0.06,rootMargin:'0px 0px -5% 0px'});
+    for(const element of targets){
+      element.classList.add('site-reveal');
+      if(element.getBoundingClientRect().top<window.innerHeight*0.92){
+        element.classList.add('is-visible');
+      }else{
+        io.observe(element);
+      }
+    }
+    document.documentElement.classList.add('site-motion-ready');
+  }
+
+  // Lock public download verification to the published RC11 prerelease.
   const tag='v1.0.3-rc.11';
   const base='https://github.com/magaskye/discordia/releases/download/'+tag+'/';
   const required=[
@@ -42,8 +121,7 @@
       text('release-hint','Apenas a RC11 está disponível no site. Instalador, portátil, rc.yml e SHA-256 verificados no GitHub.');
     })
     .catch(()=>{
-      // Os dois links estáticos já foram verificados pelo publicador, portanto
-      // uma limitação temporária da API não deve impedir o download.
+      // A falha temporária da API não desativa os links da RC11 já publicados.
       text('release-status','RC11 publicada · Versão candidata');
       text('release-hint','Apenas RC11 oferecida aqui. Confira os arquivos e SHA-256 na release oficial do GitHub.');
     });
