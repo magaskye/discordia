@@ -4,7 +4,25 @@ Atualizado em **1º de novembro de 2026**. Consulte também a [linha do tempo vi
 
 ## As cinco versões públicas mais recentes — detalhes
 
-Ordem pela data de publicação no GitHub; as edições Estável e Testers aparecem juntas para preservar a cronologia.
+Ordem de publicação no GitHub. RC15.1 é apenas uma atualização corretiva, sem novos recursos.
+
+### v1.0.3-rc.15.1 — hotfix
+
+Correções visuais na tela cheia, títulos e VeloSinc sem sobreposição, avisos contextualizados e ícones específicos do Palco. Preservados o atualizador com instalação silenciosa, Minha Conta e o sistema de mídia existente.
+
+[Release oficial](https://github.com/magaskye/discordia/releases/tag/v1.0.3-rc.15.1)
+
+### v1.0.3-rc.15
+
+Portal Minha Conta, aniversários opcionais, perfis VeloSinc, recuperação da transmissão e reorganização do Palco.
+
+[Release oficial](https://github.com/magaskye/discordia/releases/tag/v1.0.3-rc.15)
+
+### v1.0.3-rc.14
+
+Correção no autorizador com instalação silenciosa, amigos e convites.
+
+[Release oficial](https://github.com/magaskye/discordia/releases/tag/v1.0.3-rc.14)
 
 ### v1.0.3-rc.13
 
@@ -18,28 +36,13 @@ Correção de login e atualizador entre canais, detecção de jogos e emuladores
 
 [Release oficial](https://github.com/magaskye/discordia/releases/tag/v1.0.3-rc.11)
 
-### v1.0.2
-
-Manutenção da Estável, com atualização silenciosa quando permitida e recursos de exclusão definitiva ainda desativados.
-
-[Release oficial](https://github.com/magaskye/discordia/releases/tag/v1.0.2)
-
-### v1.0.3-rc.8
-
-Instalação silenciosa via electron-updater, reabertura automática e instalação adiável com o app em uso.
-
-[Release oficial](https://github.com/magaskye/discordia/releases/tag/v1.0.3-rc.8)
-
-### v1.0.3-rc.7
-
-VeloSinc adaptativo, áudio seletivo e detecção reforçada de jogos, preservando melhorias da RC6.
-
-[Release oficial](https://github.com/magaskye/discordia/releases/tag/v1.0.3-rc.7)
-
 ## Versões anteriores — destaques
 
 | Versão | Data (Brasil) | Principal mudança |
 | --- | --- | --- |
+| [v1.0.2](https://github.com/magaskye/discordia/releases/tag/v1.0.2) | 28/10/2026 | Estável histórica retirada dos downloads recomendados. |
+| [v1.0.3-rc.8](https://github.com/magaskye/discordia/releases/tag/v1.0.3-rc.8) | 25/10/2026 | Atualização e instalação silenciosa, retomada de sessão. |
+| [v1.0.3-rc.7](https://github.com/magaskye/discordia/releases/tag/v1.0.3-rc.7) | 25/10/2026 | VeloSinc adaptativo e detecção de jogos. |
 | [v1.0.3-rc.6](https://github.com/magaskye/discordia/releases/tag/v1.0.3-rc.6) | 24/10/2026 | Recuperação de vídeo congelado; presença, Palco e VeloSinc. |
 | [v1.0.3-rc.5](https://github.com/magaskye/discordia/releases/tag/v1.0.3-rc.5) | 24/10/2026 | Manifesto app-update.yml e recuperação de downloads. |
 | [v1.0.3-rc.4](https://github.com/magaskye/discordia/releases/tag/v1.0.3-rc.4) | 24/10/2026 | Atualização automática, capturador de áudio, presença e GIFs. |
