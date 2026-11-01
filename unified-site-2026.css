@@ -204,58 +204,136 @@
 .n27-policy .policy-wrap a{color:#6534c1;text-decoration:underline;text-underline-offset:3px;font-weight:850}
 @media(max-width:650px){.n27-policy .policy-wrap{padding:58px 0 75px}.n27-policy .policy-wrap h1{font-size:clamp(45px,11vw,67px)}}
 
-/* Discórdia RC13 testers homage — compact footer addition, consistent on every site page. */
+/* Homagem aos testers: agradecimentos especiais vêm primeiro e têm maior hierarquia visual. */
 .n27-footer-testers{
   box-sizing:border-box;
   max-width:1160px;
-  margin:28px auto 0;
-  padding:18px 20px 2px;
+  margin:34px auto 0;
+  padding:34px 20px 7px;
   text-align:center;
-  color:#beb3d7;
-  border-top:1px solid #ffffff1e;
-  line-height:1.55;
+  border-top:1px solid #ffffff25;
+  color:#c8c2e0;
+  line-height:1.6;
+}
+.n27-testers-eyebrow{
+  display:block;
+  color:#aeeafb;
+  font-size:11px;
+  letter-spacing:.16em;
+  font-weight:850;
 }
 .n27-footer-testers-title{
   display:block;
-  color:#e7dafa;
-  font-size:clamp(12px,1.2vw,14px);
-  font-weight:800;
-  letter-spacing:.04em;
+  margin:10px 0 7px;
+  color:#f7efff;
+  font-size:clamp(22px,2.6vw,32px);
+  font-weight:900;
+  letter-spacing:-.045em;
+  line-height:1.2;
 }
-.n27-footer-testers p{
-  margin:7px 0 13px;
-  color:#bdb2d4;
-  font-size:12px;
+.n27-footer-testers .n27-testers-intro{
+  max-width:610px;
+  margin:0 auto 23px;
+  color:#c2b8dd;
+  font-size:13px;
 }
-.n27-footer-testers .n27-testers-names{
+.n27-testers-special{
+  position:relative;
+  isolation:isolate;
+  max-width:810px;
+  margin:0 auto;
+  padding:27px 22px 21px;
+  overflow:hidden;
+  border:1px solid #bba4fb91;
+  border-radius:20px;
+  background:radial-gradient(ellipse at 50% 0%,#7a5bd24d,transparent 69%),linear-gradient(125deg,#32265e,#211b45);
+  box-shadow:0 14px 42px #09071c70,inset 0 1px 0 #efe4ff20;
+}
+.n27-testers-special:before{
+  content:"";
+  position:absolute;
+  inset:0 20%;
+  z-index:-1;
+  pointer-events:none;
+  background:radial-gradient(ellipse at 50% 0%,#a0e5ff20,transparent 65%);
+}
+.n27-testers-special-label{
+  display:block;
+  color:#c8f4ff;
+  font-size:clamp(12px,1.35vw,15px);
+  font-weight:900;
+  letter-spacing:.13em;
+}
+.n27-footer-testers .n27-testers-special-names{
   display:flex;
-  flex-wrap:wrap;
-  gap:8px;
   align-items:center;
   justify-content:center;
+  flex-wrap:wrap;
+  gap:12px;
+  margin:19px 0 13px;
 }
-.n27-footer-testers .n27-testers-names span{
+.n27-footer-testers .n27-testers-special-names span{
   display:inline-flex;
   align-items:center;
-  padding:6px 11px;
-  border:1px solid #b796e73b;
-  border-radius:999px;
-  background:#b38bfc12;
-  color:#e8dff6;
+  justify-content:center;
+  min-width:130px;
+  padding:11px 19px;
+  border:1px solid #d4c4ff85;
+  border-radius:13px;
+  background:linear-gradient(135deg,#7055bd80,#385c9a57);
+  color:#fff;
+  font-size:clamp(18px,2.1vw,23px);
+  font-weight:900;
+  letter-spacing:-.025em;
+  box-shadow:0 6px 22px #0b082e52;
+}
+.n27-footer-testers .n27-testers-special p{
+  margin:0;
+  color:#d5cbea;
   font-size:12px;
-  font-weight:720;
 }
-.n27-footer-testers small{
+.n27-testers-community{
+  margin:23px auto 0;
+  padding:0 8px;
+}
+.n27-testers-community-label{
   display:block;
-  margin-top:11px;
+  margin-bottom:12px;
+  color:#ada3c8;
   font-size:11px;
-  color:#b0a2cc;
+  font-weight:700;
+  letter-spacing:.02em;
 }
-.n27-footer-testers small strong{color:#ead5ff}
-.n27-footer-bottom strong{color:#eee0ff;font-weight:750}
+.n27-footer-testers .n27-testers-community .n27-testers-names{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  flex-wrap:wrap;
+  gap:8px;
+}
+.n27-footer-testers .n27-testers-community .n27-testers-names span{
+  display:inline-flex;
+  align-items:center;
+  padding:5px 11px;
+  border:1px solid #ae94d039;
+  border-radius:999px;
+  background:#7c64b417;
+  color:#c6bada;
+  font-size:11px;
+  font-weight:650;
+}
 @media(max-width:540px){
-  .n27-footer-testers{padding:15px 12px 3px;margin-top:18px}
-  .n27-footer-testers .n27-testers-names{gap:6px}
-  .n27-footer-testers .n27-testers-names span{padding:5px 9px;font-size:11px}
+  .n27-footer-testers{margin-top:24px;padding:27px 12px 4px}
+  .n27-testers-special{padding:24px 14px 19px;border-radius:16px}
+  .n27-footer-testers .n27-testers-special-names{gap:9px}
+  .n27-footer-testers .n27-testers-special-names span{
+    min-width:0;
+    width:100%;
+    max-width:285px;
+    font-size:20px;
+    padding:9px 16px;
+  }
+  .n27-testers-community-label{font-size:11px}
+  .n27-footer-testers .n27-testers-community .n27-testers-names span{font-size:11px}
 }
-/* End Discórdia RC13 testers homage. */
+
