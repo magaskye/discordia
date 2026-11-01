@@ -1,5 +1,5 @@
-/* Discórdia Desktop RC11 — navegação e animação progressiva no layout original.
-   Sem bibliotecas externas. Downloads limitados à RC11, respeita movimento reduzido. */
+/* Discórdia Desktop RC13 — navegação e animação progressiva no layout original.
+   Sem bibliotecas externas. Downloads limitados à RC13, respeita movimento reduzido. */
 (function () {
   'use strict';
   const navButton=document.getElementById('nav-toggle');
@@ -94,12 +94,12 @@
     document.documentElement.classList.add('site-motion-ready');
   }
 
-  // Lock public download verification to the published RC11 prerelease.
-  const tag='v1.0.3-rc.11';
+  // Lock public download verification to the published RC13 prerelease.
+  const tag='v1.0.3-rc.13';
   const base='https://github.com/magaskye/discordia/releases/download/'+tag+'/';
   const required=[
-    'Discordia-1.0.3-rc.11-Instalador-x64.exe',
-    'Discordia-1.0.3-rc.11-Portatil-x64.exe',
+    'Discordia-1.0.3-rc.13-Instalador-x64.exe',
+    'Discordia-1.0.3-rc.13-Portatil-x64.exe',
     'rc.yml','SHA256SUMS.txt'
   ];
   const text=(id,value)=>{const el=document.getElementById(id);if(el)el.textContent=value;};
@@ -117,12 +117,12 @@
     .then(res=>{if(!res.ok)throw new Error('github_api_unavailable');return res.json();})
     .then(release=>{
       if(!isVerified(release))throw new Error('release_not_verified');
-      text('release-status','RC11 · download oficial confirmado');
-      text('release-hint','Apenas a RC11 está disponível no site. Instalador, portátil, rc.yml e SHA-256 verificados no GitHub.');
+      text('release-status','RC13 · download oficial confirmado');
+      text('release-hint','Apenas a RC13 está disponível no site. Instalador, portátil, rc.yml e SHA-256 verificados no GitHub.');
     })
     .catch(()=>{
-      // A falha temporária da API não desativa os links da RC11 já publicados.
-      text('release-status','RC11 publicada · Versão candidata');
-      text('release-hint','Apenas RC11 oferecida aqui. Confira os arquivos e SHA-256 na release oficial do GitHub.');
+      // A falha temporária da API não desativa os links da RC13 já publicados.
+      text('release-status','RC13 publicada · Versão candidata');
+      text('release-hint','Apenas RC13 oferecida aqui. Confira os arquivos e SHA-256 na release oficial do GitHub.');
     });
 })();
