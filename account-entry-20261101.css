@@ -74,3 +74,6 @@
 .nav-auth-menu button.nav-auth-signout{color:#ffb6c2}
 @media(max-width:570px){.nav-auth-trigger{max-width:120px;padding:4px 7px;gap:6px}.nav-auth-name{max-width:64px}}
 @media(max-width:385px){.nav-auth-trigger{max-width:48px;padding:5px}.nav-auth-name,.nav-auth-arrow{display:none}}
+
+/* Garante que o link padrão suma quando o perfil autenticado aparecer. */
+.header .nav-account-entry[hidden]{display:none!important}
