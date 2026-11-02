@@ -1,5 +1,5 @@
-/* Discórdia Desktop RC18 — navegação e animação progressiva no layout original.
-   Sem bibliotecas externas. Downloads da RC18 no canal Testers; respeita movimento reduzido. */
+/* Discórdia Desktop RC19 — navegação e animação progressiva no layout original.
+   Sem bibliotecas externas. Downloads da RC19 no canal Testers; respeita movimento reduzido. */
 (function () {
   'use strict';
   const navButton=document.getElementById('nav-toggle');
@@ -95,12 +95,12 @@
     document.documentElement.classList.add('site-motion-ready');
   }
 
-  // Lock public download verification to the published RC18 prerelease.
-  const tag='v1.0.3-rc.18';
+  // Lock public download verification to the published RC19 prerelease.
+  const tag='v1.0.3-rc.19';
   const base='https://github.com/magaskye/discordia/releases/download/'+tag+'/';
   const required=[
-    'Discordia-1.0.3-rc.18-Instalador-x64.exe',
-    'Discordia-1.0.3-rc.18-Portatil-x64.exe',
+    'Discordia-1.0.3-rc.19-Instalador-x64.exe',
+    'Discordia-1.0.3-rc.19-Portatil-x64.exe',
     'rc.yml','SHA256SUMS.txt'
   ];
   const text=(id,value)=>{const el=document.getElementById(id);if(el)el.textContent=value;};
@@ -118,12 +118,12 @@
     .then(res=>{if(!res.ok)throw new Error('github_api_unavailable');return res.json();})
     .then(release=>{
       if(!isVerified(release))throw new Error('release_not_verified');
-      text('release-status','RC18 · download oficial confirmado');
-      text('release-hint','RC18 é a única versão candidata oferecida nos downloads principais do site. Instalador, portátil, rc.yml e SHA-256 verificados no GitHub.');
+      text('release-status','RC19 · download oficial confirmado');
+      text('release-hint','RC19 é a única versão candidata oferecida nos downloads principais do site. Instalador, portátil, rc.yml e SHA-256 verificados no GitHub.');
     })
     .catch(()=>{
       // Quando a API estiver indisponível, mantenha os links, mas oriente a conferência da release.
-      text('release-status','RC18 · verificar release oficial');
+      text('release-status','RC19 · verificar release oficial');
       text('release-hint','Antes de instalar, confira os executáveis, o manifesto e o SHA-256 na release oficial.');
     });
 })();
