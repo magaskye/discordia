@@ -1,5 +1,5 @@
-/* Discórdia Desktop RC15.2 — navegação e animação progressiva no layout original.
-   Sem bibliotecas externas. Downloads limitados à RC15.2, respeita movimento reduzido. */
+/* Discórdia Desktop RC16 — navegação e animação progressiva no layout original.
+   Sem bibliotecas externas. Downloads da RC16 no canal Testers; respeita movimento reduzido. */
 (function () {
   'use strict';
   const navButton=document.getElementById('nav-toggle');
@@ -94,12 +94,12 @@
     document.documentElement.classList.add('site-motion-ready');
   }
 
-  // Lock public download verification to the published RC15.2 prerelease.
-  const tag='v1.0.3-rc.15.2';
+  // Lock public download verification to the published RC16 prerelease.
+  const tag='v1.0.3-rc.16';
   const base='https://github.com/magaskye/discordia/releases/download/'+tag+'/';
   const required=[
-    'Discordia-1.0.3-rc.15.2-Instalador-x64.exe',
-    'Discordia-1.0.3-rc.15.2-Portatil-x64.exe',
+    'Discordia-1.0.3-rc.16-Instalador-x64.exe',
+    'Discordia-1.0.3-rc.16-Portatil-x64.exe',
     'rc.yml','SHA256SUMS.txt'
   ];
   const text=(id,value)=>{const el=document.getElementById(id);if(el)el.textContent=value;};
@@ -117,12 +117,12 @@
     .then(res=>{if(!res.ok)throw new Error('github_api_unavailable');return res.json();})
     .then(release=>{
       if(!isVerified(release))throw new Error('release_not_verified');
-      text('release-status','RC15.2 · download oficial confirmado');
-      text('release-hint','Apenas a RC15.2 está disponível no site. Instalador, portátil, rc.yml e SHA-256 verificados no GitHub.');
+      text('release-status','RC16 · download oficial confirmado');
+      text('release-hint','Apenas a RC16 está disponível no site. Instalador, portátil, rc.yml e SHA-256 verificados no GitHub.');
     })
     .catch(()=>{
       // Quando a API estiver indisponível, mantenha os links, mas oriente a conferência da release.
-      text('release-status','RC15.2 · verificar release oficial');
+      text('release-status','RC16 · verificar release oficial');
       text('release-hint','Antes de instalar, confira os executáveis, o manifesto e o SHA-256 na release oficial.');
     });
 })();
