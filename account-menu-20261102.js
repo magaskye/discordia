@@ -1,13 +1,11 @@
 /* Conta Discórdia no site oficial.
- * A sessão é autenticada APENAS no domínio Firebase do portal.
- * O site recebe só nome, @ID e URL do avatar por postMessage validado.
- * Sem tokens, senha, email, UID, armazenamento local ou Firebase duplicado.
- * Navegadores que bloqueiam sessões entre origens exigem abertura do portal.
+ * Navegação na mesma aba: não cria popup nem compartilha tokens/credenciais.
+ * O domínio do portal permanece responsável pela autenticação e saída.
+ * O painel visual só mostra dados de uma sessão já confirmada; não inventa login.
  */
 (()=>{
  'use strict';
  const ORIGIN='https://discordia-contas-573e7.web.app';
- const PORTAL=ORIGIN+'/?site_bridge=1';
  const STATE='discordia:account-state:v1';
  const READY='discordia:account-ready:v1';
  const PING='discordia:account-ping:v1';
@@ -41,17 +39,10 @@
   }else avatar.textContent=(display||'D').charAt(0).toUpperCase();
  }
  function openPortal(logout=false){
-  pendingLogout=logout;
-  // A janela fica no domínio Firebase: a sessão e o logout ocorrem lá.
-  const pop=window.open(PORTAL,'discordia-minha-conta','popup=yes,width=740,height=820');
-  if(!pop){
-   // Permite entrar no portal mesmo se o bloqueador de pop-up impedir a ponte.
-   if(!logout)window.location.assign(ORIGIN+'/');
-   else window.location.assign(ORIGIN+'/');
-   return;
-  }
-  windowPortal=pop;
-  pop.focus();
+  // O portal é outro domínio. Navegar não copia nem simula a sessão.
+  // A saída é executada no Firebase Hosting antes de retornar ao site.
+  closeMenu();
+  window.location.assign(logout?ORIGIN+'/?site_logout=1':ORIGIN+'/');
  }
  function onMessage(event){
   if(event.origin!==ORIGIN||event.source!==windowPortal)return;
