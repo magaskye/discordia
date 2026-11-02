@@ -69,6 +69,7 @@
   if(!reduceMotion&&'IntersectionObserver' in window){
     const selectors=[
       '.n26-hero-copy','.n26-hero-scene',
+      '.rc17-highlights-heading','.rc17-highlight','.rc17-highlights-bottom',
       '.n26-panel-copy','.n26-panel-art',
       '.n27-network .container','.n27-velosinc .container',
       '.n27-journey-inner','.n27-support-copy','.n27-support-art',
