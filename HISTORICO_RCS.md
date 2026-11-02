@@ -4,17 +4,28 @@ Atualizado em **1º de novembro de 2026**. Consulte também a [linha do tempo vi
 
 ## As cinco versões públicas mais recentes — detalhes
 
-Ordem de publicação no GitHub. RC15.2 é um hotfix, sem novas funcionalidades.
+Ordem de publicação no GitHub. A RC16 é a versão candidata mais recente para os testers.
+
+### v1.0.3-rc.16 — Versão candidata
+
+- VeloSinc de vídeo adaptativo por espectador: P2P/TURN/SFU, recuperação de 0–1 FPS e avaliação de quadros reais antes de trocar de rota.
+- Diagnósticos discretos de origem, transporte e reprodução; aprendizado local por resultados agregados e relatório voluntário.
+- 26 insígnias coloridas Selos de Órbita (Bronze, Prata, Ouro e Lendária), exibição entre amigos e avisos de troféus desbloqueados.
+- Banner no menu rápido, duração de status e reparo de presença da sala de voz.
+- Preservados voz, áudio da tela, exclusão de Servir a dor, portal Minha Conta e instalação silenciosa no canal Testers.
+- Próxima versão de desenvolvimento: RC17. Estável 1.1 após homologação real entre computadores.
+
+[Release oficial](https://github.com/magaskye/discordia/releases/tag/v1.0.3-rc.16)
 
 ### v1.0.3-rc.15.2 — hotfix
 
-Corrige o botão de pulso duplicado que aparecia ao reproduzir vídeo e impede o modo Ocultar barras de esconder a transmissão. As Estatísticas do Palco continuam disponíveis e o sistema de mídia permanece inalterado.
+Corrige o botão de pulso duplicado que aparecia ao reproduzir vídeo e impede o modo Ocultar barras de esconder a transmissão. Estatísticas do Palco continuam disponíveis.
 
 [Release oficial](https://github.com/magaskye/discordia/releases/tag/v1.0.3-rc.15.2)
 
 ### v1.0.3-rc.15.1 — hotfix
 
-Correções visuais na tela cheia, títulos e VeloSinc sem sobreposição, avisos contextualizados e ícones específicos do Palco. Preservados o atualizador com instalação silenciosa, Minha Conta e o sistema de mídia existente.
+Correções visuais na tela cheia, títulos e VeloSinc sem sobreposição, avisos contextualizados e ícones específicos do Palco. Preservados o atualizador com instalação silenciosa e Minha Conta.
 
 [Release oficial](https://github.com/magaskye/discordia/releases/tag/v1.0.3-rc.15.1)
 
@@ -30,16 +41,11 @@ Correção no autorizador com instalação silenciosa, amigos e convites.
 
 [Release oficial](https://github.com/magaskye/discordia/releases/tag/v1.0.3-rc.14)
 
-### v1.0.3-rc.13
-
-Interface unificada, controles do Palco, mini-player, seleção de transmissão e Snake global renovado. Catálogo de erros; mídia e reconexões ainda precisam de testes reais.
-
-[Release oficial](https://github.com/magaskye/discordia/releases/tag/v1.0.3-rc.13)
-
 ## Versões anteriores — destaques
 
 | Versão | Data (Brasil) | Principal mudança |
 | --- | --- | --- |
+| [v1.0.3-rc.13](https://github.com/magaskye/discordia/releases/tag/v1.0.3-rc.13) | 01/11/2026 | Interface unificada, mini-player, Snake global e catálogo de erros. |
 | [v1.0.3-rc.11](https://github.com/magaskye/discordia/releases/tag/v1.0.3-rc.11) | 31/10/2026 | Correções no atualizador, login, jogos e emuladores. |
 | [v1.0.2](https://github.com/magaskye/discordia/releases/tag/v1.0.2) | 28/10/2026 | Estável histórica retirada dos downloads recomendados. |
 | [v1.0.3-rc.8](https://github.com/magaskye/discordia/releases/tag/v1.0.3-rc.8) | 25/10/2026 | Atualização e instalação silenciosa, retomada de sessão. |
