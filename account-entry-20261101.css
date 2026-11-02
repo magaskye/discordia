@@ -77,3 +77,19 @@
 
 /* Garante que o link padrão suma quando o perfil autenticado aparecer. */
 .header .nav-account-entry[hidden]{display:none!important}
+
+/* 02/11: a caixa que envolve Minha Conta nao pode encolher a zero no header.
+ * Fallback sempre visivel enquanto nenhum login for confirmado.
+ */
+.header .nav-shell{min-width:0}
+.header .nav-actions{margin-left:auto;flex:0 0 auto;min-width:max-content}
+.header .nav-account-slot{flex:0 0 auto;min-width:max-content;overflow:visible;visibility:visible}
+.header #nav-account-entry:not([hidden]){display:inline-flex!important;opacity:1!important;visibility:visible!important;flex-shrink:0;white-space:nowrap}
+@media(max-width:385px){
+ .header #nav-account-entry:not([hidden]){width:auto;height:42px;padding:0 9px}
+ .header .nav-account-label{display:inline!important;font-size:11px}
+}
+@media(max-width:340px){
+ .header .nav-account-label{display:none!important}
+ .header #nav-account-entry:not([hidden]){min-width:42px;padding:0 10px}
+}
