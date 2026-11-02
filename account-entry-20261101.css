@@ -50,3 +50,30 @@
   .header .brand{font-size:18px}
 }
 @media(prefers-reduced-motion:reduce){.header .nav-account-entry{transition:none}}
+
+/* Identidade de sessão: Avatar + nome com acesso e saída no cabeçalho. */
+.nav-account-slot{position:relative;display:flex;align-items:center;min-width:0;flex-shrink:1}
+.nav-auth-profile[hidden],.nav-auth-menu[hidden]{display:none!important}
+.nav-auth-trigger{display:flex;align-items:center;gap:9px;max-width:225px;min-height:43px;
+ border:1px solid #9e9ce07c;border-radius:12px;padding:5px 10px;background:linear-gradient(120deg,#6949a866,#236b926c);
+ color:#fff;font-size:12px;font-weight:800;cursor:pointer}
+.nav-auth-trigger:hover,.nav-auth-trigger:focus-visible{border-color:#94e7ff;background:#55418e}
+.nav-auth-avatar{display:grid;place-items:center;flex:0 0 auto;width:32px;height:32px;border-radius:50%;overflow:hidden;
+ background:linear-gradient(125deg,#be6cd7,#278bad);color:#fff;font-size:14px;font-weight:850}
+.nav-auth-avatar img{display:block;width:100%;height:100%;object-fit:cover}
+.nav-auth-name{min-width:0;max-width:132px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.nav-auth-arrow{font-size:18px;color:#d6e5fb}
+.nav-auth-menu{position:absolute;top:calc(100% + 8px);right:0;width:max(225px,100%);
+ border:1px solid #8fa5dc99;border-radius:13px;padding:7px;background:#161b33;z-index:800;
+ box-shadow:0 20px 45px #000a;color:#edf7ff}
+.nav-auth-handle{display:block;max-width:100%;overflow:hidden;text-overflow:ellipsis;padding:8px 11px;
+ color:#b6cbe9;font-size:12px;white-space:nowrap}
+.nav-auth-menu button{display:flex;gap:10px;align-items:center;width:100%;padding:11px 12px;
+ border:0;background:none;color:inherit;text-align:left;font:inherit;font-size:12px;font-weight:750;border-radius:9px;cursor:pointer}
+.nav-auth-menu button:hover,.nav-auth-menu button:focus-visible{background:#354264}
+.nav-auth-menu button.nav-auth-signout{color:#ffb6c2}
+@media(max-width:570px){.nav-auth-trigger{max-width:120px;padding:4px 7px;gap:6px}.nav-auth-name{max-width:64px}}
+@media(max-width:385px){.nav-auth-trigger{max-width:48px;padding:5px}.nav-auth-name,.nav-auth-arrow{display:none}}
+
+/* Garante que o link padrão suma quando o perfil autenticado aparecer. */
+.header .nav-account-entry[hidden]{display:none!important}
