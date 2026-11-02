@@ -1,74 +1,95 @@
-/* Conta Discórdia no site oficial.
- * Navegação na mesma aba: não cria popup nem compartilha tokens/credenciais.
- * O domínio do portal permanece responsável pela autenticação e saída.
- * O painel visual só mostra dados de uma sessão já confirmada; não inventa login.
+/* Discórdia: prévia do perfil público no cabeçalho do GitHub Pages.
+ * Firebase Hosting autentica a conta; o GitHub Pages recebe SOMENTE dados
+ * públicos de exibição pelo fragmento da volta na mesma aba. Estes dados
+ * NUNCA autorizam acesso, representam uma sessão Firebase nem contêm tokens.
+ * O fragmento é removido imediatamente da URL. O cache visual é apenas da aba.
  */
 (()=>{
  'use strict';
- const ORIGIN='https://discordia-contas-573e7.web.app';
- const STATE='discordia:account-state:v1';
- const READY='discordia:account-ready:v1';
- const PING='discordia:account-ping:v1';
- const LOGOUT='discordia:account-logout:v1';
+ const PORTAL='https://discordia-contas-573e7.web.app/';
+ const PREFIX='#discordia_profile=';
+ const KEY='discordia:visual-profile:v1';
+ const MAX_AGE=6*60*60*1000;
  const find=id=>document.getElementById(id);
  const entry=find('nav-account-entry');
  const profile=find('nav-auth-profile');
- const trigger=find('nav-auth-trigger');
- const menu=find('nav-auth-menu');
+ const trigger=find('nav-auth-trigger'),menu=find('nav-auth-menu');
  const name=find('nav-auth-name'),avatar=find('nav-auth-avatar'),handle=find('nav-auth-handle');
  const account=find('nav-auth-go-account'),signout=find('nav-auth-signout');
  if(!entry||!profile||!trigger||!menu||!name||!avatar||!handle||!account||!signout)return;
- let windowPortal=null,pendingLogout=false,authenticated=false;
- const validImage=value=>typeof value==='string'&&value.length<=2000&&/^https:\/\/[^\s]+$/i.test(value);
- const closeMenu=()=>{menu.hidden=true;trigger.setAttribute('aria-expanded','false')};
- function displayUser(state){
-  authenticated=state.authenticated===true;
-  entry.hidden=authenticated;
-  profile.hidden=!authenticated;
-  if(!authenticated){closeMenu();return;}
-  const display=typeof state.displayName==='string'?state.displayName.slice(0,50).trim():'';
-  const id=typeof state.handle==='string'?state.handle.slice(0,16).trim():'';
-  name.textContent=display||'Minha conta';
-  handle.textContent=id?'@'+id:'Conta Discórdia';
+ const validImage=v=>typeof v==='string'&&v.length<=2000&&/^https:\/\/[^\s]+$/i.test(v);
+ const clip=(v,max)=>typeof v==='string'?v.slice(0,max).trim():'';
+ const clamp=(v,min,max,defaultValue)=>{
+  const n=Number(v);
+  return v!==undefined&&v!==null&&Number.isFinite(n)?Math.min(max,Math.max(min,Math.round(n))):defaultValue;
+ };
+ const close=()=>{menu.hidden=true;trigger.setAttribute('aria-expanded','false')};
+ function normalize(input){
+  if(!input||typeof input!=='object'||Array.isArray(input)||input.version!==1)return null;
+  if(!Number.isFinite(input.issuedAt)||input.issuedAt>Date.now()+60000||Date.now()-input.issuedAt>MAX_AGE)return null;
+  const displayName=clip(input.displayName,50);
+  const handle=clip(input.handle,16);
+  if(!displayName&&!handle)return null;
+  return {version:1,issuedAt:input.issuedAt,displayName,handle,
+   avatar:validImage(input.avatar)?input.avatar:'',
+   avatarCrop:{zoom:clamp(input.avatarCrop?.zoom,70,250,100),
+    x:clamp(input.avatarCrop?.x,-70,70,0),y:clamp(input.avatarCrop?.y,-70,70,0)}};
+ }
+ function store(value){
+  try{
+   if(value)sessionStorage.setItem(KEY,JSON.stringify(value));
+   else sessionStorage.removeItem(KEY);
+  }catch{/* Aba com armazenamento bloqueado: exibir apenas durante esta navegação. */}
+ }
+ function read(){
+  try{return normalize(JSON.parse(sessionStorage.getItem(KEY)||'null'))}
+  catch{return null}
+ }
+ function show(p){
+  entry.hidden=!!p;
+  profile.hidden=!p;
+  if(!p){close();return;}
+  const display=p.displayName||p.handle;
+  name.textContent=display;
+  handle.textContent=p.handle?'@'+p.handle:'Perfil Discórdia';
   avatar.replaceChildren();
-  if(validImage(state.avatar)){
+  if(p.avatar){
    const img=document.createElement('img');
-   img.src=state.avatar;img.alt='';img.referrerPolicy='no-referrer';
+   img.alt='';img.src=p.avatar;img.referrerPolicy='no-referrer';
+   img.style.transform='translate('+p.avatarCrop.x+'%, '+p.avatarCrop.y+'%) scale('+(p.avatarCrop.zoom/100)+')';
+   img.style.transformOrigin='center center';
    img.onerror=()=>{if(img.isConnected)avatar.textContent=(display||'D').charAt(0).toUpperCase()};
    avatar.append(img);
   }else avatar.textContent=(display||'D').charAt(0).toUpperCase();
  }
- function openPortal(logout=false){
-  // O portal é outro domínio. Navegar não copia nem simula a sessão.
-  // A saída é executada no Firebase Hosting antes de retornar ao site.
-  closeMenu();
-  window.location.assign(logout?ORIGIN+'/?site_logout=1':ORIGIN+'/');
- }
- function onMessage(event){
-  if(event.origin!==ORIGIN||event.source!==windowPortal)return;
-  const data=event.data;
-  if(!data||typeof data!=='object')return;
-  if(data.type===READY){
-   if(pendingLogout)windowPortal.postMessage({type:LOGOUT},ORIGIN);
-   else windowPortal.postMessage({type:PING},ORIGIN);
+ function hydrate(){
+  let p=null;
+  if(location.hash.startsWith(PREFIX)){
+   const raw=location.hash.slice(PREFIX.length);
+   if(raw==='out'){store(null);}
+   else{
+    try{p=normalize(JSON.parse(decodeURIComponent(raw)))}
+    catch{p=null}
+    store(p);
+   }
+   // Não deixar nome ou URL de avatar no histórico/endereço exibido.
+   history.replaceState(history.state,'',location.pathname+location.search);
   }
-  if(data.type!==STATE||typeof data.authenticated!=='boolean')return;
-  if(pendingLogout){
-   if(data.authenticated)return;
-   pendingLogout=false;
-  }
-  displayUser(data);
+  show(p||read());
  }
- window.addEventListener('message',onMessage);
- entry.addEventListener('click',event=>{event.preventDefault();openPortal(false)});
+ function goPortal(logout){
+  close();
+  if(logout){store(null);show(null);}
+  window.location.assign(logout?PORTAL+'?site_logout=1':PORTAL);
+ }
  trigger.addEventListener('click',()=>{
   const opening=menu.hidden;menu.hidden=!opening;
   trigger.setAttribute('aria-expanded',String(opening));
  });
- account.addEventListener('click',()=>{closeMenu();openPortal(false)});
- signout.addEventListener('click',()=>{closeMenu();openPortal(true)});
- document.addEventListener('pointerdown',event=>{
-  if(!profile.contains(event.target))closeMenu();
- });
- document.addEventListener('keydown',event=>{if(event.key==='Escape')closeMenu()});
+ account.addEventListener('click',()=>goPortal(false));
+ signout.addEventListener('click',()=>goPortal(true));
+ document.addEventListener('pointerdown',e=>{if(!profile.contains(e.target))close()});
+ document.addEventListener('keydown',e=>{if(e.key==='Escape')close()});
+ window.addEventListener('pageshow',hydrate);
+ hydrate();
 })();
