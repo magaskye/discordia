@@ -4,9 +4,9 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="theme-color" content="#0b0d19">
-<meta name="description" content="Discórdia Desktop RC17 para Windows: Audio Guardian, VeloSinc experimental, Palco Ao vivo, 26 Selos de Órbita e Minha Conta com avatar real. Estável 1.1 após testes.">
+<meta name="description" content="Discórdia Desktop RC18 para Windows: correções de áudio e transmissão, recuperação de vídeo sem Ctrl+R, VeloSinc, SimCity e atualização silenciosa. Estável 1.1 após homologação.">
 <meta property="og:title" content="Discórdia Desktop — Seus amigos. Seu universo.">
-<meta property="og:description" content="Conheça a RC17: Audio Guardian, VeloSinc, Palco Ao vivo, perfil real e 26 Selos de Órbita. Download oficial no canal Testers.">
+<meta property="og:description" content="RC18 Versão candidata: som da transmissão mais confiável, recuperação do vídeo, VeloSinc e SimCity. Download no canal Testers.">
 <meta property="og:type" content="website">
 <meta property="og:image" content="https://magaskye.github.io/discordia/discordia-identity-2026.webp">
 <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self' data: https:; connect-src https://api.github.com; frame-src https://discordia-contas-573e7.web.app; form-action 'none'; object-src 'none'; base-uri 'self'; upgrade-insecure-requests">
@@ -17,7 +17,7 @@
 <link rel="stylesheet" href="./dark-finish-2026.css?v=dark-final-20261025">
 <link rel="stylesheet" href="./admin-entry.css?v=20261030">
 <link rel="stylesheet" href="./site-polish-rc11-20261101.css?v=1">
-<script src="./site.js?v=rc17-public-20261102" defer></script>
+<script src="./site.js?v=rc18-public-20261102" defer></script>
 <script src="./account-menu-20261102.js?v=5" defer></script>
 <title>Discórdia Desktop | Sua galera. Seu jogo. Seu lugar.</title>
 <link rel="stylesheet" href="./homenagem-testers-especiais-v2-20261101.css">
@@ -63,11 +63,11 @@
   <div class="n26-sky" aria-hidden="true"></div>
   <div class="container n26-hero-grid">
     <div class="n26-hero-copy">
-      <span class="n26-tag"><span class="n26-live-dot"></span><span id="release-hero-badge">RC17 · VERSÃO CANDIDATA DISPONÍVEL</span></span>
+      <span class="n26-tag"><span class="n26-live-dot"></span><span id="release-hero-badge">RC18 · VERSÃO CANDIDATA DISPONÍVEL</span></span>
       <h1 id="hero-title">SUA GALERA.<br>SEU JOGO.<br><em>SEU LUGAR.</em></h1>
-      <p id="release-hero-description">A <strong>RC17 Versão candidata</strong> aprimora a transmissão de jogos, filmes, animes e trabalho: Audio Guardian com recuperação de áudio seletivo, métricas separadas de captura, codificação e recepção, VeloSinc por espectador e resolução nativa experimental. A faixa Ao vivo com avatar, áudio e controles agora fica abaixo da transmissão. A captura WGC/DXGI zero-copy própria ainda está em desenvolvimento; validaremos desempenho e som entre PCs com os testers. O instalador mantém o atualizador silencioso, com proteção para chamadas em andamento.</p>
-      <div class="n26-hero-actions"><a class="n26-btn n26-btn-white" href="#downloads">↓ Baixar para Windows</a><a class="n26-btn n26-btn-outline" href="#novidades">✦ Novidades da RC17</a></div>
-      <small>Windows 10 e 11 · v1.0.3-rc.17 · Versão candidata · Instalador e portátil</small>
+      <p id="release-hero-description">A <strong>RC18 Versão candidata</strong> reúne correções depois dos testes da RC17: recuperação de transmissões que não recebiam vídeo sem reiniciar o aplicativo, som da tela independente da rota do vídeo, buffer adaptativo do Audio Guardian, métricas para identificar cortes de áudio e ajustes do VeloSinc para buscar qualidade e fluidez. SimCity e SimCity 4 entram na identificação de jogos. O capturador WGC/DXGI próprio com fluxo direto pela GPU e a DLL de jogo ainda estão em desenvolvimento; o desempenho real continuará sendo testado com os amigos.</p>
+      <div class="n26-hero-actions"><a class="n26-btn n26-btn-white" href="#downloads">↓ Baixar para Windows</a><a class="n26-btn n26-btn-outline" href="#novidades">✦ Novidades da RC18</a></div>
+      <small>Windows 10 e 11 · v1.0.3-rc.18 · Versão candidata · Instalador e portátil</small>
     </div>
     <div class="n26-hero-scene" role="img" aria-label="Ilustração conceitual de uma chamada de voz e transmissão no Discórdia, com amigos em uma sala">
       <div class="n26-scene-ring ring-one"></div><div class="n26-scene-ring ring-two"></div>
@@ -92,19 +92,16 @@
  <div class="container">
   <div class="rc17-highlights-heading">
    <div><span class="n27-eyebrow">✦ NOVIDADES DA VERSÃO CANDIDATA</span><h2 id="rc17-highlights-title">MAIS PERTO.<br><em>MAIS DISCÓRDIA.</em></h2></div>
-   <p>Na RC17, áudio, transmissão e Palco evoluíram. O perfil com 26 Selos de Órbita também ganhou destaque no site. A Estável 1.1 virá após os testes em computadores reais.</p>
+   <p>Na RC18, o foco é corrigir a regressão de transmissão observada entre os testers: som, fluidez, recuperação de vídeo e melhor reconhecimento de jogos. Os 26 Selos de Órbita e o visual atual continuam. A Estável 1.1 virá depois dos testes reais.</p>
   </div>
   <div class="rc17-highlights-grid">
-   <article class="rc17-highlight"><span class="rc17-highlight-icon" aria-hidden="true">♫</span><span class="rc17-highlight-tag">01 / ÁUDIO</span>
-    <h3>Audio Guardian</h3><p>Monitora dados PCM/RTP da transmissão e tenta recuperar determinadas falhas de áudio, sem interpretar o silêncio do jogo como um defeito.</p><small>Áudio entre PCs ainda em homologação.</small></article>
-   <article class="rc17-highlight"><span class="rc17-highlight-icon" aria-hidden="true">⚡</span><span class="rc17-highlight-tag">02 / VELOSINC</span>
-    <h3>Mais controle da fluidez</h3><p>Estatísticas distinguem quadros capturados, codificados e recebidos. O ajuste por espectador e a resolução nativa adaptativa seguem em testes.</p><small>Qualidade e FPS dependem da rede e da fonte.</small></article>
-   <article class="rc17-highlight"><span class="rc17-highlight-icon" aria-hidden="true">▣</span><span class="rc17-highlight-tag">03 / PALCO</span>
-    <h3>Ao vivo, no lugar certo</h3><p>A faixa com avatar, áudio e controles de reprodução e encerramento agora fica abaixo da transmissão, também na visualização compacta.</p><small>Palco reorganizado na RC17.</small></article>
+   <article class="rc17-highlight"><span class="rc17-highlight-icon" aria-hidden="true">♫</span><span class="rc17-highlight-tag">01 / ÁUDIO</span><h3>Audio Guardian aprimorado</h3><p>Som da transmissão preservado mesmo quando o vídeo muda de rota; buffer PCM adaptativo, análise de jitter e de amostras ocultadas.</p><small>Continuidade do áudio entre computadores exige homologação real.</small></article>
+   <article class="rc17-highlight"><span class="rc17-highlight-icon" aria-hidden="true">⚡</span><span class="rc17-highlight-tag">02 / VELOSINC</span><h3>Qualidade e fluidez</h3><p>Recuperação automática quando o vídeo não chega, diagnóstico separado de captura e codificação e ajuste de pixels apenas quando o gargalo do encoder for medido.</p><small>1080p60 depende do capturador, da GPU, da fonte e da rede.</small></article>
+   <article class="rc17-highlight"><span class="rc17-highlight-icon" aria-hidden="true">▣</span><span class="rc17-highlight-tag">03 / JOGOS</span><h3>Mais jogos encontrados</h3><p>SimCity e SimCity 4 foram adicionados ao reconhecimento. A aba Jogo mostra também janelas não catalogadas para seleção manual, sem capturar o monitor sem autorização.</p><small>Tela cheia exclusiva e anticheats variam por jogo.</small></article>
    <article class="rc17-highlight"><span class="rc17-highlight-icon" aria-hidden="true">✦</span><span class="rc17-highlight-tag">04 / IDENTIDADE</span>
     <h3>Seu universo, seu perfil</h3><p>26 Selos de Órbita em Bronze, Prata, Ouro e Lendária. No Minha Conta você vê avatar e banner reais; ao voltar ao site, avatar, nome e @ID aparecem no cabeçalho.</p><small>A exibição no site não substitui o login.</small></article>
   </div>
-  <div class="rc17-highlights-bottom"><p><strong>Canal Testers:</strong> instalador com atualização silenciosa prevista e proteção para chamadas; comportamento real segue em testes. A edição portátil apenas avisa quando há atualização.</p><a href="#downloads">Conheça a RC17 e baixe ↗</a></div>
+  <div class="rc17-highlights-bottom"><p><strong>Canal Testers:</strong> instalador com atualização silenciosa prevista e proteção para chamadas; comportamento real segue em testes. A edição portátil apenas avisa quando há atualização.</p><a href="#downloads">Conheça a RC18 e baixe ↗</a></div>
  </div>
 </section>
 
@@ -118,7 +115,7 @@
 </div></section>
 
 <section class="n26-panel n26-panel-indigo" id="experiencia" aria-labelledby="n26-stream-title"><div class="container n26-panel-grid n26-grid-reverse">
-  <div class="n26-panel-copy"><span class="n26-overline">02 / COMPARTILHE A PARTIDA</span><h2 id="n26-stream-title">O JOGO É SEU.<br><em>A TORCIDA É NOSSA.</em></h2><p>Compartilhe jogos, filmes, séries ou trabalho. Na RC17, a faixa Ao vivo fica abaixo da transmissão, com avatar, áudio e controles mais organizados. VeloSinc e Audio Guardian continuam em testes para melhorar a experiência.</p><a href="#velosinc" class="n26-panel-link">Conheça o VeloSinc ↗</a></div>
+  <div class="n26-panel-copy"><span class="n26-overline">02 / COMPARTILHE A PARTIDA</span><h2 id="n26-stream-title">O JOGO É SEU.<br><em>A TORCIDA É NOSSA.</em></h2><p>Compartilhe jogos, filmes, séries ou trabalho. Na RC18, o vídeo pode tentar se recuperar sem reiniciar o aplicativo, e o Audio Guardian inclui diagnósticos para descobrir interrupções no som. A faixa Ao vivo permanece abaixo da transmissão.</p><a href="#velosinc" class="n26-panel-link">Conheça o VeloSinc ↗</a></div>
   <figure class="n26-panel-art n26-stream-art"><div class="n26-real-preview"><div class="n26-preview-top">◉ PALCO DO DISCÓRDIA <span>● CONECTADO</span></div><img src="./ui-discordia-v2-preview.svg" width="1200" height="690" loading="lazy" alt="Prévia ilustrativa da interface do aplicativo Discórdia com amigos, canais e transmissões"></div><div class="n26-stream-float sf1">▣ Compartilhando tela</div><div class="n26-stream-float sf2">⚡ VeloSinc em evolução</div><figcaption>PRÉVIA ILUSTRATIVA · FUNÇÕES VARIAM POR VERSÃO</figcaption></figure>
 </div></section>
 
@@ -167,7 +164,7 @@
   <div class="container n27-journey-inner">
     <span class="n27-eyebrow">A GENTE CONTINUA CONSTRUINDO</span>
     <h2 id="n27-journey-title">FEITO COM AMIGOS.<br><em>MELHOR A CADA VERSÃO.</em></h2>
-    <p>O Discórdia cresceu com testes reais e as ideias da comunidade. Na RC17, mantivemos o atualizador com instalação silenciosa, aprimoramos o VeloSinc por espectador, a presença na voz, o Palco e o perfil com 26 conquistas. A RC17 está disponível para testes. Próxima Estável: 1.1 após homologação.</p>
+    <p>O Discórdia cresceu com testes reais e as ideias da comunidade. Na RC18, mantivemos o atualizador com instalação silenciosa, aprimoramos o VeloSinc por espectador, a presença na voz, o Palco e o perfil com 26 conquistas. A RC18 foi publicada para testes. Próxima Estável: 1.1 após homologação.</p>
     <div class="n27-journey-tags" aria-label="Áreas de evolução"><span>✦ VOZ E PRESENÇA</span><span>▣ TRANSMISSÕES</span><span>◈ TEMAS .DISCA</span><span>♛ SNAKE GLOBAL</span></div>
     <a class="n27-link" href="./versoes.html">Conhecer o histórico completo de versões ↗</a>
   </div>
@@ -190,29 +187,29 @@
 <section class="n27-downloads" id="downloads" aria-labelledby="downloads-heading">
  <div class="container">
    <div class="n27-downloads-head">
-     <div><span class="n27-eyebrow">SUA PRÓXIMA PARTIDA COMEÇA AQUI</span><h2 id="downloads-heading">BORA ENTRAR<br><em>NO DISCÓRDIA?</em></h2><p><strong>Baixe a RC17 Versão candidata</strong> para Windows 10 e 11 (x64). Atualizações automáticas reativadas, instalação silenciosa para novas versões elegíveis e organização melhorada de Amigos e convites. A RC17 reúne Audio Guardian, estatísticas de transmissão, VeloSinc experimental e a faixa Ao vivo aprimorada. Os 26 selos continuam disponíveis. A próxima <strong>Estável 1.1</strong> depende da homologação prática.</p></div>
-     <span class="n27-release-status" id="release-status" role="status" aria-live="polite">RC17 publicada · Versão candidata</span>
+     <div><span class="n27-eyebrow">SUA PRÓXIMA PARTIDA COMEÇA AQUI</span><h2 id="downloads-heading">BORA ENTRAR<br><em>NO DISCÓRDIA?</em></h2><p><strong>Baixe a RC18 Versão candidata</strong> para Windows 10 e 11 (x64). Atualizações automáticas reativadas, instalação silenciosa para novas versões elegíveis e organização melhorada de Amigos e convites. A RC18 reúne Audio Guardian, estatísticas de transmissão, VeloSinc experimental e a faixa Ao vivo aprimorada. Os 26 selos continuam disponíveis. A próxima <strong>Estável 1.1</strong> depende da homologação prática.</p></div>
+     <span class="n27-release-status" id="release-status" role="status" aria-live="polite">RC18 publicada · Versão candidata</span>
    </div>
    <div class="n27-download-grid">
      <article class="n27-download-card is-rc" id="rc-download-card">
-       <div class="n27-download-card-top"><span>✦ PARA QUEM TESTA</span><b>RC17 / TESTERS</b></div>
-       <div class="n27-download-art" aria-hidden="true"><span>↗</span><strong>RC17</strong><i>✦</i></div>
-       <h3>Discórdia RC17 · Versão candidata.</h3><p>Audio Guardian: diagnóstico PCM, recuperação limitada e reprodução de áudio; VeloSinc com métricas de FPS por estágio e resolução nativa experimental; faixa Ao vivo abaixo do player. Mantidos microfone independente, P2P/TURN/SFU e atualização silenciosa. WGC zero-copy dedicado, DLL do OBS e garantia de áudio em todos os PCs não foram anunciados como concluídos.</p>
-       <strong class="download-version" id="rc-version">v1.0.3-rc.17 · Versão candidata · Windows x64</strong>
-       <div class="download-actions"><a id="rc-installer" class="btn primary" href="https://github.com/magaskye/discordia/releases/download/v1.0.3-rc.17/Discordia-1.0.3-rc.17-Instalador-x64.exe">Baixar instalador RC17 ↗</a><a id="rc-portable" class="secondary-link" href="https://github.com/magaskye/discordia/releases/download/v1.0.3-rc.17/Discordia-1.0.3-rc.17-Portatil-x64.exe">Baixar versão portátil ↗</a></div>
-       <small>Pré-lançamento para testers. Se você já instalou a RC16 e permanece no canal Testers, a RC17 poderá chegar pelo atualizador oficial, respeitando a disponibilidade dos arquivos e as permissões do Windows. A edição portátil avisa quando há nova versão, sem instalar automaticamente. Próxima Estável: 1.1 após homologação.</small>
+       <div class="n27-download-card-top"><span>✦ PARA QUEM TESTA</span><b>RC18 / TESTERS</b></div>
+       <div class="n27-download-art" aria-hidden="true"><span>↗</span><strong>RC18</strong><i>✦</i></div>
+       <h3>Discórdia RC18 · Versão candidata.</h3><p>Corrige problemas observados na RC17: vídeo ausente sem recuperação, som interrompido após mudanças de rota, áudio picotado e dificuldade de encontrar SimCity. Audio Guardian mede jitter e ocultamento de amostras; VeloSinc distingue captura e codificação. Mantidos P2P/TURN/SFU, atualizador silencioso e créditos aos testers. WGC/DXGI próprio sem cópias pela CPU ainda não foi integrado.</p>
+       <strong class="download-version" id="rc-version">v1.0.3-rc.18 · Versão candidata · Windows x64</strong>
+       <div class="download-actions"><a id="rc-installer" class="btn primary" href="https://github.com/magaskye/discordia/releases/download/v1.0.3-rc.18/Discordia-1.0.3-rc.18-Instalador-x64.exe">Baixar instalador RC18 ↗</a><a id="rc-portable" class="secondary-link" href="https://github.com/magaskye/discordia/releases/download/v1.0.3-rc.18/Discordia-1.0.3-rc.18-Portatil-x64.exe">Baixar versão portátil ↗</a></div>
+       <small>Pré-lançamento para testers. Se você já instalou a RC17 e permanece no canal Testers, a RC18 poderá chegar pelo atualizador oficial, respeitando a disponibilidade dos arquivos e as permissões do Windows. A edição portátil avisa quando há nova versão, sem instalar automaticamente. Próxima Estável: 1.1 após homologação.</small>
      </article>
      <article class="n27-download-card is-stable" id="stable-download-card">
        <div class="n27-download-card-top"><span>◈ PRÓXIMA ETAPA</span><b id="stable-card-label">ESTÁVEL 1.1 · FUTURA</b></div>
        <div class="n27-download-art" aria-hidden="true"><span>✳</span><strong>1.1</strong><i>◈</i></div>
-       <h3>Estável 1.1 · depois dos testes.</h3><p id="stable-card-description">A próxima versão Estável será a <strong>Discórdia 1.1</strong>. Ela só será disponibilizada após a RC17 e as próximas candidatas passarem pela homologação real de login, voz entre computadores, transmissão SFU com áudio da tela, VeloSinc, atualização e exclusão de Servir a dor.</p>
+       <h3>Estável 1.1 · depois dos testes.</h3><p id="stable-card-description">A próxima versão Estável será a <strong>Discórdia 1.1</strong>. Ela só será disponibilizada após a RC18 e as próximas candidatas passarem pela homologação real de login, voz entre computadores, transmissão SFU com áudio da tela, VeloSinc, atualização e exclusão de Servir a dor.</p>
        <strong class="download-version" id="stable-version">Estável 1.1 · em preparação · sem download</strong>
        <div class="download-actions"><span class="btn primary is-disabled" aria-disabled="true">Disponível após homologação</span></div>
        <small>Nenhuma edição Estável está sendo oferecida para download neste site.</small>
      </article>
    </div>
-   <div role="note" class="n27-compatibility-alert"><strong>Atenção:</strong> a RC17 é uma versão candidata de testes, não Estável. A antiga Estável 1.0.3 foi retirada da distribuição recomendada por problemas de atualização e compatibilidade. Não apague seus dados locais ao reinstalar. Recursos de SFU, VeloSinc e exclusão de Servir a dor ainda exigem homologação prática antes da futura Estável 1.1.</div>
-   <div class="n27-download-foot"><span id="release-hint">RC17 é a única versão candidata oferecida nos downloads principais do site. Executáveis, rc.yml e hashes SHA-256 publicados oficialmente.</span><a href="https://github.com/magaskye/discordia/releases/tag/v1.0.3-rc.17" target="_blank" rel="noopener noreferrer">Ver notas oficiais e SHA-256 ↗</a></div>
+   <div role="note" class="n27-compatibility-alert"><strong>Atenção:</strong> a RC18 é uma versão candidata de testes, não Estável. A antiga Estável 1.0.3 foi retirada da distribuição recomendada por problemas de atualização e compatibilidade. Não apague seus dados locais ao reinstalar. Recursos de SFU, VeloSinc e exclusão de Servir a dor ainda exigem homologação prática antes da futura Estável 1.1.</div>
+   <div class="n27-download-foot"><span id="release-hint">RC18 é a única versão candidata oferecida nos downloads principais do site. Executáveis, rc.yml e hashes SHA-256 publicados oficialmente.</span><a href="https://github.com/magaskye/discordia/releases/tag/v1.0.3-rc.18" target="_blank" rel="noopener noreferrer">Ver notas oficiais e SHA-256 ↗</a></div>
  </div>
 </section>
 <section class="n27-faq" id="perguntas" aria-labelledby="faq-heading">
@@ -221,10 +218,10 @@
   <div class="n27-faq-items">
     <details><summary>Em quais computadores posso usar?</summary><p>O Discórdia Desktop foi desenvolvido para Windows 10 e 11, em computadores x64. O desempenho de chamadas, câmera e compartilhamento depende do equipamento e da conexão.</p></details>
     <details><summary>Qual a diferença entre instalador e portátil?</summary><p>O instalador adiciona o aplicativo ao Windows. A edição portátil pode ser executada sem uma instalação tradicional. Consulte sempre as instruções de cada Release.</p></details>
-    <details><summary>O que é a RC17?</summary><p>A RC17 é a versão candidata 1.0.3-rc.17 para Windows x64. Avança a qualidade e o diagnóstico de transmissão, adiciona Audio Guardian e mantém o canal Testers. Após o lançamento, faremos testes reais de áudio e vídeo em vários PCs. A Estável 1.1 virá somente após a homologação.</p></details>
+    <details><summary>O que é a RC18?</summary><p>A RC18 é a versão candidata 1.0.3-rc.18 para Windows x64. Prioriza recuperar a fluidez e o áudio das transmissões, evitar Ctrl+R e identificar mais jogos. Continua em testes com usuários reais; Estável 1.1 somente após homologação.</p></details>
     <details><summary>Como confirmar se o download é oficial?</summary><p>Use os links para o GitHub Releases oficial e confira o SHA-256 publicado junto da versão. Se o Windows exibir um aviso de editor não verificado, confira a origem do arquivo; não desative proteções do sistema.</p></details>
     <details><summary>Como meu avatar aparece no site oficial?</summary><p>Entre pelo <a href="https://discordia-contas-573e7.web.app/">Minha Conta</a> e use <strong>Voltar ao site</strong>. Seu avatar, nome e @ID aparecem no cabeçalho da mesma aba. A exibição é visual; seus dados privados continuam protegidos pelo login no portal.</p></details>
-     <details><summary>O Audio Guardian garante o som em todos os PCs?</summary><p>Ainda não. Na RC17, ele ajuda a diagnosticar e recuperar determinadas falhas de áudio, mas o funcionamento real em diferentes redes e PCs continua em testes.</p></details>
+     <details><summary>O Audio Guardian garante o som em todos os PCs?</summary><p>Ainda não. A RC18 melhora recuperação, buffers e diagnósticos, mas a ausência de cortes entre vários computadores precisa ser confirmada em testes reais.</p></details>
      <details><summary>O VeloSinc já está completo?</summary><p>Não. O VeloSinc continua evoluindo em versões de testes e depende de homologação. As ilustrações do site explicam a ideia, não comprovam que todas as funções estão disponíveis.</p></details>
     <details><summary>Já posso contribuir pelo APOIA.se?</summary><p>A campanha está em preparação e depende da verificação documental da plataforma. Enquanto isso, a página <a href="./apoie.html">Apoie o projeto</a> explica a proposta, sem solicitar pagamento.</p></details>
     <details><summary>E a privacidade?</summary><p>Você pode ler as informações de tratamento de dados na nossa <a href="./privacidade.html">página de privacidade</a>.</p></details>
