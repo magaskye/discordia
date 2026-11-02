@@ -93,3 +93,7 @@
  .header .nav-account-label{display:none!important}
  .header #nav-account-entry:not([hidden]){min-width:42px;padding:0 10px}
 }
+
+/* Invisible cross-origin session check; no popup and no layout impact. */
+.account-session-bridge-frame{position:absolute!important;left:-10000px!important;top:-10000px!important;
+ width:1px!important;height:1px!important;border:0!important;opacity:0!important;pointer-events:none!important}

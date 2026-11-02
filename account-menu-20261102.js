@@ -90,6 +90,34 @@
  signout.addEventListener('click',()=>goPortal(true));
  document.addEventListener('pointerdown',e=>{if(!profile.contains(e.target))close()});
  document.addEventListener('keydown',e=>{if(e.key==='Escape')close()});
+ function mountPortalProbe(){
+  // Opcional: alguns navegadores isolam o armazenamento do Firebase em iframes.
+  // Quando isso ocorrer, manter o retorno explícito do portal como alternativa.
+  const origin=new URL(PORTAL).origin;
+  const frame=document.createElement('iframe');
+  frame.src=PORTAL+'?site_bridge=frame';
+  frame.title='Verificação privada da sessão Discórdia';
+  frame.tabIndex=-1;
+  frame.setAttribute('aria-hidden','true');
+  frame.setAttribute('referrerpolicy','no-referrer');
+  frame.className='account-session-bridge-frame';
+  const accept=event=>{
+   if(event.origin!==origin||event.source!==frame.contentWindow)return;
+   const payload=event.data;
+   if(payload?.type!=='discordia:account-frame-state:v1')return;
+   if(payload.authenticated!==true)return; // Terceiros podem isolar a sessão; não sobrescrever dados já confirmados na aba.
+   const profile=normalize(payload);
+   if(!profile)return;
+   store(profile);
+   show(profile);
+  };
+  window.addEventListener('message',accept);
+  const ping=()=>frame.contentWindow?.postMessage({type:'discordia:account-frame-ping:v1'},origin);
+  frame.addEventListener('load',ping);
+  window.addEventListener('pageshow',ping);
+  document.body.appendChild(frame);
+ }
  window.addEventListener('pageshow',hydrate);
  hydrate();
+ mountPortalProbe();
 })();
