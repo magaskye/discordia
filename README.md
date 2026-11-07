@@ -2,10 +2,10 @@
 
 **Domínio oficial planejado (EU.org):** `discordia.eu.org` — solicitação registrada, aguardando aprovação do EU.org.  
 **Site canônico em produção:** https://discordia-ari.pages.dev/ (Cloudflare Pages).  
-**Versão atual no canal Testers:** [Discórdia Desktop v1.0.3-rc.20](https://github.com/magaskye/discordia/releases/tag/v1.0.3-rc.20).  
+**Versão atual no canal Testers:** [Discórdia Desktop v1.0.3-rc.21](https://github.com/magaskye/discordia/releases/tag/v1.0.3-rc.21).  
 **Hospedagem:** Cloudflare Pages, publicada automaticamente a partir da branch `main`.  
 
-A RC20 continua candidata e depende dos testes reais para homologação. Os downloads permanecem no GitHub Releases. A documentação RC11 abaixo é mantida como registro histórico, não como versão atual.
+A RC21 continua candidata e depende dos testes reais para homologação. Os downloads permanecem no GitHub Releases. A documentação RC11 abaixo é mantida como registro histórico, não como versão atual.
 
 ---
 
@@ -23,7 +23,7 @@ Quando `discordia.eu.org` for aprovado e o HTTPS validado, atualizar a URL canô
 
 ## Plataformas no site oficial
 
-- **Windows:** [RC20 para Windows](https://discordia-ari.pages.dev/#downloads), com os executáveis no GitHub Releases.
+- **Windows:** [RC21 para Windows](https://discordia-ari.pages.dev/#downloads), com os executáveis no GitHub Releases.
 - **Android:** [página oficial de versões Android](https://discordia-ari.pages.dev/android/), com download do APK Android RC20.2 assinado e publicado no GitHub Releases.
 - **Web:** [página da versão Web](https://discordia-ari.pages.dev/web/), que descreve o desenvolvimento. O cliente React/Vite ainda não foi liberado em domínio público nem teve a autenticação Web homologada.
 
