@@ -55,8 +55,13 @@ export default {
       if(request.method!=='POST')return lockPage();
       const origin=request.headers.get('Origin');
       const fetchSite=request.headers.get('Sec-Fetch-Site');
-      if((origin && origin!==u.origin)||
-         (!origin && fetchSite && fetchSite!=='same-origin' && fetchSite!=='none'))
+      // Browser privacy settings can report Origin: null for same-origin
+      // form navigation; Sec-Fetch-Site is browser-controlled and reliable.
+      // Block cross-site browser posts; use strict Origin as fallback for
+      // clients that do not send Fetch Metadata headers.
+      if(fetchSite
+        ? (fetchSite!=='same-origin' && fetchSite!=='none')
+        : (origin!==u.origin))
         return lockPage('origin');
       let data;
       try{data=await request.formData();}catch{return lockPage('code');}
