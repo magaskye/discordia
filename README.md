@@ -1,3 +1,15 @@
+# Discórdia — site oficial
+
+**Endereço oficial gratuito:** https://discordia-ari.pages.dev/  
+**Versão atual no canal Testers:** [Discórdia Desktop v1.0.3-rc.20](https://github.com/magaskye/discordia/releases/tag/v1.0.3-rc.20).  
+**Hospedagem:** Cloudflare Pages, publicada automaticamente a partir da branch `main`.  
+
+A RC20 continua candidata e depende dos testes reais para homologação. Os downloads permanecem no GitHub Releases. A documentação RC11 abaixo é mantida como registro histórico, não como versão atual.
+
+---
+
+## Registro histórico (RC11)
+
 # Discórdia Desktop — RC11 publicada (31/10/2026)
 
 **Versão disponível neste site: [Discórdia Desktop v1.0.3-rc.11 — Versão candidata](https://github.com/magaskye/discordia/releases/tag/v1.0.3-rc.11).** É uma pré-release para Testers no Windows 10/11 x64, não uma versão Estável.
@@ -24,7 +36,8 @@ A Estável antiga `v1.0.3` foi retirada do GitHub por falhas de compatibilidade 
 
 **Importante:** quem instalou uma RC11 privada anterior com a mesma numeração precisa reinstalar manualmente a nova edição, pois o autoatualizador não troca binários entre versões de número idêntico.
 
-**Site:** https://magaskye.github.io/discordia/  
+**Site oficial atual:** https://discordia-ari.pages.dev/  
+**Endereço anterior (mantido):** https://magaskye.github.io/discordia/  
 **Release:** https://github.com/magaskye/discordia/releases/tag/v1.0.3-rc.11
 
 Desenvolvido por Carlos Eduardo Lopes, com o apoio da comunidade e dos testers.
