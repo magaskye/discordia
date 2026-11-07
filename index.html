@@ -4,14 +4,14 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="theme-color" content="#0b0d19">
-<meta name="description" content="Discórdia Desktop RC20 para Windows: correções de áudio e transmissão, recuperação de vídeo sem Ctrl+R, VeloSinc, SimCity e atualização silenciosa. Estável 1.1 após homologação.">
+<meta name="description" content="Discórdia nas três plataformas: Windows RC20 disponível, Android em preparação e Discórdia Web em desenvolvimento. Conheça os downloads e acompanhe as versões oficiais.">
 <meta property="og:title" content="Discórdia Desktop — Seus amigos. Seu universo.">
 <meta property="og:description" content="RC20 Versão candidata: som da transmissão mais confiável, recuperação do vídeo, VeloSinc e SimCity. Download no canal Testers.">
 <meta property="og:type" content="website">
 <link rel="canonical" href="https://discordia-ari.pages.dev/">
 <meta property="og:url" content="https://discordia-ari.pages.dev/">
 <meta property="og:image" content="https://discordia-ari.pages.dev/discordia-identity-2026.webp">
-<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self' data: https:; connect-src https://api.github.com; frame-src https://discordia-contas-573e7.web.app; form-action 'none'; object-src 'none'; base-uri 'self'; upgrade-insecure-requests">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self' data: https:; connect-src 'self' https://api.github.com; frame-src https://discordia-contas-573e7.web.app; form-action 'none'; object-src 'none'; base-uri 'self'; upgrade-insecure-requests">
 <link rel="icon" href="./discordia-orbit-app.png" type="image/png">
 <link rel="stylesheet" href="./site.css?v=stable102-rc8-20261028">
 <link rel="stylesheet" href="./immersive-landing-2026.css?v=full-redesign-20261025">
@@ -25,6 +25,8 @@
 <link rel="stylesheet" href="./homenagem-testers-especiais-v2-20261101.css">
 <link rel="stylesheet" href="./account-entry-20261101.css?v=3">
 <link rel="stylesheet" href="./rc17-novidades-20261102.css?v=1">
+<link rel="stylesheet" href="./plataformas-20261107.css?v=1">
+<script src="./plataformas-20261107.js?v=1" defer></script>
 </head>
 <body>
 <a class="skip-link" href="#principal">Pular para o conteúdo</a>
@@ -33,7 +35,7 @@
   <a href="#inicio" class="brand" aria-label="Discórdia Desktop — início"><img src="./discordia-orbit-app.png" alt="" width="46" height="46"><span>Disc<span class="accent">ó</span>rdia<span class="pink">.</span></span></a>
   <button id="nav-toggle" class="nav-toggle" type="button" aria-controls="nav-main" aria-expanded="false" aria-label="Abrir menu"><span></span><span></span><span></span></button>
   <nav id="nav-main" class="navigation" aria-label="Navegação principal">
-    <a href="#recursos">Experiência</a><a href="#experiencia">Transmissões</a><a href="#tecnologia">Conexões</a><a href="#velosinc">VeloSinc</a><a class="nav-support" href="#apoie">Apoie o projeto ♥</a><a class="nav-admin-entry" href="https://discordia-admin.netlify.app/" target="_blank" rel="noopener noreferrer" aria-label="Área administrativa em preparação, abre em nova aba"><span aria-hidden="true">🔒</span> Área Admin <small>Em preparação</small></a>
+    <a href="#plataformas">Plataformas</a><a href="#recursos">Experiência</a><a href="#experiencia">Transmissões</a><a href="#tecnologia">Conexões</a><a href="#velosinc">VeloSinc</a><a class="nav-support" href="#apoie">Apoie o projeto ♥</a><a class="nav-admin-entry" href="https://discordia-admin.netlify.app/" target="_blank" rel="noopener noreferrer" aria-label="Área administrativa em preparação, abre em nova aba"><span aria-hidden="true">🔒</span> Área Admin <small>Em preparação</small></a>
   </nav>
   <div class="nav-actions">
     <div class="nav-account-slot" id="nav-account-slot">
@@ -89,6 +91,40 @@
   <div class="n26-ribbon"><span>CONVERSE ✦ JOGUE JUNTO ✦ COMPARTILHE ✦ CRIE SEU ESPAÇO ✦ CONVERSE ✦ JOGUE JUNTO ✦ COMPARTILHE ✦</span></div>
 </section>
 
+
+<section class="dp-platforms" id="plataformas" aria-labelledby="dp-heading">
+ <div class="container">
+  <div class="dp-header">
+   <div><span class="dp-kicker">✦ UM UNIVERSO, VÁRIAS FORMAS DE ENTRAR</span>
+   <h2 id="dp-heading">SUA GALERA.<br><em>ONDE VOCÊ ESTIVER.</em></h2></div>
+   <p>O Discórdia está chegando ao computador, ao celular e ao navegador. Cada edição tem seu próprio estágio de lançamento: mostramos apenas downloads e acessos realmente disponíveis.</p>
+  </div>
+  <div class="dp-grid">
+   <article class="dp-card dp-windows">
+    <div class="dp-card-top"><span class="dp-symbol" aria-hidden="true">▣</span><span class="dp-status dp-status-live">RC20 DISPONÍVEL</span></div>
+    <p class="dp-overline">DESKTOP</p><h3>Discórdia para Windows</h3>
+    <p>A experiência completa de testes no PC: servidores, amigos, canais, voz e transmissão. A RC20 continua em homologação.</p>
+    <div class="dp-tags"><span>Windows 10/11</span><span>x64</span><span>1.0.3-rc.20</span></div>
+    <a class="dp-cta dp-cta-primary" href="#downloads">Baixar para Windows <span aria-hidden="true">↗</span></a>
+   </article>
+   <article class="dp-card dp-android">
+    <div class="dp-card-top"><span class="dp-symbol" aria-hidden="true">◈</span><span class="dp-status dp-status-pending" id="dp-android-status" role="status" aria-live="polite">APK EM PREPARAÇÃO</span></div>
+    <p class="dp-overline">MOBILE</p><h3>Discórdia para Android</h3>
+    <p>Mensagens, servidores e amigos no celular. O canal de atualização está pronto; o APK público só será liberado após assinatura e validação.</p>
+    <div class="dp-tags"><span>Android</span><span>Conta compartilhada</span><span>Canal RC</span></div>
+    <a class="dp-cta dp-cta-secondary" href="./android/">Ver Android e disponibilidade <span aria-hidden="true">↗</span></a>
+   </article>
+   <article class="dp-card dp-web">
+    <div class="dp-card-top"><span class="dp-symbol" aria-hidden="true">◎</span><span class="dp-status dp-status-pending">EM DESENVOLVIMENTO</span></div>
+    <p class="dp-overline">NAVEGADOR</p><h3>Discórdia Web</h3>
+    <p>Uma versão para navegar sem instalar. O aplicativo de canais e mensagens já está em desenvolvimento, mas ainda não tem acesso público.</p>
+    <div class="dp-tags"><span>Web completa</span><span>Salas rápidas: planejadas</span></div>
+    <a class="dp-cta dp-cta-secondary" href="./web/">Conhecer o Discórdia Web <span aria-hidden="true">↗</span></a>
+   </article>
+  </div>
+  <p class="dp-disclaimer">Downloads e acessos são liberados individualmente quando cada edição passa pelos requisitos de segurança e publicação.</p>
+ </div>
+</section>
 
 <section class="rc17-highlights" id="novidades" aria-labelledby="rc17-highlights-title">
  <div class="container">
@@ -211,6 +247,7 @@
      </article>
    </div>
    <div role="note" class="n27-compatibility-alert"><strong>Discórdia Android:</strong> o aplicativo já passou pelo primeiro teste de instalação no Galaxy S23. O canal de download e atualização está sendo preparado; o APK público será oferecido após assinatura de release com o mesmo certificado e validação do pacote. <a href="./android/">Acompanhar a versão Android e o download oficial</a>.</div>
+   <div role="note" class="n27-compatibility-alert"><strong>Discórdia Web:</strong> a interface para navegador está em desenvolvimento, mas ainda não foi aberta ao público. <a href="./web/">Conhecer os recursos e acompanhar a versão Web</a>.</div>
    <div role="note" class="n27-compatibility-alert"><strong>Atenção:</strong> a RC20 é uma versão candidata de testes, não Estável. A antiga Estável 1.0.3 foi retirada da distribuição recomendada por problemas de atualização e compatibilidade. Não apague seus dados locais ao reinstalar. Recursos de SFU, VeloSinc e exclusão de Servir a dor ainda exigem homologação prática antes da futura Estável 1.1.</div>
    <div class="n27-download-foot"><span id="release-hint">RC20 é a única versão candidata oferecida nos downloads principais do site. Executáveis, rc.yml e hashes SHA-256 publicados oficialmente.</span><a href="https://github.com/magaskye/discordia/releases/tag/v1.0.3-rc.20" target="_blank" rel="noopener noreferrer">Ver notas oficiais e SHA-256 ↗</a></div>
  </div>
@@ -246,7 +283,7 @@
 <footer class="n27-footer">
  <div class="container n27-footer-head">
    <div class="n27-footer-logo"><a href="#inicio" aria-label="Discórdia — início"><img src="./discordia-orbit-app.png" alt="" width="60" height="60"><span>DISCÓRDIA<span class="n27-footer-dot">.</span></span></a><p>Um projeto independente de comunicação feito para reunir amigos e histórias.</p></div>
-   <div class="n27-footer-links"><div><strong>EXPLORE</strong><a href="#recursos">A experiência</a><a href="#tecnologia">Conexões</a><a href="#velosinc">VeloSinc</a></div><div><strong>COMUNIDADE</strong><a href="./versoes.html">Histórico de versões</a><a href="./apoie.html">Apoie o projeto</a><a href="#perguntas">Dúvidas</a></div><div><strong>OFICIAL</strong><a href="#downloads">Downloads</a><a href="https://discordia-contas-573e7.web.app/">Minha Conta</a><a href="./privacidade.html">Privacidade</a><a href="./termos.html">Termos de uso</a><a class="footer-admin-entry" href="https://discordia-admin.netlify.app/" target="_blank" rel="noopener noreferrer" aria-label="Área administrativa em preparação, abre em nova aba">🔒 Área Administrativa (em preparação)</a><a href="https://github.com/magaskye/discordia/releases" target="_blank" rel="noopener noreferrer">Versões no GitHub ↗</a></div></div>
+   <div class="n27-footer-links"><div><strong>EXPLORE</strong><a href="#recursos">A experiência</a><a href="#tecnologia">Conexões</a><a href="#velosinc">VeloSinc</a></div><div><strong>COMUNIDADE</strong><a href="./versoes.html">Histórico de versões</a><a href="./apoie.html">Apoie o projeto</a><a href="#perguntas">Dúvidas</a></div><div><strong>OFICIAL</strong><a href="#plataformas">Plataformas</a><a href="./android/">Android</a><a href="./web/">Web</a><a href="#downloads">Downloads</a><a href="https://discordia-contas-573e7.web.app/">Minha Conta</a><a href="./privacidade.html">Privacidade</a><a href="./termos.html">Termos de uso</a><a class="footer-admin-entry" href="https://discordia-admin.netlify.app/" target="_blank" rel="noopener noreferrer" aria-label="Área administrativa em preparação, abre em nova aba">🔒 Área Administrativa (em preparação)</a><a href="https://github.com/magaskye/discordia/releases" target="_blank" rel="noopener noreferrer">Versões no GitHub ↗</a></div></div>
  </div>
  <div class="container n27-footer-bottom"><span>© 2026 Discórdia Desktop · Todos os direitos reservados.</span><span>Desenvolvido por <strong>Carlos Eduardo Lopes</strong>.</span></div>
  <div class="container n27-footer-testers" aria-label="Homenagem aos testers do Discórdia">

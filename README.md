@@ -9,6 +9,16 @@ A RC20 continua candidata e depende dos testes reais para homologação. Os down
 
 ---
 
+## Plataformas no site oficial
+
+- **Windows:** [RC20 para Windows](https://discordia-ari.pages.dev/#downloads), com os executáveis no GitHub Releases.
+- **Android:** [página oficial de versões Android](https://discordia-ari.pages.dev/android/), com feed de atualização que mantém o botão de APK oculto enquanto não houver publicação assinada.
+- **Web:** [página da versão Web](https://discordia-ari.pages.dev/web/), que descreve o desenvolvimento. O cliente React/Vite ainda não foi liberado em domínio público nem teve a autenticação Web homologada.
+
+**Observação:** `discordia.eu.org` continua pendente de aprovação no EU.org. A Cloudflare Pages permanece como hospedagem pública provisória.
+
+---
+
 ## Registro histórico (RC11)
 
 # Discórdia Desktop — RC11 publicada (31/10/2026)
