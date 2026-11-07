@@ -7,10 +7,14 @@
     "available": false
   },
   "android": {
-    "versionName": "1.0.3-rc.20.1",
-    "versionCode": 2,
+    "available": true,
+    "versionName": "1.0.3-rc.20.2",
+    "versionCode": 3,
     "applicationId": "br.discordia.mobile",
-    "available": false
+    "downloadUrl": "https://github.com/magaskye/discordia/releases/download/android-v1.0.3-rc.20.2/Discordia-Mobile-1.0.3-rc.20.2.apk",
+    "sha256": "271fffee1c0ff524578db828f3d38e410ac370c44391eb04a5ad00809ff9bda8",
+    "sizeBytes": 3763648,
+    "signerSha256": "fc5af7ccfd8f28acc8d3c79b1651cac67f7897386ff27768cfcb2bc3e4a23ac5"
   },
-  "notes": "Canal de atualização Android preparado. Nenhum APK público disponível neste momento."
+  "notes": "Android APK release assinado, SHA-256 e URL verificados. Windows permanece independente."
 }
