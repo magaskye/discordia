@@ -80,12 +80,12 @@
     updatePromptIcon(device);
     setup(device==='ios'?'Você está no iPhone ou iPad':'Acesso pelo navegador',
       device==='ios'?'O APK Android não funciona no iPhone. Conheça o projeto Web e veja outras plataformas.':
-        'A versão Windows é para PCs compatíveis. Conheça a prévia privada do Discórdia Web.',
-      'DISCÓRDIA WEB · PRÉVIA POR CONVITE',
-      device==='ios'?'iPhone/iPad · prévia Web privada por código':
-        'Navegador · Web privada em testes',
-      'Conhecer versão Web','Ver todas as plataformas','./web/','#plataformas');
-    heroDescription.textContent='O Discórdia Web já tem prévia privada com salas temporárias, chat, tela cheia e contas existentes em testes. A página Web explica o acesso por convite; a abertura irrestrita ainda depende de segurança e homologação.';
+        'A versão Windows é para PCs compatíveis. A Web Beta pública já pode ser acessada pelo navegador.',
+      'DISCÓRDIA WEB · BETA PÚBLICA',
+      device==='ios'?'iPhone/iPad · Web Beta pelo navegador':
+        'Navegador · beta pública disponível',
+      'Abrir Web Beta','Detalhes da versão Web','https://discordia-web-beta.pages.dev/','./web/');
+    heroDescription.textContent='A Discórdia Web Beta está aberta no navegador: entre com sua conta existente ou assista como convidado por link. Criação de salas exige e-mail verificado e recursos de mídia ainda têm limitações.';
     const card=document.querySelector(device==='ios'?'.dp-iphone':'.dp-web');
     if(card?.parentElement)card.parentElement.prepend(card);
   }
