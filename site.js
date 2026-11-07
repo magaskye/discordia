@@ -1,5 +1,5 @@
-/* Discórdia Desktop RC20 — navegação e animação progressiva no layout original.
-   Sem bibliotecas externas. Downloads da RC20 no canal Testers; respeita movimento reduzido. */
+/* Discórdia Desktop RC21 — navegação e animação progressiva no layout original.
+   Sem bibliotecas externas. Downloads da RC21 no canal Testers; respeita movimento reduzido. */
 (function () {
   'use strict';
   const navButton=document.getElementById('nav-toggle');
@@ -95,12 +95,12 @@
     document.documentElement.classList.add('site-motion-ready');
   }
 
-  // Lock public download verification to the published RC20 prerelease.
-  const tag='v1.0.3-rc.20';
+  // Lock public download verification to the published RC21 prerelease.
+  const tag='v1.0.3-rc.21';
   const base='https://github.com/magaskye/discordia/releases/download/'+tag+'/';
   const required=[
-    'Discordia-1.0.3-rc.20-Instalador-x64.exe',
-    'Discordia-1.0.3-rc.20-Portatil-x64.exe',
+    'Discordia-1.0.3-rc.21-Instalador-x64.exe',
+    'Discordia-1.0.3-rc.21-Portatil-x64.exe',
     'rc.yml','SHA256SUMS.txt'
   ];
   const text=(id,value)=>{const el=document.getElementById(id);if(el)el.textContent=value;};
@@ -118,12 +118,12 @@
     .then(res=>{if(!res.ok)throw new Error('github_api_unavailable');return res.json();})
     .then(release=>{
       if(!isVerified(release))throw new Error('release_not_verified');
-      text('release-status','RC20 · download oficial confirmado');
-      text('release-hint','RC20 é a única versão candidata oferecida nos downloads principais do site. Instalador, portátil, rc.yml e SHA-256 verificados no GitHub.');
+      text('release-status','RC21 · download oficial confirmado');
+      text('release-hint','RC21 é a única versão candidata oferecida nos downloads principais do site. Instalador, portátil, rc.yml e SHA-256 verificados no GitHub.');
     })
     .catch(()=>{
       // Quando a API estiver indisponível, mantenha os links, mas oriente a conferência da release.
-      text('release-status','RC20 · verificar release oficial');
+      text('release-status','RC21 · verificar release oficial');
       text('release-hint','Antes de instalar, confira os executáveis, o manifesto e o SHA-256 na release oficial.');
     });
 })();
