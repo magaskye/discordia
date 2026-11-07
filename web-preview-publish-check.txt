@@ -1,0 +1,1 @@
+Discórdia Web — prévia de testes via GitHub Pages branch. Sem alterações no site principal. Deploy pendente de variáveis protegidas.
