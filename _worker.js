@@ -21,7 +21,9 @@ const sha256Hex=async value=>{
   const bytes=await crypto.subtle.digest('SHA-256',new TextEncoder().encode(String(value)));
   return Array.from(new Uint8Array(bytes),b=>b.toString(16).padStart(2,'0')).join('');
 };
-const lockPage=(failure='')=>{
+const safeReturnPath=value=>typeof value==='string'&&/^\/r\/[a-f0-9]{48}\/?$/.test(value)?value:'/';
+const lockPage=(failure='',fromPath='/')=>{
+  const safePath=safeReturnPath(fromPath);
   const html='<!doctype html><html lang="pt-BR"><head><meta charset="utf-8">'+
     '<meta name="viewport" content="width=device-width,initial-scale=1">'+
     '<meta name="robots" content="noindex,nofollow">'+
@@ -33,6 +35,7 @@ const lockPage=(failure='')=>{
     '<p>Prévia de testes para amigos convidados. Digite o código de acesso compartilhado pela equipe.</p>'+
     (failure==='origin'?'<p role="alert">O navegador bloqueou a validação por origem. Reabra a página diretamente no link da prévia e tente novamente.</p>':failure==='code'?'<p role="alert">O código digitado não corresponde ao segredo salvo na Cloudflare para Preview. Confira se não há aspas ou espaços extras.</p>':'')+
     '<form method="post" action="/__preview_unlock" autocomplete="off">'+
+    '<input type="hidden" name="returnPath" value="'+safePath+'">'+
     '<label for="code">Código dos testers</label><input id="code" type="password" name="code" required maxlength="90" autocomplete="off">'+
     '<button type="submit">Entrar na prévia</button></form>'+
     '<p>Esta prévia é separada do site oficial. Recursos em desenvolvimento.</p></main></body></html>';
@@ -69,11 +72,11 @@ export default {
         return lockPage('origin');
       let data;
       try{data=await request.formData();}catch{return lockPage('code');}
-      if(!same(cleanCode(data.get('code')),cleanCode(env.WEB_PREVIEW_ACCESS_CODE)))return lockPage('code');
+      if(!same(cleanCode(data.get('code')),cleanCode(env.WEB_PREVIEW_ACCESS_CODE)))return lockPage('code',data.get('returnPath'));
       return new Response(null,{
         status:303,
         headers:{
-          'Location':'/',
+          'Location':safeReturnPath(data.get('returnPath')),
           'Set-Cookie':'__discordia_preview='+sessionValue+
             '; Path=/; Max-Age=604800; HttpOnly; Secure; SameSite=Lax',
           'Cache-Control':'no-store',
@@ -84,7 +87,7 @@ export default {
     const cookie=request.headers.get('Cookie')||'';
     const token=cookie.split(';').map(c=>c.trim()).find(c=>c.startsWith('__discordia_preview='))
       ?.slice('__discordia_preview='.length)||'';
-    if(!same(token,sessionValue))return lockPage();
+    if(!same(token,sessionValue))return lockPage('',u.pathname);
     // The password-protected Pages preview is the only public ingress for
     // Quick Rooms. Durable Objects are bound in Pages Preview, never Production.
     const roomSocket=u.pathname.match(/^\/api\/rooms\/([a-f0-9]{48})\/connect$/);
