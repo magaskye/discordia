@@ -1,0 +1,14 @@
+/* Navegação oficial entre plataformas — permanente, acessível e responsiva. */
+.disc-cross-platform{position:sticky;top:0;z-index:105;background:rgba(13,18,37,.96);border-bottom:1px solid rgba(182,165,255,.22);color:#f6f5ff;backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);box-shadow:0 5px 24px rgba(0,0,0,.18)}
+.disc-cross-platform *{box-sizing:border-box}
+.disc-cross-platform-inner{width:min(1200px,calc(100% - 28px));min-height:54px;margin:auto;display:flex;align-items:center;justify-content:center;gap:9px;padding:7px 0}
+.disc-cross-platform-lead{font-family:Inter,"Segoe UI",system-ui,sans-serif;font-weight:800;font-size:11px;letter-spacing:.025em;white-space:nowrap;color:#bfc4e3;margin-right:5px}
+.disc-cross-platform-link{display:inline-flex;align-items:center;justify-content:center;gap:7px;min-height:36px;min-width:0;border:1px solid rgba(183,180,227,.27);border-radius:12px;padding:5px 12px;color:#f8f9ff!important;text-decoration:none!important;background:rgba(134,120,188,.09);font-family:Inter,"Segoe UI",system-ui,sans-serif;font-size:12px;line-height:1.15;font-weight:750;white-space:nowrap;transition:background .18s,border-color .18s}
+.disc-cross-platform-link img{width:18px;height:18px;object-fit:contain;flex-shrink:0}
+.disc-cross-platform-link small{font-size:10px;font-weight:600;color:#c6cbe7}
+.disc-cross-platform-link[aria-current="page"]{background:rgba(119,88,221,.23);border-color:#ab94ff}
+.disc-cross-platform-link:not([aria-current="page"]):hover{background:rgba(119,88,221,.29);border-color:#9586e5}
+.disc-cross-platform-link:focus-visible{outline:3px solid #9eeeff;outline-offset:3px}
+.disc-rc21-notes-link{display:inline-flex;align-items:center;gap:7px;margin-top:8px;color:#d6b9ff!important;text-decoration:underline;text-underline-offset:3px;font-size:13px;font-weight:800}
+@media(max-width:730px){.disc-cross-platform-inner{justify-content:space-between;gap:5px;min-height:50px}.disc-cross-platform-lead{display:none}.disc-cross-platform-link{flex:1;padding:5px 6px;gap:5px;font-size:11px}.disc-cross-platform-link small{display:none}}
+@media(max-width:370px){.disc-cross-platform-link{font-size:10px;padding:6px 4px}.disc-cross-platform-link img{width:15px;height:15px}}
