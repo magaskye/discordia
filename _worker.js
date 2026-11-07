@@ -10,6 +10,11 @@ const same=(left,right)=>{
   for(let i=0;i<a.length;i++)diff|=a.charCodeAt(i)^b.charCodeAt(i);
   return diff===0;
 };
+const expectedSession=async code=>{
+  const bytes=await crypto.subtle.digest('SHA-256',
+    new TextEncoder().encode('discordia-web-testers-cookie-v1:'+code));
+  return Array.from(new Uint8Array(bytes),b=>b.toString(16).padStart(2,'0')).join('');
+};
 const lockPage=(bad=false)=>{
   const html='<!doctype html><html lang="pt-BR"><head><meta charset="utf-8">'+
     '<meta name="viewport" content="width=device-width,initial-scale=1">'+
@@ -39,9 +44,10 @@ const lockPage=(bad=false)=>{
 export default {
   async fetch(request,env){
     // Fail CLOSED if the secrets are absent in this preview deployment.
-    if(!env.WEB_PREVIEW_ACCESS_CODE||!env.WEB_PREVIEW_SESSION_SECRET)
+    if(!env.WEB_PREVIEW_ACCESS_CODE)
       return new Response('Ambiente de teste indisponível',{status:503,
         headers:{'Cache-Control':'no-store','X-Robots-Tag':'noindex,nofollow'}});
+    const sessionValue=await expectedSession(env.WEB_PREVIEW_ACCESS_CODE);
     const u=new URL(request.url);
     if(u.pathname==='/__preview_unlock'){
       if(request.method!=='POST')return lockPage();
@@ -53,7 +59,7 @@ export default {
         status:303,
         headers:{
           'Location':'/',
-          'Set-Cookie':'__discordia_preview='+env.WEB_PREVIEW_SESSION_SECRET+
+          'Set-Cookie':'__discordia_preview='+sessionValue+
             '; Path=/; Max-Age=604800; HttpOnly; Secure; SameSite=Lax',
           'Cache-Control':'no-store',
           'X-Robots-Tag':'noindex,nofollow'
@@ -63,7 +69,7 @@ export default {
     const cookie=request.headers.get('Cookie')||'';
     const token=cookie.split(';').map(c=>c.trim()).find(c=>c.startsWith('__discordia_preview='))
       ?.slice('__discordia_preview='.length)||'';
-    if(!same(token,env.WEB_PREVIEW_SESSION_SECRET))return lockPage();
+    if(!same(token,sessionValue))return lockPage();
     if(request.method!=='GET'&&request.method!=='HEAD')
       return new Response('Método não permitido',{status:405});
     const response=await env.ASSETS.fetch(request);
