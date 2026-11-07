@@ -1,6 +1,7 @@
-# Discórdia — site oficial
+# Discórdia — site e domínio
 
-**Endereço oficial gratuito:** https://discordia-ari.pages.dev/  
+**Domínio oficial planejado (EU.org):** `discordia.eu.org` — aguardando solicitação e aprovação do registro.  
+**Site publicado provisoriamente:** https://discordia-ari.pages.dev/  
 **Versão atual no canal Testers:** [Discórdia Desktop v1.0.3-rc.20](https://github.com/magaskye/discordia/releases/tag/v1.0.3-rc.20).  
 **Hospedagem:** Cloudflare Pages, publicada automaticamente a partir da branch `main`.  
 
@@ -36,7 +37,7 @@ A Estável antiga `v1.0.3` foi retirada do GitHub por falhas de compatibilidade 
 
 **Importante:** quem instalou uma RC11 privada anterior com a mesma numeração precisa reinstalar manualmente a nova edição, pois o autoatualizador não troca binários entre versões de número idêntico.
 
-**Site oficial atual:** https://discordia-ari.pages.dev/  
+**Site publicado durante o registro:** https://discordia-ari.pages.dev/  
 **Endereço anterior (mantido):** https://magaskye.github.io/discordia/  
 **Release:** https://github.com/magaskye/discordia/releases/tag/v1.0.3-rc.11
 
