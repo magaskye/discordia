@@ -17,6 +17,10 @@ const expectedSession=async code=>{
     new TextEncoder().encode('discordia-web-testers-cookie-v1:'+code));
   return Array.from(new Uint8Array(bytes),b=>b.toString(16).padStart(2,'0')).join('');
 };
+const sha256Hex=async value=>{
+  const bytes=await crypto.subtle.digest('SHA-256',new TextEncoder().encode(String(value)));
+  return Array.from(new Uint8Array(bytes),b=>b.toString(16).padStart(2,'0')).join('');
+};
 const lockPage=(failure='')=>{
   const html='<!doctype html><html lang="pt-BR"><head><meta charset="utf-8">'+
     '<meta name="viewport" content="width=device-width,initial-scale=1">'+
@@ -81,6 +85,45 @@ export default {
     const token=cookie.split(';').map(c=>c.trim()).find(c=>c.startsWith('__discordia_preview='))
       ?.slice('__discordia_preview='.length)||'';
     if(!same(token,sessionValue))return lockPage();
+    // The password-protected Pages preview is the only public ingress for
+    // Quick Rooms. Durable Objects are bound in Pages Preview, never Production.
+    const roomSocket=u.pathname.match(/^\/api\/rooms\/([a-f0-9]{48})\/connect$/);
+    if(u.pathname==='/api/rooms' || u.pathname==='/api/rooms/health' || roomSocket){
+      const ready=Boolean(env.QUICK_ROOMS&&env.QUICK_ROOM_ADMISSION);
+      const respond=(data,status=200)=>new Response(JSON.stringify(data),{
+        status,headers:{'Content-Type':'application/json; charset=utf-8',
+          'Cache-Control':'no-store','X-Robots-Tag':'noindex,nofollow'}
+      });
+      if(!ready)return respond({error:'quick_rooms_unavailable'},503);
+      if(u.pathname==='/api/rooms/health' && request.method==='GET')
+        return respond({ok:true,staging:true,roomsEnabled:true});
+      if(u.pathname==='/api/rooms'&&request.method==='POST'){
+        const origin=request.headers.get('Origin');
+        const site=request.headers.get('Sec-Fetch-Site');
+        const trusted=site?(site==='same-origin'||site==='none'):(origin===u.origin);
+        if(!trusted)return respond({error:'same_origin_required'},403);
+        try{
+          const ip=request.headers.get('CF-Connecting-IP')||'unknown';
+          // The Durable Object receives a keyed hash, never the real IP.
+          const clientHash=await expectedSession('client:'+ip+':'+env.WEB_PREVIEW_ACCESS_CODE);
+          const allowed=await env.QUICK_ROOM_ADMISSION.getByName('preview-global').allow(clientHash);
+          if(!allowed)return respond({error:'room_create_rate_limited'},429);
+          const randomHex=n=>Array.from(crypto.getRandomValues(new Uint8Array(n)),
+            b=>b.toString(16).padStart(2,'0')).join('');
+          const roomId=randomHex(24),hostKey=randomHex(32);
+          const hostHash=await sha256Hex(hostKey);
+          const created=await env.QUICK_ROOMS.getByName(roomId).createRoom(hostHash);
+          if(!created)return respond({error:'room_collision'},409);
+          return respond({roomId,hostKey,expiresInSeconds:7200},201);
+        }catch{return respond({error:'room_service_unavailable'},503);}
+      }
+      if(roomSocket&&request.method==='GET'&&
+         request.headers.get('Upgrade')?.toLowerCase()==='websocket'){
+        try{return await env.QUICK_ROOMS.getByName(roomSocket[1]).fetch(request);}
+        catch{return respond({error:'room_service_unavailable'},503);}
+      }
+      return respond({error:'route_not_found'},404);
+    }
     if(request.method!=='GET'&&request.method!=='HEAD')
       return new Response('Método não permitido',{status:405});
     const response=await env.ASSETS.fetch(request);
