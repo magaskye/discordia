@@ -80,12 +80,12 @@
     updatePromptIcon(device);
     setup(device==='ios'?'Você está no iPhone ou iPad':'Acesso pelo navegador',
       device==='ios'?'O APK Android não funciona no iPhone. Conheça o projeto Web e veja outras plataformas.':
-        'A versão Windows é exclusiva para PC compatível. Conheça a versão Web em desenvolvimento.',
-      'DISCÓRDIA WEB · EM DESENVOLVIMENTO',
-      device==='ios'?'iPhone/iPad · versão Web ainda não liberada':
-        'Navegador · versão Web ainda não liberada',
+        'A versão Windows é para PCs compatíveis. Conheça a prévia privada do Discórdia Web.',
+      'DISCÓRDIA WEB · PRÉVIA POR CONVITE',
+      device==='ios'?'iPhone/iPad · prévia Web privada por código':
+        'Navegador · Web privada em testes',
       'Conhecer versão Web','Ver todas as plataformas','./web/','#plataformas');
-    heroDescription.textContent='O Discórdia está chegando ao navegador, com servidores, canais e mensagens conectados à mesma comunidade. A versão Web ainda passa por testes de autenticação, segurança e compatibilidade, sem lançamento público confirmado.';
+    heroDescription.textContent='O Discórdia Web já tem prévia privada com salas temporárias, chat, tela cheia e contas existentes em testes. A página Web explica o acesso por convite; a abertura irrestrita ainda depende de segurança e homologação.';
     const card=document.querySelector(device==='ios'?'.dp-iphone':'.dp-web');
     if(card?.parentElement)card.parentElement.prepend(card);
   }

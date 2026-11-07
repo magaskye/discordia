@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="theme-color" content="#0b0d19">
-<meta name="description" content="Discórdia nas três plataformas: Windows RC22 disponível, Android disponível para download e Discórdia Web em desenvolvimento. Conheça os downloads e acompanhe as versões oficiais.">
+<meta name="description" content="Discórdia aberto ao público em versões candidatas: Windows RC22 e Android RC20.2. Discórdia Web tem prévia privada com salas temporárias por convite. Conheça os downloads e acompanhe as versões oficiais.">
 <meta property="og:title" content="Discórdia Desktop — Seus amigos. Seu universo.">
 <meta property="og:description" content="RC22 Testers: VeloSinc com bitrate/FPS mais estáveis, perfil cinema mais leve, recuperação de vídeo e áudio preservado.">
 <meta property="og:type" content="website">
@@ -27,6 +27,7 @@
 <link rel="stylesheet" href="./account-entry-20261101.css?v=3">
 <link rel="stylesheet" href="./rc17-novidades-20261102.css?v=1">
 <link rel="stylesheet" href="./plataformas-20261107.css?v=3">
+<link rel="stylesheet" href="./public-release-20261107.css?v=1">
 <link rel="stylesheet" href="./cross-platform-nav-20261107.css?v=1">
 <script src="./plataformas-20261107.js?v=4" defer></script>
 </head>
@@ -37,7 +38,7 @@
   <a href="#inicio" class="brand" aria-label="Discórdia Desktop — início"><img src="./discordia-orbit-app.png" alt="" width="46" height="46"><span>Disc<span class="accent">ó</span>rdia<span class="pink">.</span></span></a>
   <button id="nav-toggle" class="nav-toggle" type="button" aria-controls="nav-main" aria-expanded="false" aria-label="Abrir menu"><span></span><span></span><span></span></button>
   <nav id="nav-main" class="navigation" aria-label="Navegação principal">
-    <a href="#plataformas">Plataformas</a><a href="#recursos">Experiência</a><a href="#experiencia">Transmissões</a><a href="#tecnologia">Conexões</a><a href="#velosinc">VeloSinc</a><a class="nav-support" href="#apoie">Apoie o projeto ♥</a><a class="nav-admin-entry" href="https://discordia-admin.netlify.app/" target="_blank" rel="noopener noreferrer" aria-label="Área administrativa em preparação, abre em nova aba"><span aria-hidden="true">🔒</span> Área Admin <small>Em preparação</small></a>
+    <a href="#plataformas">Plataformas</a><a href="#acesso-publico">Lançamentos</a><a href="#recursos">Experiência</a><a href="#experiencia">Transmissões</a><a href="#tecnologia">Conexões</a><a href="#velosinc">VeloSinc</a><a class="nav-support" href="#apoie">Apoie o projeto ♥</a><a class="nav-admin-entry" href="https://discordia-admin.netlify.app/" target="_blank" rel="noopener noreferrer" aria-label="Área administrativa em preparação, abre em nova aba"><span aria-hidden="true">🔒</span> Área Admin <small>Em preparação</small></a>
   </nav>
   <div class="nav-actions">
     <div class="nav-account-slot" id="nav-account-slot">
@@ -142,14 +143,45 @@
     <a class="dp-cta dp-cta-secondary" href="./web/">Conhecer a versão para navegador <span aria-hidden="true">↗</span></a>
    </article>
    <article class="dp-card dp-web">
-    <div class="dp-card-top"><span class="dp-symbol dp-brand-icon dp-brand-icon--web" aria-hidden="true"><img src="./platform-icons/web.svg" alt="" width="38" height="38" loading="lazy"></span><span class="dp-status dp-status-pending">EM DESENVOLVIMENTO</span></div>
+    <div class="dp-card-top"><span class="dp-symbol dp-brand-icon dp-brand-icon--web" aria-hidden="true"><img src="./platform-icons/web.svg" alt="" width="38" height="38" loading="lazy"></span><span class="dp-status dp-status-pending">PRÉVIA PRIVADA ATIVA</span></div>
     <p class="dp-overline">NAVEGADOR</p><h3>Discórdia Web</h3>
-    <p>Uma versão para navegar sem instalar. O aplicativo de canais e mensagens já está em desenvolvimento, mas ainda não tem acesso público.</p>
-    <div class="dp-tags"><span>Web completa</span><span>Salas rápidas: planejadas</span></div>
+    <p>A prévia privada já permite login com contas existentes, sala rápida por link, chat, compartilhamento de tela sem áudio e tela cheia. A abertura pública irrestrita depende de segurança e homologação.</p>
+    <div class="dp-tags"><span>Contas existentes: em testes</span><span>Salas rápidas: prévia privada</span></div>
     <a class="dp-cta dp-cta-secondary" href="./web/">Conhecer o Discórdia Web <span aria-hidden="true">↗</span></a>
    </article>
   </div>
   <p class="dp-disclaimer">Downloads e acessos são liberados individualmente quando cada edição passa pelos requisitos de segurança e publicação.</p>
+ </div>
+</section>
+
+<section class="dl-public-release" id="acesso-publico" aria-labelledby="dl-public-release-title">
+ <div class="container dl-public-inner">
+  <div class="dl-public-heading">
+   <span class="dl-public-eyebrow">ATUALIZAÇÃO OFICIAL · 07 NOV 2026</span>
+   <h2 id="dl-public-release-title">DISCÓRDIA ABERTO<br><em>PARA QUEM QUER TESTAR.</em></h2>
+   <p>O projeto já oferece versões candidatas públicas para Windows e Android. A experiência Web também está em testes reais, mas continua com acesso por convite enquanto concluímos segurança, autorização de mídia e compatibilidade.</p>
+  </div>
+  <div class="dl-public-grid">
+   <article class="dl-public-card">
+    <div class="dl-public-card-top"><img src="./platform-icons/windows.svg" width="28" height="28" alt=""><span>DOWNLOAD PÚBLICO · RC22</span></div>
+    <h3>Windows 1.0.3 RC22</h3>
+    <p>Instalador e portátil para Windows 10/11 x64. VeloSinc 4 com ajustes de FPS, bitrate, recuperação do vídeo e perfil para filmes e séries. Ainda é uma versão candidata.</p>
+    <a href="https://github.com/magaskye/discordia/releases/tag/v1.0.3-rc.22" target="_blank" rel="noopener noreferrer">Ver instalador, portátil e SHA-256 ↗</a>
+   </article>
+   <article class="dl-public-card">
+    <div class="dl-public-card-top"><img src="./platform-icons/android.svg" width="28" height="28" alt=""><span>APK PÚBLICO · RC20.2</span></div>
+    <h3>Android 1.0.3-rc.20.2</h3>
+    <p>APK oficial assinado para conversas, servidores e amigos usando a mesma conta do Desktop. Voz e vídeo continuam em desenvolvimento; a entrada por link ainda não integra este APK.</p>
+    <a href="./android/">Baixar APK e conferir assinatura ↗</a>
+   </article>
+   <article class="dl-public-card dl-public-card-preview">
+    <div class="dl-public-card-top"><img src="./platform-icons/web.svg" width="28" height="28" alt=""><span>PRÉVIA PRIVADA · POR CONVITE</span></div>
+    <h3>Web: salas e navegador</h3>
+    <p>Já há login para contas existentes e salas temporárias de até 6 pessoas, com chat, vídeo de tela e tela cheia na prévia. O acesso continua protegido por código. O convite não reproduz automaticamente o canal privado do Desktop.</p>
+    <a href="./web/">Conhecer a Web e a prévia protegida ↗</a>
+   </article>
+  </div>
+  <p class="dl-public-footnote">As funções de criar ou entrar por link dentro do aplicativo Desktop e Android já foram implementadas em código de desenvolvimento, mas <strong>não estão nos instaladores públicos acima</strong>. Ainda faltam distribuição dos novos pacotes e testes entre dispositivos e redes. Não garantimos 1080p60, áudio da tela ou funcionamento em todas as conexões.</p>
  </div>
 </section>
 
@@ -283,6 +315,8 @@
  <div class="container n27-faq-grid">
   <div class="n27-faq-intro"><span class="n27-eyebrow">TUDO O QUE VOCÊ PRECISA SABER</span><h2 id="faq-heading">PERGUNTAS?<br><em>A GENTE RESPONDE.</em></h2><p>Algumas informações importantes para começar a usar o Discórdia com tranquilidade.</p><span class="n27-faq-decoration" aria-hidden="true">?</span></div>
   <div class="n27-faq-items">
+    <details><summary>A versão Web está aberta para todos?</summary><p>A página de informações é pública. O aplicativo Web está em prévia privada com código de testers: login de contas existentes e salas temporárias com chat e compartilhamento de tela sem áudio. Não abrimos acesso irrestrito até concluir testes de segurança, autorização de convidados, TURN e moderação.</p></details>
+    <details><summary>Posso convidar alguém sem conta para uma transmissão do Desktop?</summary><p>É possível criar uma sala temporária separada na Web para convidados e transmitir a tela nela. O link ainda não replica uma transmissão já ativa dentro de um servidor privado do Desktop; o aplicativo público para Windows e o APK atual também não incluem os novos controles de salas por link.</p></details>
     <details><summary>Em quais computadores posso usar?</summary><p>O Discórdia Desktop foi desenvolvido para Windows 10 e 11, em computadores x64. O desempenho de chamadas, câmera e compartilhamento depende do equipamento e da conexão.</p></details>
     <details><summary>Qual a diferença entre instalador e portátil?</summary><p>O instalador adiciona o aplicativo ao Windows. A edição portátil pode ser executada sem uma instalação tradicional. Consulte sempre as instruções de cada Release.</p></details>
     <details><summary>O que é a RC22?</summary><p>A RC22 é a versão candidata 1.0.3-rc.22 para o canal Testers no Windows x64. Concentra ajustes de áudio, vídeo, reconexão e captura em PCs fracos. Ainda precisa de testes de horas com amigos; não é a Estável 1.1.</p></details>
@@ -310,7 +344,7 @@
 <footer class="n27-footer">
  <div class="container n27-footer-head">
    <div class="n27-footer-logo"><a href="#inicio" aria-label="Discórdia — início"><img src="./discordia-orbit-app.png" alt="" width="60" height="60"><span>DISCÓRDIA<span class="n27-footer-dot">.</span></span></a><p>Um projeto independente de comunicação feito para reunir amigos e histórias.</p></div>
-   <div class="n27-footer-links"><div><strong>EXPLORE</strong><a href="#recursos">A experiência</a><a href="#tecnologia">Conexões</a><a href="#velosinc">VeloSinc</a></div><div><strong>COMUNIDADE</strong><a href="./versoes.html">Histórico de versões</a><a href="./apoie.html">Apoie o projeto</a><a href="#perguntas">Dúvidas</a></div><div><strong>OFICIAL</strong><a href="#plataformas">Plataformas</a><a href="./android/">Android</a><a href="./web/">Web</a><a href="#downloads">Downloads</a><a href="https://discordia-contas-573e7.web.app/">Minha Conta</a><a href="./privacidade.html">Privacidade</a><a href="./termos.html">Termos de uso</a><a class="footer-admin-entry" href="https://discordia-admin.netlify.app/" target="_blank" rel="noopener noreferrer" aria-label="Área administrativa em preparação, abre em nova aba">🔒 Área Administrativa (em preparação)</a><a href="https://github.com/magaskye/discordia/releases" target="_blank" rel="noopener noreferrer">Versões no GitHub ↗</a></div></div>
+   <div class="n27-footer-links"><div><strong>EXPLORE</strong><a href="#recursos">A experiência</a><a href="#tecnologia">Conexões</a><a href="#velosinc">VeloSinc</a></div><div><strong>COMUNIDADE</strong><a href="./versoes.html">Histórico de versões</a><a href="./apoie.html">Apoie o projeto</a><a href="#perguntas">Dúvidas</a></div><div><strong>OFICIAL</strong><a href="#plataformas">Plataformas</a><a href="./android/">Android</a><a href="./web/">Web</a><a href="#acesso-publico">Lançamentos</a><a href="#downloads">Downloads</a><a href="https://discordia-contas-573e7.web.app/">Minha Conta</a><a href="./privacidade.html">Privacidade</a><a href="./termos.html">Termos de uso</a><a class="footer-admin-entry" href="https://discordia-admin.netlify.app/" target="_blank" rel="noopener noreferrer" aria-label="Área administrativa em preparação, abre em nova aba">🔒 Área Administrativa (em preparação)</a><a href="https://github.com/magaskye/discordia/releases" target="_blank" rel="noopener noreferrer">Versões no GitHub ↗</a></div></div>
  </div>
  <div class="container n27-footer-bottom"><span>© 2026 Discórdia Desktop · Todos os direitos reservados.</span><span>Desenvolvido por <strong>Carlos Eduardo Lopes</strong>.</span></div>
  <div class="container n27-footer-testers" aria-label="Homenagem aos testers do Discórdia">
