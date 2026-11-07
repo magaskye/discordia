@@ -3,29 +3,96 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="theme-color" content="#151221">
-<meta name="description" content="Discórdia para Android — canal oficial de versões e atualizações.">
-<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self'; connect-src 'self'; base-uri 'self'; object-src 'none'">
+<meta name="theme-color" content="#28105c">
+<meta name="description" content="Discórdia para Android. Servidores, mensagens e amigos no celular com a mesma conta do PC. Baixe o APK oficial assinado pelo projeto.">
+<meta property="og:title" content="Discórdia Android · Sua galera, em qualquer lugar">
+<meta property="og:description" content="O universo do Discórdia no seu Android: mesma conta, conversas e servidores. Instale pelo canal oficial.">
+<meta property="og:type" content="website">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'self'; base-uri 'self'; object-src 'none'; form-action 'none'; upgrade-insecure-requests">
 <link rel="icon" href="../discordia-orbit-app.png" type="image/png">
-<link rel="stylesheet" href="./site.css">
-<title>Discórdia · Android</title>
 <link rel="canonical" href="https://discordia-ari.pages.dev/android/">
+<link rel="stylesheet" href="./site.css?v=android-rc20-20261107">
+<script src="./app.js?v=android-rc20-20261107" defer></script>
+<title>Discórdia Android · Sua galera. Onde você estiver.</title>
 </head>
 <body>
-<main class="page">
- <a href="../" class="back">← Site oficial</a>
- <header><img src="../discordia-orbit-app.png" alt="Emblema oficial Órbita do Discórdia" width="76" height="76"><div><span class="eyebrow">DISPONIBILIDADE OFICIAL</span><h1>DISCÓRDIA <em>ANDROID</em></h1></div></header>
- <p>Suas conversas e servidores no celular, conectados à mesma conta do Discórdia para Windows.</p>
- <section class="release" aria-live="polite">
-   <h2>Instalador Android</h2>
-   <p id="status">Verificando o canal de lançamento...</p>
-   <div id="details"></div>
-   <a id="download" href="#" class="download" hidden rel="noopener noreferrer">Baixar APK oficial</a>
+<a class="skip-link" href="#download-section">Pular para download</a>
+<header class="topbar">
+ <div class="container nav-inner">
+  <a class="brand" href="../" aria-label="Discórdia, página inicial"><img src="../discordia-orbit-app.png" width="44" height="44" alt=""><span>Disc<span class="brand-o">ó</span>rdia<span class="brand-dot">.</span></span></a>
+  <nav class="toplinks" aria-label="Navegação"><a href="#recursos">Recursos</a><a href="#instalar">Como instalar</a><a href="../web/">Web</a><a href="../#downloads">Windows</a></nav>
+  <a class="top-cta" href="#download-section">Baixar para Android <span aria-hidden="true">↗</span></a>
+ </div>
+</header>
+<main>
+ <section class="hero" aria-labelledby="hero-title">
+  <div class="sky" aria-hidden="true"></div>
+  <div class="container hero-grid">
+   <div class="hero-copy">
+    <div class="hero-tag"><span class="live-dot" aria-hidden="true"></span> DISPONÍVEL PARA ANDROID · CANAL RC</div>
+    <h1 id="hero-title">SUA GALERA.<br>SEU UNIVERSO.<br><em>NO SEU BOLSO.</em></h1>
+    <p>Seus servidores, amizades e conversas seguem com você. Entre no Discórdia Android com <strong>a mesma conta que usa no computador</strong> e continue de onde parou.</p>
+    <div class="hero-actions">
+     <a href="#download-section" class="button button-light"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path fill="currentColor" d="M12 3v11m0 0 4-4m-4 4-4-4M5 17v3h14v-3" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill-rule="evenodd"/></svg> Baixar APK oficial</a>
+     <a class="button button-outline" href="#recursos">Conhecer a experiência <span aria-hidden="true">↗</span></a>
+    </div>
+    <div class="hero-proof"><span><span class="proof-dot" aria-hidden="true"></span> Mesmo login</span><span>APK assinado</span><span>Atualizações oficiais</span></div>
+   </div>
+   <div class="hero-art" role="img" aria-label="Ilustração conceitual da interface de conversas do Discórdia Android, com canais de texto e amigos">
+    <div class="halo halo-a"></div><div class="halo halo-b"></div>
+    <div class="phone">
+     <div class="phone-glass">
+      <div class="phone-notch"></div>
+      <div class="phone-head"><img src="../discordia-orbit-app.png" width="30" height="30" alt=""><span><b>DISCÓRDIA</b><small>O SEU UNIVERSO, SEM PAUSA</small></span><span class="status-dot"></span></div>
+      <div class="phone-guild"><span class="guild-symbol">✦</span><div><strong>Nosso lugar</strong><small>Seus amigos estão por aqui</small></div><span>⌄</span></div>
+      <div class="phone-channel"># geral <span>● 3 online</span></div>
+      <div class="bubble bubble-friend"><span class="bubble-avatar">L</span><div><small>Luna · agora</small><p>Partiu jogar hoje? ✨</p></div></div>
+      <div class="bubble bubble-self"><div><small>Você · agora</small><p>Bora! Já tô entrando 🚀</p></div></div>
+      <div class="bubble bubble-friend"><span class="bubble-avatar pink">F</span><div><small>Felipe · agora</small><p>Vejo vocês no servidor!</p></div></div>
+      <div class="phone-compose"><span>Mensagem em #geral</span><strong>➤</strong></div>
+      <div class="phone-tabs"><span>◉<small>Servidores</small></span><span>♧<small>Amigos</small></span><span>✉<small>Mensagens</small></span></div>
+     </div>
+    </div>
+    <div class="floating-logo"><svg class="android-symbol" viewBox="0 0 64 64" width="34" height="34" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="3"><path d="m17 6 5 8M47 6l-5 8"/></g><g fill="currentColor"><path d="M14 29a18 18 0 0 1 36 0v3H14z"/><rect x="14" y="34" width="36" height="19" rx="3"/><rect x="6" y="34" width="6" height="19" rx="3"/><rect x="52" y="34" width="6" height="19" rx="3"/><rect x="21" y="49" width="6" height="12" rx="3"/><rect x="37" y="49" width="6" height="12" rx="3"/></g><g fill="#1d1740"><circle cx="24" cy="25" r="1.8"/><circle cx="40" cy="25" r="1.8"/></g></svg><div><strong>ANDROID</strong><span>MESMO DISCÓRDIA</span></div></div>
+    <small class="concept-note">PRÉVIA ILUSTRATIVA · NÃO É CAPTURA DO APP</small>
+   </div>
+  </div>
  </section>
- <p class="notice">As atualizações são assinadas com a mesma chave do aplicativo. O Android solicita a confirmação de instalação. Não é necessário desinstalar a versão anterior se o certificado e o identificador forem iguais e o código da versão aumentar.</p>
- <p class="notice">O Discórdia Mobile ainda tem recursos em desenvolvimento. A disponibilidade de voz, vídeo e transmissão depende de versões e validações específicas; nenhum recurso não lançado é anunciado como pronto.</p>
- <footer>© Discórdia · Canal de atualizações Android independente do Windows · <a href="../web/">Conhecer a versão Web</a></footer>
+ <section class="download-wrap" id="download-section" aria-labelledby="download-title">
+  <div class="container">
+   <div class="download-card">
+    <div class="download-lead">
+     <div class="download-icon"><svg class="android-symbol" viewBox="0 0 64 64" width="42" height="42" aria-hidden="true"><path d="M17 6 22 14M47 6l-5 8" stroke="currentColor" stroke-width="3" stroke-linecap="round" fill="none"/><path fill="currentColor" d="M14 29a18 18 0 0 1 36 0v3H14zM14 34h36v19H14zM6 34h6v19H6zM52 34h6v19h-6zM21 49h6v12h-6zM37 49h6v12h-6z"/><circle cx="24" cy="25" r="2" fill="#25204f"/><circle cx="40" cy="25" r="2" fill="#25204f"/></svg></div>
+     <div><span class="eyebrow">CANAL OFICIAL DE INSTALAÇÃO</span><h2 id="download-title">Seu Discórdia, <em>agora no Android.</em></h2><p>Download direto pelo GitHub Releases. Arquivo verificado e assinado com a chave oficial do aplicativo.</p></div>
+    </div>
+    <div class="download-panel">
+     <div class="download-status"><span class="live-dot" aria-hidden="true"></span><span id="status" role="status" aria-live="polite">Verificando versão oficial...</span></div>
+     <div class="version-row"><div><small>VERSÃO ATUAL</small><strong id="version">Consultando...</strong></div><div><small>TAMANHO</small><strong id="size">—</strong></div></div>
+     <a id="download" class="button button-download" hidden rel="noopener noreferrer" href="#">↓ Baixar APK para Android <span>↗</span></a>
+     <a id="release-link" href="#" class="release-link" rel="noopener noreferrer" hidden>Ver página da versão no GitHub ↗</a>
+     <div id="details" class="checksum" hidden><span>Integridade do APK · SHA-256</span><code id="sha256"></code><button id="copy-hash" type="button" aria-label="Copiar SHA-256 do APK">Copiar hash</button><small id="hash-feedback" role="status"></small></div>
+     <p class="download-note">Instalação fora da Play Store, com sua autorização. Nenhum download é habilitado sem validar os dados oficiais.</p>
+    </div>
+   </div>
+  </div>
+ </section>
+ <section class="features" id="recursos" aria-labelledby="features-title">
+  <div class="container">
+   <div class="section-heading"><div><span class="eyebrow">✦ UM UNIVERSO, EM MAIS TELAS</span><h2 id="features-title">O que já funciona.<br><em>O que vem depois.</em></h2></div><p>A edição Android compartilha a conta e as conversas do Discórdia Desktop. Recursos de mídia ainda estão em desenvolvimento e não são anunciados como disponíveis.</p></div>
+   <div class="feature-grid">
+    <article class="feature-card"><span class="feature-ic">✉</span><span class="feature-label ready">DISPONÍVEL</span><h3>Conversas que continuam</h3><p>Mensagens nos canais, edição, exclusão e reações sincronizadas com o computador.</p></article>
+    <article class="feature-card"><span class="feature-ic">♧</span><span class="feature-label ready">DISPONÍVEL</span><h3>Seus amigos pertinho</h3><p>Lista de amigos, solicitações e mensagens diretas usando a mesma conta.</p></article>
+    <article class="feature-card"><span class="feature-ic">✦</span><span class="feature-label ready">DISPONÍVEL</span><h3>Seu espaço, suas regras</h3><p>Servidores, canais de texto, convites, criação de servidores e fóruns.</p></article>
+    <article class="feature-card future"><span class="feature-ic">◉</span><span class="feature-label planned">EM DESENVOLVIMENTO</span><h3>Voz, vídeo e transmissão</h3><p>Chamadas, compartilhamento de tela, áudio em segundo plano e notificações nativas ainda exigem implementação e testes entre aparelhos.</p></article>
+   </div>
+  </div>
+ </section>
+ <section class="instructions" id="instalar" aria-labelledby="install-title"><div class="container instruction-grid">
+  <div><span class="eyebrow">INSTALAÇÃO EM POUCOS PASSOS</span><h2 id="install-title">Entre no seu universo<br><em>sem perder nada.</em></h2><p>Se você já tem a RC20 instalada, use o APK oficial da versão mais recente para atualizar. Não desinstale a edição anterior: isso pode remover dados locais.</p><a class="install-anchor" href="#download-section">Ir para o download ↗</a></div>
+  <ol class="steps"><li><b>01</b><div><strong>Baixe pelo canal oficial</strong><p>Toque em “Baixar APK” e aguarde o arquivo terminar.</p></div></li><li><b>02</b><div><strong>Autorize a instalação</strong><p>O Android poderá pedir permissão para instalar apps dessa origem. Confirme apenas se você reconhece o arquivo oficial.</p></div></li><li><b>03</b><div><strong>Entre com sua conta</strong><p>Use o mesmo e-mail e senha do Discórdia Desktop. Atualizações futuras poderão ser avisadas pelo próprio aplicativo.</p></div></li></ol>
+ </div></section>
+ <section class="cross-platform"><div class="container cross-inner"><img src="../discordia-orbit-app.png" width="62" height="62" alt=""><div><strong>UM DISCÓRDIA. MUITOS JEITOS DE ESTAR JUNTO.</strong><p>Continue no PC, conheça a versão Web ou volte ao universo principal.</p></div><div class="cross-links"><a href="../#downloads">Windows ↗</a><a href="../web/">Web ↗</a><a href="../">Site oficial ↗</a></div></div></section>
 </main>
-<script src="./app.js" defer></script>
+<footer class="footer"><div class="container footer-inner"><span>© 2026 Discórdia · Sua galera. Seu jogo. Seu lugar.</span><div><a href="../privacidade.html">Privacidade</a><a href="../termos.html">Termos</a><a href="https://github.com/magaskye/discordia/releases" rel="noopener noreferrer">GitHub Releases</a></div></div></footer>
 </body>
 </html>
