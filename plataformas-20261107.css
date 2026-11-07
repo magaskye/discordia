@@ -49,3 +49,25 @@
 html[data-discordia-device="android"] .dp-android{border-color:#b4a2ff;background:linear-gradient(145deg,#302653,#1b1d3b)}
 html[data-discordia-device="ios"] .dp-web,html[data-discordia-device="other"] .dp-web{border-color:#b4a2ff;background:linear-gradient(145deg,#302653,#1b1d3b)}
 @media(max-width:720px){.dp-device-prompt-inner{gap:.7rem}.dp-device-prompt-icon{flex-basis:2.2rem;width:2.2rem;height:2.2rem}.dp-device-prompt-actions{width:100%}.dp-device-prompt-actions a{flex:1 1 140px}.dp-device-prompt-copy{flex:1 1 calc(100% - 3rem)}}
+
+/* RC20: símbolos oficiais de cada plataforma, imagens SVG locais e leve acabamento de vidro. */
+.dp-platforms .dp-grid{grid-template-columns:repeat(4,minmax(0,1fr));gap:1rem}
+.dp-platforms .dp-card{padding:clamp(1.15rem,1.8vw,1.75rem)}
+.dp-platforms .dp-card h3{font-size:clamp(1.3rem,1.55vw,1.72rem)}
+.dp-brand-icon{position:relative;isolation:isolate;display:grid;place-items:center;overflow:hidden;border:1px solid rgba(255,255,255,.18);border-radius:18px;box-shadow:0 15px 32px rgba(0,0,0,.25),inset 0 1px 0 rgba(255,255,255,.18);transition:transform .22s ease,box-shadow .22s ease;flex-shrink:0}
+.dp-symbol.dp-brand-icon{width:64px;height:64px;background:#2c3a65}
+.dp-brand-icon::before{content:"";position:absolute;inset:0;background:linear-gradient(140deg,rgba(255,255,255,.27),transparent 50%,rgba(0,0,0,.16));pointer-events:none}
+.dp-brand-icon::after{content:"";position:absolute;left:7px;right:7px;top:4px;height:18px;background:radial-gradient(ellipse at center,rgba(255,255,255,.21),transparent 70%);pointer-events:none}
+.dp-brand-icon img{position:relative;z-index:1;display:block;width:38px;height:38px;object-fit:contain;filter:drop-shadow(0 2px 5px rgba(0,0,0,.18))}
+.dp-symbol.dp-brand-icon--windows,.dp-brand-icon--windows{background:linear-gradient(135deg,#1174d9 2%,#00b7f1 100%);box-shadow:0 15px 28px rgba(0,128,243,.24),inset 0 1px 0 rgba(255,255,255,.25)}
+.dp-symbol.dp-brand-icon--android,.dp-brand-icon--android{background:linear-gradient(135deg,#39b96c,#177448);box-shadow:0 15px 28px rgba(52,190,107,.18),inset 0 1px 0 rgba(255,255,255,.2)}
+.dp-symbol.dp-brand-icon--apple,.dp-brand-icon--apple{background:linear-gradient(145deg,#686b7e,#1c2030);box-shadow:0 15px 28px rgba(0,0,0,.28),inset 0 1px 0 rgba(255,255,255,.2)}
+.dp-symbol.dp-brand-icon--web,.dp-brand-icon--web{background:linear-gradient(135deg,#7460e8,#403daf);box-shadow:0 15px 28px rgba(111,80,219,.25),inset 0 1px 0 rgba(255,255,255,.2)}
+.dp-card:hover .dp-brand-icon{transform:translateY(-3px);box-shadow:0 20px 34px rgba(0,0,0,.26),inset 0 1px 0 rgba(255,255,255,.21)}
+.dp-card.dp-iphone{background:linear-gradient(145deg,rgba(38,39,63,.92),rgba(30,29,50,.88))}
+.dp-card.dp-iphone .dp-status{font-size:.61rem}
+.dp-device-prompt-icon.dp-brand-icon{display:grid;place-items:center;width:44px;height:44px;flex:0 0 44px;border-radius:13px}
+.dp-device-prompt-icon.dp-brand-icon img{width:25px;height:25px;object-fit:contain}
+@media(max-width:1120px){.dp-platforms .dp-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.dp-platforms .dp-card:last-child{grid-column:auto}}
+@media(max-width:610px){.dp-platforms .dp-grid{grid-template-columns:1fr}.dp-platforms .dp-card:last-child{grid-column:auto}.dp-device-prompt-icon.dp-brand-icon{width:40px;height:40px;flex-basis:40px}}
+@media(prefers-reduced-motion:reduce){.dp-brand-icon{transition:none}.dp-card:hover .dp-brand-icon{transform:none}}

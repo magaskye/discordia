@@ -16,6 +16,21 @@
   const heroBadge=byId('release-hero-badge');
   const heroDetails=byId('device-platform-detail');
   const androidBadge=byId('dp-android-status');
+  const promptIcon=byId('device-prompt-icon');
+  const promptImage=byId('device-prompt-icon-image');
+  const platformIcons={
+    windows:'./platform-icons/windows.svg',
+    android:'./platform-icons/android.svg',
+    ios:'./platform-icons/apple.svg',
+    other:'./platform-icons/web.svg'
+  };
+  function updatePromptIcon(which){
+    const key=Object.prototype.hasOwnProperty.call(platformIcons,which)?which:'other';
+    if(!promptIcon||!promptImage)return;
+    promptImage.src=platformIcons[key];
+    promptIcon.className='dp-device-prompt-icon dp-brand-icon dp-brand-icon--'+(key==='ios'?'apple':key);
+  }
+
   if(!primary||!secondary||!nav||!prompt||!promptTitle||!promptDescription||
      !promptCTA||!promptAlternative||!heroDescription||!heroBadge||!heroDetails)return;
 
@@ -45,7 +60,7 @@
     prompt.hidden=false;
   }
   if(device==='android'){
-    prompt.querySelector('.dp-device-prompt-icon').textContent='◈';
+    updatePromptIcon('android');
     setup('Você está no Android',
       'Instale o Discórdia Mobile e continue suas conversas no celular.',
       'DISCÓRDIA ANDROID · CANAL OFICIAL',
@@ -55,13 +70,14 @@
     const card=document.querySelector('.dp-android');
     if(card?.parentElement)card.parentElement.prepend(card);
   }else if(device==='windows'){
+    updatePromptIcon('windows');
     setup('Você está no Windows',
       'Baixe a versão Desktop ou conheça o Discórdia Web.',
       'RC20 · VERSÃO CANDIDATA DISPONÍVEL',
       'Windows 10 e 11 · v1.0.3-rc.20 · Testers · instalador e portátil',
       'Baixar para Windows','Conhecer versão Web','#downloads','./web/');
   }else {
-    prompt.querySelector('.dp-device-prompt-icon').textContent='◎';
+    updatePromptIcon(device);
     setup(device==='ios'?'Você está no iPhone ou iPad':'Acesso pelo navegador',
       device==='ios'?'O APK Android não funciona no iPhone. Conheça o projeto Web e veja outras plataformas.':
         'A versão Windows é exclusiva para PC compatível. Conheça a versão Web em desenvolvimento.',
@@ -70,7 +86,7 @@
         'Navegador · versão Web ainda não liberada',
       'Conhecer versão Web','Ver todas as plataformas','./web/','#plataformas');
     heroDescription.textContent='O Discórdia está chegando ao navegador, com servidores, canais e mensagens conectados à mesma comunidade. A versão Web ainda passa por testes de autenticação, segurança e compatibilidade, sem lançamento público confirmado.';
-    const card=document.querySelector('.dp-web');
+    const card=document.querySelector(device==='ios'?'.dp-iphone':'.dp-web');
     if(card?.parentElement)card.parentElement.prepend(card);
   }
 

@@ -26,8 +26,8 @@
 <link rel="stylesheet" href="./homenagem-testers-especiais-v2-20261101.css">
 <link rel="stylesheet" href="./account-entry-20261101.css?v=3">
 <link rel="stylesheet" href="./rc17-novidades-20261102.css?v=1">
-<link rel="stylesheet" href="./plataformas-20261107.css?v=2">
-<script src="./plataformas-20261107.js?v=2" defer></script>
+<link rel="stylesheet" href="./plataformas-20261107.css?v=3">
+<script src="./plataformas-20261107.js?v=3" defer></script>
 </head>
 <body>
 <a class="skip-link" href="#principal">Pular para o conteúdo</a>
@@ -65,7 +65,7 @@
 <main id="principal">
 <div class="dp-device-prompt" id="device-prompt" hidden role="region" aria-label="Acesso recomendado para seu dispositivo">
  <div class="container dp-device-prompt-inner">
-  <span class="dp-device-prompt-icon" aria-hidden="true">▣</span>
+  <span class="dp-device-prompt-icon dp-brand-icon dp-brand-icon--windows" id="device-prompt-icon" aria-hidden="true"><img id="device-prompt-icon-image" src="./platform-icons/windows.svg" alt="" width="24" height="24"></span>
   <div class="dp-device-prompt-copy"><strong id="device-prompt-title"></strong><span id="device-prompt-description"></span></div>
   <div class="dp-device-prompt-actions">
    <a id="device-prompt-cta" class="dp-device-prompt-primary" href="#downloads">Baixar para Windows</a>
@@ -112,21 +112,28 @@
   </div>
   <div class="dp-grid">
    <article class="dp-card dp-windows">
-    <div class="dp-card-top"><span class="dp-symbol" aria-hidden="true">▣</span><span class="dp-status dp-status-live">RC20 DISPONÍVEL</span></div>
+    <div class="dp-card-top"><span class="dp-symbol dp-brand-icon dp-brand-icon--windows" aria-hidden="true"><img src="./platform-icons/windows.svg" alt="" width="38" height="38" loading="lazy"></span><span class="dp-status dp-status-live">RC20 DISPONÍVEL</span></div>
     <p class="dp-overline">DESKTOP</p><h3>Discórdia para Windows</h3>
     <p>A experiência completa de testes no PC: servidores, amigos, canais, voz e transmissão. A RC20 continua em homologação.</p>
     <div class="dp-tags"><span>Windows 10/11</span><span>x64</span><span>1.0.3-rc.20</span></div>
     <a class="dp-cta dp-cta-primary" href="#downloads">Baixar para Windows <span aria-hidden="true">↗</span></a>
    </article>
    <article class="dp-card dp-android">
-    <div class="dp-card-top"><span class="dp-symbol" aria-hidden="true">◈</span><span class="dp-status dp-status-live" id="dp-android-status" role="status" aria-live="polite">APK PUBLICADO</span></div>
+    <div class="dp-card-top"><span class="dp-symbol dp-brand-icon dp-brand-icon--android" aria-hidden="true"><img src="./platform-icons/android.svg" alt="" width="38" height="38" loading="lazy"></span><span class="dp-status dp-status-live" id="dp-android-status" role="status" aria-live="polite">APK PUBLICADO</span></div>
     <p class="dp-overline">MOBILE</p><h3>Discórdia para Android</h3>
     <p>Mensagens, servidores, amizades e fóruns no celular, conectados à mesma conta. APK RC20.2 publicado e assinado, com canal próprio de atualizações.</p>
     <div class="dp-tags"><span>Android</span><span>Conta compartilhada</span><span>Canal RC</span></div>
     <a class="dp-cta dp-cta-secondary" href="./android/">Baixar para Android <span aria-hidden="true">↗</span></a>
    </article>
+   <article class="dp-card dp-iphone">
+    <div class="dp-card-top"><span class="dp-symbol dp-brand-icon dp-brand-icon--apple" aria-hidden="true"><img src="./platform-icons/apple.svg" alt="" width="38" height="38" loading="lazy"></span><span class="dp-status dp-status-pending">VIA WEB · EM PREPARAÇÃO</span></div>
+    <p class="dp-overline">IPHONE / IPAD</p><h3>Discórdia no iPhone</h3>
+    <p>Ainda não existe um aplicativo nativo para iOS. O caminho será pelo navegador quando o Discórdia Web for liberado.</p>
+    <div class="dp-tags"><span>iPhone e iPad</span><span>Sem APK</span><span>Web futura</span></div>
+    <a class="dp-cta dp-cta-secondary" href="./web/">Conhecer a versão para navegador <span aria-hidden="true">↗</span></a>
+   </article>
    <article class="dp-card dp-web">
-    <div class="dp-card-top"><span class="dp-symbol" aria-hidden="true">◎</span><span class="dp-status dp-status-pending">EM DESENVOLVIMENTO</span></div>
+    <div class="dp-card-top"><span class="dp-symbol dp-brand-icon dp-brand-icon--web" aria-hidden="true"><img src="./platform-icons/web.svg" alt="" width="38" height="38" loading="lazy"></span><span class="dp-status dp-status-pending">EM DESENVOLVIMENTO</span></div>
     <p class="dp-overline">NAVEGADOR</p><h3>Discórdia Web</h3>
     <p>Uma versão para navegar sem instalar. O aplicativo de canais e mensagens já está em desenvolvimento, mas ainda não tem acesso público.</p>
     <div class="dp-tags"><span>Web completa</span><span>Salas rápidas: planejadas</span></div>
