@@ -26,8 +26,8 @@
 <link rel="stylesheet" href="./homenagem-testers-especiais-v2-20261101.css">
 <link rel="stylesheet" href="./account-entry-20261101.css?v=3">
 <link rel="stylesheet" href="./rc17-novidades-20261102.css?v=1">
-<link rel="stylesheet" href="./plataformas-20261107.css?v=1">
-<script src="./plataformas-20261107.js?v=1" defer></script>
+<link rel="stylesheet" href="./plataformas-20261107.css?v=2">
+<script src="./plataformas-20261107.js?v=2" defer></script>
 </head>
 <body>
 <a class="skip-link" href="#principal">Pular para o conteúdo</a>
@@ -59,10 +59,20 @@
         </div>
       </div>
     </div>
-    <a class="nav-button" href="#downloads">Baixar para Windows <span aria-hidden="true">↗</span></a>
+    <a id="device-nav-cta" class="nav-button" href="#downloads">Baixar para Windows <span aria-hidden="true">↗</span></a>
   </div>
 </div></header>
 <main id="principal">
+<div class="dp-device-prompt" id="device-prompt" hidden role="region" aria-label="Acesso recomendado para seu dispositivo">
+ <div class="container dp-device-prompt-inner">
+  <span class="dp-device-prompt-icon" aria-hidden="true">▣</span>
+  <div class="dp-device-prompt-copy"><strong id="device-prompt-title"></strong><span id="device-prompt-description"></span></div>
+  <div class="dp-device-prompt-actions">
+   <a id="device-prompt-cta" class="dp-device-prompt-primary" href="#downloads">Baixar para Windows</a>
+   <a id="device-prompt-alternative" class="dp-device-prompt-secondary" href="./web/">Conhecer versão Web</a>
+  </div>
+ </div>
+</div>
   
 <section class="n26-hero" id="inicio" aria-labelledby="hero-title">
   <div class="n26-sky" aria-hidden="true"></div>
@@ -71,8 +81,8 @@
       <span class="n26-tag"><span class="n26-live-dot"></span><span id="release-hero-badge">RC20 · VERSÃO CANDIDATA DISPONÍVEL</span></span>
       <h1 id="hero-title">SUA GALERA.<br>SEU JOGO.<br><em>SEU LUGAR.</em></h1>
       <p id="release-hero-description">A <strong>RC20 Versão candidata para o canal Testers</strong> reúne melhorias de recuperação do áudio da transmissão, filas PCM, reconexão de vídeo e presença após sessões longas. O VeloSinc adapta o vídeo por espectador; PCs fracos podem começar com captura mais leve. Voz, mensagens, servidores, SimCity, Minha Conta e os 26 Selos de Órbita continuam. <strong>Os resultados de desempenho, memória e áudio ainda dependem dos testes dos amigos.</strong></p>
-      <div class="n26-hero-actions"><a class="n26-btn n26-btn-white" href="#downloads">↓ Baixar para Windows</a><a class="n26-btn n26-btn-outline" href="#novidades">✦ Novidades da RC20</a></div>
-      <small>Windows 10 e 11 · v1.0.3-rc.20 · Versão candidata · Instalador e portátil</small>
+      <div class="n26-hero-actions"><a id="device-primary-cta" class="n26-btn n26-btn-white" href="#downloads">↓ Baixar para Windows</a><a id="device-secondary-cta" class="n26-btn n26-btn-outline" href="./web/">◈ Conhecer versão Web</a></div>
+      <small id="device-platform-detail">Windows 10 e 11 · v1.0.3-rc.20 · Versão candidata · Instalador e portátil</small>
     </div>
     <div class="n26-hero-scene" role="img" aria-label="Ilustração conceitual de uma chamada de voz e transmissão no Discórdia, com amigos em uma sala">
       <div class="n26-scene-ring ring-one"></div><div class="n26-scene-ring ring-two"></div>

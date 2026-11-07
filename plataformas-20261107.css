@@ -31,3 +31,21 @@
 @media(max-width:920px){.dp-header{grid-template-columns:1fr;gap:1rem}.dp-grid{grid-template-columns:1fr 1fr}.dp-card:last-child{grid-column:1/-1}}
 @media(max-width:610px){.dp-platforms{padding:3.4rem 0}.dp-grid{grid-template-columns:1fr}.dp-card:last-child{grid-column:auto}.dp-card-top{margin-bottom:1.5rem}.dp-card{padding:1.4rem}.dp-header p{font-size:.97rem}}
 @media(prefers-reduced-motion:reduce){.dp-cta{transition:none}.dp-cta:hover,.dp-cta:focus-visible{transform:none}}
+
+/* Acesso por dispositivo: UX progressiva, sem redirecionar usuários ou ocultar plataformas. */
+.dp-device-prompt[hidden]{display:none!important}
+.dp-device-prompt{position:relative;background:linear-gradient(100deg,#241d4f,#302258 60%,#231943);border-bottom:1px solid rgba(190,172,255,.35);color:#fff;padding:1rem 0;z-index:2}
+.dp-device-prompt-inner{display:flex;align-items:center;gap:1rem;flex-wrap:wrap}
+.dp-device-prompt-icon{display:grid;place-items:center;flex:0 0 2.5rem;width:2.5rem;height:2.5rem;background:rgba(218,203,255,.15);color:#eadfff;border:1px solid rgba(224,210,255,.27);border-radius:12px;font-size:1.4rem}
+.dp-device-prompt-copy{display:flex;flex-direction:column;gap:.2rem;flex:1 1 260px;min-width:0;line-height:1.4}
+.dp-device-prompt-copy strong{font-size:.96rem;font-weight:850;color:#fff}
+.dp-device-prompt-copy span{font-size:.81rem;color:#d5cfe6}
+.dp-device-prompt-actions{display:flex;gap:.55rem;align-items:center;flex-wrap:wrap}
+.dp-device-prompt-actions a{display:inline-flex;justify-content:center;align-items:center;text-align:center;border-radius:10px;min-height:2.5rem;padding:.52rem .85rem;font-size:.84rem;font-weight:800;text-decoration:none}
+.dp-device-prompt-primary{color:#25133f;background:#f5efff}
+.dp-device-prompt-secondary{color:#f5efff;background:rgba(229,216,255,.12);border:1px solid rgba(234,216,255,.3)}
+.dp-device-prompt-actions a:hover{filter:brightness(1.08)}
+.dp-device-prompt-actions a:focus-visible{outline:3px solid #e5d8ff;outline-offset:3px}
+html[data-discordia-device="android"] .dp-android{border-color:#b4a2ff;background:linear-gradient(145deg,#302653,#1b1d3b)}
+html[data-discordia-device="ios"] .dp-web,html[data-discordia-device="other"] .dp-web{border-color:#b4a2ff;background:linear-gradient(145deg,#302653,#1b1d3b)}
+@media(max-width:720px){.dp-device-prompt-inner{gap:.7rem}.dp-device-prompt-icon{flex-basis:2.2rem;width:2.2rem;height:2.2rem}.dp-device-prompt-actions{width:100%}.dp-device-prompt-actions a{flex:1 1 140px}.dp-device-prompt-copy{flex:1 1 calc(100% - 3rem)}}
