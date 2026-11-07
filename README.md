@@ -1,7 +1,7 @@
 # Discórdia — site e domínio
 
-**Domínio oficial planejado (EU.org):** `discordia.eu.org` — aguardando solicitação e aprovação do registro.  
-**Site publicado provisoriamente:** https://discordia-ari.pages.dev/  
+**Domínio oficial planejado (EU.org):** `discordia.eu.org` — solicitação registrada, aguardando aprovação do EU.org.  
+**Site canônico em produção:** https://discordia-ari.pages.dev/ (Cloudflare Pages).  
 **Versão atual no canal Testers:** [Discórdia Desktop v1.0.3-rc.20](https://github.com/magaskye/discordia/releases/tag/v1.0.3-rc.20).  
 **Hospedagem:** Cloudflare Pages, publicada automaticamente a partir da branch `main`.  
 
@@ -9,10 +9,22 @@ A RC20 continua candidata e depende dos testes reais para homologação. Os down
 
 ---
 
+## Site único e redirecionamento legado
+
+O Cloudflare Pages é a única vitrine canônica de páginas do Discórdia. O GitHub mantém o código-fonte, releases e manifestos históricos de atualização; a Cloudflare publica o site a partir da branch `main`.
+
+As páginas HTML antigas em `https://magaskye.github.io/discordia/` utilizam **redirecionamento via JavaScript** para seus caminhos correspondentes em `https://discordia-ari.pages.dev/`, preservando os parâmetros da URL. Esse encaminhamento não é um HTTP 301 e depende de JavaScript; quem o desabilitar poderá ver a versão legada, mas as páginas têm tag canônica para a Cloudflare.
+
+Manter **sem redirecionamento** `https://magaskye.github.io/discordia/android/updates/rc.json`: aplicativos Android antigos usam esse feed, e seu link ainda é atualizado a partir do repositório. O portal Firebase de contas e os downloads de arquivos grandes no GitHub Releases continuam serviços independentes.
+
+Quando `discordia.eu.org` for aprovado e o HTTPS validado, atualizar a URL canônica e o destino do script de compatibilidade.
+
+---
+
 ## Plataformas no site oficial
 
 - **Windows:** [RC20 para Windows](https://discordia-ari.pages.dev/#downloads), com os executáveis no GitHub Releases.
-- **Android:** [página oficial de versões Android](https://discordia-ari.pages.dev/android/), com feed de atualização que mantém o botão de APK oculto enquanto não houver publicação assinada.
+- **Android:** [página oficial de versões Android](https://discordia-ari.pages.dev/android/), com download do APK Android RC20.2 assinado e publicado no GitHub Releases.
 - **Web:** [página da versão Web](https://discordia-ari.pages.dev/web/), que descreve o desenvolvimento. O cliente React/Vite ainda não foi liberado em domínio público nem teve a autenticação Web homologada.
 
 **Observação:** `discordia.eu.org` continua pendente de aprovação no EU.org. A Cloudflare Pages permanece como hospedagem pública provisória.
