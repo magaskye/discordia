@@ -1,0 +1,51 @@
+/* Discórdia 2026 — unified polish across Windows / Android / Web marketing. */
+.site26-home{--sx-bg:#0b0f20;--sx-mint:#a8ebee;--sx-lav:#c3afff}
+.site26-home .dp-platforms{background:radial-gradient(ellipse at 88% 16%,#51418b39,transparent 44%),linear-gradient(150deg,#0c1024 0%,#15172e 57%,#111328 100%)}
+.site26-home .dp-platforms .dp-grid{gap:18px}
+.site26-home .dp-platforms .dp-card{position:relative;overflow:hidden;border-radius:24px;background:linear-gradient(145deg,#262744ed,#161b33f5);border:1px solid #5c62826d;box-shadow:0 18px 55px #0005;transition:transform .18s,border-color .18s,box-shadow .18s}
+.site26-home .dp-platforms .dp-card:before{content:"";position:absolute;width:220px;height:220px;right:-140px;top:-140px;background:radial-gradient(circle,#b4b1ff45,transparent 70%);pointer-events:none}
+.site26-home .dp-platforms .dp-card:hover{transform:translateY(-4px);border-color:#8a90b9a6;box-shadow:0 23px 55px #0006}
+.site26-home .dp-platforms .dp-windows{background:linear-gradient(145deg,#302e59,#171c36)}
+.site26-home .dp-platforms .dp-android{background:linear-gradient(145deg,#223c51,#171b38)}
+.site26-home .dp-platforms .dp-web{background:linear-gradient(145deg,#232f52,#151b31)}
+.site26-home .dp-platforms .dp-card h3{font-size:clamp(23px,2.2vw,30px)}
+.site26-home .dp-platforms .dp-card>p:not(.dp-overline){font-size:14px;line-height:1.7;color:#c3cadf}
+.site26-home .dp-platforms .dp-card .dp-tags span{background:#ffffff09;color:#cdd3eb}
+.site26-home .dp-platforms .dp-cta{border-radius:12px;font-weight:900}
+.site26-home .dl-public-release{background:radial-gradient(ellipse at 12% 20%,#3150733b,transparent 42%),linear-gradient(170deg,#0e1426,#14112d)}
+.site26-home .dl-public-grid{gap:18px}
+.site26-home .dl-public-card{border-radius:22px;border-color:#59648477;background:linear-gradient(145deg,#262c47,#171b31);transition:transform .18s,border-color .18s}
+.site26-home .dl-public-card:hover{transform:translateY(-3px);border-color:#8a9cc6a6}
+.site26-home .dl-public-card a{display:inline-flex;align-items:center;min-height:37px;color:#b7edff;font-weight:850}
+.site26-home .n27-download-card.is-rc{box-shadow:0 24px 65px #0003}
+.site26-home .disc-cross-platform{z-index:105}
+.sx-cross-device{position:relative;isolation:isolate;background:radial-gradient(ellipse at 10% 15%,#35316f6b,transparent 50%),linear-gradient(145deg,#15152b,#1e1b38 58%,#111b2c);color:#f7f8ff;padding:clamp(65px,7vw,105px) 0;border-block:1px solid #65628e7c}
+.sx-cross-wrap{display:grid;grid-template-columns:1.08fr .92fr;align-items:center;gap:clamp(28px,4vw,60px)}
+.sx-eyebrow{display:inline-flex;align-items:center;gap:9px;color:#b2e6f7;font-weight:900;font-size:11px;letter-spacing:.16em}
+.sx-eyebrow i{width:8px;height:8px;border-radius:50%;background:#70e6c7;box-shadow:0 0 13px #62e6c7a6}
+.sx-cross-heading h2{font-size:clamp(33px,4.75vw,60px);line-height:1.08;letter-spacing:-.06em;margin:21px 0}
+.sx-cross-heading h2 em{font-style:normal;color:transparent;background:linear-gradient(100deg,#a3eaf9,#bca9ff);background-clip:text;-webkit-background-clip:text}
+.sx-cross-heading p{font-size:15px;line-height:1.76;color:#b9c5dc;max-width:700px;margin:0}
+.sx-cross-heading p strong{color:#fff}
+.sx-cross-tags{display:flex;flex-wrap:wrap;gap:9px;margin-top:23px}
+.sx-cross-tags span{font-size:11px;color:#ced6ed;border:1px solid #62658a;background:#30325085;padding:9px 11px;border-radius:100px;font-weight:750}
+.sx-cross-visual{position:relative;display:flex;align-items:center;justify-content:center;gap:0;min-height:280px}
+.sx-device{width:min(200px,42%);min-height:215px;border:1px solid #6e78a2;border-radius:20px;overflow:hidden;background:linear-gradient(145deg,#343354,#1b233c);box-shadow:0 18px 50px #0004;display:flex;flex-direction:column}
+.sx-device-pc{transform:rotate(-3deg)}.sx-device-mobile{transform:rotate(3deg)}
+.sx-device-top{display:flex;flex-direction:column;align-items:center;gap:5px;border-bottom:1px solid #65618977;padding:19px 11px;background:#1f2846a8}
+.sx-device-top strong{letter-spacing:.08em;font-size:12px}.sx-device-top small{color:#b5dffc;font-size:11px}
+.sx-device-inside{display:flex;align-items:center;gap:9px;padding:13px;flex:1}
+.sx-device-avatar{display:grid;place-items:center;flex:none;border-radius:12px;width:35px;height:35px;background:#6455a4;font-weight:900}
+.sx-device-inside strong{display:block;font-size:11px;color:#fff}
+.sx-device-inside small{display:block;color:#b5bfd7;font-size:9px;line-height:1.5;margin-top:3px}
+.sx-device-signal{font-size:10px;color:#b5eedc;margin:0 12px 15px;padding:9px;background:#22444c5c;border:1px solid #3b8b83aa;border-radius:8px;text-align:center}
+.sx-sync-orbit{position:relative;z-index:2;width:53px;height:53px;margin:0 -9px;border-radius:50%;display:grid;place-items:center;color:#cce9ff;background:#4b427c;box-shadow:0 0 32px #8a83d06b;flex:none}
+.sx-cross-foot{grid-column:1/-1;display:flex;justify-content:space-between;align-items:center;gap:21px;border-top:1px solid #63658266;padding-top:24px}
+.sx-cross-foot p{max-width:800px;font-size:12px;line-height:1.7;color:#abb9d6;margin:0}
+.sx-cross-foot p strong{color:#e8eefc}
+.sx-cross-links{display:flex;gap:9px;flex-wrap:wrap;flex:none}
+.sx-cross-links a{border:1px solid #6886a1;border-radius:11px;color:#b3e8ff;font-size:12px;font-weight:850;padding:12px 15px;background:#26436344}
+.sx-cross-links a:hover{background:#2b4763}
+@media(max-width:1060px){.sx-cross-wrap{grid-template-columns:1fr}.sx-cross-visual{min-height:230px}.sx-cross-foot{grid-column:auto}}
+@media(max-width:650px){.sx-cross-device{padding:55px 0}.sx-cross-heading h2{font-size:clamp(32px,9vw,45px)}.sx-cross-heading p{font-size:13px}.sx-cross-visual{min-height:225px}.sx-device{min-height:202px}.sx-device-top{padding:13px 7px}.sx-cross-foot{flex-wrap:wrap}.sx-cross-links{width:100%}.sx-cross-links a{flex:1;text-align:center}.site26-home .dp-platforms .dp-card{border-radius:19px}}
+@media(prefers-reduced-motion:reduce){.site26-home .dp-platforms .dp-card,.site26-home .dl-public-card{transition:none}.site26-home .dp-platforms .dp-card:hover,.site26-home .dl-public-card:hover{transform:none}}
