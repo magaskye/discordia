@@ -21,8 +21,12 @@ const allowedPost=request=>{
   const url=new URL(request.url);
   const site=request.headers.get('Sec-Fetch-Site');
   const origin=request.headers.get('Origin');
-  return url.origin===BETA_ORIGIN &&
-    (site?site==='same-origin':origin===BETA_ORIGIN);
+  // Both headers, when present, must agree. A valid Origin alone is not
+  // enough when Fetch Metadata explicitly identifies a cross-site request.
+  if(url.origin!==BETA_ORIGIN)return false;
+  if(origin&&origin!==BETA_ORIGIN)return false;
+  if(site&&site!=='same-origin')return false;
+  return origin===BETA_ORIGIN||site==='same-origin';
 };
 const allowedSocket=request=>{
   // WebSocket always carries a browser-generated Origin. Exact match required.
@@ -68,11 +72,20 @@ export default {
     const bearer=request.headers.get('Authorization')||'';
     if(!/^Bearer [A-Za-z0-9_.-]{32,6000}$/.test(bearer))
       return json({error:'login_required'},401);
+    // Limit expensive identity-provider requests before looking up an ID token.
+    // Rate decisions depend only on a salted-equivalent one-way network hash,
+    // never the token's unverified contents.
+    let clientHash;
+    try{
+      clientHash=await fingerprint(request,'public-ip');
+      const admitted=await env.QUICK_ROOM_ADMISSION
+        .getByName('public-global').mayAttempt(clientHash);
+      if(!admitted)return json({error:'verification_limited'},429);
+    }catch{return json({error:'verification_unavailable'},503);}
     // Firebase verifies the ID token on the server and checks emailVerified.
     const account=await verifyFirebaseIdToken(bearer.slice(7),env.FIREBASE_WEB_API_KEY);
     if(!account)return json({error:'verified_account_required'},403);
     try{
-      const clientHash=await fingerprint(request,'public-ip');
       const userHash=await sha256Hex('public-uid:'+account.uid);
       const allowed=await env.QUICK_ROOM_ADMISSION.getByName('public-global').allow(clientHash,userHash);
       if(!allowed)return json({error:'room_creation_limited'},429);
