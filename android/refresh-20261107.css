@@ -1,0 +1,60 @@
+/* Android RC23.3 page refresh, matching official site and Web Beta identity. */
+.sx-android{background:#0b0e1d;color:#f8f7ff}
+.sx-android .topbar{background:#0d1326f2;border-bottom:1px solid #9f9cdf38}
+.sx-android .top-cta{background:linear-gradient(120deg,#c5efff,#b6a4f7);color:#132040;box-shadow:0 8px 27px #7e7cc342}
+.sx-android .toplinks a{color:#c6cee8}
+.sx-android .hero{background:radial-gradient(ellipse at 80% 40%,#7956d058,transparent 50%),radial-gradient(ellipse at 5% 95%,#245a8966,transparent 55%),linear-gradient(130deg,#13112d,#241c4c 43%,#0c132b 88%,#0d1020)}
+.sx-android .hero:before{border-color:#abc4ff22}
+.sx-android .hero h1{font-size:clamp(49px,5.4vw,84px);line-height:1.03;white-space:normal}
+.sx-android .hero h1 em{background:linear-gradient(100deg,#a4eaf9,#c6b0ff,#ffbfdd);background-clip:text;-webkit-background-clip:text}
+.sx-android .hero-tag{font-size:10px;background:#4033648a;border-color:#a69bd46e}
+.sx-android .hero-copy>p{max-width:590px;color:#d4d9ec}
+.sx-android .button-light{background:linear-gradient(115deg,#cbf0ff,#b8b4f7);color:#10213a}
+.sx-android .button-outline{border-color:#9895c5;color:#f5f7ff}
+.sx-android .phone{border-color:#101528;box-shadow:0 30px 85px #0009,0 0 75px #a88cff35}
+.sx-android .phone-glass{background:linear-gradient(#1e203c,#12182c)}
+.sx-android .phone-head{background:#202448}
+.sx-android .phone-channel{background:#2c3153}
+.sx-android .hero-proof{gap:9px 12px}
+.sx-android .hero-proof>span{border:1px solid #e5dbff3e;border-radius:100px;padding:7px 11px;background:#ffffff10}
+.sx-android .download-wrap{background:linear-gradient(180deg,#0b1022,#10142a)}
+.sx-android .download-card{border-color:#6768a278;box-shadow:0 16px 65px #0005}
+.sx-android .download-lead h2 em{background:linear-gradient(100deg,#9ee6f8,#c0a8fe);background-clip:text;-webkit-background-clip:text;color:transparent}
+.sx-android .features{background:radial-gradient(ellipse at 100% 20%,#29224d77,transparent 50%),#0b0d20}
+.sx-android .feature-card{border:1px solid #575c7f8c;transition:transform .18s,border-color .18s}
+.sx-android .feature-card:hover{transform:translateY(-3px);border-color:#8a90c1}
+.sx-android .feature-card .feature-ic{display:grid;place-items:center;width:54px;height:54px;border-radius:15px;background:#34345a;color:#b3e9fa;font-size:0}
+.sx-android .feature-card .feature-ic svg{width:29px;height:29px}
+.sx-android .instructions{background:#101328}
+.sx-android-bridge{padding:clamp(62px,8vw,112px) 0;background:radial-gradient(ellipse at 10% 20%,#2f2b5b66,transparent 55%),linear-gradient(150deg,#14172e,#17152d 60%,#0c1525);color:#f7f7ff;position:relative}
+.sx-bridge-top{display:grid;grid-template-columns:1.15fr .85fr;align-items:center;gap:55px}
+.sx-android-eyebrow{display:inline-flex;align-items:center;gap:10px;letter-spacing:.17em;font-size:10px;font-weight:900;color:#b7dfff}
+.sx-android-eyebrow i{width:8px;height:8px;background:#71e7be;border-radius:50%;box-shadow:0 0 14px #79e8c988}
+.sx-bridge-top h2{font-size:clamp(34px,5.2vw,66px);letter-spacing:-.06em;line-height:1.06;margin:19px 0 20px}
+.sx-bridge-top h2 em{font-style:normal;background:linear-gradient(100deg,#a6e8fc,#c6a6f8);background-clip:text;-webkit-background-clip:text;color:transparent}
+.sx-bridge-top p{font-size:15px;color:#b7c2da;max-width:630px;line-height:1.74}.sx-bridge-top p strong{color:#f2f6ff}
+.sx-bridge-pair{display:flex;align-items:center;justify-content:center;gap:16px;background:radial-gradient(ellipse at center,#45407599,transparent 73%);padding:40px 5px}
+.sx-bridge-pair>div{min-width:130px;min-height:155px;border:1px solid #70739b99;border-radius:22px;background:linear-gradient(160deg,#303258,#191d37);display:flex;align-items:center;justify-content:center;flex-direction:column;gap:9px;box-shadow:0 14px 42px #0004}
+.sx-bridge-pair strong{font-size:12px;letter-spacing:.09em}.sx-bridge-pair small{font-size:11px;color:#b7ddfc}
+.sx-bridge-arrows{display:grid;place-items:center;color:#aedfff;background:#37385e;border-radius:50%;width:43px;height:43px;flex:none}
+.sx-bridge-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin-top:25px}
+.sx-bridge-grid article{border:1px solid #4b527c;border-radius:19px;background:#202743a6;padding:24px}
+.sx-bridge-num{display:inline-flex;color:#acdfff;letter-spacing:.05em;font-size:14px;font-weight:900;background:#33496a;border-radius:10px;padding:9px 11px}
+.sx-bridge-grid h3{margin:23px 0 9px;font-size:18px;letter-spacing:-.03em}
+.sx-bridge-grid p{margin:0;color:#b7c2d9;font-size:13px;line-height:1.67}
+.sx-bridge-foot{display:flex;align-items:center;gap:24px;justify-content:space-between;margin-top:19px}
+.sx-bridge-foot p{font-size:12px;color:#aebad4;max-width:840px;line-height:1.74}.sx-bridge-foot strong{color:#dce9fb}
+.sx-bridge-foot a{flex:none;color:#abebff;font-size:12px;font-weight:800;border:1px solid #5a7590;border-radius:11px;padding:12px 16px}
+.sx-bridge-foot a:hover{background:#253e56}
+.sx-mobile-web-note{padding:27px 0;background:linear-gradient(100deg,#20203e,#182b40);border-block:1px solid #626b9388}
+.sx-mobile-web-inner{display:flex;align-items:center;gap:22px}
+.sx-mobile-web-inner img{flex:none}
+.sx-mobile-web-inner>div{flex:1}
+.sx-mobile-web-inner h2{font-size:19px;letter-spacing:-.04em;margin-bottom:7px}
+.sx-mobile-web-inner p{font-size:12px;line-height:1.6;color:#c2cce0}
+.sx-mobile-web-inner a{flex:none;font-size:12px;font-weight:850;color:#111c31;background:linear-gradient(120deg,#b2ecfa,#aca5fa);padding:13px 17px;border-radius:12px}
+.sx-android .cross-platform{background:#0e1427}
+@media(max-width:960px){.sx-bridge-top{grid-template-columns:1fr;gap:6px}.sx-bridge-pair{padding:18px 0}.sx-bridge-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.sx-bridge-grid article:last-child{grid-column:1/-1}}
+@media(max-width:710px){.sx-android .hero h1{font-size:clamp(39px,10vw,59px);white-space:normal}.sx-android .hero-grid{padding-top:46px}.sx-android-bridge{padding:68px 0}.sx-bridge-grid{grid-template-columns:1fr}.sx-bridge-grid article:last-child{grid-column:auto}.sx-bridge-foot{align-items:flex-start;flex-direction:column}.sx-mobile-web-inner{align-items:flex-start;flex-wrap:wrap}.sx-mobile-web-inner>div{flex:1 1 230px}.sx-mobile-web-inner a{width:100%;text-align:center}}
+@media(max-width:460px){.sx-android .top-cta{padding:10px 11px;font-size:10px}.sx-android .hero h1{font-size:clamp(36px,10vw,49px)}.sx-bridge-pair{gap:7px}.sx-bridge-pair>div{min-width:100px;min-height:133px}.sx-bridge-arrows{width:35px;height:35px}.sx-bridge-top h2{font-size:35px}.sx-bridge-grid article{padding:20px}}
+@media(prefers-reduced-motion:reduce){.sx-android .feature-card{transition:none}.sx-android .feature-card:hover{transform:none}}
