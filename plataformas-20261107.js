@@ -73,8 +73,8 @@
     updatePromptIcon('windows');
     setup('Você está no Windows',
       'Baixe a versão Desktop ou conheça o Discórdia Web.',
-      'RC23.1 · VERSÃO CANDIDATA DISPONÍVEL',
-      'Windows 10 e 11 · v1.0.3-rc.23.1 · Testers · instalador e portátil',
+      'RC24 · VERSÃO CANDIDATA DISPONÍVEL',
+      'Windows 10 e 11 · v1.0.3-rc.24 · Testers · instalador e portátil',
       'Baixar para Windows','Conhecer versão Web','#downloads','./web/');
   }else {
     updatePromptIcon(device);
