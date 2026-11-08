@@ -1,46 +1,85 @@
 <!doctype html>
 <html lang="pt-BR">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="theme-color" content="#0c1023">
-<meta name="robots" content="index,follow">
-<meta name="description" content="Discórdia Web Beta pública: entre com sua conta existente, crie salas temporárias e convide espectadores sem conta por link. Chat, tela cheia e indicador de rede P2P/TURN/SFU.">
-<meta http-equiv="Content-Security-Policy" content="default-src 'none'; img-src 'self'; style-src 'self'; script-src 'self'; object-src 'none'; form-action 'none'; base-uri 'self'; upgrade-insecure-requests">
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#0c1021">
+<meta name="description" content="Discórdia Web Beta 1: entre pelo navegador, crie salas temporárias com uma conta verificada e convide amigos sem conta. Chat, tela cheia, transmissão P2P e indicador de rede.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Discórdia Web Beta 1 | Sua galera, em qualquer navegador">
+<meta property="og:description" content="Entre com sua conta, crie uma sala e compartilhe por link. Convidados podem assistir sem cadastro.">
+<meta property="og:image" content="https://discordia-ari.pages.dev/discordia-identity-2026.webp">
+<meta property="og:url" content="https://discordia-ari.pages.dev/web/">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self' data: https:; object-src 'none'; form-action 'none'; base-uri 'self'; upgrade-insecure-requests">
 <script src="../legacy-github-pages-redirect.js" data-purpose="legacy-github-pages-redirect"></script>
 <link rel="icon" href="../discordia-orbit-app.png" type="image/png">
 <link rel="canonical" href="https://discordia-ari.pages.dev/web/">
-<link rel="stylesheet" href="./web.css">
-<link rel="stylesheet" href="../cross-platform-nav-20261107.css?v=1">
-<title>Discórdia Web · Beta 1 oficial</title>
+<link rel="stylesheet" href="./web.css?v=web-beta1-redesign">
+<link rel="stylesheet" href="../cross-platform-nav-20261107.css?v=2">
+<title>Discórdia Web Beta 1 | Seu universo no navegador</title>
 </head>
-<body>
- <main class="web-shell">
-  <nav class="web-nav" aria-label="Navegação"><a class="web-brand" href="../"><img src="../discordia-orbit-app.png" width="42" height="42" alt=""><span>DISCÓRDIA<span class="dot">.</span></span></a><a class="web-back" href="../#plataformas">← Todas as plataformas</a></nav>
-  <nav class="disc-cross-platform" aria-label="Versões e plataformas do Discórdia">
- <div class="disc-cross-platform-inner">
-  <span class="disc-cross-platform-lead">SEU DISCÓRDIA EM TODAS AS TELAS</span>
-  <a class="disc-cross-platform-link" href="../#downloads" title="Discórdia Desktop RC23 para Windows"><img src="../platform-icons/windows.svg" alt="" width="18" height="18">Windows <small>RC23</small></a>
-  <a class="disc-cross-platform-link" href="../android/" title="Discórdia Android: APK oficial disponível"><img src="../platform-icons/android.svg" alt="" width="18" height="18">Android <small>APK disponível</small></a>
-  <a class="disc-cross-platform-link" href="#web-title" aria-current="page" title="Discórdia Web: beta pública disponível"><img src="../platform-icons/web.svg" alt="" width="18" height="18">Web <small>beta pública</small></a>
+<body class="sx-web">
+<a class="sx-skip" href="#conteudo">Pular para conteúdo</a>
+<header class="sx-top"><div class="sx-top-inner">
+ <a class="sx-logo" href="../" aria-label="Discórdia — site oficial"><img src="../discordia-orbit-app.png" width="46" height="46" alt=""><span>DISCÓRDIA<small>O SEU UNIVERSO</small></span></a>
+ <nav class="sx-top-links" aria-label="Navegação da Web"><a href="#recursos">Recursos</a><a href="#como-funciona">Como funciona</a><a href="../android/">Android</a><a href="../#downloads">Windows</a></nav>
+ <a class="sx-cta sx-cta-compact" href="https://discordia-web-beta.pages.dev/" rel="noopener noreferrer">Abrir a Web <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-7-7 7 7-7 7"/></svg></a>
+</div></header>
+<nav class="disc-cross-platform" aria-label="Plataformas do Discórdia"><div class="disc-cross-platform-inner">
+ <span class="disc-cross-platform-lead">EM TODAS AS TELAS</span>
+ <a class="disc-cross-platform-link" href="../#downloads"><img src="../platform-icons/windows.svg" width="18" height="18" alt="">Windows <small>RC23.1</small></a>
+ <a class="disc-cross-platform-link" href="../android/"><img src="../platform-icons/android.svg" width="18" height="18" alt="">Android <small>RC23.3</small></a>
+ <a class="disc-cross-platform-link" href="#conteudo" aria-current="page"><img src="../platform-icons/web.svg" width="18" height="18" alt="">Web <small>Beta 1</small></a>
+</div></nav>
+<main id="conteudo">
+<section class="sx-hero"><div class="sx-glow sx-glow-a" aria-hidden="true"></div><div class="sx-glow sx-glow-b" aria-hidden="true"></div>
+ <div class="sx-container sx-hero-grid"><div class="sx-hero-copy">
+  <span class="sx-status"><i aria-hidden="true"></i> DISCÓRDIA WEB · BETA 1 PÚBLICA</span>
+  <h1>SUA GALERA.<br>SEU JOGO.<br><em>NO NAVEGADOR.</em></h1>
+  <p>Entre no seu universo sem instalar nada. Converse com seus amigos, crie uma sala temporária e compartilhe o link para alguém assistir <strong>mesmo sem ter uma conta.</strong></p>
+  <div class="sx-hero-actions">
+   <a class="sx-cta sx-cta-primary" href="https://discordia-web-beta.pages.dev/" rel="noopener noreferrer">Abrir Discórdia Web <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-7-7 7 7-7 7"/></svg></a>
+   <a class="sx-cta sx-cta-ghost" href="#como-funciona">Como funcionam os convites</a>
+  </div>
+  <div class="sx-hero-trust"><span><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s9-4 9-11V5l-9-3-9 3v6c0 7 9 11 9 11Z"/><path d="m9 12 2 2 4-4"/></svg> Contas existentes</span><span><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7 0l3-3a5 5 0 1 0-7-7l-2 2"/><path d="M14 11a5 5 0 0 0-7 0l-3 3a5 5 0 1 0 7 7l2-2"/></svg> Convites sem conta</span><span><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="13" rx="2"/><path d="M8 21h8m-4-4v4"/></svg> Tela cheia</span></div>
  </div>
-</nav>
-  <section class="web-hero" aria-labelledby="web-title">
-   <span class="web-status">WEB BETA 1 · LANÇAMENTO OFICIAL DE TESTES</span>
-   <h1 id="web-title">SUA GALERA.<br><em>DIRETO NO NAVEGADOR.</em></h1>
-   <p>A Web Beta 1 é a versão oficial de testes do Discórdia no navegador. Entre com sua conta existente, crie uma sala e compartilhe o link: <strong>convidados não precisam ter conta nem digitar código de testers</strong>. Há chat temporário, tela cheia, qualidade de vídeo configurável e indicador real de rota P2P/TURN/SFU. O anfitrião pode remover convidados ou encerrar a sala. A voz nativa, TURN para convidados, cadastro novo e transmissão privada do Desktop ainda não foram liberados.</p>
-   <div class="web-actions"><a class="web-button web-primary" href="https://discordia-web-beta.pages.dev/" target="_blank" rel="noopener noreferrer">Abrir Discórdia Web Beta 1 ↗</a><a class="web-button web-secondary" href="../#downloads">Baixar Windows RC23 ↗</a><a class="web-button web-secondary" href="../android/">Baixar Android ↗</a></div>
-   <p class="web-caption">A Web Beta não exige código de testers. Criar salas requer conta existente com e-mail verificado; para assistir como convidado, basta receber um link de sala.</p>
-  </section>
-  <section class="web-modes" aria-labelledby="modes-title">
-   <div class="web-section-title"><span>DOIS JEITOS DE ESTAR JUNTO</span><h2 id="modes-title">Uma Web para cada momento.</h2></div>
-   <div class="web-grid">
-    <article class="web-mode"><div class="web-icon" aria-hidden="true">◎</div><span class="web-pill">ATIVA NA BETA PÚBLICA</span><h3>Salas rápidas</h3><p>Crie um convite temporário para até 6 participantes; a pessoa pode entrar sem conta, escolher apelido, conversar e assistir à tela do anfitrião.</p><ul><li>Chat e convites por link — em beta pública</li><li>Tela P2P, 720/1080p e perfis 30/60 FPS — em beta</li><li>Remover participante e encerrar sala — disponível ao anfitrião</li><li>Áudio da tela, TURN e links de canais privados — não integrados</li></ul></article>
-    <article class="web-mode"><div class="web-icon" aria-hidden="true">▣</div><span class="web-pill">CONTAS EXISTENTES · BETA PÚBLICA</span><h3>Discórdia com conta</h3><p>O aplicativo React/Vite utiliza o Firebase das contas existentes. O acesso segue as permissões da sua conta; servidores e mensagens privados não são liberados por um convite de sala.</p><ul><li>Entrar com conta existente — em homologação</li><li>Cadastro de novas contas na Web — temporariamente desativado</li><li>Recepção de SFU em canais privados — ainda em desenvolvimento</li></ul></article>
+ <div class="sx-preview" aria-label="Representação ilustrativa da interface de sala do Discórdia Web">
+  <div class="sx-preview-header"><span class="sx-preview-dots"><i></i><i></i><i></i></span><span>DISCÓRDIA WEB · SALA TEMPORÁRIA</span><small>DEMONSTRAÇÃO VISUAL</small></div>
+  <div class="sx-preview-content">
+   <aside class="sx-preview-side"><img src="../discordia-orbit-app.png" width="38" height="38" alt=""><span><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="8" r="4"/><path d="M2 21v-2a6 6 0 0 1 12 0v2m2-17a4 4 0 0 1 0 8m2 2a6 6 0 0 1 4 6v1"/></svg></span><span><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="14" height="14" rx="3"/><path d="m17 10 4-3v10l-4-3"/></svg></span><span><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7 0l3-3a5 5 0 1 0-7-7l-2 2"/><path d="M14 11a5 5 0 0 0-7 0l-3 3a5 5 0 1 0 7 7l2-2"/></svg></span></aside>
+   <div class="sx-preview-main">
+    <div class="sx-preview-name"><span><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="14" height="14" rx="3"/><path d="m17 10 4-3v10l-4-3"/></svg> Compartilhando tela</span><span class="sx-preview-live">● AO VIVO</span></div>
+    <div class="sx-preview-stage"><div class="sx-preview-ring"></div><img src="../discordia-orbit-app.png" width="64" height="64" alt=""><strong>UM LUGAR PARA A SUA GALERA.</strong><small>Jogos · Filmes · Conversa</small></div>
+    <div class="sx-preview-status"><span><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="4" cy="12" r="2"/><circle cx="20" cy="5" r="2"/><circle cx="20" cy="19" r="2"/><path d="M6 11 18 6M6 13l12 5"/></svg> P2P · EXEMPLO</span><span>30 FPS · EXEMPLO</span><span><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="8" r="4"/><path d="M2 21v-2a6 6 0 0 1 12 0v2m2-17a4 4 0 0 1 0 8m2 2a6 6 0 0 1 4 6v1"/></svg> 3/6</span></div>
    </div>
-  </section>
-  <section class="web-next" aria-labelledby="next-title"><h2 id="next-title">O que ainda está em teste?</h2><p>A Web Beta 1 é pública com limites de criação de salas e controles básicos do anfitrião. Ainda faltam cadastro novo, moderação ampliada com denúncias e bloqueios persistentes, TURN para convidados, chamadas de voz Web, áudio compartilhado, recepção SFU completa e integração direta com transmissões privadas do Desktop. Windows RC23 e Android têm canais próprios de download e atualizações.</p><a href="../">Voltar para o site oficial ↗</a></section>
-  <footer>© 2026 Discórdia · <a href="../privacidade.html">Privacidade</a> · <a href="../termos.html">Termos</a></footer>
- </main>
-</body>
-</html>
+  </div>
+  <div class="sx-preview-foot">ARTE CONCEITUAL · AS MÉTRICAS EXIBIDAS SÃO ILUSTRATIVAS</div>
+ </div>
+ </div>
+</section>
+<section class="sx-proof"><div class="sx-container sx-proof-inner">
+ <div><strong>WEB BETA 1</strong><span>Acesso público pelo navegador</span></div>
+ <div><strong>ATÉ 6</strong><span>Pessoas por sala temporária</span></div>
+ <div><strong>SEM CONTA</strong><span>Para assistir por convite</span></div>
+ <div><strong>P2P</strong><span>Compartilhamento de tela entre navegadores</span></div>
+</div></section>
+<section class="sx-section" id="recursos"><div class="sx-container">
+ <div class="sx-section-head"><span class="sx-overline">UM LUGAR PARA ESTAR JUNTO</span><h2>Entre, compartilhe,<br><em>aproveite o momento.</em></h2><p>A beta Web tem o essencial para aproximar sua galera, com indicadores honestos e controles claros para os anfitriões.</p></div>
+ <div class="sx-features">
+  <article class="sx-feature"><span class="sx-feature-icon"><svg width="29" height="29" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="8" r="4"/><path d="M2 21v-2a6 6 0 0 1 12 0v2m2-17a4 4 0 0 1 0 8m2 2a6 6 0 0 1 4 6v1"/></svg></span><span class="sx-feature-eyebrow">SUA COMUNIDADE</span><h3>Seus amigos e conversas</h3><p>Acesse a interface com sua conta existente. Servidores, canais e mensagens seguem as permissões já configuradas para sua conta.</p></article>
+  <article class="sx-feature"><span class="sx-feature-icon"><svg width="29" height="29" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7 0l3-3a5 5 0 1 0-7-7l-2 2"/><path d="M14 11a5 5 0 0 0-7 0l-3 3a5 5 0 1 0 7 7l2-2"/></svg></span><span class="sx-feature-eyebrow">SEM COMPLICAÇÃO</span><h3>Sala por link</h3><p>Crie uma sala com sua conta verificada. Um amigo pode abrir o convite e entrar automaticamente como convidado, sem cadastro.</p></article>
+  <article class="sx-feature"><span class="sx-feature-icon"><svg width="29" height="29" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="13" rx="2"/><path d="M8 21h8m-4-4v4"/></svg></span><span class="sx-feature-eyebrow">DO SEU JEITO</span><h3>Transmissão configurável</h3><p>Compartilhe a tela com perfis de 720p ou 1080p e alvos de 30/60 FPS. O navegador e sua rede determinam a qualidade efetiva.</p></article>
+  <article class="sx-feature"><span class="sx-feature-icon"><svg width="29" height="29" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="4" cy="12" r="2"/><circle cx="20" cy="5" r="2"/><circle cx="20" cy="19" r="2"/><path d="M6 11 18 6M6 13l12 5"/></svg></span><span class="sx-feature-eyebrow">SEM ADIVINHAR</span><h3>Conexão monitorada</h3><p>Veja P2P, TURN ou SFU somente quando a rota for confirmada. Latência, FPS e bitrate aparecem quando o WebRTC oferece esses dados.</p></article>
+  <article class="sx-feature"><span class="sx-feature-icon"><svg width="29" height="29" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s9-4 9-11V5l-9-3-9 3v6c0 7 9 11 9 11Z"/><path d="m9 12 2 2 4-4"/></svg></span><span class="sx-feature-eyebrow">CONTROLE DE SALA</span><h3>Você decide quem fica</h3><p>O anfitrião pode remover participantes ou encerrar uma sala temporária para todos. Um participante removido pode voltar se ainda tiver o link.</p></article>
+  <article class="sx-feature sx-feature-accent"><span class="sx-feature-icon"><svg width="29" height="29" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 2 2.4 7.6L22 12l-7.6 2.4L12 22l-2.4-7.6L2 12l7.6-2.4L12 2Z"/></svg></span><span class="sx-feature-eyebrow">EM CONSTANTE EVOLUÇÃO</span><h3>Feita para melhorar</h3><p>Esta é uma beta pública de testes. Voz nativa nos canais, TURN para convidados, áudio da tela e recepção de lives privadas do Desktop ainda não estão liberados.</p></article>
+ </div>
+</div></section>
+<section class="sx-how" id="como-funciona"><div class="sx-container sx-how-grid">
+ <div><span class="sx-overline">CONVIDE QUEM VOCÊ QUISER</span><h2>É só enviar<br><em>o link da sala.</em></h2><p>O anfitrião entra com uma conta existente e verificada. O convidado não precisa criar perfil nem entrar em um servidor privado.</p>
+  <a href="https://discordia-web-beta.pages.dev/" class="sx-cta sx-cta-primary" rel="noopener noreferrer">Criar sala na Web <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-7-7 7 7-7 7"/></svg></a>
+ </div>
+ <ol class="sx-steps"><li><b>01</b><div><h3>Entre com sua conta</h3><p>Use seu login do Discórdia. A criação de salas exige e-mail verificado.</p></div></li><li><b>02</b><div><h3>Crie e copie o convite</h3><p>Compartilhe o link temporário com seus amigos.</p></div></li><li><b>03</b><div><h3>Assistam juntos</h3><p>O convidado entra pelo link sem conta. Compartilhe sua tela e use o chat da sala.</p></div></li></ol>
+</div></section>
+<section class="sx-last"><div class="sx-container sx-last-inner"><img src="../discordia-orbit-app.png" width="60" height="60" alt=""><div><span class="sx-overline">A EXPERIÊNCIA CONTINUA</span><h2>Sua galera em todas as telas.</h2><p>Windows RC23.1, Android RC23.3 e Web Beta 1. Mesma conta entre plataformas, respeitando os recursos de cada versão.</p></div><div class="sx-last-links"><a href="../android/">Android RC23.3</a><a href="../#downloads">Windows RC23.1</a><a href="../#dois-dispositivos">PC + Celular</a></div></div></section>
+</main>
+<footer class="sx-footer"><div class="sx-container sx-footer-inner"><span>© 2026 Discórdia · Sua galera. Seu jogo. Seu lugar.</span><div><a href="../">Site oficial</a><a href="../privacidade.html">Privacidade</a><a href="../termos.html">Termos</a></div></div></footer>
+</body></html>
