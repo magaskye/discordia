@@ -1,0 +1,106 @@
+/* Discórdia · site-wide orbital brand consistency (2026-11-08).
+   Final, additive stylesheet; preserves existing layouts and release information. */
+:root{
+  --dc-ink:#090d1b;
+  --dc-panel:#171e35;
+  --dc-text:#f2f7ff;
+  --dc-muted:#a7b9d7;
+  --dc-cyan:#79d7f5;
+  --dc-violet:#aa97ff;
+  --dc-outline:rgba(135,169,231,.25);
+  --dc-shadow:0 18px 55px rgba(0,4,18,.4);
+}
+html{scroll-behavior:smooth}
+body{accent-color:#80dfff}
+:is(a,button,input,select,textarea):focus-visible{
+  outline:2px solid #82e2ff;outline-offset:3px
+}
+.header,.sx-top,.topbar,.n27-subheader{
+  border-bottom:1px solid rgba(135,174,234,.22)!important;
+  box-shadow:0 8px 34px rgba(0,5,23,.14);
+  backdrop-filter:blur(17px);
+}
+.header .brand,.sx-top .sx-logo,.topbar .brand,.n27-subheader .n27-subbrand{
+  display:inline-flex;align-items:center;gap:11px;
+  color:#f4f8ff;letter-spacing:.035em
+}
+.header .brand img,.sx-logo img,.topbar .brand img,
+.n27-subbrand img,.n27-footer-logo img{
+  flex:none;object-fit:contain;
+  filter:drop-shadow(0 0 12px rgba(130,172,250,.38));
+  transition:filter .22s ease,transform .22s ease
+}
+.header .brand:hover img,.sx-logo:hover img,.topbar .brand:hover img,
+.n27-subbrand:hover img,.n27-footer-logo a:hover img{
+  filter:drop-shadow(0 0 20px rgba(115,212,255,.55));
+  transform:translateY(-2px)
+}
+.n27-subbrand,.sx-logo,.topbar .brand,.header .brand{
+  text-decoration:none
+}
+:is(.n26-hero,.sx-hero,.hero,.dv-hero,.n27-support-hero){
+  position:relative;isolation:isolate
+}
+:is(.n26-hero,.sx-hero,.hero,.dv-hero,.n27-support-hero)::before{
+  content:"";position:absolute;z-index:-1;pointer-events:none;
+  inset:0;opacity:.48;
+  background:radial-gradient(ellipse 48% 45% at 15% 24%,rgba(79,95,191,.25),transparent 74%),
+             radial-gradient(ellipse 36% 44% at 91% 35%,rgba(64,161,211,.16),transparent 78%)
+}
+:is(.n26-hero-copy h1,.sx-hero h1,.hero-copy h1,.dv-hero h1,.n27-support-hero h1){
+  text-wrap:balance;text-shadow:0 7px 35px rgba(0,4,20,.18)
+}
+:is(.n26-btn,.dp-cta,.sx-cta,.top-cta,.btn,.n27-backsite){
+  transition:transform .18s ease,filter .18s ease,
+             background-color .18s ease,border-color .18s ease,box-shadow .18s ease
+}
+:is(.n26-btn,.dp-cta,.sx-cta,.top-cta,.btn,.n27-backsite):hover{
+  transform:translateY(-2px)
+}
+:is(.n26-btn-white,.dp-cta-primary,.sx-cta-primary,.top-cta){
+  box-shadow:0 10px 28px rgba(60,135,216,.14)
+}
+:is(.n27-download-card,.dl-public-card,.dp-card,.feature-card,.sx-feature,
+     .n27-support-detail-card,.download-card){
+  border-color:var(--dc-outline);
+  transition:transform .2s ease,border-color .2s ease,box-shadow .2s ease
+}
+:is(.n27-download-card,.dl-public-card,.dp-card,.feature-card,.sx-feature,
+     .n27-support-detail-card,.download-card):hover{
+  border-color:rgba(127,207,255,.43);
+  box-shadow:var(--dc-shadow);
+  transform:translateY(-2px)
+}
+:is(.n27-footer,.sx-footer,.footer){
+  border-top:1px solid rgba(142,163,223,.2);
+  background-image:radial-gradient(ellipse 45% 60% at 12% 0%,rgba(68,83,159,.13),transparent 75%)
+}
+.dc-footbrand{
+  display:inline-flex;align-items:center;gap:10px;min-height:38px;
+  color:#f0f5ff;text-decoration:none;font-weight:900;letter-spacing:.08em;
+  font-size:13px;flex:none
+}
+.dc-footbrand img{width:36px;height:36px;object-fit:contain;filter:drop-shadow(0 0 12px rgba(121,164,250,.3))}
+.dc-footbrand span{color:inherit}
+:is(.sx-footer-inner,.footer-inner):has(.dc-footbrand){gap:13px 21px;flex-wrap:wrap}
+.dc-footbrand:hover img{filter:drop-shadow(0 0 19px rgba(129,205,252,.5))}
+:is(.n27-footer,.sx-footer,.footer) a:focus-visible{
+  outline-color:var(--dc-cyan)
+}
+@media(max-width:640px){
+  .dc-footbrand{width:100%;justify-content:center}
+  .dc-footbrand img{width:32px;height:32px}
+  :is(.n27-download-card,.dl-public-card,.dp-card,.feature-card,.sx-feature,
+      .n27-support-detail-card,.download-card):hover{transform:none}
+}
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .header .brand img,.sx-logo img,.topbar .brand img,
+  .n27-subbrand img,.n27-footer-logo img,
+  .n26-btn,.dp-cta,.sx-cta,.top-cta,.btn,.n27-backsite{
+    transition:none
+  }
+  :is(.n26-btn,.dp-cta,.sx-cta,.top-cta,.btn,.n27-backsite):hover,
+  .header .brand:hover img,.sx-logo:hover img,.topbar .brand:hover img,
+  .n27-subbrand:hover img,.n27-footer-logo a:hover img{transform:none}
+}
