@@ -8,11 +8,11 @@
   },
   "android": {
     "available": true,
-    "versionName": "1.0.3-rc.24.0",
-    "versionCode": 13,
+    "versionName": "1.0.3-rc.24.1",
+    "versionCode": 14,
     "applicationId": "br.discordia.mobile",
-    "downloadUrl": "https://github.com/magaskye/discordia/releases/download/android-v1.0.3-rc.24.0/Discordia-Mobile-1.0.3-rc.24.0.apk",
-    "sha256": "c71e2633f1f4f7767d4b157a78e38fa19a74751e33bb22da6f917a5bdc2e7edf",
+    "downloadUrl": "https://github.com/magaskye/discordia/releases/download/android-v1.0.3-rc.24.1/Discordia-Mobile-1.0.3-rc.24.1.apk",
+    "sha256": "9db1ca6b4f6cc59c7d42e21c423d973591f13409812ec1fd3257b5a852c60353",
     "sizeBytes": 5346930,
     "signerSha256": "fc5af7ccfd8f28acc8d3c79b1651cac67f7897386ff27768cfcb2bc3e4a23ac5"
   },
