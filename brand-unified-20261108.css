@@ -104,3 +104,38 @@ body{accent-color:#80dfff}
   .header .brand:hover img,.sx-logo:hover img,.topbar .brand:hover img,
   .n27-subbrand:hover img,.n27-footer-logo a:hover img{transform:none}
 }
+
+/* 1366px desktop: prioritize downloads over an unreleased admin shortcut. */
+@media(min-width:1161px) and (max-width:1500px){
+ .header .nav-shell{gap:13px}
+ .header .navigation{gap:11px;min-width:0}
+ .header .navigation a{font-size:11px!important;white-space:nowrap}
+ .header .navigation .nav-support{
+   white-space:nowrap!important;padding:9px 12px!important;border-radius:12px!important
+ }
+ .header .navigation .nav-admin-entry{display:none!important}
+ .header .nav-actions{gap:7px}
+ .header .nav-account-entry{white-space:nowrap}
+ .header .nav-button{white-space:nowrap;padding:10px 12px!important}
+}
+@media(min-width:851px) and (max-width:1160px){
+ .header .nav-shell{gap:12px}
+ .header .nav-toggle{
+   display:flex;margin-left:auto;flex-direction:column;justify-content:center;
+   width:42px;height:42px;gap:5px;padding:10px;
+   background:rgba(55,67,103,.5);border:1px solid rgba(153,182,232,.33);
+   border-radius:10px
+ }
+ .header .nav-toggle span{width:100%;height:2px;background:#edf6ff}
+ .header .navigation{
+   display:none;position:absolute;top:100%;left:0;right:0;z-index:44;
+   margin:0;padding:18px clamp(20px,5vw,70px);
+   align-items:stretch;flex-direction:column;gap:8px;
+   background:rgba(14,21,40,.98);border-bottom:1px solid rgba(157,181,233,.28);
+   max-height:calc(100dvh - 82px);overflow-y:auto
+ }
+ .header .navigation.open{display:flex}
+ .header .navigation a{display:block;padding:10px 13px;font-size:13px!important;white-space:normal}
+ .header .navigation .nav-admin-entry{display:none!important}
+ .header .nav-actions{gap:8px}
+}
