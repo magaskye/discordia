@@ -1,8 +1,8 @@
 /**
  * Discórdia Web — limited public beta gateway.
- * Public GET frontend and 48-hex room invites; Firebase verified members only
- * may CREATE a room. Guests can JOIN by possession of a room link, not access
- * the Firebase social database. No privileged Firebase or TURN credentials.
+ * Public GET frontend and 48-hex room invites; both visitors and verified
+ * members may CREATE a room under separate admission quotas. Invites never
+ * grant access to Firebase social data or privileged media credentials.
  */
 export const BETA_ORIGIN='https://discordia-web-beta.pages.dev';
 const ROOM=/^\/r\/([a-f0-9]{48})\/?$/;
@@ -65,29 +65,31 @@ export default {
   const connected=Boolean(env.QUICK_ROOMS&&env.QUICK_ROOM_ADMISSION);
   if(url.pathname==='/api/rooms/health'&&request.method==='GET')
     return json({status:connected?'ready':'offline',mode:'limited-public-beta',
-      guestMode:'invite',createMode:'verified-firebase-account'},connected?200:503);
+      guestMode:'invite-and-host',createMode:'guest-or-verified-firebase-account'},connected?200:503);
   if(url.pathname==='/api/rooms'&&request.method==='POST'){
     if(!allowedPost(request))return json({error:'same_origin_required'},403);
     if(!connected)return json({error:'room_service_unavailable'},503);
     const bearer=request.headers.get('Authorization')||'';
-    if(!/^Bearer [A-Za-z0-9_.-]{32,6000}$/.test(bearer))
-      return json({error:'login_required'},401);
-    // Limit expensive identity-provider requests before looking up an ID token.
-    // Rate decisions depend only on a salted-equivalent one-way network hash,
-    // never the token's unverified contents.
-    let clientHash;
+    const hasToken=bearer.length>0;
+    // A malformed/forged token is never silently downgraded to anonymous.
+    if(hasToken&&!/^Bearer [A-Za-z0-9_.-]{32,6000}$/.test(bearer))
+      return json({error:'invalid_authorization'},401);
     try{
-      clientHash=await fingerprint(request,'public-ip');
-      const admitted=await env.QUICK_ROOM_ADMISSION
-        .getByName('public-global').mayAttempt(clientHash);
-      if(!admitted)return json({error:'verification_limited'},429);
-    }catch{return json({error:'verification_unavailable'},503);}
-    // Firebase verifies the ID token on the server and checks emailVerified.
-    const account=await verifyFirebaseIdToken(bearer.slice(7),env.FIREBASE_WEB_API_KEY);
-    if(!account)return json({error:'verified_account_required'},403);
-    try{
-      const userHash=await sha256Hex('public-uid:'+account.uid);
-      const allowed=await env.QUICK_ROOM_ADMISSION.getByName('public-global').allow(clientHash,userHash);
+      const clientHash=await fingerprint(request,'public-ip');
+      const admission=env.QUICK_ROOM_ADMISSION.getByName('public-global');
+      let account=null;
+      if(hasToken){
+        // Bound costly Firebase lookups independently of room creation.
+        if(!await admission.mayAttempt(clientHash))
+          return json({error:'verification_limited'},429);
+        account=await verifyFirebaseIdToken(bearer.slice(7),env.FIREBASE_WEB_API_KEY);
+        if(!account)return json({error:'verified_account_required'},403);
+      }
+      // Anonymous rooms have stricter quotas than authenticated rooms.
+      // Both modes share the global 12-rooms/hour cap in the Durable Object.
+      const allowed=account
+        ?await admission.allow(clientHash,await sha256Hex('public-uid:'+account.uid))
+        :await admission.allowGuest(clientHash);
       if(!allowed)return json({error:'room_creation_limited'},429);
       const roomId=randomHex(24),hostKey=randomHex(32);
       const hostHash=await sha256Hex(hostKey);
