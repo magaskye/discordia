@@ -1,0 +1,18 @@
+{
+  "name": "Discórdia Web",
+  "short_name": "Discórdia",
+  "description": "Salas por convite, chat e compartilhamento de tela no navegador.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#090d1c",
+  "theme_color": "#090d1c",
+  "icons": [
+    {
+      "src": "/discordia-orbit.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
+}
