@@ -1,0 +1,2 @@
+Discórdia Web Beta — 2026-11-08
+Ativação de salas por convite criadas por visitantes, quotas anônimas, frontend atualizado e gateway protegido. O serviço de Durable Objects permanece isolado.
