@@ -129,7 +129,7 @@ export default {
   headers.set('Content-Security-Policy',[
     "default-src 'self'","script-src 'self'","style-src 'self' 'unsafe-inline'",
     "img-src 'self' data: https:","font-src 'self' data:",
-    "connect-src 'self' https://*.googleapis.com https://*.firebaseio.com wss://*.firebaseio.com https://*.firebasedatabase.app wss://*.firebasedatabase.app",
+    "connect-src 'self' https://*.googleapis.com https://*.firebaseio.com wss://*.firebaseio.com https://*.firebasedatabase.app wss://*.firebasedatabase.app https://discordia-sfu-media-production.carlos1702s.workers.dev https://discordia-voice-lease-gateway-production.carlos1702s.workers.dev",
     "frame-ancestors 'none'","object-src 'none'","base-uri 'self'","form-action 'self'"
   ].join('; '));
   if(ROOM.test(url.pathname)||url.pathname==='/'||url.pathname==='/index.html')
