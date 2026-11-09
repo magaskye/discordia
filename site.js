@@ -1,5 +1,5 @@
-/* Discórdia Desktop RC25 — navegação e animação progressiva no layout original.
-   Sem bibliotecas externas. Downloads da RC25 no canal Testers; respeita movimento reduzido. */
+/* Discórdia Desktop RC25.2 — navegação e animação progressiva no layout original.
+   Sem bibliotecas externas. Downloads da RC25.2 no canal Testers; respeita movimento reduzido. */
 (function () {
   'use strict';
   const navButton=document.getElementById('nav-toggle');
@@ -95,12 +95,12 @@
     document.documentElement.classList.add('site-motion-ready');
   }
 
-  // Verify the RC25 official Windows release against GitHub assets before reporting a confirmed download.
-  const tag='v1.0.3-rc.25';
+  // Verify the RC25.2 official Windows release against GitHub assets before reporting a confirmed download.
+  const tag='v1.0.3-rc.25.2';
   const base='https://github.com/magaskye/discordia/releases/download/'+tag+'/';
   const required=[
-    'Discordia-1.0.3-rc.25-Instalador-x64.exe',
-    'Discordia-1.0.3-rc.25-Portatil-x64.exe',
+    'Discordia-1.0.3-rc.25.2-Instalador-x64.exe',
+    'Discordia-1.0.3-rc.25.2-Portatil-x64.exe',
     'rc.yml','SHA256SUMS.txt'
   ];
   const text=(id,value)=>{const el=document.getElementById(id);if(el)el.textContent=value;};
@@ -118,12 +118,12 @@
     .then(res=>{if(!res.ok)throw new Error('github_api_unavailable');return res.json();})
     .then(release=>{
       if(!isVerified(release))throw new Error('release_not_verified');
-      text('release-status','RC25 · download oficial confirmado');
-      text('release-hint','RC25 é a versão Windows recomendada para Testers, com executáveis e hashes verificados no GitHub. Instalador, portátil, rc.yml e SHA-256 verificados no GitHub.');
+      text('release-status','RC25.2 · download oficial confirmado');
+      text('release-hint','RC25.2 é a versão Windows recomendada para Testers, com executáveis e hashes verificados no GitHub. Instalador, portátil, rc.yml e SHA-256 verificados no GitHub.');
     })
     .catch(()=>{
       // Quando a API estiver indisponível, mantenha os links, mas oriente a conferência da release.
-      text('release-status','RC25 · verificar release oficial');
+      text('release-status','RC25.2 · verificar release oficial');
       text('release-hint','Antes de instalar, confira os executáveis, o manifesto e o SHA-256 na release oficial.');
     });
 })();
