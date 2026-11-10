@@ -1,7 +1,7 @@
 {
   "name": "Discórdia Web",
   "short_name": "Discórdia",
-  "description": "Salas por convite, chat e compartilhamento de tela no navegador.",
+  "description": "Discórdia Web oficial: servidores, amigos, chat e transmissão no navegador.",
   "start_url": "/",
   "scope": "/",
   "display": "standalone",
