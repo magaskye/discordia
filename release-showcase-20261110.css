@@ -1,0 +1,47 @@
+/* Discórdia — vitrine oficial de versões atuais, 10/11/2026.
+   Estilo complementar, sem remover CSS de identidade já publicado. */
+:root{--release-ink:#f9f8ff;--release-muted:#c8c1e5;--release-cyan:#9feaff;--release-lilac:#c2a9ff}
+.dl-public-release .dl-public-heading{margin-bottom:1.9rem}
+.dl-public-release .dl-public-eyebrow{display:inline-flex;align-items:center;gap:9px}
+.dl-public-release .dl-public-card{position:relative;overflow:hidden;transition:transform .2s ease,border-color .2s ease,box-shadow .2s ease}
+.dl-public-release .dl-public-card:hover{transform:translateY(-3px);box-shadow:0 24px 45px #08051e4d}
+.dl-public-release .dl-public-card:focus-within{outline:2px solid var(--release-cyan);outline-offset:3px}
+.rc17-highlights{background:radial-gradient(ellipse at 9% 8%,#6135a063,transparent 43%),linear-gradient(145deg,#170f42,#291761 57%,#14142f)}
+.rc17-highlights-heading>p{max-width:520px}
+.rc17-highlight{border-color:#bba5ff47;background:linear-gradient(145deg,#ffffff17,#ffffff06)}
+.rc17-highlight:nth-child(1){background:linear-gradient(145deg,#9f6dff2c,#ffffff08)}
+.rc17-highlight:nth-child(2){background:linear-gradient(145deg,#46bce126,#ffffff06)}
+.rc17-highlight:nth-child(3){background:linear-gradient(145deg,#c674ea24,#ffffff06)}
+.rc17-highlight:nth-child(4){background:linear-gradient(145deg,#7a82e827,#ffffff06)}
+.rc17-highlight p{font-size:13.5px}
+.n27-download-grid.disc-current-downloads{grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;align-items:stretch}
+.disc-current-downloads .n27-download-card{min-width:0;display:flex;flex-direction:column}
+.disc-current-downloads .n27-download-card .download-actions{margin-top:auto;display:flex;gap:12px;flex-wrap:wrap;align-items:center}
+.disc-current-downloads .n27-download-card .download-version{overflow-wrap:anywhere}
+.disc-current-downloads .n27-download-card.is-android{border-color:#79dcac72;background:radial-gradient(circle at 95% 0%,#65cba42b,transparent 57%),linear-gradient(145deg,#182a2e,#191932)}
+.disc-current-downloads .n27-download-card.is-web{border-color:#85cde56b;background:radial-gradient(circle at 95% 0%,#70b6eb32,transparent 57%),linear-gradient(145deg,#162640,#191731)}
+.disc-current-downloads .n27-download-card.is-android .n27-download-art{background:linear-gradient(135deg,#244e4a,#172d43)}
+.disc-current-downloads .n27-download-card.is-web .n27-download-art{background:linear-gradient(135deg,#21466d,#231e59)}
+.disc-current-downloads .n27-download-card.is-android .n27-download-art strong,.disc-current-downloads .n27-download-card.is-web .n27-download-art strong{font-size:clamp(21px,2.6vw,37px)}
+.disc-current-downloads .n27-download-card .secondary-link{overflow-wrap:anywhere}
+.disc-current-downloads .n27-download-card small{display:block;margin-top:13px;line-height:1.65}
+.disc-current-downloads .n27-download-card .n27-download-card-top b{white-space:normal;text-align:right}
+.dv-hero .dv-stats{margin-top:30px}
+.dv-main .dv-current-cards{grid-template-columns:repeat(2,minmax(0,1fr));gap:19px}
+.dv-current-cards .dv-release{min-width:0;position:relative}
+.dv-current-cards .dv-release.dv-latest{grid-column:1/-1}
+.dv-current-cards .dv-release h3{font-size:clamp(25px,3.2vw,39px)}
+.dv-current-cards .dv-release .dv-release-kicker{font-size:17px}
+.dv-current-cards .dv-release a.dv-external{margin-top:auto;align-self:flex-start}
+.dv-current-cards .dv-release ul{margin-bottom:24px}
+.dv-main .dv-release-os{display:inline-flex;gap:10px;align-items:center;margin:10px 0 16px;color:#edebff;font-weight:700}
+.dv-main .dv-release-os img{height:27px;width:27px}
+.dv-current-cards .dv-release.is-mobile{background:radial-gradient(circle at 92% 4%,#46af9a2e,transparent 54%),linear-gradient(145deg,#202e40,#191933)}
+.dv-current-cards .dv-release.is-browser{background:radial-gradient(circle at 92% 4%,#5f9ee63a,transparent 54%),linear-gradient(145deg,#1d2549,#19172f)}
+.dv-main .dv-archive-simplified{background:linear-gradient(140deg,#181235,#12132d);border-top:1px solid #ffffff1c}
+.dv-archive-simplified .dv-archive-panel{max-width:830px;border:1px solid #a89beb52;padding:clamp(23px,4vw,39px);border-radius:24px;background:#ffffff08}
+.dv-archive-simplified .dv-archive-panel p{color:#cbc7e1;line-height:1.8}
+.dv-archive-simplified .dv-archive-panel a{display:inline-flex;margin-top:14px}
+@media(max-width:1100px){.n27-download-grid.disc-current-downloads{grid-template-columns:repeat(2,minmax(0,1fr))}.disc-current-downloads .n27-download-card.is-rc{grid-column:1/-1}}
+@media(max-width:700px){.n27-download-grid.disc-current-downloads,.dv-main .dv-current-cards{grid-template-columns:1fr}.disc-current-downloads .n27-download-card.is-rc,.dv-current-cards .dv-release.dv-latest{grid-column:auto}.dv-main .dv-archive-simplified{padding:58px 0}}
+@media(prefers-reduced-motion:reduce){.dl-public-release .dl-public-card{transition:none}.dl-public-release .dl-public-card:hover{transform:none}}
