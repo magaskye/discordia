@@ -1,0 +1,55 @@
+/* Discórdia RC27 Android – Cyan accents on the official cross-platform site.
+   The Windows and Web cards retain their existing independent identities. */
+body.site26-home .dp-card.dp-android,
+body.site26-home .n27-download-card.is-android{
+ background:linear-gradient(145deg,#12384c,#10283d 75%)!important;
+ border:1px solid #47889a!important;
+ box-shadow:inset 0 1px #b7fbff20,0 10px 32px #020b1a36;
+}
+body.site26-home .dp-android .dp-symbol,
+body.site26-home .n27-download-card.is-android .n27-download-card-top{
+ color:#8ceffa!important;
+}
+body.site26-home .dp-android .dp-tags span,
+body.site26-home .n27-download-card.is-android .download-version{
+ color:#a7f5ff!important;
+}
+body.site26-home .dp-android .dp-cta,
+body.site26-home .n27-download-card.is-android .download-actions .btn.primary{
+ border:1px solid #c2ffff!important;
+ background:linear-gradient(110deg,#63dff0,#a0f8ff)!important;
+ color:#062b3b!important;
+}
+body.site26-home .dp-android p,
+body.site26-home .n27-download-card.is-android p{color:#c5e0eb!important}
+body.site26-home .n27-download-card.is-android .download-actions .secondary-link{
+ border-color:#5190a0!important;color:#8deffa!important;
+}
+body.site26-home .rc17-highlight:nth-child(3){
+ border-color:#4d96a7!important;
+ background:linear-gradient(145deg,#143448,#0e2335)!important;
+}
+body.site26-home .rc17-highlight:nth-child(3) .rc17-highlight-tag{
+ color:#99f7ff!important;
+}
+.dv-release.is-mobile{
+ border-color:#4a8494!important;
+ background:linear-gradient(145deg,#123146,#10263b)!important;
+}
+.dv-release.is-mobile .dv-pill{
+ color:#c4fcff!important;
+ border-color:#4db2c1!important;
+ background:#14596c!important;
+}
+.dv-release.is-mobile .dv-release-kicker{color:#93f0f7!important}
+.dv-release.is-mobile .dv-action{
+ background:linear-gradient(115deg,#63dfee,#a0faff)!important;
+ color:#062c3d!important;
+}
+.dv-release.is-mobile .dv-external{color:#91f1ff!important}
+@media(prefers-reduced-motion:reduce){
+ body.site26-home .dp-android .dp-cta,
+ body.site26-home .n27-download-card.is-android .download-actions .btn{
+  animation:none!important;transition:none!important
+ }
+}

@@ -1,0 +1,98 @@
+/* Android RC27 · Orbit Cyan site layer.
+   Mirrors the native Android interface while respecting reduced motion. */
+:root{--bg:#071320;--deep:#0e2236;--purple:#133d54;--cyan:#73eafa;--ink:#f3fcff;--muted:#bed2df;--border:#46768a;color-scheme:dark}
+body.sx-android{background:#071320;color:#f3fcff}
+.sx-android .topbar{background:#0c2031f7;border-bottom:1px solid #2f6176}
+.sx-android .toplinks a{color:#c0dbe7}
+.sx-android .toplinks a:hover,.sx-android .brand-o,.sx-android .eyebrow{color:#83f2ff}
+.sx-android .top-cta{background:#7deaf6;color:#063143;box-shadow:0 6px 26px #2ed3e525}
+.sx-android .top-cta:hover{background:#c0fbff}
+.sx-android .disc-cross-platform{background:#101e31;border-color:#2e5066}
+.sx-android .disc-cross-platform-link[aria-current="page"]{background:#175064;border-color:#65e0f0;color:#ebffff}
+.sx-android .hero{
+ background:radial-gradient(ellipse at 84% 28%,#196585bb,transparent 52%),
+ radial-gradient(ellipse at 8% 83%,#16425b95,transparent 55%),
+ linear-gradient(125deg,#102d43,#082039 52%,#071522);
+}
+.sx-android .hero::before{border-color:#80f6ff26}
+.sx-android .sky{opacity:.29}
+.sx-android .hero-tag{color:#c8fcff;border-color:#63d9ed8c;background:#174558a3}
+.sx-android .hero h1{font-size:clamp(46px,5.3vw,86px)}
+.sx-android .hero h1 em{
+ background:linear-gradient(100deg,#7aeafa 4%,#b7feff 55%,#d6cdff 100%);
+ -webkit-background-clip:text;background-clip:text;
+}
+.sx-android .hero-copy>p{color:#d1e6ef}
+.sx-android .hero-actions .button-light{background:#81edfa;color:#063043;box-shadow:0 16px 32px #1ab0ce35}
+.sx-android .hero-actions .button-light:hover{background:#b9ffff}
+.sx-android .hero-actions .button-outline{border-color:#92eeffb3;background:#11384e80}
+.sx-android .hero-proof{color:#c8e2ed}
+.sx-android .halo{border-color:#64eafa33}
+.sx-android .halo-b{border-color:#97f6ff7a}
+.sx-android .phone{
+ background:#061321;border-color:#071729;box-shadow:0 30px 80px #010712cd,0 0 58px #2bcaf75a;
+}
+.sx-android .phone-glass{
+ background:linear-gradient(180deg,#122d44,#0a1a2d);
+}
+.sx-android .phone-head{background:#112b41;border-color:#366478}
+.sx-android .phone-head b{color:#f3fdff}
+.sx-android .phone-head small{color:#9eeff9}
+.sx-android .floating-logo{background:#125267f4;border:1px solid #6df1ff;color:#e1fdff;box-shadow:0 12px 36px #02121cc9}
+.sx-android .floating-logo strong{color:#f1fcff}
+.sx-android .floating-logo span{color:#b1eff6}
+.sx-android .concept-note{color:#a6d4e3}
+.sx-android .download-wrap{background:#071320}
+.sx-android .download-card{background:linear-gradient(140deg,#15394f,#112338);border-color:#47788a}
+.sx-android .download-card .button-download{background:#78eafa;color:#032939;border-color:#affbff}
+.sx-android .download-card .button-download:hover{background:#bffbff}
+.sx-android .download-card em,.sx-android .section-heading h2 em{color:#77e7f6}
+.sx-android .download-panel{background:#0d2538;border-color:#45758b}
+.sx-android .download-note{color:#bcd9e5}
+.sx-android .features{background:#0b1d2f}
+.sx-android .feature-card{background:#172f43;border-color:#426980}
+.sx-android .feature-card .feature-ic{background:#164f63;color:#9cf7ff}
+.sx-android .feature-card .feature-label.ready{color:#9af7df}
+.sx-android .sx-android-bridge{background:#0c2135}
+.sx-android .sx-bridge-pair>div{background:#15364b;border-color:#44748d}
+.sx-android .sx-bridge-arrows{color:#89eff8}
+.sx-android .sx-bridge-num{color:#7de4f5}
+.sx-android .install{background:#0b2133}
+.sx-android .cross-platform{background:#10384d}
+.sx-android .sx-mobile-web-note{background:#0c263a}
+.sx-android ::selection{background:#b6faff;color:#052938}
+.orbit27-web-phone-home{display:flex;flex-direction:column;gap:12px;padding:20px 11px 12px;flex:1;min-height:0}
+.orbit27-phone-hello{font-size:10px;letter-spacing:.06em;color:#8bebf8;font-weight:850}
+.orbit27-phone-main-title{font-weight:920;font-size:22px;color:#f6ffff;line-height:1.12;letter-spacing:-.045em;max-width:12ch}
+.orbit27-phone-call{display:flex;align-items:center;gap:8px;background:linear-gradient(110deg,#52d9e9,#9ef7ff);color:#073246;border-radius:13px;padding:12px 10px}
+.orbit27-phone-call>span{font-size:20px;line-height:1}
+.orbit27-phone-call>div{flex:1;display:grid;gap:3px}
+.orbit27-phone-call strong{font-size:11px;font-weight:950}
+.orbit27-phone-call small{font-size:8px;color:#1b5969}
+.orbit27-phone-call>b{font-size:18px}
+.orbit27-phone-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.orbit27-phone-grid>div{background:#18384c;border:1px solid #426c7b;color:#edfaff;border-radius:12px;min-height:68px;display:grid;place-content:center;gap:6px;text-align:center;font-size:9px;font-weight:800}
+.orbit27-phone-grid>div span{color:#7eecfa;font-size:19px}
+.orbit27-phone-server{display:flex;gap:9px;align-items:center;border-radius:13px;background:#122c43;border:1px solid #3d617c;padding:11px 9px;font-size:10px}
+.orbit27-phone-server>i{display:grid;place-items:center;flex:none;width:31px;height:31px;border-radius:9px;font-size:18px;font-style:normal;background:#17596d;color:#c7fcff}
+.orbit27-phone-server>div{display:grid;gap:3px;min-width:0;flex:1}
+.orbit27-phone-server strong{font-size:10px}
+.orbit27-phone-server small{color:#a5c7d9;font-size:8px}
+.sx-android .phone-tabs{background:#10273a;border-top:1px solid #355871;gap:0}
+.sx-android .phone-tabs>span{font-size:14px;flex:1;color:#b3d4e0;display:grid;justify-items:center;gap:4px}
+.sx-android .phone-tabs>span:first-child{color:#7deaf7}
+.sx-android .phone-tabs small{font-size:7px;font-weight:750}
+.orbit27-web-feature{display:inline-flex;align-items:center;gap:7px;background:#175464;border:1px solid #67e7ed;border-radius:100px;color:#d9faff;padding:8px 12px;font-size:11px;font-weight:850;margin-bottom:12px}
+@media(max-width:900px){
+ .sx-android .hero h1{font-size:clamp(39px,7vw,70px);white-space:normal}
+ .sx-android .phone{transform:rotate(3deg)}
+}
+@media(max-width:600px){
+ .sx-android .hero{background:radial-gradient(ellipse at 50% 18%,#175875,transparent 62%),#0d2338}
+ .sx-android .hero h1{font-size:clamp(40px,10vw,57px);white-space:normal}
+ .sx-android .phone{transform:none}
+}
+@media(prefers-reduced-motion:reduce){
+ .sx-android .phone,.sx-android .floating-logo{animation:none!important;transition:none!important;transform:none!important}
+ .sx-android .button,.sx-android .top-cta{transition:none!important;transform:none!important}
+}
