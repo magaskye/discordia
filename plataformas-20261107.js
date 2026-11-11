@@ -66,7 +66,7 @@
       'DISCÓRDIA ANDROID · CANAL OFICIAL',
       'Android · instalação do APK somente após confirmar a versão oficial',
       'Ver download Android','Conhecer versão Web','./android/','./web/');
-    heroDescription.textContent='Discórdia para Android: seus servidores, mensagens e amigos na mesma conta do Desktop. Confira o APK assinado e as instruções de instalação pelo canal oficial. As chamadas e transmissões no celular ainda estão em desenvolvimento.';
+    heroDescription.textContent='Discórdia Android RC26.1: conversas, salas autorizadas, câmera WebRTC e recepção experimental de transmissões do PC. O APK assinado está disponível, mas a captura de tela e o áudio interno do Android ainda não foram liberados. Testes reais de chamadas e vídeo continuam necessários.';
     const card=document.querySelector('.dp-android');
     if(card?.parentElement)card.parentElement.prepend(card);
   }else if(device==='windows'){
@@ -80,12 +80,12 @@
     updatePromptIcon(device);
     setup(device==='ios'?'Você está no iPhone ou iPad':'Acesso pelo navegador',
       device==='ios'?'O APK Android não funciona no iPhone. Conheça o projeto Web e veja outras plataformas.':
-        'A versão Windows é para PCs compatíveis. A Web Beta pública já pode ser acessada pelo navegador.',
-      'DISCÓRDIA WEB · BETA PÚBLICA',
-      device==='ios'?'iPhone/iPad · Web Beta pelo navegador':
-        'Navegador · beta pública disponível',
-      'Abrir Web Beta','Detalhes da versão Web','https://discordia-web-beta.pages.dev/','./web/');
-    heroDescription.textContent='A Discórdia Web Beta está aberta no navegador: entre com sua conta existente ou assista como convidado por link. Criação de salas exige e-mail verificado e recursos de mídia ainda têm limitações.';
+        'A versão Windows é para PCs compatíveis. A Web 1.0 está disponível para acessar diretamente pelo navegador.',
+      'DISCÓRDIA WEB · 1.0 ESTÁVEL',
+      device==='ios'?'iPhone/iPad · Discórdia Web 1.0 pelo navegador':
+        'Navegador · Discórdia Web 1.0 disponível',
+      'Abrir Web 1.0','Detalhes da versão Web','https://discordia-web-beta.pages.dev/','./web/');
+    heroDescription.textContent='A Discórdia Web 1.0 está aberta no navegador: acesse servidores com sua conta ou crie salas temporárias por convite, inclusive sem cadastro. O compartilhamento depende das permissões do navegador, e alguns recursos de voz e vídeo ainda têm limitações.';
     const card=document.querySelector(device==='ios'?'.dp-iphone':'.dp-web');
     if(card?.parentElement)card.parentElement.prepend(card);
   }
