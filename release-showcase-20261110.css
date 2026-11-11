@@ -45,3 +45,22 @@
 @media(max-width:1100px){.n27-download-grid.disc-current-downloads{grid-template-columns:repeat(2,minmax(0,1fr))}.disc-current-downloads .n27-download-card.is-rc{grid-column:1/-1}}
 @media(max-width:700px){.n27-download-grid.disc-current-downloads,.dv-main .dv-current-cards{grid-template-columns:1fr}.disc-current-downloads .n27-download-card.is-rc,.dv-current-cards .dv-release.dv-latest{grid-column:auto}.dv-main .dv-archive-simplified{padding:58px 0}}
 @media(prefers-reduced-motion:reduce){.dl-public-release .dl-public-card{transition:none}.dl-public-release .dl-public-card:hover{transform:none}}
+/* Novembro 11 — acabamento da vitrine RC26, Android RC26.1 e Web 1.0 */
+.dl-public-release .dl-public-card,.disc-current-downloads .n27-download-card,.dv-current-cards .dv-release{isolation:isolate}
+.dl-public-release .dl-public-card:before,.disc-current-downloads .n27-download-card:before{content:"";position:absolute;inset:0 0 auto;height:3px;background:linear-gradient(90deg,#9773ff,#78e2f8);pointer-events:none;z-index:1}
+.dl-public-release .dl-public-card:nth-child(2):before,.disc-current-downloads .n27-download-card.is-android:before{background:linear-gradient(90deg,#5bdbb9,#8ee8ef)}
+.dl-public-release .dl-public-card:nth-child(3):before,.disc-current-downloads .n27-download-card.is-web:before{background:linear-gradient(90deg,#79c8ff,#bb9bff)}
+.rc17-highlights-grid{align-items:stretch}
+.rc17-highlight{box-shadow:0 20px 45px #08052040;min-height:250px}
+.rc17-highlight h3{font-size:clamp(17px,1.65vw,21px)}
+.rc17-highlight-tag{line-height:1.4}
+.rc17-highlight small{padding-top:10px;border-top:1px solid #ffffff22;width:100%;margin-top:auto}
+.disc-current-downloads .n27-download-card .download-actions a:focus-visible,
+.dv-current-cards .dv-release a:focus-visible,.dl-public-release .dl-public-card a:focus-visible,.rc17-highlights-bottom a:focus-visible{outline:3px solid #9eeafa;outline-offset:4px;border-radius:8px}
+.dv-hero .dv-stats strong{color:#eafaff}
+.dv-current-cards .dv-release.dv-latest{border-color:#ab9afb99}
+.dv-current-cards .dv-release.is-mobile{border-color:#6ed7b48c}
+.dv-current-cards .dv-release.is-browser{border-color:#84c7f288}
+.dv-current-cards .dv-release .dv-release-top{flex-wrap:wrap;gap:12px}
+@media(max-width:700px){.rc17-highlight{min-height:0}.rc17-highlights-grid{gap:12px}.disc-current-downloads .n27-download-card .download-actions{gap:14px}}
+@media(prefers-reduced-motion:reduce){.rc17-highlight{scroll-behavior:auto}}
