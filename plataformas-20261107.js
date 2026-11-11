@@ -66,7 +66,7 @@
       'DISCÓRDIA ANDROID · CANAL OFICIAL',
       'Android · instalação do APK somente após confirmar a versão oficial',
       'Ver download Android','Conhecer versão Web','./android/','./web/');
-    heroDescription.textContent='Discórdia Android RC26.1: conversas, salas autorizadas, câmera WebRTC e recepção experimental de transmissões do PC. O APK assinado está disponível, mas a captura de tela e o áudio interno do Android ainda não foram liberados. Testes reais de chamadas e vídeo continuam necessários.';
+    heroDescription.textContent='Discórdia Android RC27 Orbit Ciano: nova tela Início, servidores, conversas e chamadas fáceis de usar. O APK assinado oferece câmera e captura experimental da tela Android com permissão do sistema, sem áudio interno de jogos. Transmissões com o PC ainda exigem testes em aparelhos reais.';
     const card=document.querySelector('.dp-android');
     if(card?.parentElement)card.parentElement.prepend(card);
   }else if(device==='windows'){
