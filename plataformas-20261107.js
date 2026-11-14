@@ -66,7 +66,7 @@
       'DISCÓRDIA ANDROID · CANAL OFICIAL',
       'Android · instalação do APK somente após confirmar a versão oficial',
       'Ver download Android','Conhecer versão Web','./android/','./web/');
-    heroDescription.textContent='Discórdia Android RC28 Orbit Ciano: quatro abas, mensagens, servidores, chamadas por DM com voz e vídeo e entrada direta nas salas. O APK assinado oferece câmera e captura experimental da tela Android com permissão do sistema, sem áudio interno de jogos. Transmissões com o PC ainda exigem testes em aparelhos reais.';
+    heroDescription.textContent='Discórdia Android RC29 Orbit Ciano: Central de convites para aceitar servidores e amizades, sino com contador, quatro abas, DMs e chamadas por voz e vídeo. O APK assinado oferece câmera e captura experimental da tela Android com permissão do sistema, sem áudio interno de jogos. Transmissões com o PC ainda exigem testes em aparelhos reais.';
     const card=document.querySelector('.dp-android');
     if(card?.parentElement)card.parentElement.prepend(card);
   }else if(device==='windows'){
